@@ -3839,7 +3839,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_4set_pixmap_and_resize(CYTHON_UN
  *             bleeding = 1
  * 
  *         self.pixmap_label.move(bleeding, bleeding)             # <<<<<<<<<<<<<<
- *         self.resize(pixmap.width() + bleeding, pixmap.height() + bleeding)
+ *         self.resize(pixmap.width() + (bleeding *2), pixmap.height() + (bleeding*2))
  * 
  */
   __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_pixmap_label); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 68, __pyx_L1_error)
@@ -3905,7 +3905,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_4set_pixmap_and_resize(CYTHON_UN
   /* "covers.pyx":69
  * 
  *         self.pixmap_label.move(bleeding, bleeding)
- *         self.resize(pixmap.width() + bleeding, pixmap.height() + bleeding)             # <<<<<<<<<<<<<<
+ *         self.resize(pixmap.width() + (bleeding *2), pixmap.height() + (bleeding*2))             # <<<<<<<<<<<<<<
  * 
  *         self.pixmap_label.setPixmap(pixmap)
  */
@@ -3928,7 +3928,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_4set_pixmap_and_resize(CYTHON_UN
   if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_bleeding); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_bleeding * 2)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_3 = PyNumber_Add(__pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -3951,7 +3951,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_4set_pixmap_and_resize(CYTHON_UN
   if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_From_int(__pyx_v_bleeding); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyInt_From_long((__pyx_v_bleeding * 2)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = PyNumber_Add(__pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 69, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -4009,7 +4009,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_4set_pixmap_and_resize(CYTHON_UN
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "covers.pyx":71
- *         self.resize(pixmap.width() + bleeding, pixmap.height() + bleeding)
+ *         self.resize(pixmap.width() + (bleeding *2), pixmap.height() + (bleeding*2))
  * 
  *         self.pixmap_label.setPixmap(pixmap)             # <<<<<<<<<<<<<<
  * 
