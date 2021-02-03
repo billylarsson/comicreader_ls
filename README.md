@@ -7,16 +7,21 @@ This software isn't publicly announced, if you’re here reading this you most l
 
 Reading features 
 -----
-***Mode1:*** Single page one per turn is resized and shown to fit the screen while maintaining aspect ratio.
+***Mode1:*** (Shortcut: F1) Single page one per turn is resized and shown to fit the screen while maintaining aspect ratio.
 
-***Mode2:*** Same as mode1 but with two pages per turn (if one image is very wide, mode1 is used for the current page and mode2 will be turned back on once two images can fit the same screen together)
+***Mode2:*** (Shortcut: F2) Same as mode1 but with two pages per turn (if one image is very wide, mode1 is used for the current page and mode2 will be turned back on once two images can fit the same screen together)
 
-***Mode3:*** Single page that’s resized to fit the screens width where you can scroll up and down with the mouse.
+***Mode3:*** (Shortcut: F3) Single page that’s resized to fit the screens width where you can scroll up and down with the mouse.
 If you press ‘P’ a minipage-widget will be shown to the right where you see all the pages from the loaded comic, you can click anywhere inside to go directly to that page. Pressing ‘P’ again disables the minipage-widget.
 
 ***Bookmarking:***
 Right clicking a page and you’ll have the option to set a bookmark with a comment, also while right clicking if there are any bookmarks already such will be available and while clicking one takes you directly to that page.
 
+***Zoom:***
+While reading you can press ***+*** or ***-*** on keypad to zoom in or out one step at a time, if you have a zoomed mode that you prefer, while chaning page you can choose to press 6 or 4 on numpad to keep the zoom-settings and position to the next page. Also, if you press numpad 7 you will instantly adjust the current page into the last zoommode and position that you used that isnt default, pressing ***5*** on numpad restores default zoom and position.
+
+***Autoscrolling:***
+Pressing ***DOWN*** or ***UP*** on your keyboard and the image starts to autoscroll at a slow pace, if you press ***/*** or * the autoscrolling pace will increase or decrease the pace.
 
 Comicvine features
 -----
@@ -36,16 +41,34 @@ Dangerous Indexing feature
 To enable you should enter the database manually and put a path to any folder that you want to copy your comic files into while sorting them.
 This will result in the old file being renamed to *.backup and the new file will be properly sorted for you.
 
-ie, say you have this comic: `"/Downloads/comics/Weekly_Pack2020.10.21/Batman and Robin #23.cbz"` and it is properly linked with corresponding Comicvine ID.
-It will be copied to `"/Your desired location/DC Comics/Batman and Robin #17827/Batman and Robin #23.cbz"` where `#17827` is the unique volume ID for that volume. 
-initializing dangerous indexing can only be done from the command line: python launcher.py dangerous
-This feature shouldn't be used unless you really know what you're doing and realizing the danger it include, that's why its not accessible from the GUI.
+ie, say you have this comic: 
+
+`"/../Weekly_Pack2020.10.21/Batman and Robin #23.cbz"` 
+
+and it is properly linked with corresponding Comicvine ID. It will be copied to: 
+
+`"/../DC Comics/Batman and Robin #17827/Batman and Robin #23.cbz"` 
+
+where `#17827` is the unique volume ID for that volume. 
 
 WEBP converter
 -----
+Converts single file or que from top to bottom.
+
 This is the least tested feature, it works properly under Linux.
 It converts your comics to WEBP (or JPEG) re-compresses them and REPLACES the old file, same as Dangerous Indexing... you shouldn't use this feature unless you know what you're doing and I know that there are some bugs if you use the same instances after processing a que.
 Restarting the program could be a good idea after using the compressor.
+
+
+User rating(s)
+-----
+You can set your own rating for each comic by clicking the comic once and then the rating you want to assign to it, there's also room for importing 2 additional ratings, perhaps from a friend and a site, these will be shown on the same rating label but with a different icon.
+
+Sharing ratings and comic id
+-----
+Pressing the import/export button gives you the ability to share your linked comics with their true MD5 hash (or a fake one) paired with the Comicvine ID and your personal rating.
+When importing data from someone else you choose where their rating will be assigned.
+
 
 Installation
 -----
@@ -58,7 +81,7 @@ Preparation
 -----
 You need to have Python installed: `https://www.python.org/downloads/`
 
-Running: pip install -r requirements.txt –user may install everything needed.
+Running: `pip install -r requirements.txt –user` may install everything needed.
 If you’re having trouble with WEBP, causing the program to crash you should:
 
 `pip install webp –user`
@@ -82,4 +105,4 @@ Run
 -----
 You run the program from you command line: `python launcher.py` (..perhaps `python3 laucher.py` etc…)
 You could use the full path of a CBR/CBZ file as an argument and if should get you right into the page one of that comic.
-`Python3.8 launcher.py “C:\Comics\Super Hero\Wearing a pyjamas 001.cbz”`
+`Python3.8 launcher.py “C:\Comics\Super Hero - Wearing a pyjamas 001.cbz”`
