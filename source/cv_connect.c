@@ -1099,13 +1099,6 @@ static PyObject *__Pyx_GetItemInt_Generic(PyObject *o, PyObject* j);
 static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Fast(PyObject *o, Py_ssize_t i,
                                                      int is_list, int wraparound, int boundscheck);
 
-/* ObjectGetItem.proto */
-#if CYTHON_USE_TYPE_SLOTS
-static CYTHON_INLINE PyObject *__Pyx_PyObject_GetItem(PyObject *obj, PyObject* key);
-#else
-#define __Pyx_PyObject_GetItem(obj, key)  PyObject_GetItem(obj, key)
-#endif
-
 /* GetTopmostException.proto */
 #if CYTHON_USE_EXC_INFO_STACK
 static _PyErr_StackItem * __Pyx_PyErr_GetTopmostException(PyThreadState *tstate);
@@ -1172,6 +1165,13 @@ static CYTHON_INLINE void __Pyx_ErrFetchInState(PyThreadState *tstate, PyObject 
 static int __Pyx__GetException(PyThreadState *tstate, PyObject **type, PyObject **value, PyObject **tb);
 #else
 static int __Pyx_GetException(PyObject **type, PyObject **value, PyObject **tb);
+#endif
+
+/* ObjectGetItem.proto */
+#if CYTHON_USE_TYPE_SLOTS
+static CYTHON_INLINE PyObject *__Pyx_PyObject_GetItem(PyObject *obj, PyObject* key);
+#else
+#define __Pyx_PyObject_GetItem(obj, key)  PyObject_GetItem(obj, key)
 #endif
 
 /* DictGetItem.proto */
@@ -1641,6 +1641,7 @@ static const char __pyx_k_platform[] = "platform";
 static const char __pyx_k_qualname[] = "__qualname__";
 static const char __pyx_k_requests[] = "requests";
 static const char __pyx_k_response[] = "response";
+static const char __pyx_k_where_id[] = " = (?) where id = (?)";
 static const char __pyx_k_ComicVine[] = "ComicVine";
 static const char __pyx_k_QtWidgets[] = "QtWidgets";
 static const char __pyx_k_checkdata[] = "checkdata";
@@ -1652,7 +1653,6 @@ static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_newstring[] = "newstring";
 static const char __pyx_k_printdata[] = "printdata";
 static const char __pyx_k_volume_id[] = "volume_id";
-static const char __pyx_k_where_md5[] = " = (?) where md5 = (?)";
 static const char __pyx_k_IndexError[] = "IndexError";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_cache_date[] = "cache_date";
@@ -2034,7 +2034,7 @@ static PyObject *__pyx_n_u_volume;
 static PyObject *__pyx_n_u_volume_id;
 static PyObject *__pyx_n_u_w;
 static PyObject *__pyx_n_s_was_sleeping;
-static PyObject *__pyx_kp_u_where_md5;
+static PyObject *__pyx_kp_u_where_id;
 static PyObject *__pyx_n_s_your_rating_radio;
 static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self, PyObject *__pyx_v_cycle, PyObject *__pyx_v_db_input); /* proto */
 static PyObject *__pyx_pf_10cv_connect_9ComicVine_2refresh_comic_id(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_db_input); /* proto */
@@ -2289,7 +2289,7 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
  *             for column, value in cycle.items():
  *                 if value != None:             # <<<<<<<<<<<<<<
  *                     try:
- *                         query = 'update comics set ' + column + ' = (?) where md5 = (?)'
+ *                         query = 'update comics set ' + column + ' = (?) where id = (?)'
  */
             __pyx_t_4 = PyObject_RichCompare(__pyx_v_value, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 20, __pyx_L7_error)
             __pyx_t_13 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_13 < 0)) __PYX_ERR(0, 20, __pyx_L7_error)
@@ -2300,8 +2300,8 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
  *             for column, value in cycle.items():
  *                 if value != None:
  *                     try:             # <<<<<<<<<<<<<<
- *                         query = 'update comics set ' + column + ' = (?) where md5 = (?)'
- *                         sqlitecursor.execute(query, (value, db_input[DB.md5],))
+ *                         query = 'update comics set ' + column + ' = (?) where id = (?)'
+ *                         sqlitecursor.execute(query, (value, db_input[0],))
  */
               {
                 __Pyx_PyThreadState_declare
@@ -2315,13 +2315,13 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
                   /* "cv_connect.pyx":22
  *                 if value != None:
  *                     try:
- *                         query = 'update comics set ' + column + ' = (?) where md5 = (?)'             # <<<<<<<<<<<<<<
- *                         sqlitecursor.execute(query, (value, db_input[DB.md5],))
+ *                         query = 'update comics set ' + column + ' = (?) where id = (?)'             # <<<<<<<<<<<<<<
+ *                         sqlitecursor.execute(query, (value, db_input[0],))
  *                     except KeyError: pass
  */
                   __pyx_t_4 = __Pyx_PyUnicode_ConcatSafe(__pyx_kp_u_update_comics_set, __pyx_v_column); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_4);
-                  __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_t_4, __pyx_kp_u_where_md5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L16_error)
+                  __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_t_4, __pyx_kp_u_where_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_3);
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                   __Pyx_XDECREF_SET(__pyx_v_query, ((PyObject*)__pyx_t_3));
@@ -2329,8 +2329,8 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
 
                   /* "cv_connect.pyx":23
  *                     try:
- *                         query = 'update comics set ' + column + ' = (?) where md5 = (?)'
- *                         sqlitecursor.execute(query, (value, db_input[DB.md5],))             # <<<<<<<<<<<<<<
+ *                         query = 'update comics set ' + column + ' = (?) where id = (?)'
+ *                         sqlitecursor.execute(query, (value, db_input[0],))             # <<<<<<<<<<<<<<
  *                     except KeyError: pass
  * 
  */
@@ -2343,14 +2343,8 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
                     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
                     __PYX_ERR(0, 23, __pyx_L16_error)
                   }
-                  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_DB); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L16_error)
+                  __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_4);
-                  __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_md5); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 23, __pyx_L16_error)
-                  __Pyx_GOTREF(__pyx_t_17);
-                  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-                  __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_db_input, __pyx_t_17); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 23, __pyx_L16_error)
-                  __Pyx_GOTREF(__pyx_t_4);
-                  __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
                   __pyx_t_17 = PyTuple_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 23, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_17);
                   __Pyx_INCREF(__pyx_v_value);
@@ -2412,8 +2406,8 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
  *             for column, value in cycle.items():
  *                 if value != None:
  *                     try:             # <<<<<<<<<<<<<<
- *                         query = 'update comics set ' + column + ' = (?) where md5 = (?)'
- *                         sqlitecursor.execute(query, (value, db_input[DB.md5],))
+ *                         query = 'update comics set ' + column + ' = (?) where id = (?)'
+ *                         sqlitecursor.execute(query, (value, db_input[0],))
  */
                 }
                 __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
@@ -2428,8 +2422,8 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
                 __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
                 /* "cv_connect.pyx":24
- *                         query = 'update comics set ' + column + ' = (?) where md5 = (?)'
- *                         sqlitecursor.execute(query, (value, db_input[DB.md5],))
+ *                         query = 'update comics set ' + column + ' = (?) where id = (?)'
+ *                         sqlitecursor.execute(query, (value, db_input[0],))
  *                     except KeyError: pass             # <<<<<<<<<<<<<<
  * 
  *     def refresh_comic_id(self, tuple db_input):
@@ -2446,8 +2440,8 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
  *             for column, value in cycle.items():
  *                 if value != None:
  *                     try:             # <<<<<<<<<<<<<<
- *                         query = 'update comics set ' + column + ' = (?) where md5 = (?)'
- *                         sqlitecursor.execute(query, (value, db_input[DB.md5],))
+ *                         query = 'update comics set ' + column + ' = (?) where id = (?)'
+ *                         sqlitecursor.execute(query, (value, db_input[0],))
  */
                 __Pyx_XGIVEREF(__pyx_t_14);
                 __Pyx_XGIVEREF(__pyx_t_15);
@@ -2467,7 +2461,7 @@ static PyObject *__pyx_pf_10cv_connect_9ComicVine_update_column(CYTHON_UNUSED Py
  *             for column, value in cycle.items():
  *                 if value != None:             # <<<<<<<<<<<<<<
  *                     try:
- *                         query = 'update comics set ' + column + ' = (?) where md5 = (?)'
+ *                         query = 'update comics set ' + column + ' = (?) where id = (?)'
  */
             }
           }
@@ -12841,7 +12835,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_u_volume_id, __pyx_k_volume_id, sizeof(__pyx_k_volume_id), 0, 1, 0, 1},
   {&__pyx_n_u_w, __pyx_k_w, sizeof(__pyx_k_w), 0, 1, 0, 1},
   {&__pyx_n_s_was_sleeping, __pyx_k_was_sleeping, sizeof(__pyx_k_was_sleeping), 0, 0, 1, 1},
-  {&__pyx_kp_u_where_md5, __pyx_k_where_md5, sizeof(__pyx_k_where_md5), 0, 1, 0, 0},
+  {&__pyx_kp_u_where_id, __pyx_k_where_id, sizeof(__pyx_k_where_id), 0, 1, 0, 0},
   {&__pyx_n_s_your_rating_radio, __pyx_k_your_rating_radio, sizeof(__pyx_k_your_rating_radio), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
@@ -14789,35 +14783,6 @@ static CYTHON_INLINE PyObject *__Pyx_GetItemInt_Fast(PyObject *o, Py_ssize_t i, 
     return __Pyx_GetItemInt_Generic(o, PyInt_FromSsize_t(i));
 }
 
-/* ObjectGetItem */
-#if CYTHON_USE_TYPE_SLOTS
-static PyObject *__Pyx_PyObject_GetIndex(PyObject *obj, PyObject* index) {
-    PyObject *runerr;
-    Py_ssize_t key_value;
-    PySequenceMethods *m = Py_TYPE(obj)->tp_as_sequence;
-    if (unlikely(!(m && m->sq_item))) {
-        PyErr_Format(PyExc_TypeError, "'%.200s' object is not subscriptable", Py_TYPE(obj)->tp_name);
-        return NULL;
-    }
-    key_value = __Pyx_PyIndex_AsSsize_t(index);
-    if (likely(key_value != -1 || !(runerr = PyErr_Occurred()))) {
-        return __Pyx_GetItemInt_Fast(obj, key_value, 0, 1, 1);
-    }
-    if (PyErr_GivenExceptionMatches(runerr, PyExc_OverflowError)) {
-        PyErr_Clear();
-        PyErr_Format(PyExc_IndexError, "cannot fit '%.200s' into an index-sized integer", Py_TYPE(index)->tp_name);
-    }
-    return NULL;
-}
-static PyObject *__Pyx_PyObject_GetItem(PyObject *obj, PyObject* key) {
-    PyMappingMethods *m = Py_TYPE(obj)->tp_as_mapping;
-    if (likely(m && m->mp_subscript)) {
-        return m->mp_subscript(obj, key);
-    }
-    return __Pyx_PyObject_GetIndex(obj, key);
-}
-#endif
-
 /* GetTopmostException */
 #if CYTHON_USE_EXC_INFO_STACK
 static _PyErr_StackItem *
@@ -14996,6 +14961,35 @@ bad:
     Py_XDECREF(local_tb);
     return -1;
 }
+
+/* ObjectGetItem */
+#if CYTHON_USE_TYPE_SLOTS
+static PyObject *__Pyx_PyObject_GetIndex(PyObject *obj, PyObject* index) {
+    PyObject *runerr;
+    Py_ssize_t key_value;
+    PySequenceMethods *m = Py_TYPE(obj)->tp_as_sequence;
+    if (unlikely(!(m && m->sq_item))) {
+        PyErr_Format(PyExc_TypeError, "'%.200s' object is not subscriptable", Py_TYPE(obj)->tp_name);
+        return NULL;
+    }
+    key_value = __Pyx_PyIndex_AsSsize_t(index);
+    if (likely(key_value != -1 || !(runerr = PyErr_Occurred()))) {
+        return __Pyx_GetItemInt_Fast(obj, key_value, 0, 1, 1);
+    }
+    if (PyErr_GivenExceptionMatches(runerr, PyExc_OverflowError)) {
+        PyErr_Clear();
+        PyErr_Format(PyExc_IndexError, "cannot fit '%.200s' into an index-sized integer", Py_TYPE(index)->tp_name);
+    }
+    return NULL;
+}
+static PyObject *__Pyx_PyObject_GetItem(PyObject *obj, PyObject* key) {
+    PyMappingMethods *m = Py_TYPE(obj)->tp_as_mapping;
+    if (likely(m && m->mp_subscript)) {
+        return m->mp_subscript(obj, key);
+    }
+    return __Pyx_PyObject_GetIndex(obj, key);
+}
+#endif
 
 /* DictGetItem */
 #if PY_MAJOR_VERSION >= 3 && !CYTHON_COMPILING_IN_PYPY

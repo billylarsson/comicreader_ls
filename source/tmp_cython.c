@@ -1209,6 +1209,7 @@ static const char __pyx_k_module[] = "__module__";
 static const char __pyx_k_return[] = "return";
 static const char __pyx_k_QWidget[] = "QWidget";
 static const char __pyx_k_prepare[] = "__prepare__";
+static const char __pyx_k_database[] = "database";
 static const char __pyx_k_qualname[] = "__qualname__";
 static const char __pyx_k_FUCK_YEAR[] = "FUCK YEAR!";
 static const char __pyx_k_QtWidgets[] = "QtWidgets";
@@ -1219,6 +1220,7 @@ static const char __pyx_k_volumes_lw[] = "volumes_lw";
 static const char __pyx_k_QMouseEvent[] = "QMouseEvent";
 static const char __pyx_k_fuck___init[] = "fuck.__init__";
 static const char __pyx_k_mousePressEvent[] = "mousePressEvent";
+static const char __pyx_k_alternative_covers[] = "alternative_covers";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_fuck_mousePressEvent[] = "fuck.mousePressEvent";
 static const char __pyx_k_small_flexible_tunnel[] = "small_flexible_tunnel";
@@ -1231,7 +1233,9 @@ static PyObject *__pyx_n_s_QWidget;
 static PyObject *__pyx_n_s_QtCore;
 static PyObject *__pyx_n_s_QtGui;
 static PyObject *__pyx_n_s_QtWidgets;
+static PyObject *__pyx_n_s_alternative_covers;
 static PyObject *__pyx_n_s_cline_in_traceback;
+static PyObject *__pyx_n_s_database;
 static PyObject *__pyx_n_s_doc;
 static PyObject *__pyx_n_s_ev;
 static PyObject *__pyx_n_s_fuck;
@@ -1542,7 +1546,7 @@ static PyObject *__pyx_pf_10tmp_cython_4fuck_2mousePressEvent(CYTHON_UNUSED PyOb
  * 
  * def small_flexible_tunnel(self):             # <<<<<<<<<<<<<<
  *     from tmp_python import small_flexible_tunnel_two
- *     small_flexible_tunnel_two(self)
+ *     small_flexible_tunnel_two(self, self.database, self.alternative_covers)
  */
 
 /* Python wrapper */
@@ -1566,6 +1570,10 @@ static PyObject *__pyx_pf_10tmp_cython_small_flexible_tunnel(CYTHON_UNUSED PyObj
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
+  PyObject *__pyx_t_4 = NULL;
+  PyObject *__pyx_t_5 = NULL;
+  int __pyx_t_6;
+  PyObject *__pyx_t_7 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -1575,7 +1583,7 @@ static PyObject *__pyx_pf_10tmp_cython_small_flexible_tunnel(CYTHON_UNUSED PyObj
  * 
  * def small_flexible_tunnel(self):
  *     from tmp_python import small_flexible_tunnel_two             # <<<<<<<<<<<<<<
- *     small_flexible_tunnel_two(self)
+ *     small_flexible_tunnel_two(self, self.database, self.alternative_covers)
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -1595,24 +1603,65 @@ static PyObject *__pyx_pf_10tmp_cython_small_flexible_tunnel(CYTHON_UNUSED PyObj
   /* "tmp_cython.pyx":11
  * def small_flexible_tunnel(self):
  *     from tmp_python import small_flexible_tunnel_two
- *     small_flexible_tunnel_two(self)             # <<<<<<<<<<<<<<
+ *     small_flexible_tunnel_two(self, self.database, self.alternative_covers)             # <<<<<<<<<<<<<<
  */
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_database); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_alternative_covers); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_small_flexible_tunnel_two);
-  __pyx_t_1 = __pyx_v_small_flexible_tunnel_two; __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_3);
+  __pyx_t_4 = __pyx_v_small_flexible_tunnel_two; __pyx_t_5 = NULL;
+  __pyx_t_6 = 0;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+      __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
+      __Pyx_DECREF_SET(__pyx_t_4, function);
+      __pyx_t_6 = 1;
     }
   }
-  __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_3, __pyx_v_self) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_self);
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  #if CYTHON_FAST_PYCALL
+  if (PyFunction_Check(__pyx_t_4)) {
+    PyObject *__pyx_temp[4] = {__pyx_t_5, __pyx_v_self, __pyx_t_1, __pyx_t_3};
+    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 3+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else
+  #endif
+  #if CYTHON_FAST_PYCCALL
+  if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
+    PyObject *__pyx_temp[4] = {__pyx_t_5, __pyx_v_self, __pyx_t_1, __pyx_t_3};
+    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 3+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  } else
+  #endif
+  {
+    __pyx_t_7 = PyTuple_New(3+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 11, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    if (__pyx_t_5) {
+      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
+    }
+    __Pyx_INCREF(__pyx_v_self);
+    __Pyx_GIVEREF(__pyx_v_self);
+    PyTuple_SET_ITEM(__pyx_t_7, 0+__pyx_t_6, __pyx_v_self);
+    __Pyx_GIVEREF(__pyx_t_1);
+    PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_t_1);
+    __Pyx_GIVEREF(__pyx_t_3);
+    PyTuple_SET_ITEM(__pyx_t_7, 2+__pyx_t_6, __pyx_t_3);
+    __pyx_t_1 = 0;
+    __pyx_t_3 = 0;
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+  }
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /* "tmp_cython.pyx":9
@@ -1620,7 +1669,7 @@ static PyObject *__pyx_pf_10tmp_cython_small_flexible_tunnel(CYTHON_UNUSED PyObj
  * 
  * def small_flexible_tunnel(self):             # <<<<<<<<<<<<<<
  *     from tmp_python import small_flexible_tunnel_two
- *     small_flexible_tunnel_two(self)
+ *     small_flexible_tunnel_two(self, self.database, self.alternative_covers)
  */
 
   /* function exit code */
@@ -1630,6 +1679,9 @@ static PyObject *__pyx_pf_10tmp_cython_small_flexible_tunnel(CYTHON_UNUSED PyObj
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
+  __Pyx_XDECREF(__pyx_t_5);
+  __Pyx_XDECREF(__pyx_t_7);
   __Pyx_AddTraceback("tmp_cython.small_flexible_tunnel", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -1692,7 +1744,9 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_QtCore, __pyx_k_QtCore, sizeof(__pyx_k_QtCore), 0, 0, 1, 1},
   {&__pyx_n_s_QtGui, __pyx_k_QtGui, sizeof(__pyx_k_QtGui), 0, 0, 1, 1},
   {&__pyx_n_s_QtWidgets, __pyx_k_QtWidgets, sizeof(__pyx_k_QtWidgets), 0, 0, 1, 1},
+  {&__pyx_n_s_alternative_covers, __pyx_k_alternative_covers, sizeof(__pyx_k_alternative_covers), 0, 0, 1, 1},
   {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
+  {&__pyx_n_s_database, __pyx_k_database, sizeof(__pyx_k_database), 0, 0, 1, 1},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
   {&__pyx_n_s_ev, __pyx_k_ev, sizeof(__pyx_k_ev), 0, 0, 1, 1},
   {&__pyx_n_s_fuck, __pyx_k_fuck, sizeof(__pyx_k_fuck), 0, 0, 1, 1},
@@ -1773,7 +1827,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  * 
  * def small_flexible_tunnel(self):             # <<<<<<<<<<<<<<
  *     from tmp_python import small_flexible_tunnel_two
- *     small_flexible_tunnel_two(self)
+ *     small_flexible_tunnel_two(self, self.database, self.alternative_covers)
  */
   __pyx_tuple__6 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_small_flexible_tunnel_two); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
@@ -2183,7 +2237,7 @@ if (!__Pyx_RefNanny) {
  * 
  * def small_flexible_tunnel(self):             # <<<<<<<<<<<<<<
  *     from tmp_python import small_flexible_tunnel_two
- *     small_flexible_tunnel_two(self)
+ *     small_flexible_tunnel_two(self, self.database, self.alternative_covers)
  */
   __pyx_t_2 = PyCFunction_NewEx(&__pyx_mdef_10tmp_cython_1small_flexible_tunnel, NULL, __pyx_n_s_tmp_cython); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
