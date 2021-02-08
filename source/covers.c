@@ -6735,7 +6735,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_6mousePressEvent(CYTHON_UNUSED P
  *                 menu = QMenu()
  * 
  *                 if tech.apikey() != False:             # <<<<<<<<<<<<<<
- *                     cv_widget       = menu.addAction("Comicvine Widget")
+ *                     cv_widget = menu.addAction("Comicvine Widget")
  *                     menu.addSeparator()
  */
       __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_tech); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 162, __pyx_L1_error)
@@ -6767,7 +6767,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_6mousePressEvent(CYTHON_UNUSED P
         /* "covers.pyx":163
  * 
  *                 if tech.apikey() != False:
- *                     cv_widget       = menu.addAction("Comicvine Widget")             # <<<<<<<<<<<<<<
+ *                     cv_widget = menu.addAction("Comicvine Widget")             # <<<<<<<<<<<<<<
  *                     menu.addSeparator()
  * 
  */
@@ -6793,7 +6793,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_6mousePressEvent(CYTHON_UNUSED P
 
         /* "covers.pyx":164
  *                 if tech.apikey() != False:
- *                     cv_widget       = menu.addAction("Comicvine Widget")
+ *                     cv_widget = menu.addAction("Comicvine Widget")
  *                     menu.addSeparator()             # <<<<<<<<<<<<<<
  * 
  *                     if self.database[DB.comic_id] != None and self.main.check_alternative_covers.isChecked() == True:
@@ -7424,7 +7424,7 @@ static PyObject *__pyx_pf_6covers_11CoverWidget_6mousePressEvent(CYTHON_UNUSED P
  *                 menu = QMenu()
  * 
  *                 if tech.apikey() != False:             # <<<<<<<<<<<<<<
- *                     cv_widget       = menu.addAction("Comicvine Widget")
+ *                     cv_widget = menu.addAction("Comicvine Widget")
  *                     menu.addSeparator()
  */
       }
