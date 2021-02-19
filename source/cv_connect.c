@@ -1341,6 +1341,12 @@ static CYTHON_INLINE PyObject* __Pyx_PyUnicode_From_Py_ssize_t(Py_ssize_t value,
 /* PyUnicode_Unicode.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyUnicode_Unicode(PyObject *obj);
 
+/* PySequenceContains.proto */
+static CYTHON_INLINE int __Pyx_PySequence_ContainsTF(PyObject* item, PyObject* seq, int eq) {
+    int result = PySequence_Contains(seq, item);
+    return unlikely(result < 0) ? result : (result == (eq == Py_EQ));
+}
+
 /* Import.proto */
 static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
 
@@ -1466,10 +1472,10 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value);
 
 /* CIntFromPy.proto */
-static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
+static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
 
 /* CIntFromPy.proto */
-static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
+static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
 
 /* CheckBinaryVersion.proto */
 static int __Pyx_check_binary_version(void);
@@ -1492,6 +1498,8 @@ static PyObject *__pyx_builtin_open;
 static PyObject *__pyx_builtin_print;
 static PyObject *__pyx_builtin_round;
 static PyObject *__pyx_builtin_super;
+static PyObject *__pyx_builtin_range;
+static PyObject *__pyx_builtin_AttributeError;
 static const char __pyx_k_f[] = "f";
 static const char __pyx_k_i[] = "i";
 static const char __pyx_k_r[] = "r";
@@ -1540,6 +1548,7 @@ static const char __pyx_k_name[] = "name";
 static const char __pyx_k_open[] = "open";
 static const char __pyx_k_path[] = "path";
 static const char __pyx_k_self[] = "self";
+static const char __pyx_k_show[] = "show";
 static const char __pyx_k_size[] = "\tsize: ";
 static const char __pyx_k_tech[] = "tech";
 static const char __pyx_k_test[] = "__test__";
@@ -1547,9 +1556,11 @@ static const char __pyx_k_time[] = "time";
 static const char __pyx_k_FALSE[] = "FALSE";
 static const char __pyx_k_GREEN[] = "GREEN";
 static const char __pyx_k_PyQt5[] = "PyQt5";
+static const char __pyx_k_Theme[] = "Theme";
 static const char __pyx_k_clear[] = "clear";
 static const char __pyx_k_color[] = "color";
 static const char __pyx_k_count[] = "count";
+static const char __pyx_k_cover[] = "cover";
 static const char __pyx_k_cycle[] = "cycle";
 static const char __pyx_k_enter[] = "__enter__";
 static const char __pyx_k_force[] = "force";
@@ -1558,6 +1569,7 @@ static const char __pyx_k_items[] = "items";
 static const char __pyx_k_mkdir[] = "mkdir";
 static const char __pyx_k_print[] = "print";
 static const char __pyx_k_query[] = "query";
+static const char __pyx_k_range[] = "range";
 static const char __pyx_k_rfind[] = "rfind";
 static const char __pyx_k_round[] = "round";
 static const char __pyx_k_sleep[] = "sleep";
@@ -1575,6 +1587,7 @@ static const char __pyx_k_apikey[] = "apikey";
 static const char __pyx_k_append[] = "append";
 static const char __pyx_k_column[] = "column";
 static const char __pyx_k_comics[] = "comics";
+static const char __pyx_k_covers[] = "covers";
 static const char __pyx_k_exists[] = "exists";
 static const char __pyx_k_fields[] = "fields";
 static const char __pyx_k_filter[] = "filter";
@@ -1594,6 +1607,7 @@ static const char __pyx_k_remove[] = "remove";
 static const char __pyx_k_status[] = "status";
 static const char __pyx_k_stored[] = "stored: ";
 static const char __pyx_k_system[] = "system";
+static const char __pyx_k_takeAt[] = "takeAt";
 static const char __pyx_k_tricks[] = "tricks";
 static const char __pyx_k_update[] = "update";
 static const char __pyx_k_values[] = "values";
@@ -1607,6 +1621,7 @@ static const char __pyx_k_api_key[] = "?api_key=";
 static const char __pyx_k_clicked[] = "clicked";
 static const char __pyx_k_connect[] = "connect";
 static const char __pyx_k_cv_dict[] = "cv_dict";
+static const char __pyx_k_cv_link[] = "cv_link";
 static const char __pyx_k_eachkey[] = "eachkey";
 static const char __pyx_k_execute[] = "execute";
 static const char __pyx_k_filters[] = "filters";
@@ -1615,6 +1630,7 @@ static const char __pyx_k_headers[] = "headers";
 static const char __pyx_k_id_none[] = "id_none";
 static const char __pyx_k_isdigit[] = "isdigit";
 static const char __pyx_k_md5data[] = "md5data";
+static const char __pyx_k_newdata[] = "newdata";
 static const char __pyx_k_parents[] = "parents";
 static const char __pyx_k_pathlib[] = "pathlib";
 static const char __pyx_k_prepare[] = "__prepare__";
@@ -1627,6 +1643,7 @@ static const char __pyx_k_APICOUNT[] = "[APICOUNT:";
 static const char __pyx_k_KeyError[] = "KeyError";
 static const char __pyx_k_Skipping[] = "Skipping: ";
 static const char __pyx_k_comic_id[] = "comic_id";
+static const char __pyx_k_database[] = "database";
 static const char __pyx_k_db_input[] = "db_input";
 static const char __pyx_k_drawlist[] = "drawlist";
 static const char __pyx_k_eachcard[] = "eachcard";
@@ -1641,10 +1658,12 @@ static const char __pyx_k_platform[] = "platform";
 static const char __pyx_k_qualname[] = "__qualname__";
 static const char __pyx_k_requests[] = "requests";
 static const char __pyx_k_response[] = "response";
+static const char __pyx_k_standard[] = "standard";
 static const char __pyx_k_where_id[] = " = (?) where id = (?)";
 static const char __pyx_k_ComicVine[] = "ComicVine";
 static const char __pyx_k_QtWidgets[] = "QtWidgets";
 static const char __pyx_k_checkdata[] = "checkdata";
+static const char __pyx_k_cv_link_x[] = "cv_link_x";
 static const char __pyx_k_eachfield[] = "eachfield";
 static const char __pyx_k_id_update[] = "id_update";
 static const char __pyx_k_import_te[] = "import_te";
@@ -1658,8 +1677,10 @@ static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_cache_date[] = "cache_date";
 static const char __pyx_k_comic_name[] = "comic_name";
 static const char __pyx_k_cv_connect[] = "cv_connect";
+static const char __pyx_k_eachwidget[] = "eachwidget";
 static const char __pyx_k_longstring[] = "longstring";
 static const char __pyx_k_org_string[] = "org_string";
+static const char __pyx_k_starlayout[] = "starlayout";
 static const char __pyx_k_styleSheet[] = "styleSheet";
 static const char __pyx_k_tmp_python[] = "tmp_python";
 static const char __pyx_k_user_paste[] = "user_paste";
@@ -1675,8 +1696,10 @@ static const char __pyx_k_toPlainText[] = "toPlainText";
 static const char __pyx_k_user_rating[] = "user_rating";
 static const char __pyx_k_Page_results[] = "\tPage results: ";
 static const char __pyx_k_force_update[] = "force_update";
+static const char __pyx_k_height_taken[] = "height_taken";
 static const char __pyx_k_issue_number[] = "issue_number";
 static const char __pyx_k_load_results[] = "load_results";
+static const char __pyx_k_make_cv_link[] = "make_cv_link";
 static const char __pyx_k_results_from[] = "results from ";
 static const char __pyx_k_savelocation[] = "savelocation";
 static const char __pyx_k_setPlainText[] = "setPlainText";
@@ -1690,6 +1713,7 @@ static const char __pyx_k_string_normer[] = "string_normer";
 static const char __pyx_k_timeconverter[] = "timeconverter";
 static const char __pyx_k_update_column[] = "update_column";
 static const char __pyx_k_API_statuscode[] = " -> API statuscode: ";
+static const char __pyx_k_AttributeError[] = "AttributeError";
 static const char __pyx_k_Page_results_2[] = "| Page results: ";
 static const char __pyx_k_api_detail_url[] = "api_detail_url";
 static const char __pyx_k_extract_issues[] = "extract_issues";
@@ -1709,6 +1733,7 @@ static const char __pyx_k_advanced_seardch[] = "advanced_seardch";
 static const char __pyx_k_any_rating_radio[] = "any_rating_radio";
 static const char __pyx_k_check_ignore_md5[] = "check_ignore_md5";
 static const char __pyx_k_latest_API_usage[] = "latest API usage ";
+static const char __pyx_k_make_stars_relay[] = "make_stars_relay";
 static const char __pyx_k_refresh_comic_id[] = "refresh_comic_id";
 static const char __pyx_k_sqliteconnection[] = "sqliteconnection";
 static const char __pyx_k_comicvine_request[] = "comicvine_request";
@@ -1743,6 +1768,7 @@ static const char __pyx_k_ComicIdImportExport___init[] = "ComicIdImportExport.__
 static const char __pyx_k_ComicVine_refresh_comic_id[] = "ComicVine.refresh_comic_id";
 static const char __pyx_k_ComicVine_comicvine_request[] = "ComicVine.comicvine_request";
 static const char __pyx_k_ComicVine_generate_filename[] = "ComicVine.generate_filename";
+static const char __pyx_k_select_from_comics_where_id[] = "select * from comics where id = (?)";
 static const char __pyx_k_new_comicvine_id_and_updated[] = " new comicvine id and updated ";
 static const char __pyx_k_gui_import_export_comic_id_ui[] = "./gui/import_export_comic_id.ui";
 static const char __pyx_k_import_other_rating_radio_one[] = "import_other_rating_radio_one";
@@ -1768,6 +1794,7 @@ static PyObject *__pyx_kp_u_APICOUNT;
 static PyObject *__pyx_kp_u_API_ConnectionError_count;
 static PyObject *__pyx_kp_u_API_needed_sleep;
 static PyObject *__pyx_kp_u_API_statuscode;
+static PyObject *__pyx_n_s_AttributeError;
 static PyObject *__pyx_n_s_BLUE;
 static PyObject *__pyx_n_s_CYAN;
 static PyObject *__pyx_n_s_C_volume_id;
@@ -1810,6 +1837,7 @@ static PyObject *__pyx_n_s_RED;
 static PyObject *__pyx_kp_u_STATUS;
 static PyObject *__pyx_kp_u_Skipping;
 static PyObject *__pyx_n_u_TRUE;
+static PyObject *__pyx_n_s_Theme;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_n_u_Windows;
 static PyObject *__pyx_n_u_XXX;
@@ -1851,12 +1879,19 @@ static PyObject *__pyx_n_u_comic_name;
 static PyObject *__pyx_n_u_comics;
 static PyObject *__pyx_n_s_comicvine_request;
 static PyObject *__pyx_n_s_connect;
+static PyObject *__pyx_n_s_count;
 static PyObject *__pyx_n_u_count;
+static PyObject *__pyx_n_s_cover;
+static PyObject *__pyx_n_s_covers;
 static PyObject *__pyx_n_s_current_long_string;
 static PyObject *__pyx_n_s_cv_connect;
 static PyObject *__pyx_n_s_cv_dict;
+static PyObject *__pyx_n_s_cv_link;
+static PyObject *__pyx_n_u_cv_link;
+static PyObject *__pyx_n_s_cv_link_x;
 static PyObject *__pyx_n_s_cycle;
 static PyObject *__pyx_n_s_data;
+static PyObject *__pyx_n_s_database;
 static PyObject *__pyx_n_s_db_input;
 static PyObject *__pyx_n_s_doc;
 static PyObject *__pyx_n_s_draw_export_from_drawlist;
@@ -1866,6 +1901,7 @@ static PyObject *__pyx_n_s_eachcard;
 static PyObject *__pyx_n_s_eachfield;
 static PyObject *__pyx_n_s_eachform;
 static PyObject *__pyx_n_s_eachkey;
+static PyObject *__pyx_n_s_eachwidget;
 static PyObject *__pyx_n_s_empty_insert_query;
 static PyObject *__pyx_n_s_enter;
 static PyObject *__pyx_n_s_execute;
@@ -1893,6 +1929,7 @@ static PyObject *__pyx_n_s_getsize;
 static PyObject *__pyx_kp_u_gui_import_export_comic_id_ui;
 static PyObject *__pyx_n_s_header;
 static PyObject *__pyx_n_s_headers;
+static PyObject *__pyx_n_s_height_taken;
 static PyObject *__pyx_kp_s_home_plutonergy_Coding_CComicRe;
 static PyObject *__pyx_kp_u_https_comicvine_gamespot_com_api;
 static PyObject *__pyx_kp_u_https_comicvine_gamespot_com_api_2;
@@ -1936,6 +1973,8 @@ static PyObject *__pyx_n_u_local_file_date_unixtime;
 static PyObject *__pyx_n_s_longstring;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_main_2;
+static PyObject *__pyx_n_s_make_cv_link;
+static PyObject *__pyx_n_s_make_stars_relay;
 static PyObject *__pyx_kp_u_mb;
 static PyObject *__pyx_n_s_md5;
 static PyObject *__pyx_n_s_md5data;
@@ -1947,6 +1986,7 @@ static PyObject *__pyx_kp_u_ms_ago;
 static PyObject *__pyx_n_u_name;
 static PyObject *__pyx_n_s_name_2;
 static PyObject *__pyx_kp_u_new_comicvine_id_and_updated;
+static PyObject *__pyx_n_s_newdata;
 static PyObject *__pyx_n_s_newstring;
 static PyObject *__pyx_n_s_no_rating_radio;
 static PyObject *__pyx_n_u_number_of_page_results;
@@ -1969,6 +2009,7 @@ static PyObject *__pyx_n_s_printdata;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_query;
 static PyObject *__pyx_n_u_r;
+static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_rating;
 static PyObject *__pyx_n_u_rating_none;
 static PyObject *__pyx_n_u_rating_update;
@@ -1989,11 +2030,13 @@ static PyObject *__pyx_n_s_rfind;
 static PyObject *__pyx_n_s_round;
 static PyObject *__pyx_n_s_savelocation;
 static PyObject *__pyx_kp_u_select_from_comics_where_comic_i;
+static PyObject *__pyx_kp_u_select_from_comics_where_id;
 static PyObject *__pyx_kp_u_select_from_comics_where_md5_or;
 static PyObject *__pyx_n_s_self;
 static PyObject *__pyx_n_s_setPlainText;
 static PyObject *__pyx_n_s_setStyleSheet;
 static PyObject *__pyx_n_s_setWindowTitle;
+static PyObject *__pyx_n_s_show;
 static PyObject *__pyx_n_u_site_detail_url;
 static PyObject *__pyx_kp_u_size;
 static PyObject *__pyx_n_s_sleep;
@@ -2002,6 +2045,8 @@ static PyObject *__pyx_kp_u_sort_id_desc_format_json;
 static PyObject *__pyx_n_s_split;
 static PyObject *__pyx_n_s_sqliteconnection;
 static PyObject *__pyx_n_s_sqlitecursor;
+static PyObject *__pyx_n_u_standard;
+static PyObject *__pyx_n_s_starlayout;
 static PyObject *__pyx_n_u_starting_time;
 static PyObject *__pyx_n_s_status;
 static PyObject *__pyx_n_s_status_code;
@@ -2013,6 +2058,7 @@ static PyObject *__pyx_n_s_strip;
 static PyObject *__pyx_n_s_styleSheet;
 static PyObject *__pyx_n_s_super;
 static PyObject *__pyx_n_s_system;
+static PyObject *__pyx_n_s_takeAt;
 static PyObject *__pyx_n_s_tech;
 static PyObject *__pyx_n_s_test;
 static PyObject *__pyx_n_s_textChanged;
@@ -2060,6 +2106,7 @@ static __Pyx_CachedCFunction __pyx_umethod_PyUnicode_Type_strip = {0, &__pyx_n_s
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
+static PyObject *__pyx_int_5;
 static PyObject *__pyx_int_10;
 static PyObject *__pyx_int_11;
 static PyObject *__pyx_int_100;
@@ -9313,10 +9360,13 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
   PyObject *__pyx_v_longstring = 0;
   PyObject *__pyx_v_data = 0;
   PyObject *__pyx_v_status = 0;
+  int __pyx_v_count;
   PyObject *__pyx_v_checkdata = NULL;
   PyObject *__pyx_v_query = NULL;
   PyObject *__pyx_v_md5data = NULL;
   PyObject *__pyx_v_newstring = NULL;
+  PyObject *__pyx_v_eachwidget = NULL;
+  PyObject *__pyx_v_newdata = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -9337,6 +9387,8 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
   PyObject *__pyx_t_16 = NULL;
   PyObject *__pyx_t_17 = NULL;
   Py_UCS4 __pyx_t_18;
+  PyObject *(*__pyx_t_19)(PyObject *);
+  int __pyx_t_20;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -9360,7 +9412,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  *         cdef str org_string = self.current_long_string, i
  *         cdef list longstring = org_string.strip().split('\n'), data             # <<<<<<<<<<<<<<
  *         cdef dict status = {'id_none': 0, 'id_update': 0, 'rating_none': 0, 'rating_update': 0}
- *         for i in longstring:
+ *         cdef int count
  */
   __pyx_t_2 = __Pyx_CallUnboundCMethod0(&__pyx_umethod_PyUnicode_Type_strip, __pyx_v_org_string); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -9390,8 +9442,8 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  *         cdef str org_string = self.current_long_string, i
  *         cdef list longstring = org_string.strip().split('\n'), data
  *         cdef dict status = {'id_none': 0, 'id_update': 0, 'rating_none': 0, 'rating_update': 0}             # <<<<<<<<<<<<<<
- *         for i in longstring:
- *             data = i.split(':')
+ *         cdef int count
+ * 
  */
   __pyx_t_1 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 273, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
@@ -9402,32 +9454,32 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
   __pyx_v_status = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "cv_connect.pyx":274
- *         cdef list longstring = org_string.strip().split('\n'), data
- *         cdef dict status = {'id_none': 0, 'id_update': 0, 'rating_none': 0, 'rating_update': 0}
+  /* "cv_connect.pyx":276
+ *         cdef int count
+ * 
  *         for i in longstring:             # <<<<<<<<<<<<<<
  *             data = i.split(':')
  *             if len(data) > 1 and len(data[0]) == 32 and data[1].isdigit() == True:
  */
   if (unlikely(__pyx_v_longstring == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 274, __pyx_L1_error)
+    __PYX_ERR(0, 276, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_v_longstring; __Pyx_INCREF(__pyx_t_1); __pyx_t_4 = 0;
   for (;;) {
     if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 274, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 276, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 274, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
-    if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 274, __pyx_L1_error)
+    if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 276, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_i, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "cv_connect.pyx":275
- *         cdef dict status = {'id_none': 0, 'id_update': 0, 'rating_none': 0, 'rating_update': 0}
+    /* "cv_connect.pyx":277
+ * 
  *         for i in longstring:
  *             data = i.split(':')             # <<<<<<<<<<<<<<
  *             if len(data) > 1 and len(data[0]) == 32 and data[1].isdigit() == True:
@@ -9435,14 +9487,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
     if (unlikely(__pyx_v_i == Py_None)) {
       PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "split");
-      __PYX_ERR(0, 275, __pyx_L1_error)
+      __PYX_ERR(0, 277, __pyx_L1_error)
     }
-    __pyx_t_3 = PyUnicode_Split(__pyx_v_i, __pyx_kp_u__4, -1L); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 275, __pyx_L1_error)
+    __pyx_t_3 = PyUnicode_Split(__pyx_v_i, __pyx_kp_u__4, -1L); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_XDECREF_SET(__pyx_v_data, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "cv_connect.pyx":276
+    /* "cv_connect.pyx":278
  *         for i in longstring:
  *             data = i.split(':')
  *             if len(data) > 1 and len(data[0]) == 32 and data[1].isdigit() == True:             # <<<<<<<<<<<<<<
@@ -9451,9 +9503,9 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
     if (unlikely(__pyx_v_data == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 276, __pyx_L1_error)
+      __PYX_ERR(0, 278, __pyx_L1_error)
     }
-    __pyx_t_6 = PyList_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_6 = PyList_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 278, __pyx_L1_error)
     __pyx_t_7 = ((__pyx_t_6 > 1) != 0);
     if (__pyx_t_7) {
     } else {
@@ -9462,11 +9514,11 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
     }
     if (unlikely(__pyx_v_data == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 276, __pyx_L1_error)
+      __PYX_ERR(0, 278, __pyx_L1_error)
     }
-    __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_6 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_6 = PyObject_Length(__pyx_t_3); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_7 = ((__pyx_t_6 == 32) != 0);
     if (__pyx_t_7) {
@@ -9476,11 +9528,11 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
     }
     if (unlikely(__pyx_v_data == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 276, __pyx_L1_error)
+      __PYX_ERR(0, 278, __pyx_L1_error)
     }
-    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isdigit); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isdigit); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -9495,42 +9547,42 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = PyObject_RichCompare(__pyx_t_3, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_8 = PyObject_RichCompare(__pyx_t_3, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 276, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 278, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __pyx_t_5 = __pyx_t_7;
     __pyx_L6_bool_binop_done:;
     if (__pyx_t_5) {
 
-      /* "cv_connect.pyx":277
+      /* "cv_connect.pyx":279
  *             data = i.split(':')
  *             if len(data) > 1 and len(data[0]) == 32 and data[1].isdigit() == True:
  *                 sqlitecursor.execute('select * from comics where md5 = (?) or comic_id = (?)', (data[0],data[1],))             # <<<<<<<<<<<<<<
  *                 checkdata = sqlitecursor.fetchone()
  *                 if checkdata == None:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_execute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 277, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_execute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 279, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (unlikely(__pyx_v_data == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 277, __pyx_L1_error)
+        __PYX_ERR(0, 279, __pyx_L1_error)
       }
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       if (unlikely(__pyx_v_data == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 277, __pyx_L1_error)
+        __PYX_ERR(0, 279, __pyx_L1_error)
       }
-      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 277, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 279, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 277, __pyx_L1_error)
+      __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 279, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_GIVEREF(__pyx_t_3);
       PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_3);
@@ -9553,7 +9605,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_kp_u_select_from_comics_where_md5_or, __pyx_t_10};
-        __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 277, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 279, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -9562,14 +9614,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_kp_u_select_from_comics_where_md5_or, __pyx_t_10};
-        __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 277, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 279, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       } else
       #endif
       {
-        __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         if (__pyx_t_9) {
           __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -9580,23 +9632,23 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
         __Pyx_GIVEREF(__pyx_t_10);
         PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_11, __pyx_t_10);
         __pyx_t_10 = 0;
-        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 277, __pyx_L1_error)
+        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 279, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "cv_connect.pyx":278
+      /* "cv_connect.pyx":280
  *             if len(data) > 1 and len(data[0]) == 32 and data[1].isdigit() == True:
  *                 sqlitecursor.execute('select * from comics where md5 = (?) or comic_id = (?)', (data[0],data[1],))
  *                 checkdata = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *                 if checkdata == None:
  *                     continue
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 278, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 278, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 280, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_2 = NULL;
@@ -9611,25 +9663,25 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
       }
       __pyx_t_8 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 278, __pyx_L1_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 280, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF_SET(__pyx_v_checkdata, __pyx_t_8);
       __pyx_t_8 = 0;
 
-      /* "cv_connect.pyx":279
+      /* "cv_connect.pyx":281
  *                 sqlitecursor.execute('select * from comics where md5 = (?) or comic_id = (?)', (data[0],data[1],))
  *                 checkdata = sqlitecursor.fetchone()
  *                 if checkdata == None:             # <<<<<<<<<<<<<<
  *                     continue
  *                 with sqliteconnection:
  */
-      __pyx_t_8 = PyObject_RichCompare(__pyx_v_checkdata, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 279, __pyx_L1_error)
-      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_8 = PyObject_RichCompare(__pyx_v_checkdata, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 281, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       if (__pyx_t_5) {
 
-        /* "cv_connect.pyx":280
+        /* "cv_connect.pyx":282
  *                 checkdata = sqlitecursor.fetchone()
  *                 if checkdata == None:
  *                     continue             # <<<<<<<<<<<<<<
@@ -9638,7 +9690,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
         goto __pyx_L3_continue;
 
-        /* "cv_connect.pyx":279
+        /* "cv_connect.pyx":281
  *                 sqlitecursor.execute('select * from comics where md5 = (?) or comic_id = (?)', (data[0],data[1],))
  *                 checkdata = sqlitecursor.fetchone()
  *                 if checkdata == None:             # <<<<<<<<<<<<<<
@@ -9647,7 +9699,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
       }
 
-      /* "cv_connect.pyx":281
+      /* "cv_connect.pyx":283
  *                 if checkdata == None:
  *                     continue
  *                 with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -9655,11 +9707,11 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  *                         sqlitecursor.execute('update comics set comic_id = (?) where id = (?)', (data[1], checkdata[0],))
  */
       /*with:*/ {
-        __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 281, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 283, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
-        __pyx_t_12 = __Pyx_PyObject_LookupSpecial(__pyx_t_8, __pyx_n_s_exit); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 281, __pyx_L1_error)
+        __pyx_t_12 = __Pyx_PyObject_LookupSpecial(__pyx_t_8, __pyx_n_s_exit); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 283, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_12);
-        __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_8, __pyx_n_s_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L10_error)
+        __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_8, __pyx_n_s_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 283, __pyx_L10_error)
         __Pyx_GOTREF(__pyx_t_2);
         __pyx_t_10 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -9673,7 +9725,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
         }
         __pyx_t_3 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
         __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L10_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 283, __pyx_L10_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -9688,48 +9740,48 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
             __Pyx_XGOTREF(__pyx_t_15);
             /*try:*/ {
 
-              /* "cv_connect.pyx":282
+              /* "cv_connect.pyx":284
  *                     continue
  *                 with sqliteconnection:
  *                     if checkdata[DB.comic_id] == None:             # <<<<<<<<<<<<<<
  *                         sqlitecursor.execute('update comics set comic_id = (?) where id = (?)', (data[1], checkdata[0],))
  *                         status['id_none'] += 1
  */
-              __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_DB); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 282, __pyx_L16_error)
+              __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_DB); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 284, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_8);
-              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 282, __pyx_L16_error)
+              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-              __pyx_t_8 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 282, __pyx_L16_error)
+              __pyx_t_8 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 284, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_8);
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-              __pyx_t_3 = PyObject_RichCompare(__pyx_t_8, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 282, __pyx_L16_error)
+              __pyx_t_3 = PyObject_RichCompare(__pyx_t_8, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L16_error)
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-              __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 282, __pyx_L16_error)
+              __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 284, __pyx_L16_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               if (__pyx_t_5) {
 
-                /* "cv_connect.pyx":283
+                /* "cv_connect.pyx":285
  *                 with sqliteconnection:
  *                     if checkdata[DB.comic_id] == None:
  *                         sqlitecursor.execute('update comics set comic_id = (?) where id = (?)', (data[1], checkdata[0],))             # <<<<<<<<<<<<<<
  *                         status['id_none'] += 1
  * 
  */
-                __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 283, __pyx_L16_error)
+                __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 285, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_8);
-                __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 283, __pyx_L16_error)
+                __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 285, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                 if (unlikely(__pyx_v_data == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 283, __pyx_L16_error)
+                  __PYX_ERR(0, 285, __pyx_L16_error)
                 }
-                __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 283, __pyx_L16_error)
+                __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 285, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_8);
-                __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 283, __pyx_L16_error)
+                __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 285, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_10);
-                __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 283, __pyx_L16_error)
+                __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 285, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_9);
                 __Pyx_GIVEREF(__pyx_t_8);
                 PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_8);
@@ -9752,7 +9804,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 #if CYTHON_FAST_PYCALL
                 if (PyFunction_Check(__pyx_t_2)) {
                   PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_kp_u_update_comics_set_comic_id_where, __pyx_t_9};
-                  __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 283, __pyx_L16_error)
+                  __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L16_error)
                   __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
                   __Pyx_GOTREF(__pyx_t_3);
                   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -9761,14 +9813,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 #if CYTHON_FAST_PYCCALL
                 if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
                   PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_kp_u_update_comics_set_comic_id_where, __pyx_t_9};
-                  __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 283, __pyx_L16_error)
+                  __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L16_error)
                   __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
                   __Pyx_GOTREF(__pyx_t_3);
                   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
                 } else
                 #endif
                 {
-                  __pyx_t_8 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 283, __pyx_L16_error)
+                  __pyx_t_8 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 285, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_8);
                   if (__pyx_t_10) {
                     __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_10); __pyx_t_10 = NULL;
@@ -9779,14 +9831,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                   __Pyx_GIVEREF(__pyx_t_9);
                   PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_11, __pyx_t_9);
                   __pyx_t_9 = 0;
-                  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 283, __pyx_L16_error)
+                  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_3);
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                 }
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-                /* "cv_connect.pyx":284
+                /* "cv_connect.pyx":286
  *                     if checkdata[DB.comic_id] == None:
  *                         sqlitecursor.execute('update comics set comic_id = (?) where id = (?)', (data[1], checkdata[0],))
  *                         status['id_none'] += 1             # <<<<<<<<<<<<<<
@@ -9795,16 +9847,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                 __Pyx_INCREF(__pyx_n_u_id_none);
                 __pyx_t_16 = __pyx_n_u_id_none;
-                __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L16_error)
+                __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L16_error)
+                __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_2) < 0)) __PYX_ERR(0, 284, __pyx_L16_error)
+                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_2) < 0)) __PYX_ERR(0, 286, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-                /* "cv_connect.pyx":282
+                /* "cv_connect.pyx":284
  *                     continue
  *                 with sqliteconnection:
  *                     if checkdata[DB.comic_id] == None:             # <<<<<<<<<<<<<<
@@ -9814,56 +9866,56 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 goto __pyx_L24;
               }
 
-              /* "cv_connect.pyx":286
+              /* "cv_connect.pyx":288
  *                         status['id_none'] += 1
  * 
  *                     elif str(checkdata[DB.comic_id]) != data[1]:             # <<<<<<<<<<<<<<
  *                         sqlitecursor.execute('update comics set comic_id = (?) where id = (?)', (data[1], checkdata[0],))
  *                         status['id_update'] += 1
  */
-              __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L16_error)
+              __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_2);
-              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L16_error)
+              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-              __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L16_error)
+              __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_2);
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-              __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L16_error)
+              __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
               if (unlikely(__pyx_v_data == Py_None)) {
                 PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                __PYX_ERR(0, 286, __pyx_L16_error)
+                __PYX_ERR(0, 288, __pyx_L16_error)
               }
-              __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L16_error)
+              __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_2);
-              __pyx_t_5 = (__Pyx_PyUnicode_Equals(__pyx_t_3, __pyx_t_2, Py_NE)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 286, __pyx_L16_error)
+              __pyx_t_5 = (__Pyx_PyUnicode_Equals(__pyx_t_3, __pyx_t_2, Py_NE)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 288, __pyx_L16_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
               if (__pyx_t_5) {
 
-                /* "cv_connect.pyx":287
+                /* "cv_connect.pyx":289
  * 
  *                     elif str(checkdata[DB.comic_id]) != data[1]:
  *                         sqlitecursor.execute('update comics set comic_id = (?) where id = (?)', (data[1], checkdata[0],))             # <<<<<<<<<<<<<<
  *                         status['id_update'] += 1
  * 
  */
-                __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 287, __pyx_L16_error)
+                __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_execute); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 287, __pyx_L16_error)
+                __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_execute); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 289, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_8);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                 if (unlikely(__pyx_v_data == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 287, __pyx_L16_error)
+                  __PYX_ERR(0, 289, __pyx_L16_error)
                 }
-                __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 287, __pyx_L16_error)
+                __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, 1, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_9 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 287, __pyx_L16_error)
+                __pyx_t_9 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 289, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_9);
-                __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 287, __pyx_L16_error)
+                __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 289, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_10);
                 __Pyx_GIVEREF(__pyx_t_3);
                 PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_3);
@@ -9886,7 +9938,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 #if CYTHON_FAST_PYCALL
                 if (PyFunction_Check(__pyx_t_8)) {
                   PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_kp_u_update_comics_set_comic_id_where, __pyx_t_10};
-                  __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L16_error)
+                  __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L16_error)
                   __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
                   __Pyx_GOTREF(__pyx_t_2);
                   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -9895,14 +9947,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 #if CYTHON_FAST_PYCCALL
                 if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
                   PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_kp_u_update_comics_set_comic_id_where, __pyx_t_10};
-                  __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L16_error)
+                  __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L16_error)
                   __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
                   __Pyx_GOTREF(__pyx_t_2);
                   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
                 } else
                 #endif
                 {
-                  __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 287, __pyx_L16_error)
+                  __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_3);
                   if (__pyx_t_9) {
                     __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -9913,14 +9965,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                   __Pyx_GIVEREF(__pyx_t_10);
                   PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_11, __pyx_t_10);
                   __pyx_t_10 = 0;
-                  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L16_error)
+                  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_2);
                   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                 }
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-                /* "cv_connect.pyx":288
+                /* "cv_connect.pyx":290
  *                     elif str(checkdata[DB.comic_id]) != data[1]:
  *                         sqlitecursor.execute('update comics set comic_id = (?) where id = (?)', (data[1], checkdata[0],))
  *                         status['id_update'] += 1             # <<<<<<<<<<<<<<
@@ -9929,16 +9981,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                 __Pyx_INCREF(__pyx_n_u_id_update);
                 __pyx_t_16 = __pyx_n_u_id_update;
-                __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L16_error)
+                __pyx_t_2 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_2);
-                __pyx_t_8 = __Pyx_PyInt_AddObjC(__pyx_t_2, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 288, __pyx_L16_error)
+                __pyx_t_8 = __Pyx_PyInt_AddObjC(__pyx_t_2, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 290, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_8);
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_8) < 0)) __PYX_ERR(0, 288, __pyx_L16_error)
+                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_8) < 0)) __PYX_ERR(0, 290, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                 __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-                /* "cv_connect.pyx":286
+                /* "cv_connect.pyx":288
  *                         status['id_none'] += 1
  * 
  *                     elif str(checkdata[DB.comic_id]) != data[1]:             # <<<<<<<<<<<<<<
@@ -9948,7 +10000,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
               }
               __pyx_L24:;
 
-              /* "cv_connect.pyx":290
+              /* "cv_connect.pyx":292
  *                         status['id_update'] += 1
  * 
  *                     if len(data) > 2 and data[2].isdigit() == True and self.import_no_rating_radio.isChecked() == False:             # <<<<<<<<<<<<<<
@@ -9957,9 +10009,9 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
               if (unlikely(__pyx_v_data == Py_None)) {
                 PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-                __PYX_ERR(0, 290, __pyx_L16_error)
+                __PYX_ERR(0, 292, __pyx_L16_error)
               }
-              __pyx_t_6 = PyList_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_6 = PyList_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 292, __pyx_L16_error)
               __pyx_t_7 = ((__pyx_t_6 > 2) != 0);
               if (__pyx_t_7) {
               } else {
@@ -9968,11 +10020,11 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
               }
               if (unlikely(__pyx_v_data == Py_None)) {
                 PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                __PYX_ERR(0, 290, __pyx_L16_error)
+                __PYX_ERR(0, 292, __pyx_L16_error)
               }
-              __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_2);
-              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isdigit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isdigit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
               __pyx_t_2 = NULL;
@@ -9987,21 +10039,21 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
               }
               __pyx_t_8 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
               __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-              if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 290, __pyx_L16_error)
+              if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_8);
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-              __pyx_t_3 = PyObject_RichCompare(__pyx_t_8, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_3 = PyObject_RichCompare(__pyx_t_8, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               if (__pyx_t_7) {
               } else {
                 __pyx_t_5 = __pyx_t_7;
                 goto __pyx_L26_bool_binop_done;
               }
-              __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_no_rating_radio); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_no_rating_radio); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_8);
-              __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_2);
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
               __pyx_t_8 = NULL;
@@ -10016,18 +10068,18 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
               }
               __pyx_t_3 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
               __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-              if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 290, __pyx_L16_error)
+              if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-              __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 290, __pyx_L16_error)
+              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 292, __pyx_L16_error)
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
               __pyx_t_5 = __pyx_t_7;
               __pyx_L26_bool_binop_done:;
               if (__pyx_t_5) {
 
-                /* "cv_connect.pyx":291
+                /* "cv_connect.pyx":293
  * 
  *                     if len(data) > 2 and data[2].isdigit() == True and self.import_no_rating_radio.isChecked() == False:
  *                         if int(data[2]) > 10 or int(data[2]) < 1:             # <<<<<<<<<<<<<<
@@ -10036,16 +10088,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                 if (unlikely(__pyx_v_data == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 291, __pyx_L16_error)
+                  __PYX_ERR(0, 293, __pyx_L16_error)
                 }
-                __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L16_error)
+                __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 293, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_2);
-                __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L16_error)
+                __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 293, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_int_10, Py_GT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L16_error)
+                __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_int_10, Py_GT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 293, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 291, __pyx_L16_error)
+                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 293, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 if (!__pyx_t_7) {
                 } else {
@@ -10054,22 +10106,22 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 }
                 if (unlikely(__pyx_v_data == Py_None)) {
                   PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                  __PYX_ERR(0, 291, __pyx_L16_error)
+                  __PYX_ERR(0, 293, __pyx_L16_error)
                 }
-                __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L16_error)
+                __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 293, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_2);
-                __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L16_error)
+                __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 293, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_int_1, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L16_error)
+                __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_int_1, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 293, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 291, __pyx_L16_error)
+                __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 293, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 __pyx_t_5 = __pyx_t_7;
                 __pyx_L30_bool_binop_done:;
                 if (__pyx_t_5) {
 
-                  /* "cv_connect.pyx":292
+                  /* "cv_connect.pyx":294
  *                     if len(data) > 2 and data[2].isdigit() == True and self.import_no_rating_radio.isChecked() == False:
  *                         if int(data[2]) > 10 or int(data[2]) < 1:
  *                             continue             # <<<<<<<<<<<<<<
@@ -10078,7 +10130,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                   goto __pyx_L22_try_continue;
 
-                  /* "cv_connect.pyx":291
+                  /* "cv_connect.pyx":293
  * 
  *                     if len(data) > 2 and data[2].isdigit() == True and self.import_no_rating_radio.isChecked() == False:
  *                         if int(data[2]) > 10 or int(data[2]) < 1:             # <<<<<<<<<<<<<<
@@ -10087,16 +10139,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                 }
 
-                /* "cv_connect.pyx":294
+                /* "cv_connect.pyx":296
  *                             continue
  * 
  *                         elif self.import_your_rating_radio.isChecked():             # <<<<<<<<<<<<<<
  *                             query = 'update comics set user_rating = (?) where id = (?)'
  *                             if checkdata[DB.user_rating] == None:
  */
-                __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_your_rating_radio); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L16_error)
+                __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_your_rating_radio); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 296, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 294, __pyx_L16_error)
+                __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 296, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_8);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                 __pyx_t_3 = NULL;
@@ -10111,14 +10163,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 }
                 __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_8);
                 __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-                if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 294, __pyx_L16_error)
+                if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 296, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 294, __pyx_L16_error)
+                __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 296, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 if (__pyx_t_5) {
 
-                  /* "cv_connect.pyx":295
+                  /* "cv_connect.pyx":297
  * 
  *                         elif self.import_your_rating_radio.isChecked():
  *                             query = 'update comics set user_rating = (?) where id = (?)'             # <<<<<<<<<<<<<<
@@ -10128,28 +10180,28 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                   __Pyx_INCREF(__pyx_kp_u_update_comics_set_user_rating_wh);
                   __Pyx_XDECREF_SET(__pyx_v_query, __pyx_kp_u_update_comics_set_user_rating_wh);
 
-                  /* "cv_connect.pyx":296
+                  /* "cv_connect.pyx":298
  *                         elif self.import_your_rating_radio.isChecked():
  *                             query = 'update comics set user_rating = (?) where id = (?)'
  *                             if checkdata[DB.user_rating] == None:             # <<<<<<<<<<<<<<
  *                                 status['rating_none'] += 1
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))
  */
-                  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 296, __pyx_L16_error)
+                  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 298, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_2);
-                  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 296, __pyx_L16_error)
+                  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 298, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_8);
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 296, __pyx_L16_error)
+                  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 298, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_2);
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                  __pyx_t_8 = PyObject_RichCompare(__pyx_t_2, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 296, __pyx_L16_error)
+                  __pyx_t_8 = PyObject_RichCompare(__pyx_t_2, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 298, __pyx_L16_error)
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 296, __pyx_L16_error)
+                  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 298, __pyx_L16_error)
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                   if (__pyx_t_5) {
 
-                    /* "cv_connect.pyx":297
+                    /* "cv_connect.pyx":299
  *                             query = 'update comics set user_rating = (?) where id = (?)'
  *                             if checkdata[DB.user_rating] == None:
  *                                 status['rating_none'] += 1             # <<<<<<<<<<<<<<
@@ -10158,36 +10210,36 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                     __Pyx_INCREF(__pyx_n_u_rating_none);
                     __pyx_t_16 = __pyx_n_u_rating_none;
-                    __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 297, __pyx_L16_error)
+                    __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 299, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_8, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 297, __pyx_L16_error)
+                    __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_8, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 299, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_2);
                     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                    if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_2) < 0)) __PYX_ERR(0, 297, __pyx_L16_error)
+                    if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_2) < 0)) __PYX_ERR(0, 299, __pyx_L16_error)
                     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-                    /* "cv_connect.pyx":298
+                    /* "cv_connect.pyx":300
  *                             if checkdata[DB.user_rating] == None:
  *                                 status['rating_none'] += 1
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))             # <<<<<<<<<<<<<<
  * 
  *                         elif self.import_other_rating_radio_one.isChecked():
  */
-                    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 298, __pyx_L16_error)
+                    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 300, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 298, __pyx_L16_error)
+                    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_3);
                     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                     if (unlikely(__pyx_v_data == Py_None)) {
                       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                      __PYX_ERR(0, 298, __pyx_L16_error)
+                      __PYX_ERR(0, 300, __pyx_L16_error)
                     }
-                    __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 298, __pyx_L16_error)
+                    __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 300, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 298, __pyx_L16_error)
+                    __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 300, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_10);
-                    __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 298, __pyx_L16_error)
+                    __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 300, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_9);
                     __Pyx_GIVEREF(__pyx_t_8);
                     PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_8);
@@ -10210,7 +10262,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     #if CYTHON_FAST_PYCALL
                     if (PyFunction_Check(__pyx_t_3)) {
                       PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_v_query, __pyx_t_9};
-                      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 298, __pyx_L16_error)
+                      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L16_error)
                       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
                       __Pyx_GOTREF(__pyx_t_2);
                       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -10219,14 +10271,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     #if CYTHON_FAST_PYCCALL
                     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
                       PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_v_query, __pyx_t_9};
-                      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 298, __pyx_L16_error)
+                      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L16_error)
                       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
                       __Pyx_GOTREF(__pyx_t_2);
                       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
                     } else
                     #endif
                     {
-                      __pyx_t_8 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 298, __pyx_L16_error)
+                      __pyx_t_8 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 300, __pyx_L16_error)
                       __Pyx_GOTREF(__pyx_t_8);
                       if (__pyx_t_10) {
                         __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_10); __pyx_t_10 = NULL;
@@ -10237,14 +10289,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                       __Pyx_GIVEREF(__pyx_t_9);
                       PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_11, __pyx_t_9);
                       __pyx_t_9 = 0;
-                      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 298, __pyx_L16_error)
+                      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L16_error)
                       __Pyx_GOTREF(__pyx_t_2);
                       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                     }
                     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-                    /* "cv_connect.pyx":296
+                    /* "cv_connect.pyx":298
  *                         elif self.import_your_rating_radio.isChecked():
  *                             query = 'update comics set user_rating = (?) where id = (?)'
  *                             if checkdata[DB.user_rating] == None:             # <<<<<<<<<<<<<<
@@ -10253,7 +10305,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                   }
 
-                  /* "cv_connect.pyx":294
+                  /* "cv_connect.pyx":296
  *                             continue
  * 
  *                         elif self.import_your_rating_radio.isChecked():             # <<<<<<<<<<<<<<
@@ -10263,16 +10315,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                   goto __pyx_L29;
                 }
 
-                /* "cv_connect.pyx":300
+                /* "cv_connect.pyx":302
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))
  * 
  *                         elif self.import_other_rating_radio_one.isChecked():             # <<<<<<<<<<<<<<
  *                             if checkdata[DB.other_rating_a] != int(data[2]):
  *                                 status['rating_update'] += 1
  */
-                __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_other_rating_radio_one); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L16_error)
+                __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_other_rating_radio_one); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 302, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 300, __pyx_L16_error)
+                __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 302, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_8);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                 __pyx_t_3 = NULL;
@@ -10287,45 +10339,45 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 }
                 __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_8);
                 __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-                if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 300, __pyx_L16_error)
+                if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 302, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 300, __pyx_L16_error)
+                __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 302, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 if (__pyx_t_5) {
 
-                  /* "cv_connect.pyx":301
+                  /* "cv_connect.pyx":303
  * 
  *                         elif self.import_other_rating_radio_one.isChecked():
  *                             if checkdata[DB.other_rating_a] != int(data[2]):             # <<<<<<<<<<<<<<
  *                                 status['rating_update'] += 1
  *                                 query = 'update comics set other_rating_a = (?) where id = (?)'
  */
-                  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 301, __pyx_L16_error)
+                  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_2);
-                  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 301, __pyx_L16_error)
+                  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 303, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_8);
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 301, __pyx_L16_error)
+                  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_2);
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                   if (unlikely(__pyx_v_data == Py_None)) {
                     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                    __PYX_ERR(0, 301, __pyx_L16_error)
+                    __PYX_ERR(0, 303, __pyx_L16_error)
                   }
-                  __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 301, __pyx_L16_error)
+                  __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 303, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_8);
-                  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 301, __pyx_L16_error)
+                  __pyx_t_3 = __Pyx_PyNumber_Int(__pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_3);
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                  __pyx_t_8 = PyObject_RichCompare(__pyx_t_2, __pyx_t_3, Py_NE); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 301, __pyx_L16_error)
+                  __pyx_t_8 = PyObject_RichCompare(__pyx_t_2, __pyx_t_3, Py_NE); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 303, __pyx_L16_error)
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 301, __pyx_L16_error)
+                  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 303, __pyx_L16_error)
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                   if (__pyx_t_5) {
 
-                    /* "cv_connect.pyx":302
+                    /* "cv_connect.pyx":304
  *                         elif self.import_other_rating_radio_one.isChecked():
  *                             if checkdata[DB.other_rating_a] != int(data[2]):
  *                                 status['rating_update'] += 1             # <<<<<<<<<<<<<<
@@ -10334,16 +10386,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                     __Pyx_INCREF(__pyx_n_u_rating_update);
                     __pyx_t_16 = __pyx_n_u_rating_update;
-                    __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 302, __pyx_L16_error)
+                    __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 304, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_t_8, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 302, __pyx_L16_error)
+                    __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_t_8, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_3);
                     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                    if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_3) < 0)) __PYX_ERR(0, 302, __pyx_L16_error)
+                    if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_3) < 0)) __PYX_ERR(0, 304, __pyx_L16_error)
                     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-                    /* "cv_connect.pyx":303
+                    /* "cv_connect.pyx":305
  *                             if checkdata[DB.other_rating_a] != int(data[2]):
  *                                 status['rating_update'] += 1
  *                                 query = 'update comics set other_rating_a = (?) where id = (?)'             # <<<<<<<<<<<<<<
@@ -10353,27 +10405,27 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     __Pyx_INCREF(__pyx_kp_u_update_comics_set_other_rating_a);
                     __Pyx_XDECREF_SET(__pyx_v_query, __pyx_kp_u_update_comics_set_other_rating_a);
 
-                    /* "cv_connect.pyx":304
+                    /* "cv_connect.pyx":306
  *                                 status['rating_update'] += 1
  *                                 query = 'update comics set other_rating_a = (?) where id = (?)'
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))             # <<<<<<<<<<<<<<
  * 
  *                         elif self.import_other_rating_radio_two.isChecked():
  */
-                    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 304, __pyx_L16_error)
+                    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 306, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L16_error)
+                    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_2);
                     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                     if (unlikely(__pyx_v_data == Py_None)) {
                       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                      __PYX_ERR(0, 304, __pyx_L16_error)
+                      __PYX_ERR(0, 306, __pyx_L16_error)
                     }
-                    __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 304, __pyx_L16_error)
+                    __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 306, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_9 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 304, __pyx_L16_error)
+                    __pyx_t_9 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 306, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_9);
-                    __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 304, __pyx_L16_error)
+                    __pyx_t_10 = PyTuple_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 306, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_10);
                     __Pyx_GIVEREF(__pyx_t_8);
                     PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_8);
@@ -10396,7 +10448,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     #if CYTHON_FAST_PYCALL
                     if (PyFunction_Check(__pyx_t_2)) {
                       PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_v_query, __pyx_t_10};
-                      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L16_error)
+                      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L16_error)
                       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
                       __Pyx_GOTREF(__pyx_t_3);
                       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -10405,14 +10457,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     #if CYTHON_FAST_PYCCALL
                     if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
                       PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_v_query, __pyx_t_10};
-                      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L16_error)
+                      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L16_error)
                       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
                       __Pyx_GOTREF(__pyx_t_3);
                       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
                     } else
                     #endif
                     {
-                      __pyx_t_8 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 304, __pyx_L16_error)
+                      __pyx_t_8 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 306, __pyx_L16_error)
                       __Pyx_GOTREF(__pyx_t_8);
                       if (__pyx_t_9) {
                         __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -10423,14 +10475,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                       __Pyx_GIVEREF(__pyx_t_10);
                       PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_11, __pyx_t_10);
                       __pyx_t_10 = 0;
-                      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L16_error)
+                      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_8, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L16_error)
                       __Pyx_GOTREF(__pyx_t_3);
                       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                     }
                     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-                    /* "cv_connect.pyx":301
+                    /* "cv_connect.pyx":303
  * 
  *                         elif self.import_other_rating_radio_one.isChecked():
  *                             if checkdata[DB.other_rating_a] != int(data[2]):             # <<<<<<<<<<<<<<
@@ -10439,7 +10491,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                   }
 
-                  /* "cv_connect.pyx":300
+                  /* "cv_connect.pyx":302
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))
  * 
  *                         elif self.import_other_rating_radio_one.isChecked():             # <<<<<<<<<<<<<<
@@ -10449,16 +10501,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                   goto __pyx_L29;
                 }
 
-                /* "cv_connect.pyx":306
+                /* "cv_connect.pyx":308
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))
  * 
  *                         elif self.import_other_rating_radio_two.isChecked():             # <<<<<<<<<<<<<<
  *                             if checkdata[DB.other_rating_b] != int(data[2]):
  *                                 status['rating_update'] += 1
  */
-                __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_other_rating_radio_two); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L16_error)
+                __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_other_rating_radio_two); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_2);
-                __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 306, __pyx_L16_error)
+                __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 308, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_8);
                 __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                 __pyx_t_2 = NULL;
@@ -10473,45 +10525,45 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 }
                 __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_8);
                 __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-                if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L16_error)
+                if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 308, __pyx_L16_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 306, __pyx_L16_error)
+                __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 308, __pyx_L16_error)
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                 if (__pyx_t_5) {
 
-                  /* "cv_connect.pyx":307
+                  /* "cv_connect.pyx":309
  * 
  *                         elif self.import_other_rating_radio_two.isChecked():
  *                             if checkdata[DB.other_rating_b] != int(data[2]):             # <<<<<<<<<<<<<<
  *                                 status['rating_update'] += 1
  *                                 query = 'update comics set other_rating_b = (?) where id = (?)'
  */
-                  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DB); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 307, __pyx_L16_error)
+                  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DB); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_3);
-                  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 307, __pyx_L16_error)
+                  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 309, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_8);
                   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 307, __pyx_L16_error)
+                  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_3);
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                   if (unlikely(__pyx_v_data == Py_None)) {
                     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                    __PYX_ERR(0, 307, __pyx_L16_error)
+                    __PYX_ERR(0, 309, __pyx_L16_error)
                   }
-                  __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 307, __pyx_L16_error)
+                  __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 309, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_8);
-                  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L16_error)
+                  __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L16_error)
                   __Pyx_GOTREF(__pyx_t_2);
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                  __pyx_t_8 = PyObject_RichCompare(__pyx_t_3, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 307, __pyx_L16_error)
+                  __pyx_t_8 = PyObject_RichCompare(__pyx_t_3, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 309, __pyx_L16_error)
                   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 307, __pyx_L16_error)
+                  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 309, __pyx_L16_error)
                   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                   if (__pyx_t_5) {
 
-                    /* "cv_connect.pyx":308
+                    /* "cv_connect.pyx":310
  *                         elif self.import_other_rating_radio_two.isChecked():
  *                             if checkdata[DB.other_rating_b] != int(data[2]):
  *                                 status['rating_update'] += 1             # <<<<<<<<<<<<<<
@@ -10520,16 +10572,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                     __Pyx_INCREF(__pyx_n_u_rating_update);
                     __pyx_t_16 = __pyx_n_u_rating_update;
-                    __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 308, __pyx_L16_error)
+                    __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 310, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_8, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L16_error)
+                    __pyx_t_2 = __Pyx_PyInt_AddObjC(__pyx_t_8, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_2);
                     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-                    if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_2) < 0)) __PYX_ERR(0, 308, __pyx_L16_error)
+                    if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_2) < 0)) __PYX_ERR(0, 310, __pyx_L16_error)
                     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                     __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-                    /* "cv_connect.pyx":309
+                    /* "cv_connect.pyx":311
  *                             if checkdata[DB.other_rating_b] != int(data[2]):
  *                                 status['rating_update'] += 1
  *                                 query = 'update comics set other_rating_b = (?) where id = (?)'             # <<<<<<<<<<<<<<
@@ -10539,27 +10591,27 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     __Pyx_INCREF(__pyx_kp_u_update_comics_set_other_rating_b);
                     __Pyx_XDECREF_SET(__pyx_v_query, __pyx_kp_u_update_comics_set_other_rating_b);
 
-                    /* "cv_connect.pyx":310
+                    /* "cv_connect.pyx":312
  *                                 status['rating_update'] += 1
  *                                 query = 'update comics set other_rating_b = (?) where id = (?)'
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))             # <<<<<<<<<<<<<<
  *                         continue
  * 
  */
-                    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 310, __pyx_L16_error)
+                    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 312, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 310, __pyx_L16_error)
+                    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 312, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_3);
                     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                     if (unlikely(__pyx_v_data == Py_None)) {
                       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                      __PYX_ERR(0, 310, __pyx_L16_error)
+                      __PYX_ERR(0, 312, __pyx_L16_error)
                     }
-                    __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 310, __pyx_L16_error)
+                    __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, 2, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 312, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_8);
-                    __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 310, __pyx_L16_error)
+                    __pyx_t_10 = __Pyx_GetItemInt(__pyx_v_checkdata, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 312, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_10);
-                    __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 310, __pyx_L16_error)
+                    __pyx_t_9 = PyTuple_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 312, __pyx_L16_error)
                     __Pyx_GOTREF(__pyx_t_9);
                     __Pyx_GIVEREF(__pyx_t_8);
                     PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_8);
@@ -10582,7 +10634,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     #if CYTHON_FAST_PYCALL
                     if (PyFunction_Check(__pyx_t_3)) {
                       PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_v_query, __pyx_t_9};
-                      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L16_error)
+                      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L16_error)
                       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
                       __Pyx_GOTREF(__pyx_t_2);
                       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -10591,14 +10643,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     #if CYTHON_FAST_PYCCALL
                     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
                       PyObject *__pyx_temp[3] = {__pyx_t_10, __pyx_v_query, __pyx_t_9};
-                      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L16_error)
+                      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L16_error)
                       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
                       __Pyx_GOTREF(__pyx_t_2);
                       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
                     } else
                     #endif
                     {
-                      __pyx_t_8 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 310, __pyx_L16_error)
+                      __pyx_t_8 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 312, __pyx_L16_error)
                       __Pyx_GOTREF(__pyx_t_8);
                       if (__pyx_t_10) {
                         __Pyx_GIVEREF(__pyx_t_10); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_10); __pyx_t_10 = NULL;
@@ -10609,14 +10661,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                       __Pyx_GIVEREF(__pyx_t_9);
                       PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_11, __pyx_t_9);
                       __pyx_t_9 = 0;
-                      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L16_error)
+                      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L16_error)
                       __Pyx_GOTREF(__pyx_t_2);
                       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                     }
                     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-                    /* "cv_connect.pyx":307
+                    /* "cv_connect.pyx":309
  * 
  *                         elif self.import_other_rating_radio_two.isChecked():
  *                             if checkdata[DB.other_rating_b] != int(data[2]):             # <<<<<<<<<<<<<<
@@ -10625,7 +10677,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                   }
 
-                  /* "cv_connect.pyx":306
+                  /* "cv_connect.pyx":308
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))
  * 
  *                         elif self.import_other_rating_radio_two.isChecked():             # <<<<<<<<<<<<<<
@@ -10635,7 +10687,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 }
                 __pyx_L29:;
 
-                /* "cv_connect.pyx":311
+                /* "cv_connect.pyx":313
  *                                 query = 'update comics set other_rating_b = (?) where id = (?)'
  *                                 sqlitecursor.execute(query, (data[2], checkdata[0],))
  *                         continue             # <<<<<<<<<<<<<<
@@ -10644,7 +10696,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                 goto __pyx_L22_try_continue;
 
-                /* "cv_connect.pyx":290
+                /* "cv_connect.pyx":292
  *                         status['id_update'] += 1
  * 
  *                     if len(data) > 2 and data[2].isdigit() == True and self.import_no_rating_radio.isChecked() == False:             # <<<<<<<<<<<<<<
@@ -10653,7 +10705,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
               }
 
-              /* "cv_connect.pyx":281
+              /* "cv_connect.pyx":283
  *                 if checkdata == None:
  *                     continue
  *                 with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -10674,20 +10726,20 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
             __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
             /*except:*/ {
               __Pyx_AddTraceback("cv_connect.ComicIdImportExport.import_rating_comic_id", __pyx_clineno, __pyx_lineno, __pyx_filename);
-              if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_8) < 0) __PYX_ERR(0, 281, __pyx_L18_except_error)
+              if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_8) < 0) __PYX_ERR(0, 283, __pyx_L18_except_error)
               __Pyx_GOTREF(__pyx_t_2);
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_GOTREF(__pyx_t_8);
-              __pyx_t_9 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_3, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 281, __pyx_L18_except_error)
+              __pyx_t_9 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_3, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 283, __pyx_L18_except_error)
               __Pyx_GOTREF(__pyx_t_9);
               __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_9, NULL);
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
               __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-              if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 281, __pyx_L18_except_error)
+              if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 283, __pyx_L18_except_error)
               __Pyx_GOTREF(__pyx_t_17);
               __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_17);
               __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-              if (__pyx_t_5 < 0) __PYX_ERR(0, 281, __pyx_L18_except_error)
+              if (__pyx_t_5 < 0) __PYX_ERR(0, 283, __pyx_L18_except_error)
               __pyx_t_7 = ((!(__pyx_t_5 != 0)) != 0);
               if (__pyx_t_7) {
                 __Pyx_GIVEREF(__pyx_t_2);
@@ -10695,7 +10747,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 __Pyx_XGIVEREF(__pyx_t_8);
                 __Pyx_ErrRestoreWithState(__pyx_t_2, __pyx_t_3, __pyx_t_8);
                 __pyx_t_2 = 0; __pyx_t_3 = 0; __pyx_t_8 = 0; 
-                __PYX_ERR(0, 281, __pyx_L18_except_error)
+                __PYX_ERR(0, 283, __pyx_L18_except_error)
               }
               __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
               __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -10727,7 +10779,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
             if (__pyx_t_12) {
               __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_tuple_, NULL);
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-              if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 281, __pyx_L1_error)
+              if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 283, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_15);
               __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
             }
@@ -10737,7 +10789,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
             if (__pyx_t_12) {
               __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_tuple_, NULL);
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-              if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 281, __pyx_L1_error)
+              if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 283, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_15);
               __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
             }
@@ -10752,7 +10804,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
         __pyx_L38:;
       }
 
-      /* "cv_connect.pyx":276
+      /* "cv_connect.pyx":278
  *         for i in longstring:
  *             data = i.split(':')
  *             if len(data) > 1 and len(data[0]) == 32 and data[1].isdigit() == True:             # <<<<<<<<<<<<<<
@@ -10761,16 +10813,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
     }
 
-    /* "cv_connect.pyx":313
+    /* "cv_connect.pyx":315
  *                         continue
  * 
  *             if self.check_ignore_md5.isChecked() == True:             # <<<<<<<<<<<<<<
  *                 if data[-2].isdigit() and data[-1].isdigit() and self.import_no_rating_radio.isChecked() == False:
  *                     if int(data[-1]) < 11 and int(data[-1]) > 0:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_ignore_md5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 313, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_ignore_md5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 313, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -10785,16 +10837,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
     }
     __pyx_t_8 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 313, __pyx_L1_error)
+    if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 315, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_8, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 313, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_8, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 313, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 315, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_7) {
 
-      /* "cv_connect.pyx":314
+      /* "cv_connect.pyx":316
  * 
  *             if self.check_ignore_md5.isChecked() == True:
  *                 if data[-2].isdigit() and data[-1].isdigit() and self.import_no_rating_radio.isChecked() == False:             # <<<<<<<<<<<<<<
@@ -10803,11 +10855,11 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
       if (unlikely(__pyx_v_data == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 314, __pyx_L1_error)
+        __PYX_ERR(0, 316, __pyx_L1_error)
       }
-      __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, -2L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_GetItemInt_List(__pyx_v_data, -2L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_isdigit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_isdigit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __pyx_t_8 = NULL;
@@ -10822,10 +10874,10 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
       }
       __pyx_t_2 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (__pyx_t_5) {
       } else {
@@ -10834,11 +10886,11 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
       }
       if (unlikely(__pyx_v_data == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 314, __pyx_L1_error)
+        __PYX_ERR(0, 316, __pyx_L1_error)
       }
-      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isdigit); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isdigit); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = NULL;
@@ -10853,19 +10905,19 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
       }
       __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_8);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (__pyx_t_5) {
       } else {
         __pyx_t_7 = __pyx_t_5;
         goto __pyx_L41_bool_binop_done;
       }
-      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_no_rating_radio); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_no_rating_radio); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       __pyx_t_8 = NULL;
@@ -10880,18 +10932,18 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
       }
       __pyx_t_2 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 314, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_7 = __pyx_t_5;
       __pyx_L41_bool_binop_done:;
       if (__pyx_t_7) {
 
-        /* "cv_connect.pyx":315
+        /* "cv_connect.pyx":317
  *             if self.check_ignore_md5.isChecked() == True:
  *                 if data[-2].isdigit() and data[-1].isdigit() and self.import_no_rating_radio.isChecked() == False:
  *                     if int(data[-1]) < 11 and int(data[-1]) > 0:             # <<<<<<<<<<<<<<
@@ -10900,16 +10952,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
         if (unlikely(__pyx_v_data == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 315, __pyx_L1_error)
+          __PYX_ERR(0, 317, __pyx_L1_error)
         }
-        __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 317, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_int_11, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
+        __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_int_11, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 315, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 317, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         if (__pyx_t_5) {
         } else {
@@ -10918,40 +10970,40 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
         }
         if (unlikely(__pyx_v_data == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 315, __pyx_L1_error)
+          __PYX_ERR(0, 317, __pyx_L1_error)
         }
-        __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyNumber_Int(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 317, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
+        __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 315, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 317, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_t_7 = __pyx_t_5;
         __pyx_L45_bool_binop_done:;
         if (__pyx_t_7) {
 
-          /* "cv_connect.pyx":316
+          /* "cv_connect.pyx":318
  *                 if data[-2].isdigit() and data[-1].isdigit() and self.import_no_rating_radio.isChecked() == False:
  *                     if int(data[-1]) < 11 and int(data[-1]) > 0:
  *                         sqlitecursor.execute('select * from comics where comic_id = (?)', (data[-2],))             # <<<<<<<<<<<<<<
  *                         md5data = sqlitecursor.fetchone()
  *                         if md5data != None:
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_execute); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 316, __pyx_L1_error)
+          __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_execute); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 318, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           if (unlikely(__pyx_v_data == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 316, __pyx_L1_error)
+            __PYX_ERR(0, 318, __pyx_L1_error)
           }
-          __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, -2L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, -2L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 316, __pyx_L1_error)
+          __pyx_t_9 = PyTuple_New(1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 318, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
           __Pyx_GIVEREF(__pyx_t_2);
           PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_2);
@@ -10971,7 +11023,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
           #if CYTHON_FAST_PYCALL
           if (PyFunction_Check(__pyx_t_8)) {
             PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_kp_u_select_from_comics_where_comic_i, __pyx_t_9};
-            __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
+            __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
             __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -10980,14 +11032,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
           #if CYTHON_FAST_PYCCALL
           if (__Pyx_PyFastCFunction_Check(__pyx_t_8)) {
             PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_kp_u_select_from_comics_where_comic_i, __pyx_t_9};
-            __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
+            __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_8, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
             __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
           } else
           #endif
           {
-            __pyx_t_10 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 316, __pyx_L1_error)
+            __pyx_t_10 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 318, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_10);
             if (__pyx_t_2) {
               __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -10998,23 +11050,23 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
             __Pyx_GIVEREF(__pyx_t_9);
             PyTuple_SET_ITEM(__pyx_t_10, 1+__pyx_t_11, __pyx_t_9);
             __pyx_t_9 = 0;
-            __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_10, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
+            __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_8, __pyx_t_10, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
           }
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-          /* "cv_connect.pyx":317
+          /* "cv_connect.pyx":319
  *                     if int(data[-1]) < 11 and int(data[-1]) > 0:
  *                         sqlitecursor.execute('select * from comics where comic_id = (?)', (data[-2],))
  *                         md5data = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *                         if md5data != None:
  *                             if self.import_your_rating_radio.isChecked() == True:
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 317, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 319, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
-          __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 317, __pyx_L1_error)
+          __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 319, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_10);
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
           __pyx_t_8 = NULL;
@@ -11029,34 +11081,34 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
           }
           __pyx_t_3 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_10);
           __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
+          if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
           __Pyx_XDECREF_SET(__pyx_v_md5data, __pyx_t_3);
           __pyx_t_3 = 0;
 
-          /* "cv_connect.pyx":318
+          /* "cv_connect.pyx":320
  *                         sqlitecursor.execute('select * from comics where comic_id = (?)', (data[-2],))
  *                         md5data = sqlitecursor.fetchone()
  *                         if md5data != None:             # <<<<<<<<<<<<<<
  *                             if self.import_your_rating_radio.isChecked() == True:
  *                                 if checkdata[DB.user_rating] == None:
  */
-          __pyx_t_3 = PyObject_RichCompare(__pyx_v_md5data, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
-          __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 318, __pyx_L1_error)
+          __pyx_t_3 = PyObject_RichCompare(__pyx_v_md5data, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 320, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           if (__pyx_t_7) {
 
-            /* "cv_connect.pyx":319
+            /* "cv_connect.pyx":321
  *                         md5data = sqlitecursor.fetchone()
  *                         if md5data != None:
  *                             if self.import_your_rating_radio.isChecked() == True:             # <<<<<<<<<<<<<<
  *                                 if checkdata[DB.user_rating] == None:
  *                                     status['rating_none'] += 1
  */
-            __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_your_rating_radio); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 319, __pyx_L1_error)
+            __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_your_rating_radio); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 321, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_10);
-            __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 319, __pyx_L1_error)
+            __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 321, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_8);
             __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
             __pyx_t_10 = NULL;
@@ -11071,38 +11123,38 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
             }
             __pyx_t_3 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_8);
             __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-            if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
+            if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 321, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-            __pyx_t_8 = PyObject_RichCompare(__pyx_t_3, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 319, __pyx_L1_error)
+            __pyx_t_8 = PyObject_RichCompare(__pyx_t_3, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 321, __pyx_L1_error)
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-            __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 319, __pyx_L1_error)
+            __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 321, __pyx_L1_error)
             __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
             if (__pyx_t_7) {
 
-              /* "cv_connect.pyx":320
+              /* "cv_connect.pyx":322
  *                         if md5data != None:
  *                             if self.import_your_rating_radio.isChecked() == True:
  *                                 if checkdata[DB.user_rating] == None:             # <<<<<<<<<<<<<<
  *                                     status['rating_none'] += 1
  *                                     query = 'update comics set user_rating = (?) where id = (?)'
  */
-              if (unlikely(!__pyx_v_checkdata)) { __Pyx_RaiseUnboundLocalError("checkdata"); __PYX_ERR(0, 320, __pyx_L1_error) }
-              __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_DB); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 320, __pyx_L1_error)
+              if (unlikely(!__pyx_v_checkdata)) { __Pyx_RaiseUnboundLocalError("checkdata"); __PYX_ERR(0, 322, __pyx_L1_error) }
+              __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_DB); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 322, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_8);
-              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
+              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 322, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-              __pyx_t_8 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 320, __pyx_L1_error)
+              __pyx_t_8 = __Pyx_PyObject_GetItem(__pyx_v_checkdata, __pyx_t_3); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 322, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_8);
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-              __pyx_t_3 = PyObject_RichCompare(__pyx_t_8, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
+              __pyx_t_3 = PyObject_RichCompare(__pyx_t_8, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 322, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 320, __pyx_L1_error)
+              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 322, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               if (__pyx_t_7) {
 
-                /* "cv_connect.pyx":321
+                /* "cv_connect.pyx":323
  *                             if self.import_your_rating_radio.isChecked() == True:
  *                                 if checkdata[DB.user_rating] == None:
  *                                     status['rating_none'] += 1             # <<<<<<<<<<<<<<
@@ -11111,16 +11163,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                 __Pyx_INCREF(__pyx_n_u_rating_none);
                 __pyx_t_16 = __pyx_n_u_rating_none;
-                __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 321, __pyx_L1_error)
+                __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 323, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_8 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 321, __pyx_L1_error)
+                __pyx_t_8 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 323, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_8);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_8) < 0)) __PYX_ERR(0, 321, __pyx_L1_error)
+                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_8) < 0)) __PYX_ERR(0, 323, __pyx_L1_error)
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                 __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-                /* "cv_connect.pyx":322
+                /* "cv_connect.pyx":324
  *                                 if checkdata[DB.user_rating] == None:
  *                                     status['rating_none'] += 1
  *                                     query = 'update comics set user_rating = (?) where id = (?)'             # <<<<<<<<<<<<<<
@@ -11130,7 +11182,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 __Pyx_INCREF(__pyx_kp_u_update_comics_set_user_rating_wh);
                 __Pyx_XDECREF_SET(__pyx_v_query, __pyx_kp_u_update_comics_set_user_rating_wh);
 
-                /* "cv_connect.pyx":320
+                /* "cv_connect.pyx":322
  *                         if md5data != None:
  *                             if self.import_your_rating_radio.isChecked() == True:
  *                                 if checkdata[DB.user_rating] == None:             # <<<<<<<<<<<<<<
@@ -11140,7 +11192,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 goto __pyx_L49;
               }
 
-              /* "cv_connect.pyx":324
+              /* "cv_connect.pyx":326
  *                                     query = 'update comics set user_rating = (?) where id = (?)'
  *                                 else:
  *                                     continue             # <<<<<<<<<<<<<<
@@ -11152,16 +11204,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
               }
               __pyx_L49:;
 
-              /* "cv_connect.pyx":326
+              /* "cv_connect.pyx":328
  *                                     continue
  * 
  *                                 if self.import_other_rating_radio_one.isChecked() == True:             # <<<<<<<<<<<<<<
  *                                     query = 'update comics set other_rating_a = (?) where id = (?)'
  *                                     status['rating_update'] += 1
  */
-              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_other_rating_radio_one); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 326, __pyx_L1_error)
+              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_other_rating_radio_one); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 328, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 326, __pyx_L1_error)
+              __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 328, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_10);
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               __pyx_t_3 = NULL;
@@ -11176,16 +11228,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
               }
               __pyx_t_8 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_10);
               __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-              if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 326, __pyx_L1_error)
+              if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 328, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_8);
               __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-              __pyx_t_10 = PyObject_RichCompare(__pyx_t_8, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 326, __pyx_L1_error)
+              __pyx_t_10 = PyObject_RichCompare(__pyx_t_8, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 328, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 326, __pyx_L1_error)
+              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 328, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
               if (__pyx_t_7) {
 
-                /* "cv_connect.pyx":327
+                /* "cv_connect.pyx":329
  * 
  *                                 if self.import_other_rating_radio_one.isChecked() == True:
  *                                     query = 'update comics set other_rating_a = (?) where id = (?)'             # <<<<<<<<<<<<<<
@@ -11195,7 +11247,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 __Pyx_INCREF(__pyx_kp_u_update_comics_set_other_rating_a);
                 __Pyx_DECREF_SET(__pyx_v_query, __pyx_kp_u_update_comics_set_other_rating_a);
 
-                /* "cv_connect.pyx":328
+                /* "cv_connect.pyx":330
  *                                 if self.import_other_rating_radio_one.isChecked() == True:
  *                                     query = 'update comics set other_rating_a = (?) where id = (?)'
  *                                     status['rating_update'] += 1             # <<<<<<<<<<<<<<
@@ -11204,16 +11256,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                 __Pyx_INCREF(__pyx_n_u_rating_update);
                 __pyx_t_16 = __pyx_n_u_rating_update;
-                __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 328, __pyx_L1_error)
+                __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 330, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_10);
-                __pyx_t_8 = __Pyx_PyInt_AddObjC(__pyx_t_10, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 328, __pyx_L1_error)
+                __pyx_t_8 = __Pyx_PyInt_AddObjC(__pyx_t_10, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 330, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_8);
                 __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_8) < 0)) __PYX_ERR(0, 328, __pyx_L1_error)
+                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_8) < 0)) __PYX_ERR(0, 330, __pyx_L1_error)
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                 __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-                /* "cv_connect.pyx":326
+                /* "cv_connect.pyx":328
  *                                     continue
  * 
  *                                 if self.import_other_rating_radio_one.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -11223,16 +11275,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 goto __pyx_L50;
               }
 
-              /* "cv_connect.pyx":329
+              /* "cv_connect.pyx":331
  *                                     query = 'update comics set other_rating_a = (?) where id = (?)'
  *                                     status['rating_update'] += 1
  *                                 elif self.import_other_rating_radio_two.isChecked() == True:             # <<<<<<<<<<<<<<
  *                                     query = 'update comics set other_rating_b = (?) where id = (?)'
  *                                     status['rating_update'] += 1
  */
-              __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_other_rating_radio_two); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 329, __pyx_L1_error)
+              __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_other_rating_radio_two); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 331, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_10);
-              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
+              __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 331, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
               __pyx_t_10 = NULL;
@@ -11247,16 +11299,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
               }
               __pyx_t_8 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
               __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-              if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 329, __pyx_L1_error)
+              if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 331, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_8);
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-              __pyx_t_3 = PyObject_RichCompare(__pyx_t_8, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
+              __pyx_t_3 = PyObject_RichCompare(__pyx_t_8, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 331, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 329, __pyx_L1_error)
+              __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 331, __pyx_L1_error)
               __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               if (__pyx_t_7) {
 
-                /* "cv_connect.pyx":330
+                /* "cv_connect.pyx":332
  *                                     status['rating_update'] += 1
  *                                 elif self.import_other_rating_radio_two.isChecked() == True:
  *                                     query = 'update comics set other_rating_b = (?) where id = (?)'             # <<<<<<<<<<<<<<
@@ -11266,7 +11318,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 __Pyx_INCREF(__pyx_kp_u_update_comics_set_other_rating_b);
                 __Pyx_DECREF_SET(__pyx_v_query, __pyx_kp_u_update_comics_set_other_rating_b);
 
-                /* "cv_connect.pyx":331
+                /* "cv_connect.pyx":333
  *                                 elif self.import_other_rating_radio_two.isChecked() == True:
  *                                     query = 'update comics set other_rating_b = (?) where id = (?)'
  *                                     status['rating_update'] += 1             # <<<<<<<<<<<<<<
@@ -11275,16 +11327,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
                 __Pyx_INCREF(__pyx_n_u_rating_update);
                 __pyx_t_16 = __pyx_n_u_rating_update;
-                __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 331, __pyx_L1_error)
+                __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_t_16); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 333, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_3);
-                __pyx_t_8 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 331, __pyx_L1_error)
+                __pyx_t_8 = __Pyx_PyInt_AddObjC(__pyx_t_3, __pyx_int_1, 1, 1, 0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 333, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_8);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_8) < 0)) __PYX_ERR(0, 331, __pyx_L1_error)
+                if (unlikely(PyDict_SetItem(__pyx_v_status, __pyx_t_16, __pyx_t_8) < 0)) __PYX_ERR(0, 333, __pyx_L1_error)
                 __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
                 __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
 
-                /* "cv_connect.pyx":329
+                /* "cv_connect.pyx":331
  *                                     query = 'update comics set other_rating_a = (?) where id = (?)'
  *                                     status['rating_update'] += 1
  *                                 elif self.import_other_rating_radio_two.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -11294,7 +11346,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
               }
               __pyx_L50:;
 
-              /* "cv_connect.pyx":332
+              /* "cv_connect.pyx":334
  *                                     query = 'update comics set other_rating_b = (?) where id = (?)'
  *                                     status['rating_update'] += 1
  *                                 with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -11302,11 +11354,11 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  * 
  */
               /*with:*/ {
-                __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 332, __pyx_L1_error)
+                __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 334, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_8);
-                __pyx_t_12 = __Pyx_PyObject_LookupSpecial(__pyx_t_8, __pyx_n_s_exit); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 332, __pyx_L1_error)
+                __pyx_t_12 = __Pyx_PyObject_LookupSpecial(__pyx_t_8, __pyx_n_s_exit); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 334, __pyx_L1_error)
                 __Pyx_GOTREF(__pyx_t_12);
-                __pyx_t_10 = __Pyx_PyObject_LookupSpecial(__pyx_t_8, __pyx_n_s_enter); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 332, __pyx_L51_error)
+                __pyx_t_10 = __Pyx_PyObject_LookupSpecial(__pyx_t_8, __pyx_n_s_enter); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 334, __pyx_L51_error)
                 __Pyx_GOTREF(__pyx_t_10);
                 __pyx_t_9 = NULL;
                 if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_10))) {
@@ -11320,7 +11372,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 }
                 __pyx_t_3 = (__pyx_t_9) ? __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_9) : __Pyx_PyObject_CallNoArg(__pyx_t_10);
                 __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-                if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 332, __pyx_L51_error)
+                if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 334, __pyx_L51_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -11335,27 +11387,27 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     __Pyx_XGOTREF(__pyx_t_13);
                     /*try:*/ {
 
-                      /* "cv_connect.pyx":333
+                      /* "cv_connect.pyx":335
  *                                     status['rating_update'] += 1
  *                                 with sqliteconnection:
  *                                     sqlitecursor.execute(query, (data[-1], md5data[0],))             # <<<<<<<<<<<<<<
  * 
  * 
  */
-                      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 333, __pyx_L57_error)
+                      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 335, __pyx_L57_error)
                       __Pyx_GOTREF(__pyx_t_3);
-                      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_execute); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 333, __pyx_L57_error)
+                      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_execute); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 335, __pyx_L57_error)
                       __Pyx_GOTREF(__pyx_t_10);
                       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                       if (unlikely(__pyx_v_data == Py_None)) {
                         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                        __PYX_ERR(0, 333, __pyx_L57_error)
+                        __PYX_ERR(0, 335, __pyx_L57_error)
                       }
-                      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 333, __pyx_L57_error)
+                      __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_data, -1L, long, 1, __Pyx_PyInt_From_long, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 335, __pyx_L57_error)
                       __Pyx_GOTREF(__pyx_t_3);
-                      __pyx_t_9 = __Pyx_GetItemInt(__pyx_v_md5data, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 333, __pyx_L57_error)
+                      __pyx_t_9 = __Pyx_GetItemInt(__pyx_v_md5data, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 335, __pyx_L57_error)
                       __Pyx_GOTREF(__pyx_t_9);
-                      __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 333, __pyx_L57_error)
+                      __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 335, __pyx_L57_error)
                       __Pyx_GOTREF(__pyx_t_2);
                       __Pyx_GIVEREF(__pyx_t_3);
                       PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3);
@@ -11378,7 +11430,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                       #if CYTHON_FAST_PYCALL
                       if (PyFunction_Check(__pyx_t_10)) {
                         PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_v_query, __pyx_t_2};
-                        __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_10, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 333, __pyx_L57_error)
+                        __pyx_t_8 = __Pyx_PyFunction_FastCall(__pyx_t_10, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 335, __pyx_L57_error)
                         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
                         __Pyx_GOTREF(__pyx_t_8);
                         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -11387,14 +11439,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                       #if CYTHON_FAST_PYCCALL
                       if (__Pyx_PyFastCFunction_Check(__pyx_t_10)) {
                         PyObject *__pyx_temp[3] = {__pyx_t_9, __pyx_v_query, __pyx_t_2};
-                        __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_10, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 333, __pyx_L57_error)
+                        __pyx_t_8 = __Pyx_PyCFunction_FastCall(__pyx_t_10, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 335, __pyx_L57_error)
                         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
                         __Pyx_GOTREF(__pyx_t_8);
                         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
                       } else
                       #endif
                       {
-                        __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 333, __pyx_L57_error)
+                        __pyx_t_3 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 335, __pyx_L57_error)
                         __Pyx_GOTREF(__pyx_t_3);
                         if (__pyx_t_9) {
                           __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_9); __pyx_t_9 = NULL;
@@ -11405,14 +11457,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                         __Pyx_GIVEREF(__pyx_t_2);
                         PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_11, __pyx_t_2);
                         __pyx_t_2 = 0;
-                        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_3, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 333, __pyx_L57_error)
+                        __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_10, __pyx_t_3, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 335, __pyx_L57_error)
                         __Pyx_GOTREF(__pyx_t_8);
                         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
                       }
                       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
                       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-                      /* "cv_connect.pyx":332
+                      /* "cv_connect.pyx":334
  *                                     query = 'update comics set other_rating_b = (?) where id = (?)'
  *                                     status['rating_update'] += 1
  *                                 with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -11433,20 +11485,20 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
                     /*except:*/ {
                       __Pyx_AddTraceback("cv_connect.ComicIdImportExport.import_rating_comic_id", __pyx_clineno, __pyx_lineno, __pyx_filename);
-                      if (__Pyx_GetException(&__pyx_t_8, &__pyx_t_10, &__pyx_t_3) < 0) __PYX_ERR(0, 332, __pyx_L59_except_error)
+                      if (__Pyx_GetException(&__pyx_t_8, &__pyx_t_10, &__pyx_t_3) < 0) __PYX_ERR(0, 334, __pyx_L59_except_error)
                       __Pyx_GOTREF(__pyx_t_8);
                       __Pyx_GOTREF(__pyx_t_10);
                       __Pyx_GOTREF(__pyx_t_3);
-                      __pyx_t_2 = PyTuple_Pack(3, __pyx_t_8, __pyx_t_10, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 332, __pyx_L59_except_error)
+                      __pyx_t_2 = PyTuple_Pack(3, __pyx_t_8, __pyx_t_10, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 334, __pyx_L59_except_error)
                       __Pyx_GOTREF(__pyx_t_2);
                       __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_2, NULL);
                       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
                       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-                      if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 332, __pyx_L59_except_error)
+                      if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 334, __pyx_L59_except_error)
                       __Pyx_GOTREF(__pyx_t_17);
                       __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_17);
                       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-                      if (__pyx_t_7 < 0) __PYX_ERR(0, 332, __pyx_L59_except_error)
+                      if (__pyx_t_7 < 0) __PYX_ERR(0, 334, __pyx_L59_except_error)
                       __pyx_t_5 = ((!(__pyx_t_7 != 0)) != 0);
                       if (__pyx_t_5) {
                         __Pyx_GIVEREF(__pyx_t_8);
@@ -11454,7 +11506,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                         __Pyx_XGIVEREF(__pyx_t_3);
                         __Pyx_ErrRestoreWithState(__pyx_t_8, __pyx_t_10, __pyx_t_3);
                         __pyx_t_8 = 0; __pyx_t_10 = 0; __pyx_t_3 = 0; 
-                        __PYX_ERR(0, 332, __pyx_L59_except_error)
+                        __PYX_ERR(0, 334, __pyx_L59_except_error)
                       }
                       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
                       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
@@ -11480,7 +11532,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                     if (__pyx_t_12) {
                       __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_tuple_, NULL);
                       __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-                      if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 332, __pyx_L1_error)
+                      if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 334, __pyx_L1_error)
                       __Pyx_GOTREF(__pyx_t_13);
                       __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
                     }
@@ -11495,7 +11547,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
                 __pyx_L68:;
               }
 
-              /* "cv_connect.pyx":319
+              /* "cv_connect.pyx":321
  *                         md5data = sqlitecursor.fetchone()
  *                         if md5data != None:
  *                             if self.import_your_rating_radio.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -11504,7 +11556,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
             }
 
-            /* "cv_connect.pyx":318
+            /* "cv_connect.pyx":320
  *                         sqlitecursor.execute('select * from comics where comic_id = (?)', (data[-2],))
  *                         md5data = sqlitecursor.fetchone()
  *                         if md5data != None:             # <<<<<<<<<<<<<<
@@ -11513,7 +11565,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
           }
 
-          /* "cv_connect.pyx":315
+          /* "cv_connect.pyx":317
  *             if self.check_ignore_md5.isChecked() == True:
  *                 if data[-2].isdigit() and data[-1].isdigit() and self.import_no_rating_radio.isChecked() == False:
  *                     if int(data[-1]) < 11 and int(data[-1]) > 0:             # <<<<<<<<<<<<<<
@@ -11522,7 +11574,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
         }
 
-        /* "cv_connect.pyx":314
+        /* "cv_connect.pyx":316
  * 
  *             if self.check_ignore_md5.isChecked() == True:
  *                 if data[-2].isdigit() and data[-1].isdigit() and self.import_no_rating_radio.isChecked() == False:             # <<<<<<<<<<<<<<
@@ -11531,7 +11583,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
       }
 
-      /* "cv_connect.pyx":313
+      /* "cv_connect.pyx":315
  *                         continue
  * 
  *             if self.check_ignore_md5.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -11540,9 +11592,9 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
  */
     }
 
-    /* "cv_connect.pyx":274
- *         cdef list longstring = org_string.strip().split('\n'), data
- *         cdef dict status = {'id_none': 0, 'id_update': 0, 'rating_none': 0, 'rating_update': 0}
+    /* "cv_connect.pyx":276
+ *         cdef int count
+ * 
  *         for i in longstring:             # <<<<<<<<<<<<<<
  *             data = i.split(':')
  *             if len(data) > 1 and len(data[0]) == 32 and data[1].isdigit() == True:
@@ -11551,14 +11603,52 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cv_connect.pyx":336
+  /* "cv_connect.pyx":338
  * 
  * 
- *         newstring = f'results from {len(longstring)} lines of potential data:\nfound {status["id_none"]} new comicvine id and updated {status["id_update"]}\n{status["rating_none"]} ratings added and {status["rating_update"]} ratings updated'             # <<<<<<<<<<<<<<
+ *         self.stopper = True             # <<<<<<<<<<<<<<
+ *         self.import_te.clear()
+ *         newstring = f'results from {len(longstring)} lines of potential data:\nfound {status["id_none"]} new comicvine id and updated {status["id_update"]}\n{status["rating_none"]} ratings added and {status["rating_update"]} ratings updated'
+ */
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_True) < 0) __PYX_ERR(0, 338, __pyx_L1_error)
+
+  /* "cv_connect.pyx":339
+ * 
+ *         self.stopper = True
+ *         self.import_te.clear()             # <<<<<<<<<<<<<<
+ *         newstring = f'results from {len(longstring)} lines of potential data:\nfound {status["id_none"]} new comicvine id and updated {status["id_update"]}\n{status["rating_none"]} ratings added and {status["rating_update"]} ratings updated'
+ *         self.import_te.setPlainText(f'{newstring}\n\n{org_string}')
+ */
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_te); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_clear); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_10))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_10);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_10);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_10, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_10);
+  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "cv_connect.pyx":340
  *         self.stopper = True
  *         self.import_te.clear()
+ *         newstring = f'results from {len(longstring)} lines of potential data:\nfound {status["id_none"]} new comicvine id and updated {status["id_update"]}\n{status["rating_none"]} ratings added and {status["rating_update"]} ratings updated'             # <<<<<<<<<<<<<<
+ *         self.import_te.setPlainText(f'{newstring}\n\n{org_string}')
+ *         self.stopper = False
  */
-  __pyx_t_1 = PyTuple_New(11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(11); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = 0;
   __pyx_t_18 = 127;
@@ -11568,180 +11658,644 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_results_from);
   if (unlikely(__pyx_v_longstring == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 336, __pyx_L1_error)
+    __PYX_ERR(0, 340, __pyx_L1_error)
   }
-  __pyx_t_6 = PyList_GET_SIZE(__pyx_v_longstring); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 336, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_6, 0, ' ', 'd'); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 336, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_3);
-  __pyx_t_3 = 0;
+  __pyx_t_6 = PyList_GET_SIZE(__pyx_v_longstring); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyUnicode_From_Py_ssize_t(__pyx_t_6, 0, ' ', 'd'); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_10);
+  __Pyx_GIVEREF(__pyx_t_10);
+  PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_10);
+  __pyx_t_10 = 0;
   __Pyx_INCREF(__pyx_kp_u_lines_of_potential_data_found);
   __pyx_t_4 += 32;
   __Pyx_GIVEREF(__pyx_kp_u_lines_of_potential_data_found);
   PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_lines_of_potential_data_found);
-  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_n_u_id_none); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 336, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_t_3, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_n_u_id_none); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_10) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_10) : __pyx_t_18;
-  __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_10);
-  __Pyx_GIVEREF(__pyx_t_10);
-  PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_t_10);
-  __pyx_t_10 = 0;
+  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_t_10, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) : __pyx_t_18;
+  __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_3);
+  PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_t_3);
+  __pyx_t_3 = 0;
   __Pyx_INCREF(__pyx_kp_u_new_comicvine_id_and_updated);
   __pyx_t_4 += 30;
   __Pyx_GIVEREF(__pyx_kp_u_new_comicvine_id_and_updated);
   PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_kp_u_new_comicvine_id_and_updated);
-  __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_n_u_id_update); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 336, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_t_10, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_n_u_id_update); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) : __pyx_t_18;
-  __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_1, 5, __pyx_t_3);
-  __pyx_t_3 = 0;
-  __Pyx_INCREF(__pyx_kp_u__15);
-  __pyx_t_4 += 1;
-  __Pyx_GIVEREF(__pyx_kp_u__15);
-  PyTuple_SET_ITEM(__pyx_t_1, 6, __pyx_kp_u__15);
-  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_n_u_rating_none); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 336, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_t_3, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_t_3, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_10) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_10) : __pyx_t_18;
   __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_10);
   __Pyx_GIVEREF(__pyx_t_10);
-  PyTuple_SET_ITEM(__pyx_t_1, 7, __pyx_t_10);
+  PyTuple_SET_ITEM(__pyx_t_1, 5, __pyx_t_10);
   __pyx_t_10 = 0;
-  __Pyx_INCREF(__pyx_kp_u_ratings_added_and);
-  __pyx_t_4 += 19;
-  __Pyx_GIVEREF(__pyx_kp_u_ratings_added_and);
-  PyTuple_SET_ITEM(__pyx_t_1, 8, __pyx_kp_u_ratings_added_and);
-  __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_n_u_rating_update); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __Pyx_INCREF(__pyx_kp_u__15);
+  __pyx_t_4 += 1;
+  __Pyx_GIVEREF(__pyx_kp_u__15);
+  PyTuple_SET_ITEM(__pyx_t_1, 6, __pyx_kp_u__15);
+  __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_n_u_rating_none); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_t_10, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_FormatSimple(__pyx_t_10, __pyx_empty_unicode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
   __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_3) : __pyx_t_18;
   __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_1, 9, __pyx_t_3);
+  PyTuple_SET_ITEM(__pyx_t_1, 7, __pyx_t_3);
   __pyx_t_3 = 0;
+  __Pyx_INCREF(__pyx_kp_u_ratings_added_and);
+  __pyx_t_4 += 19;
+  __Pyx_GIVEREF(__pyx_kp_u_ratings_added_and);
+  PyTuple_SET_ITEM(__pyx_t_1, 8, __pyx_kp_u_ratings_added_and);
+  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_status, __pyx_n_u_rating_update); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_10 = __Pyx_PyObject_FormatSimple(__pyx_t_3, __pyx_empty_unicode); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_10) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_10) : __pyx_t_18;
+  __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_10);
+  __Pyx_GIVEREF(__pyx_t_10);
+  PyTuple_SET_ITEM(__pyx_t_1, 9, __pyx_t_10);
+  __pyx_t_10 = 0;
   __Pyx_INCREF(__pyx_kp_u_ratings_updated);
   __pyx_t_4 += 16;
   __Pyx_GIVEREF(__pyx_kp_u_ratings_updated);
   PyTuple_SET_ITEM(__pyx_t_1, 10, __pyx_kp_u_ratings_updated);
-  __pyx_t_3 = __Pyx_PyUnicode_Join(__pyx_t_1, 11, __pyx_t_4, __pyx_t_18); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 336, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_newstring = ((PyObject*)__pyx_t_3);
-  __pyx_t_3 = 0;
-
-  /* "cv_connect.pyx":337
- * 
- *         newstring = f'results from {len(longstring)} lines of potential data:\nfound {status["id_none"]} new comicvine id and updated {status["id_update"]}\n{status["rating_none"]} ratings added and {status["rating_update"]} ratings updated'
- *         self.stopper = True             # <<<<<<<<<<<<<<
- *         self.import_te.clear()
- *         self.import_te.setPlainText(f'{newstring}\n\n{org_string}')
- */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_True) < 0) __PYX_ERR(0, 337, __pyx_L1_error)
-
-  /* "cv_connect.pyx":338
- *         newstring = f'results from {len(longstring)} lines of potential data:\nfound {status["id_none"]} new comicvine id and updated {status["id_update"]}\n{status["rating_none"]} ratings added and {status["rating_update"]} ratings updated'
- *         self.stopper = True
- *         self.import_te.clear()             # <<<<<<<<<<<<<<
- *         self.import_te.setPlainText(f'{newstring}\n\n{org_string}')
- *         self.stopper = False
- */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_te); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_clear); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 338, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyUnicode_Join(__pyx_t_1, 11, __pyx_t_4, __pyx_t_18); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_10))) {
-    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_10);
-    if (likely(__pyx_t_1)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_10);
-      __Pyx_INCREF(__pyx_t_1);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_10, function);
-    }
-  }
-  __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_10);
-  __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 338, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_v_newstring = ((PyObject*)__pyx_t_10);
+  __pyx_t_10 = 0;
 
-  /* "cv_connect.pyx":339
- *         self.stopper = True
+  /* "cv_connect.pyx":341
  *         self.import_te.clear()
+ *         newstring = f'results from {len(longstring)} lines of potential data:\nfound {status["id_none"]} new comicvine id and updated {status["id_update"]}\n{status["rating_none"]} ratings added and {status["rating_update"]} ratings updated'
  *         self.import_te.setPlainText(f'{newstring}\n\n{org_string}')             # <<<<<<<<<<<<<<
  *         self.stopper = False
  * 
  */
-  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_te); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 339, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_setPlainText); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_te); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = PyTuple_New(3); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 339, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_10);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_setPlainText); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_4 = 0;
   __pyx_t_18 = 127;
   __Pyx_INCREF(__pyx_v_newstring);
   __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_v_newstring) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_v_newstring) : __pyx_t_18;
   __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_v_newstring);
   __Pyx_GIVEREF(__pyx_v_newstring);
-  PyTuple_SET_ITEM(__pyx_t_10, 0, __pyx_v_newstring);
+  PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_newstring);
   __Pyx_INCREF(__pyx_kp_u__16);
   __pyx_t_4 += 2;
   __Pyx_GIVEREF(__pyx_kp_u__16);
-  PyTuple_SET_ITEM(__pyx_t_10, 1, __pyx_kp_u__16);
-  __pyx_t_8 = __Pyx_PyUnicode_Unicode(__pyx_v_org_string); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 339, __pyx_L1_error)
+  PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_kp_u__16);
+  __pyx_t_8 = __Pyx_PyUnicode_Unicode(__pyx_v_org_string); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __pyx_t_18 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_8) > __pyx_t_18) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_8) : __pyx_t_18;
   __pyx_t_4 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_8);
   __Pyx_GIVEREF(__pyx_t_8);
-  PyTuple_SET_ITEM(__pyx_t_10, 2, __pyx_t_8);
+  PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_t_8);
   __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_PyUnicode_Join(__pyx_t_10, 3, __pyx_t_4, __pyx_t_18); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyUnicode_Join(__pyx_t_1, 3, __pyx_t_4, __pyx_t_18); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-  __pyx_t_10 = NULL;
-  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_10)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = NULL;
+  if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_1)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_1);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
     }
   }
-  __pyx_t_3 = (__pyx_t_10) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_10, __pyx_t_8) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __pyx_t_10 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_1, __pyx_t_8) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8);
+  __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 339, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-  /* "cv_connect.pyx":340
- *         self.import_te.clear()
+  /* "cv_connect.pyx":342
+ *         newstring = f'results from {len(longstring)} lines of potential data:\nfound {status["id_none"]} new comicvine id and updated {status["id_update"]}\n{status["rating_none"]} ratings added and {status["rating_update"]} ratings updated'
  *         self.import_te.setPlainText(f'{newstring}\n\n{org_string}')
  *         self.stopper = False             # <<<<<<<<<<<<<<
  * 
+ *         for eachwidget in self.main.covers['standard']:
+ */
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_False) < 0) __PYX_ERR(0, 342, __pyx_L1_error)
+
+  /* "cv_connect.pyx":344
+ *         self.stopper = False
+ * 
+ *         for eachwidget in self.main.covers['standard']:             # <<<<<<<<<<<<<<
+ *             sqlitecursor.execute('select * from comics where id = (?)', (eachwidget.database[0],))
+ *             newdata = sqlitecursor.fetchone()
+ */
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_main); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_covers); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  __pyx_t_10 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_u_standard); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (likely(PyList_CheckExact(__pyx_t_10)) || PyTuple_CheckExact(__pyx_t_10)) {
+    __pyx_t_3 = __pyx_t_10; __Pyx_INCREF(__pyx_t_3); __pyx_t_4 = 0;
+    __pyx_t_19 = NULL;
+  } else {
+    __pyx_t_4 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 344, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_19 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 344, __pyx_L1_error)
+  }
+  __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+  for (;;) {
+    if (likely(!__pyx_t_19)) {
+      if (likely(PyList_CheckExact(__pyx_t_3))) {
+        if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_3)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_10 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_10); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 344, __pyx_L1_error)
+        #else
+        __pyx_t_10 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 344, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        #endif
+      } else {
+        if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
+        #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
+        __pyx_t_10 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_4); __Pyx_INCREF(__pyx_t_10); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 344, __pyx_L1_error)
+        #else
+        __pyx_t_10 = PySequence_ITEM(__pyx_t_3, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 344, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        #endif
+      }
+    } else {
+      __pyx_t_10 = __pyx_t_19(__pyx_t_3);
+      if (unlikely(!__pyx_t_10)) {
+        PyObject* exc_type = PyErr_Occurred();
+        if (exc_type) {
+          if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
+          else __PYX_ERR(0, 344, __pyx_L1_error)
+        }
+        break;
+      }
+      __Pyx_GOTREF(__pyx_t_10);
+    }
+    __Pyx_XDECREF_SET(__pyx_v_eachwidget, __pyx_t_10);
+    __pyx_t_10 = 0;
+
+    /* "cv_connect.pyx":345
+ * 
+ *         for eachwidget in self.main.covers['standard']:
+ *             sqlitecursor.execute('select * from comics where id = (?)', (eachwidget.database[0],))             # <<<<<<<<<<<<<<
+ *             newdata = sqlitecursor.fetchone()
+ *             if newdata != eachwidget.database:
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 345, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 345, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_database); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 345, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_8, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 345, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __pyx_t_8 = PyTuple_New(1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 345, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_8);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_2);
+    __pyx_t_2 = 0;
+    __pyx_t_2 = NULL;
+    __pyx_t_11 = 0;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_2)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_1, function);
+        __pyx_t_11 = 1;
+      }
+    }
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_1)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_kp_u_select_from_comics_where_id, __pyx_t_8};
+      __pyx_t_10 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 345, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
+      PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_kp_u_select_from_comics_where_id, __pyx_t_8};
+      __pyx_t_10 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_11, 2+__pyx_t_11); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 345, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_9 = PyTuple_New(2+__pyx_t_11); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 345, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      if (__pyx_t_2) {
+        __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_2); __pyx_t_2 = NULL;
+      }
+      __Pyx_INCREF(__pyx_kp_u_select_from_comics_where_id);
+      __Pyx_GIVEREF(__pyx_kp_u_select_from_comics_where_id);
+      PyTuple_SET_ITEM(__pyx_t_9, 0+__pyx_t_11, __pyx_kp_u_select_from_comics_where_id);
+      __Pyx_GIVEREF(__pyx_t_8);
+      PyTuple_SET_ITEM(__pyx_t_9, 1+__pyx_t_11, __pyx_t_8);
+      __pyx_t_8 = 0;
+      __pyx_t_10 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_9, NULL); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 345, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    }
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+
+    /* "cv_connect.pyx":346
+ *         for eachwidget in self.main.covers['standard']:
+ *             sqlitecursor.execute('select * from comics where id = (?)', (eachwidget.database[0],))
+ *             newdata = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
+ *             if newdata != eachwidget.database:
+ * 
+ */
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_9))) {
+      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_9);
+      if (likely(__pyx_t_1)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_9);
+        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_9, function);
+      }
+    }
+    __pyx_t_10 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_9);
+    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_newdata, __pyx_t_10);
+    __pyx_t_10 = 0;
+
+    /* "cv_connect.pyx":347
+ *             sqlitecursor.execute('select * from comics where id = (?)', (eachwidget.database[0],))
+ *             newdata = sqlitecursor.fetchone()
+ *             if newdata != eachwidget.database:             # <<<<<<<<<<<<<<
+ * 
+ *                 eachwidget.database       = newdata
+ */
+    __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_database); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 347, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_10);
+    __pyx_t_9 = PyObject_RichCompare(__pyx_v_newdata, __pyx_t_10, Py_NE); __Pyx_XGOTREF(__pyx_t_9); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 347, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+    __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_9); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 347, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    if (__pyx_t_5) {
+
+      /* "cv_connect.pyx":349
+ *             if newdata != eachwidget.database:
+ * 
+ *                 eachwidget.database       = newdata             # <<<<<<<<<<<<<<
+ *                 eachwidget.cover.database = newdata
+ * 
+ */
+      if (__Pyx_PyObject_SetAttrStr(__pyx_v_eachwidget, __pyx_n_s_database, __pyx_v_newdata) < 0) __PYX_ERR(0, 349, __pyx_L1_error)
+
+      /* "cv_connect.pyx":350
+ * 
+ *                 eachwidget.database       = newdata
+ *                 eachwidget.cover.database = newdata             # <<<<<<<<<<<<<<
+ * 
+ *                 if 'cv_link' not in dir(eachwidget) and newdata[DB.comic_id] != None:
+ */
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_cover); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 350, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      if (__Pyx_PyObject_SetAttrStr(__pyx_t_9, __pyx_n_s_database, __pyx_v_newdata) < 0) __PYX_ERR(0, 350, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+      /* "cv_connect.pyx":352
+ *                 eachwidget.cover.database = newdata
+ * 
+ *                 if 'cv_link' not in dir(eachwidget) and newdata[DB.comic_id] != None:             # <<<<<<<<<<<<<<
+ *                     eachwidget.height_taken  -= (eachwidget.cv_link_x +5)
+ *                     eachwidget.make_cv_link()
+ */
+      __pyx_t_9 = PyObject_Dir(__pyx_v_eachwidget); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 352, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __pyx_t_7 = (__Pyx_PySequence_ContainsTF(__pyx_n_u_cv_link, __pyx_t_9, Py_NE)); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 352, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __pyx_t_20 = (__pyx_t_7 != 0);
+      if (__pyx_t_20) {
+      } else {
+        __pyx_t_5 = __pyx_t_20;
+        goto __pyx_L73_bool_binop_done;
+      }
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_DB); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 352, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 352, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_10);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __pyx_t_9 = __Pyx_PyObject_GetItem(__pyx_v_newdata, __pyx_t_10); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 352, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_t_10 = PyObject_RichCompare(__pyx_t_9, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_10); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 352, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __pyx_t_20 = __Pyx_PyObject_IsTrue(__pyx_t_10); if (unlikely(__pyx_t_20 < 0)) __PYX_ERR(0, 352, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+      __pyx_t_5 = __pyx_t_20;
+      __pyx_L73_bool_binop_done:;
+      if (__pyx_t_5) {
+
+        /* "cv_connect.pyx":353
+ * 
+ *                 if 'cv_link' not in dir(eachwidget) and newdata[DB.comic_id] != None:
+ *                     eachwidget.height_taken  -= (eachwidget.cv_link_x +5)             # <<<<<<<<<<<<<<
+ *                     eachwidget.make_cv_link()
+ *                     eachwidget.cv_link.show()
+ */
+        __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_height_taken); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 353, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_cv_link_x); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 353, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_9);
+        __pyx_t_1 = __Pyx_PyInt_AddObjC(__pyx_t_9, __pyx_int_5, 5, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+        __pyx_t_9 = PyNumber_InPlaceSubtract(__pyx_t_10, __pyx_t_1); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 353, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_9);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        if (__Pyx_PyObject_SetAttrStr(__pyx_v_eachwidget, __pyx_n_s_height_taken, __pyx_t_9) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
+        __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+        /* "cv_connect.pyx":354
+ *                 if 'cv_link' not in dir(eachwidget) and newdata[DB.comic_id] != None:
+ *                     eachwidget.height_taken  -= (eachwidget.cv_link_x +5)
+ *                     eachwidget.make_cv_link()             # <<<<<<<<<<<<<<
+ *                     eachwidget.cv_link.show()
+ *                     Theme(eachwidget)
+ */
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_make_cv_link); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_10 = NULL;
+        if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
+          __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_1);
+          if (likely(__pyx_t_10)) {
+            PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+            __Pyx_INCREF(__pyx_t_10);
+            __Pyx_INCREF(function);
+            __Pyx_DECREF_SET(__pyx_t_1, function);
+          }
+        }
+        __pyx_t_9 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+        __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+        if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 354, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_9);
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+        /* "cv_connect.pyx":355
+ *                     eachwidget.height_taken  -= (eachwidget.cv_link_x +5)
+ *                     eachwidget.make_cv_link()
+ *                     eachwidget.cv_link.show()             # <<<<<<<<<<<<<<
+ *                     Theme(eachwidget)
+ * 
+ */
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_cv_link); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 355, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_1);
+        __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_show); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 355, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __pyx_t_1 = NULL;
+        if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_10))) {
+          __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_10);
+          if (likely(__pyx_t_1)) {
+            PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_10);
+            __Pyx_INCREF(__pyx_t_1);
+            __Pyx_INCREF(function);
+            __Pyx_DECREF_SET(__pyx_t_10, function);
+          }
+        }
+        __pyx_t_9 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_10);
+        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 355, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_9);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+        /* "cv_connect.pyx":356
+ *                     eachwidget.make_cv_link()
+ *                     eachwidget.cv_link.show()
+ *                     Theme(eachwidget)             # <<<<<<<<<<<<<<
+ * 
+ *                 try:
+ */
+        __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_Theme); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 356, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_10);
+        __pyx_t_1 = NULL;
+        if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_10))) {
+          __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_10);
+          if (likely(__pyx_t_1)) {
+            PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_10);
+            __Pyx_INCREF(__pyx_t_1);
+            __Pyx_INCREF(function);
+            __Pyx_DECREF_SET(__pyx_t_10, function);
+          }
+        }
+        __pyx_t_9 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_1, __pyx_v_eachwidget) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_v_eachwidget);
+        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 356, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_9);
+        __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+        /* "cv_connect.pyx":352
+ *                 eachwidget.cover.database = newdata
+ * 
+ *                 if 'cv_link' not in dir(eachwidget) and newdata[DB.comic_id] != None:             # <<<<<<<<<<<<<<
+ *                     eachwidget.height_taken  -= (eachwidget.cv_link_x +5)
+ *                     eachwidget.make_cv_link()
+ */
+      }
+
+      /* "cv_connect.pyx":358
+ *                     Theme(eachwidget)
+ * 
+ *                 try:             # <<<<<<<<<<<<<<
+ *                     for count in range(len(eachwidget.starlayout)-1,-1,-1):
+ *                         eachwidget.starlayout.takeAt(count)
+ */
+      {
+        __Pyx_PyThreadState_declare
+        __Pyx_PyThreadState_assign
+        __Pyx_ExceptionSave(&__pyx_t_12, &__pyx_t_13, &__pyx_t_14);
+        __Pyx_XGOTREF(__pyx_t_12);
+        __Pyx_XGOTREF(__pyx_t_13);
+        __Pyx_XGOTREF(__pyx_t_14);
+        /*try:*/ {
+
+          /* "cv_connect.pyx":359
+ * 
+ *                 try:
+ *                     for count in range(len(eachwidget.starlayout)-1,-1,-1):             # <<<<<<<<<<<<<<
+ *                         eachwidget.starlayout.takeAt(count)
+ *                     eachwidget.make_stars_relay()
+ */
+          __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_starlayout); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 359, __pyx_L75_error)
+          __Pyx_GOTREF(__pyx_t_9);
+          __pyx_t_6 = PyObject_Length(__pyx_t_9); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 359, __pyx_L75_error)
+          __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+          for (__pyx_t_11 = (__pyx_t_6 - 1); __pyx_t_11 > -1; __pyx_t_11-=1) {
+            __pyx_v_count = __pyx_t_11;
+
+            /* "cv_connect.pyx":360
+ *                 try:
+ *                     for count in range(len(eachwidget.starlayout)-1,-1,-1):
+ *                         eachwidget.starlayout.takeAt(count)             # <<<<<<<<<<<<<<
+ *                     eachwidget.make_stars_relay()
+ *                 except AttributeError: pass
+ */
+            __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_starlayout); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 360, __pyx_L75_error)
+            __Pyx_GOTREF(__pyx_t_10);
+            __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_takeAt); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L75_error)
+            __Pyx_GOTREF(__pyx_t_1);
+            __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+            __pyx_t_10 = __Pyx_PyInt_From_int(__pyx_v_count); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 360, __pyx_L75_error)
+            __Pyx_GOTREF(__pyx_t_10);
+            __pyx_t_8 = NULL;
+            if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
+              __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_1);
+              if (likely(__pyx_t_8)) {
+                PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+                __Pyx_INCREF(__pyx_t_8);
+                __Pyx_INCREF(function);
+                __Pyx_DECREF_SET(__pyx_t_1, function);
+              }
+            }
+            __pyx_t_9 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_8, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_10);
+            __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+            __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
+            if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 360, __pyx_L75_error)
+            __Pyx_GOTREF(__pyx_t_9);
+            __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+            __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+          }
+
+          /* "cv_connect.pyx":361
+ *                     for count in range(len(eachwidget.starlayout)-1,-1,-1):
+ *                         eachwidget.starlayout.takeAt(count)
+ *                     eachwidget.make_stars_relay()             # <<<<<<<<<<<<<<
+ *                 except AttributeError: pass
+ * 
+ */
+          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_eachwidget, __pyx_n_s_make_stars_relay); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L75_error)
+          __Pyx_GOTREF(__pyx_t_1);
+          __pyx_t_10 = NULL;
+          if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
+            __pyx_t_10 = PyMethod_GET_SELF(__pyx_t_1);
+            if (likely(__pyx_t_10)) {
+              PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+              __Pyx_INCREF(__pyx_t_10);
+              __Pyx_INCREF(function);
+              __Pyx_DECREF_SET(__pyx_t_1, function);
+            }
+          }
+          __pyx_t_9 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+          __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+          if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 361, __pyx_L75_error)
+          __Pyx_GOTREF(__pyx_t_9);
+          __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+          __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+          /* "cv_connect.pyx":358
+ *                     Theme(eachwidget)
+ * 
+ *                 try:             # <<<<<<<<<<<<<<
+ *                     for count in range(len(eachwidget.starlayout)-1,-1,-1):
+ *                         eachwidget.starlayout.takeAt(count)
+ */
+        }
+        __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
+        __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
+        __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
+        goto __pyx_L82_try_end;
+        __pyx_L75_error:;
+        __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+        __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
+        __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
+        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+        __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+        __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+        /* "cv_connect.pyx":362
+ *                         eachwidget.starlayout.takeAt(count)
+ *                     eachwidget.make_stars_relay()
+ *                 except AttributeError: pass             # <<<<<<<<<<<<<<
+ * 
  *     def draw_export_from_drawlist(self):
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_False) < 0) __PYX_ERR(0, 340, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_AttributeError);
+        if (__pyx_t_11) {
+          __Pyx_ErrRestore(0,0,0);
+          goto __pyx_L76_exception_handled;
+        }
+        goto __pyx_L77_except_error;
+        __pyx_L77_except_error:;
+
+        /* "cv_connect.pyx":358
+ *                     Theme(eachwidget)
+ * 
+ *                 try:             # <<<<<<<<<<<<<<
+ *                     for count in range(len(eachwidget.starlayout)-1,-1,-1):
+ *                         eachwidget.starlayout.takeAt(count)
+ */
+        __Pyx_XGIVEREF(__pyx_t_12);
+        __Pyx_XGIVEREF(__pyx_t_13);
+        __Pyx_XGIVEREF(__pyx_t_14);
+        __Pyx_ExceptionReset(__pyx_t_12, __pyx_t_13, __pyx_t_14);
+        goto __pyx_L1_error;
+        __pyx_L76_exception_handled:;
+        __Pyx_XGIVEREF(__pyx_t_12);
+        __Pyx_XGIVEREF(__pyx_t_13);
+        __Pyx_XGIVEREF(__pyx_t_14);
+        __Pyx_ExceptionReset(__pyx_t_12, __pyx_t_13, __pyx_t_14);
+        __pyx_L82_try_end:;
+      }
+
+      /* "cv_connect.pyx":347
+ *             sqlitecursor.execute('select * from comics where id = (?)', (eachwidget.database[0],))
+ *             newdata = sqlitecursor.fetchone()
+ *             if newdata != eachwidget.database:             # <<<<<<<<<<<<<<
+ * 
+ *                 eachwidget.database       = newdata
+ */
+    }
+
+    /* "cv_connect.pyx":344
+ *         self.stopper = False
+ * 
+ *         for eachwidget in self.main.covers['standard']:             # <<<<<<<<<<<<<<
+ *             sqlitecursor.execute('select * from comics where id = (?)', (eachwidget.database[0],))
+ *             newdata = sqlitecursor.fetchone()
+ */
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
   /* "cv_connect.pyx":266
  *         self.stopper = False
@@ -11774,13 +12328,15 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comi
   __Pyx_XDECREF(__pyx_v_query);
   __Pyx_XDECREF(__pyx_v_md5data);
   __Pyx_XDECREF(__pyx_v_newstring);
+  __Pyx_XDECREF(__pyx_v_eachwidget);
+  __Pyx_XDECREF(__pyx_v_newdata);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "cv_connect.pyx":342
- *         self.stopper = False
+/* "cv_connect.pyx":364
+ *                 except AttributeError: pass
  * 
  *     def draw_export_from_drawlist(self):             # <<<<<<<<<<<<<<
  *         cdef str longstring = "", rating
@@ -11819,7 +12375,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("draw_export_from_drawlist", 0);
 
-  /* "cv_connect.pyx":343
+  /* "cv_connect.pyx":365
  * 
  *     def draw_export_from_drawlist(self):
  *         cdef str longstring = "", rating             # <<<<<<<<<<<<<<
@@ -11829,16 +12385,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
   __Pyx_INCREF(__pyx_kp_u__2);
   __pyx_v_longstring = __pyx_kp_u__2;
 
-  /* "cv_connect.pyx":345
+  /* "cv_connect.pyx":367
  *         cdef str longstring = "", rating
  *         cdef tuple eachcard
  *         self.import_te.clear()             # <<<<<<<<<<<<<<
  *         for eachcard in self.main.drawlist:
  *             rating = ""
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_te); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 345, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_te); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_clear); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 345, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_clear); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -11853,30 +12409,30 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 345, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cv_connect.pyx":346
+  /* "cv_connect.pyx":368
  *         cdef tuple eachcard
  *         self.import_te.clear()
  *         for eachcard in self.main.drawlist:             # <<<<<<<<<<<<<<
  *             rating = ""
  *             if eachcard[DB.comic_id] != None:
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_main); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_main); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_drawlist); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_drawlist); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
     __pyx_t_1 = __pyx_t_3; __Pyx_INCREF(__pyx_t_1); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_4 = -1; __pyx_t_1 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_1)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 368, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   for (;;) {
@@ -11884,17 +12440,17 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
       if (likely(PyList_CheckExact(__pyx_t_1))) {
         if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 346, __pyx_L1_error)
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 368, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 346, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       } else {
         if (__pyx_t_4 >= PyTuple_GET_SIZE(__pyx_t_1)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 346, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_3); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 368, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 346, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       }
@@ -11904,17 +12460,17 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 346, __pyx_L1_error)
+          else __PYX_ERR(0, 368, __pyx_L1_error)
         }
         break;
       }
       __Pyx_GOTREF(__pyx_t_3);
     }
-    if (!(likely(PyTuple_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 346, __pyx_L1_error)
+    if (!(likely(PyTuple_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 368, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_eachcard, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "cv_connect.pyx":347
+    /* "cv_connect.pyx":369
  *         self.import_te.clear()
  *         for eachcard in self.main.drawlist:
  *             rating = ""             # <<<<<<<<<<<<<<
@@ -11924,7 +12480,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
     __Pyx_INCREF(__pyx_kp_u__2);
     __Pyx_XDECREF_SET(__pyx_v_rating, __pyx_kp_u__2);
 
-    /* "cv_connect.pyx":348
+    /* "cv_connect.pyx":370
  *         for eachcard in self.main.drawlist:
  *             rating = ""
  *             if eachcard[DB.comic_id] != None:             # <<<<<<<<<<<<<<
@@ -11933,32 +12489,32 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
     if (unlikely(__pyx_v_eachcard == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 348, __pyx_L1_error)
+      __PYX_ERR(0, 370, __pyx_L1_error)
     }
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DB); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DB); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 370, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 370, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 348, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 370, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_6) {
 
-      /* "cv_connect.pyx":349
+      /* "cv_connect.pyx":371
  *             rating = ""
  *             if eachcard[DB.comic_id] != None:
  *                 if self.any_rating_radio.isChecked():             # <<<<<<<<<<<<<<
  *                     if eachcard[DB.user_rating] != None:
  *                         rating = ':'  + str(eachcard[DB.user_rating])
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_any_rating_radio); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_any_rating_radio); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 371, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 349, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 371, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = NULL;
@@ -11973,14 +12529,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
       }
       __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 371, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 349, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 371, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (__pyx_t_6) {
 
-        /* "cv_connect.pyx":350
+        /* "cv_connect.pyx":372
  *             if eachcard[DB.comic_id] != None:
  *                 if self.any_rating_radio.isChecked():
  *                     if eachcard[DB.user_rating] != None:             # <<<<<<<<<<<<<<
@@ -11989,23 +12545,23 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         if (unlikely(__pyx_v_eachcard == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 350, __pyx_L1_error)
+          __PYX_ERR(0, 372, __pyx_L1_error)
         }
-        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 372, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 350, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 372, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 372, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = PyObject_RichCompare(__pyx_t_2, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 350, __pyx_L1_error)
+        __pyx_t_7 = PyObject_RichCompare(__pyx_t_2, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 372, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 350, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 372, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         if (__pyx_t_6) {
 
-          /* "cv_connect.pyx":351
+          /* "cv_connect.pyx":373
  *                 if self.any_rating_radio.isChecked():
  *                     if eachcard[DB.user_rating] != None:
  *                         rating = ':'  + str(eachcard[DB.user_rating])             # <<<<<<<<<<<<<<
@@ -12014,26 +12570,26 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
           if (unlikely(__pyx_v_eachcard == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 351, __pyx_L1_error)
+            __PYX_ERR(0, 373, __pyx_L1_error)
           }
-          __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 351, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 373, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 351, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 373, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 351, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 373, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 351, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 373, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 351, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 373, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF_SET(__pyx_v_rating, ((PyObject*)__pyx_t_7));
           __pyx_t_7 = 0;
 
-          /* "cv_connect.pyx":350
+          /* "cv_connect.pyx":372
  *             if eachcard[DB.comic_id] != None:
  *                 if self.any_rating_radio.isChecked():
  *                     if eachcard[DB.user_rating] != None:             # <<<<<<<<<<<<<<
@@ -12043,7 +12599,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
           goto __pyx_L7;
         }
 
-        /* "cv_connect.pyx":352
+        /* "cv_connect.pyx":374
  *                     if eachcard[DB.user_rating] != None:
  *                         rating = ':'  + str(eachcard[DB.user_rating])
  *                     elif eachcard[DB.other_rating_a] != None:             # <<<<<<<<<<<<<<
@@ -12052,23 +12608,23 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         if (unlikely(__pyx_v_eachcard == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 352, __pyx_L1_error)
+          __PYX_ERR(0, 374, __pyx_L1_error)
         }
-        __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 352, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 374, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 352, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 374, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
+        __pyx_t_2 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 352, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 374, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         if (__pyx_t_6) {
 
-          /* "cv_connect.pyx":353
+          /* "cv_connect.pyx":375
  *                         rating = ':'  + str(eachcard[DB.user_rating])
  *                     elif eachcard[DB.other_rating_a] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_a])             # <<<<<<<<<<<<<<
@@ -12077,26 +12633,26 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
           if (unlikely(__pyx_v_eachcard == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 353, __pyx_L1_error)
+            __PYX_ERR(0, 375, __pyx_L1_error)
           }
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 353, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 375, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 353, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 375, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_DECREF_SET(__pyx_v_rating, ((PyObject*)__pyx_t_2));
           __pyx_t_2 = 0;
 
-          /* "cv_connect.pyx":352
+          /* "cv_connect.pyx":374
  *                     if eachcard[DB.user_rating] != None:
  *                         rating = ':'  + str(eachcard[DB.user_rating])
  *                     elif eachcard[DB.other_rating_a] != None:             # <<<<<<<<<<<<<<
@@ -12106,7 +12662,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
           goto __pyx_L7;
         }
 
-        /* "cv_connect.pyx":354
+        /* "cv_connect.pyx":376
  *                     elif eachcard[DB.other_rating_a] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_a])
  *                     elif eachcard[DB.other_rating_b] != None:             # <<<<<<<<<<<<<<
@@ -12115,23 +12671,23 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         if (unlikely(__pyx_v_eachcard == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 354, __pyx_L1_error)
+          __PYX_ERR(0, 376, __pyx_L1_error)
         }
-        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 376, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 354, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 376, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 376, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = PyObject_RichCompare(__pyx_t_2, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 354, __pyx_L1_error)
+        __pyx_t_7 = PyObject_RichCompare(__pyx_t_2, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 376, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 354, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 376, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         if (__pyx_t_6) {
 
-          /* "cv_connect.pyx":355
+          /* "cv_connect.pyx":377
  *                         rating = ':' + str(eachcard[DB.other_rating_a])
  *                     elif eachcard[DB.other_rating_b] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_b])             # <<<<<<<<<<<<<<
@@ -12140,26 +12696,26 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
           if (unlikely(__pyx_v_eachcard == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 355, __pyx_L1_error)
+            __PYX_ERR(0, 377, __pyx_L1_error)
           }
-          __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 355, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 377, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 355, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 377, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 355, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 377, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 355, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 377, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 355, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 377, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF_SET(__pyx_v_rating, ((PyObject*)__pyx_t_7));
           __pyx_t_7 = 0;
 
-          /* "cv_connect.pyx":354
+          /* "cv_connect.pyx":376
  *                     elif eachcard[DB.other_rating_a] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_a])
  *                     elif eachcard[DB.other_rating_b] != None:             # <<<<<<<<<<<<<<
@@ -12169,7 +12725,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
         }
         __pyx_L7:;
 
-        /* "cv_connect.pyx":349
+        /* "cv_connect.pyx":371
  *             rating = ""
  *             if eachcard[DB.comic_id] != None:
  *                 if self.any_rating_radio.isChecked():             # <<<<<<<<<<<<<<
@@ -12179,16 +12735,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
         goto __pyx_L6;
       }
 
-      /* "cv_connect.pyx":356
+      /* "cv_connect.pyx":378
  *                     elif eachcard[DB.other_rating_b] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_b])
  *                 elif self.your_rating_radio.isChecked():             # <<<<<<<<<<<<<<
  *                     if eachcard[DB.user_rating] != None:
  *                         rating = ':' + str(eachcard[DB.user_rating])
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_your_rating_radio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 356, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_your_rating_radio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 378, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 378, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_2 = NULL;
@@ -12203,14 +12759,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
       }
       __pyx_t_7 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 356, __pyx_L1_error)
+      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 378, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 356, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 378, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (__pyx_t_6) {
 
-        /* "cv_connect.pyx":357
+        /* "cv_connect.pyx":379
  *                         rating = ':' + str(eachcard[DB.other_rating_b])
  *                 elif self.your_rating_radio.isChecked():
  *                     if eachcard[DB.user_rating] != None:             # <<<<<<<<<<<<<<
@@ -12219,23 +12775,23 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         if (unlikely(__pyx_v_eachcard == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 357, __pyx_L1_error)
+          __PYX_ERR(0, 379, __pyx_L1_error)
         }
-        __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 379, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 379, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __pyx_t_3 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 379, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         if (__pyx_t_6) {
 
-          /* "cv_connect.pyx":358
+          /* "cv_connect.pyx":380
  *                 elif self.your_rating_radio.isChecked():
  *                     if eachcard[DB.user_rating] != None:
  *                         rating = ':' + str(eachcard[DB.user_rating])             # <<<<<<<<<<<<<<
@@ -12244,26 +12800,26 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
           if (unlikely(__pyx_v_eachcard == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 358, __pyx_L1_error)
+            __PYX_ERR(0, 380, __pyx_L1_error)
           }
-          __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DB); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DB); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
-          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_user_rating); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 380, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 380, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_DECREF_SET(__pyx_v_rating, ((PyObject*)__pyx_t_3));
           __pyx_t_3 = 0;
 
-          /* "cv_connect.pyx":357
+          /* "cv_connect.pyx":379
  *                         rating = ':' + str(eachcard[DB.other_rating_b])
  *                 elif self.your_rating_radio.isChecked():
  *                     if eachcard[DB.user_rating] != None:             # <<<<<<<<<<<<<<
@@ -12272,7 +12828,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         }
 
-        /* "cv_connect.pyx":356
+        /* "cv_connect.pyx":378
  *                     elif eachcard[DB.other_rating_b] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_b])
  *                 elif self.your_rating_radio.isChecked():             # <<<<<<<<<<<<<<
@@ -12282,16 +12838,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
         goto __pyx_L6;
       }
 
-      /* "cv_connect.pyx":359
+      /* "cv_connect.pyx":381
  *                     if eachcard[DB.user_rating] != None:
  *                         rating = ':' + str(eachcard[DB.user_rating])
  *                 elif self.other_rating_radio_one.isChecked():             # <<<<<<<<<<<<<<
  *                     if eachcard[DB.other_rating_a] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_a])
  */
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_other_rating_radio_one); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 359, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_other_rating_radio_one); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 381, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 359, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_7 = NULL;
@@ -12306,14 +12862,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
       }
       __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 359, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 381, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_6) {
 
-        /* "cv_connect.pyx":360
+        /* "cv_connect.pyx":382
  *                         rating = ':' + str(eachcard[DB.user_rating])
  *                 elif self.other_rating_radio_one.isChecked():
  *                     if eachcard[DB.other_rating_a] != None:             # <<<<<<<<<<<<<<
@@ -12322,23 +12878,23 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         if (unlikely(__pyx_v_eachcard == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 360, __pyx_L1_error)
+          __PYX_ERR(0, 382, __pyx_L1_error)
         }
-        __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DB); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 360, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_DB); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 360, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 360, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 360, __pyx_L1_error)
+        __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 360, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 382, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         if (__pyx_t_6) {
 
-          /* "cv_connect.pyx":361
+          /* "cv_connect.pyx":383
  *                 elif self.other_rating_radio_one.isChecked():
  *                     if eachcard[DB.other_rating_a] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_a])             # <<<<<<<<<<<<<<
@@ -12347,26 +12903,26 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
           if (unlikely(__pyx_v_eachcard == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 361, __pyx_L1_error)
+            __PYX_ERR(0, 383, __pyx_L1_error)
           }
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_a); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __Pyx_DECREF_SET(__pyx_v_rating, ((PyObject*)__pyx_t_2));
           __pyx_t_2 = 0;
 
-          /* "cv_connect.pyx":360
+          /* "cv_connect.pyx":382
  *                         rating = ':' + str(eachcard[DB.user_rating])
  *                 elif self.other_rating_radio_one.isChecked():
  *                     if eachcard[DB.other_rating_a] != None:             # <<<<<<<<<<<<<<
@@ -12375,7 +12931,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         }
 
-        /* "cv_connect.pyx":359
+        /* "cv_connect.pyx":381
  *                     if eachcard[DB.user_rating] != None:
  *                         rating = ':' + str(eachcard[DB.user_rating])
  *                 elif self.other_rating_radio_one.isChecked():             # <<<<<<<<<<<<<<
@@ -12385,16 +12941,16 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
         goto __pyx_L6;
       }
 
-      /* "cv_connect.pyx":362
+      /* "cv_connect.pyx":384
  *                     if eachcard[DB.other_rating_a] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_a])
  *                 elif self.other_rating_radio_two.isChecked():             # <<<<<<<<<<<<<<
  *                     if eachcard[DB.other_rating_b] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_b])
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_other_rating_radio_two); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 362, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_other_rating_radio_two); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 362, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 384, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = NULL;
@@ -12409,14 +12965,14 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
       }
       __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 362, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 384, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 362, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 384, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (__pyx_t_6) {
 
-        /* "cv_connect.pyx":363
+        /* "cv_connect.pyx":385
  *                         rating = ':' + str(eachcard[DB.other_rating_a])
  *                 elif self.other_rating_radio_two.isChecked():
  *                     if eachcard[DB.other_rating_b] != None:             # <<<<<<<<<<<<<<
@@ -12425,23 +12981,23 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         if (unlikely(__pyx_v_eachcard == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 363, __pyx_L1_error)
+          __PYX_ERR(0, 385, __pyx_L1_error)
         }
-        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_DB); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 363, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 385, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 385, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = PyObject_RichCompare(__pyx_t_2, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 363, __pyx_L1_error)
+        __pyx_t_7 = PyObject_RichCompare(__pyx_t_2, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 385, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 363, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 385, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         if (__pyx_t_6) {
 
-          /* "cv_connect.pyx":364
+          /* "cv_connect.pyx":386
  *                 elif self.other_rating_radio_two.isChecked():
  *                     if eachcard[DB.other_rating_b] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_b])             # <<<<<<<<<<<<<<
@@ -12450,26 +13006,26 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
           if (unlikely(__pyx_v_eachcard == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 364, __pyx_L1_error)
+            __PYX_ERR(0, 386, __pyx_L1_error)
           }
-          __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 364, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 386, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_other_rating_b); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 364, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 386, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-          __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-          __pyx_t_7 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 364, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyUnicode_Concat(__pyx_kp_u__4, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 386, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF_SET(__pyx_v_rating, ((PyObject*)__pyx_t_7));
           __pyx_t_7 = 0;
 
-          /* "cv_connect.pyx":363
+          /* "cv_connect.pyx":385
  *                         rating = ':' + str(eachcard[DB.other_rating_a])
  *                 elif self.other_rating_radio_two.isChecked():
  *                     if eachcard[DB.other_rating_b] != None:             # <<<<<<<<<<<<<<
@@ -12478,7 +13034,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
         }
 
-        /* "cv_connect.pyx":362
+        /* "cv_connect.pyx":384
  *                     if eachcard[DB.other_rating_a] != None:
  *                         rating = ':' + str(eachcard[DB.other_rating_a])
  *                 elif self.other_rating_radio_two.isChecked():             # <<<<<<<<<<<<<<
@@ -12488,7 +13044,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
       }
       __pyx_L6:;
 
-      /* "cv_connect.pyx":366
+      /* "cv_connect.pyx":388
  *                         rating = ':' + str(eachcard[DB.other_rating_b])
  * 
  *                 longstring += eachcard[DB.md5] + ':' + str(eachcard[DB.comic_id]) + rating + '\n'             # <<<<<<<<<<<<<<
@@ -12497,52 +13053,52 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
       if (unlikely(__pyx_v_eachcard == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 366, __pyx_L1_error)
+        __PYX_ERR(0, 388, __pyx_L1_error)
       }
-      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_md5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_md5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyNumber_Add(__pyx_t_7, __pyx_kp_u__4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_2 = PyNumber_Add(__pyx_t_7, __pyx_kp_u__4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (unlikely(__pyx_v_eachcard == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 366, __pyx_L1_error)
+        __PYX_ERR(0, 388, __pyx_L1_error)
       }
-      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_DB); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_comic_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_eachcard, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyNumber_Add(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_7 = PyNumber_Add(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyNumber_Add(__pyx_t_7, __pyx_v_rating); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_3 = PyNumber_Add(__pyx_t_7, __pyx_v_rating); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyNumber_Add(__pyx_t_3, __pyx_kp_u__15); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_7 = PyNumber_Add(__pyx_t_3, __pyx_kp_u__15); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_v_longstring, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_3 = PyNumber_InPlaceAdd(__pyx_v_longstring, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 366, __pyx_L1_error)
+      if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 388, __pyx_L1_error)
       __Pyx_DECREF_SET(__pyx_v_longstring, ((PyObject*)__pyx_t_3));
       __pyx_t_3 = 0;
 
-      /* "cv_connect.pyx":348
+      /* "cv_connect.pyx":370
  *         for eachcard in self.main.drawlist:
  *             rating = ""
  *             if eachcard[DB.comic_id] != None:             # <<<<<<<<<<<<<<
@@ -12551,7 +13107,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  */
     }
 
-    /* "cv_connect.pyx":346
+    /* "cv_connect.pyx":368
  *         cdef tuple eachcard
  *         self.import_te.clear()
  *         for eachcard in self.main.drawlist:             # <<<<<<<<<<<<<<
@@ -12561,25 +13117,25 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cv_connect.pyx":368
+  /* "cv_connect.pyx":390
  *                 longstring += eachcard[DB.md5] + ':' + str(eachcard[DB.comic_id]) + rating + '\n'
  * 
  *         self.stopper = True             # <<<<<<<<<<<<<<
  *         self.import_te.setPlainText(longstring)
  *         self.current_long_string = longstring
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_True) < 0) __PYX_ERR(0, 368, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_True) < 0) __PYX_ERR(0, 390, __pyx_L1_error)
 
-  /* "cv_connect.pyx":369
+  /* "cv_connect.pyx":391
  * 
  *         self.stopper = True
  *         self.import_te.setPlainText(longstring)             # <<<<<<<<<<<<<<
  *         self.current_long_string = longstring
  *         self.stopper = False
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_te); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_import_te); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_setPlainText); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_setPlainText); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -12594,31 +13150,31 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_3, __pyx_v_longstring) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_longstring);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cv_connect.pyx":370
+  /* "cv_connect.pyx":392
  *         self.stopper = True
  *         self.import_te.setPlainText(longstring)
  *         self.current_long_string = longstring             # <<<<<<<<<<<<<<
  *         self.stopper = False
  * 
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_current_long_string, __pyx_v_longstring) < 0) __PYX_ERR(0, 370, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_current_long_string, __pyx_v_longstring) < 0) __PYX_ERR(0, 392, __pyx_L1_error)
 
-  /* "cv_connect.pyx":371
+  /* "cv_connect.pyx":393
  *         self.import_te.setPlainText(longstring)
  *         self.current_long_string = longstring
  *         self.stopper = False             # <<<<<<<<<<<<<<
  * 
  * def advanced_seardch(self):
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_False) < 0) __PYX_ERR(0, 371, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_False) < 0) __PYX_ERR(0, 393, __pyx_L1_error)
 
-  /* "cv_connect.pyx":342
- *         self.stopper = False
+  /* "cv_connect.pyx":364
+ *                 except AttributeError: pass
  * 
  *     def draw_export_from_drawlist(self):             # <<<<<<<<<<<<<<
  *         cdef str longstring = "", rating
@@ -12644,7 +13200,7 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
   return __pyx_r;
 }
 
-/* "cv_connect.pyx":373
+/* "cv_connect.pyx":395
  *         self.stopper = False
  * 
  * def advanced_seardch(self):             # <<<<<<<<<<<<<<
@@ -12676,12 +13232,12 @@ static PyObject *__pyx_pf_10cv_connect_advanced_seardch(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("advanced_seardch", 0);
 
-  /* "cv_connect.pyx":374
+  /* "cv_connect.pyx":396
  * 
  * def advanced_seardch(self):
  *     small_flexible_tunnel_two(self)             # <<<<<<<<<<<<<<
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_small_flexible_tunnel_two); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_small_flexible_tunnel_two); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 396, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -12695,12 +13251,12 @@ static PyObject *__pyx_pf_10cv_connect_advanced_seardch(CYTHON_UNUSED PyObject *
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_self) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_self);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cv_connect.pyx":373
+  /* "cv_connect.pyx":395
  *         self.stopper = False
  * 
  * def advanced_seardch(self):             # <<<<<<<<<<<<<<
@@ -12773,6 +13329,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_API_ConnectionError_count, __pyx_k_API_ConnectionError_count, sizeof(__pyx_k_API_ConnectionError_count), 0, 1, 0, 0},
   {&__pyx_kp_u_API_needed_sleep, __pyx_k_API_needed_sleep, sizeof(__pyx_k_API_needed_sleep), 0, 1, 0, 0},
   {&__pyx_kp_u_API_statuscode, __pyx_k_API_statuscode, sizeof(__pyx_k_API_statuscode), 0, 1, 0, 0},
+  {&__pyx_n_s_AttributeError, __pyx_k_AttributeError, sizeof(__pyx_k_AttributeError), 0, 0, 1, 1},
   {&__pyx_n_s_BLUE, __pyx_k_BLUE, sizeof(__pyx_k_BLUE), 0, 0, 1, 1},
   {&__pyx_n_s_CYAN, __pyx_k_CYAN, sizeof(__pyx_k_CYAN), 0, 0, 1, 1},
   {&__pyx_n_s_C_volume_id, __pyx_k_C_volume_id, sizeof(__pyx_k_C_volume_id), 0, 0, 1, 1},
@@ -12815,6 +13372,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_STATUS, __pyx_k_STATUS, sizeof(__pyx_k_STATUS), 0, 1, 0, 0},
   {&__pyx_kp_u_Skipping, __pyx_k_Skipping, sizeof(__pyx_k_Skipping), 0, 1, 0, 0},
   {&__pyx_n_u_TRUE, __pyx_k_TRUE, sizeof(__pyx_k_TRUE), 0, 1, 0, 1},
+  {&__pyx_n_s_Theme, __pyx_k_Theme, sizeof(__pyx_k_Theme), 0, 0, 1, 1},
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_n_u_Windows, __pyx_k_Windows, sizeof(__pyx_k_Windows), 0, 1, 0, 1},
   {&__pyx_n_u_XXX, __pyx_k_XXX, sizeof(__pyx_k_XXX), 0, 1, 0, 1},
@@ -12856,12 +13414,19 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_u_comics, __pyx_k_comics, sizeof(__pyx_k_comics), 0, 1, 0, 1},
   {&__pyx_n_s_comicvine_request, __pyx_k_comicvine_request, sizeof(__pyx_k_comicvine_request), 0, 0, 1, 1},
   {&__pyx_n_s_connect, __pyx_k_connect, sizeof(__pyx_k_connect), 0, 0, 1, 1},
+  {&__pyx_n_s_count, __pyx_k_count, sizeof(__pyx_k_count), 0, 0, 1, 1},
   {&__pyx_n_u_count, __pyx_k_count, sizeof(__pyx_k_count), 0, 1, 0, 1},
+  {&__pyx_n_s_cover, __pyx_k_cover, sizeof(__pyx_k_cover), 0, 0, 1, 1},
+  {&__pyx_n_s_covers, __pyx_k_covers, sizeof(__pyx_k_covers), 0, 0, 1, 1},
   {&__pyx_n_s_current_long_string, __pyx_k_current_long_string, sizeof(__pyx_k_current_long_string), 0, 0, 1, 1},
   {&__pyx_n_s_cv_connect, __pyx_k_cv_connect, sizeof(__pyx_k_cv_connect), 0, 0, 1, 1},
   {&__pyx_n_s_cv_dict, __pyx_k_cv_dict, sizeof(__pyx_k_cv_dict), 0, 0, 1, 1},
+  {&__pyx_n_s_cv_link, __pyx_k_cv_link, sizeof(__pyx_k_cv_link), 0, 0, 1, 1},
+  {&__pyx_n_u_cv_link, __pyx_k_cv_link, sizeof(__pyx_k_cv_link), 0, 1, 0, 1},
+  {&__pyx_n_s_cv_link_x, __pyx_k_cv_link_x, sizeof(__pyx_k_cv_link_x), 0, 0, 1, 1},
   {&__pyx_n_s_cycle, __pyx_k_cycle, sizeof(__pyx_k_cycle), 0, 0, 1, 1},
   {&__pyx_n_s_data, __pyx_k_data, sizeof(__pyx_k_data), 0, 0, 1, 1},
+  {&__pyx_n_s_database, __pyx_k_database, sizeof(__pyx_k_database), 0, 0, 1, 1},
   {&__pyx_n_s_db_input, __pyx_k_db_input, sizeof(__pyx_k_db_input), 0, 0, 1, 1},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
   {&__pyx_n_s_draw_export_from_drawlist, __pyx_k_draw_export_from_drawlist, sizeof(__pyx_k_draw_export_from_drawlist), 0, 0, 1, 1},
@@ -12871,6 +13436,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_eachfield, __pyx_k_eachfield, sizeof(__pyx_k_eachfield), 0, 0, 1, 1},
   {&__pyx_n_s_eachform, __pyx_k_eachform, sizeof(__pyx_k_eachform), 0, 0, 1, 1},
   {&__pyx_n_s_eachkey, __pyx_k_eachkey, sizeof(__pyx_k_eachkey), 0, 0, 1, 1},
+  {&__pyx_n_s_eachwidget, __pyx_k_eachwidget, sizeof(__pyx_k_eachwidget), 0, 0, 1, 1},
   {&__pyx_n_s_empty_insert_query, __pyx_k_empty_insert_query, sizeof(__pyx_k_empty_insert_query), 0, 0, 1, 1},
   {&__pyx_n_s_enter, __pyx_k_enter, sizeof(__pyx_k_enter), 0, 0, 1, 1},
   {&__pyx_n_s_execute, __pyx_k_execute, sizeof(__pyx_k_execute), 0, 0, 1, 1},
@@ -12898,6 +13464,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_gui_import_export_comic_id_ui, __pyx_k_gui_import_export_comic_id_ui, sizeof(__pyx_k_gui_import_export_comic_id_ui), 0, 1, 0, 0},
   {&__pyx_n_s_header, __pyx_k_header, sizeof(__pyx_k_header), 0, 0, 1, 1},
   {&__pyx_n_s_headers, __pyx_k_headers, sizeof(__pyx_k_headers), 0, 0, 1, 1},
+  {&__pyx_n_s_height_taken, __pyx_k_height_taken, sizeof(__pyx_k_height_taken), 0, 0, 1, 1},
   {&__pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_k_home_plutonergy_Coding_CComicRe, sizeof(__pyx_k_home_plutonergy_Coding_CComicRe), 0, 0, 1, 0},
   {&__pyx_kp_u_https_comicvine_gamespot_com_api, __pyx_k_https_comicvine_gamespot_com_api, sizeof(__pyx_k_https_comicvine_gamespot_com_api), 0, 1, 0, 0},
   {&__pyx_kp_u_https_comicvine_gamespot_com_api_2, __pyx_k_https_comicvine_gamespot_com_api_2, sizeof(__pyx_k_https_comicvine_gamespot_com_api_2), 0, 1, 0, 0},
@@ -12941,6 +13508,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_longstring, __pyx_k_longstring, sizeof(__pyx_k_longstring), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_main_2, __pyx_k_main_2, sizeof(__pyx_k_main_2), 0, 0, 1, 1},
+  {&__pyx_n_s_make_cv_link, __pyx_k_make_cv_link, sizeof(__pyx_k_make_cv_link), 0, 0, 1, 1},
+  {&__pyx_n_s_make_stars_relay, __pyx_k_make_stars_relay, sizeof(__pyx_k_make_stars_relay), 0, 0, 1, 1},
   {&__pyx_kp_u_mb, __pyx_k_mb, sizeof(__pyx_k_mb), 0, 1, 0, 0},
   {&__pyx_n_s_md5, __pyx_k_md5, sizeof(__pyx_k_md5), 0, 0, 1, 1},
   {&__pyx_n_s_md5data, __pyx_k_md5data, sizeof(__pyx_k_md5data), 0, 0, 1, 1},
@@ -12952,6 +13521,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_u_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 1, 0, 1},
   {&__pyx_n_s_name_2, __pyx_k_name_2, sizeof(__pyx_k_name_2), 0, 0, 1, 1},
   {&__pyx_kp_u_new_comicvine_id_and_updated, __pyx_k_new_comicvine_id_and_updated, sizeof(__pyx_k_new_comicvine_id_and_updated), 0, 1, 0, 0},
+  {&__pyx_n_s_newdata, __pyx_k_newdata, sizeof(__pyx_k_newdata), 0, 0, 1, 1},
   {&__pyx_n_s_newstring, __pyx_k_newstring, sizeof(__pyx_k_newstring), 0, 0, 1, 1},
   {&__pyx_n_s_no_rating_radio, __pyx_k_no_rating_radio, sizeof(__pyx_k_no_rating_radio), 0, 0, 1, 1},
   {&__pyx_n_u_number_of_page_results, __pyx_k_number_of_page_results, sizeof(__pyx_k_number_of_page_results), 0, 1, 0, 1},
@@ -12974,6 +13544,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_query, __pyx_k_query, sizeof(__pyx_k_query), 0, 0, 1, 1},
   {&__pyx_n_u_r, __pyx_k_r, sizeof(__pyx_k_r), 0, 1, 0, 1},
+  {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_rating, __pyx_k_rating, sizeof(__pyx_k_rating), 0, 0, 1, 1},
   {&__pyx_n_u_rating_none, __pyx_k_rating_none, sizeof(__pyx_k_rating_none), 0, 1, 0, 1},
   {&__pyx_n_u_rating_update, __pyx_k_rating_update, sizeof(__pyx_k_rating_update), 0, 1, 0, 1},
@@ -12994,11 +13565,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_round, __pyx_k_round, sizeof(__pyx_k_round), 0, 0, 1, 1},
   {&__pyx_n_s_savelocation, __pyx_k_savelocation, sizeof(__pyx_k_savelocation), 0, 0, 1, 1},
   {&__pyx_kp_u_select_from_comics_where_comic_i, __pyx_k_select_from_comics_where_comic_i, sizeof(__pyx_k_select_from_comics_where_comic_i), 0, 1, 0, 0},
+  {&__pyx_kp_u_select_from_comics_where_id, __pyx_k_select_from_comics_where_id, sizeof(__pyx_k_select_from_comics_where_id), 0, 1, 0, 0},
   {&__pyx_kp_u_select_from_comics_where_md5_or, __pyx_k_select_from_comics_where_md5_or, sizeof(__pyx_k_select_from_comics_where_md5_or), 0, 1, 0, 0},
   {&__pyx_n_s_self, __pyx_k_self, sizeof(__pyx_k_self), 0, 0, 1, 1},
   {&__pyx_n_s_setPlainText, __pyx_k_setPlainText, sizeof(__pyx_k_setPlainText), 0, 0, 1, 1},
   {&__pyx_n_s_setStyleSheet, __pyx_k_setStyleSheet, sizeof(__pyx_k_setStyleSheet), 0, 0, 1, 1},
   {&__pyx_n_s_setWindowTitle, __pyx_k_setWindowTitle, sizeof(__pyx_k_setWindowTitle), 0, 0, 1, 1},
+  {&__pyx_n_s_show, __pyx_k_show, sizeof(__pyx_k_show), 0, 0, 1, 1},
   {&__pyx_n_u_site_detail_url, __pyx_k_site_detail_url, sizeof(__pyx_k_site_detail_url), 0, 1, 0, 1},
   {&__pyx_kp_u_size, __pyx_k_size, sizeof(__pyx_k_size), 0, 1, 0, 0},
   {&__pyx_n_s_sleep, __pyx_k_sleep, sizeof(__pyx_k_sleep), 0, 0, 1, 1},
@@ -13007,6 +13580,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_split, __pyx_k_split, sizeof(__pyx_k_split), 0, 0, 1, 1},
   {&__pyx_n_s_sqliteconnection, __pyx_k_sqliteconnection, sizeof(__pyx_k_sqliteconnection), 0, 0, 1, 1},
   {&__pyx_n_s_sqlitecursor, __pyx_k_sqlitecursor, sizeof(__pyx_k_sqlitecursor), 0, 0, 1, 1},
+  {&__pyx_n_u_standard, __pyx_k_standard, sizeof(__pyx_k_standard), 0, 1, 0, 1},
+  {&__pyx_n_s_starlayout, __pyx_k_starlayout, sizeof(__pyx_k_starlayout), 0, 0, 1, 1},
   {&__pyx_n_u_starting_time, __pyx_k_starting_time, sizeof(__pyx_k_starting_time), 0, 1, 0, 1},
   {&__pyx_n_s_status, __pyx_k_status, sizeof(__pyx_k_status), 0, 0, 1, 1},
   {&__pyx_n_s_status_code, __pyx_k_status_code, sizeof(__pyx_k_status_code), 0, 0, 1, 1},
@@ -13018,6 +13593,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_styleSheet, __pyx_k_styleSheet, sizeof(__pyx_k_styleSheet), 0, 0, 1, 1},
   {&__pyx_n_s_super, __pyx_k_super, sizeof(__pyx_k_super), 0, 0, 1, 1},
   {&__pyx_n_s_system, __pyx_k_system, sizeof(__pyx_k_system), 0, 0, 1, 1},
+  {&__pyx_n_s_takeAt, __pyx_k_takeAt, sizeof(__pyx_k_takeAt), 0, 0, 1, 1},
   {&__pyx_n_s_tech, __pyx_k_tech, sizeof(__pyx_k_tech), 0, 0, 1, 1},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
   {&__pyx_n_s_textChanged, __pyx_k_textChanged, sizeof(__pyx_k_textChanged), 0, 0, 1, 1},
@@ -13057,6 +13633,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 155, __pyx_L1_error)
   __pyx_builtin_round = __Pyx_GetBuiltinName(__pyx_n_s_round); if (!__pyx_builtin_round) __PYX_ERR(0, 188, __pyx_L1_error)
   __pyx_builtin_super = __Pyx_GetBuiltinName(__pyx_n_s_super); if (!__pyx_builtin_super) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 359, __pyx_L1_error)
+  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) __PYX_ERR(0, 362, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -13271,33 +13849,33 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *         """
  *         reads from the widget md5sum:comic_id:rating it will overwrite
  */
-  __pyx_tuple__40 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_org_string, __pyx_n_s_i, __pyx_n_s_longstring, __pyx_n_s_data, __pyx_n_s_status, __pyx_n_s_checkdata, __pyx_n_s_query, __pyx_n_s_md5data, __pyx_n_s_newstring); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_tuple__40 = PyTuple_Pack(13, __pyx_n_s_self, __pyx_n_s_org_string, __pyx_n_s_i, __pyx_n_s_longstring, __pyx_n_s_data, __pyx_n_s_status, __pyx_n_s_count, __pyx_n_s_checkdata, __pyx_n_s_query, __pyx_n_s_md5data, __pyx_n_s_newstring, __pyx_n_s_eachwidget, __pyx_n_s_newdata); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(1, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_import_rating_comic_id, 266, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(1, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_import_rating_comic_id, 266, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 266, __pyx_L1_error)
 
-  /* "cv_connect.pyx":342
- *         self.stopper = False
+  /* "cv_connect.pyx":364
+ *                 except AttributeError: pass
  * 
  *     def draw_export_from_drawlist(self):             # <<<<<<<<<<<<<<
  *         cdef str longstring = "", rating
  *         cdef tuple eachcard
  */
-  __pyx_tuple__42 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_longstring, __pyx_n_s_rating, __pyx_n_s_eachcard); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_tuple__42 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_longstring, __pyx_n_s_rating, __pyx_n_s_eachcard); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 364, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_draw_export_from_drawlist, 342, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_draw_export_from_drawlist, 364, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 364, __pyx_L1_error)
 
-  /* "cv_connect.pyx":373
+  /* "cv_connect.pyx":395
  *         self.stopper = False
  * 
  * def advanced_seardch(self):             # <<<<<<<<<<<<<<
  *     small_flexible_tunnel_two(self)
  */
-  __pyx_tuple__44 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 373, __pyx_L1_error)
+  __pyx_tuple__44 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__44);
   __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_advanced_seardch, 373, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 373, __pyx_L1_error)
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_advanced_seardch, 395, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -13311,6 +13889,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_2 = PyInt_FromLong(2); if (unlikely(!__pyx_int_2)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_5 = PyInt_FromLong(5); if (unlikely(!__pyx_int_5)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_10 = PyInt_FromLong(10); if (unlikely(!__pyx_int_10)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_11 = PyInt_FromLong(11); if (unlikely(!__pyx_int_11)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_100 = PyInt_FromLong(100); if (unlikely(!__pyx_int_100)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -13625,7 +14204,7 @@ if (!__Pyx_RefNanny) {
  * from PyQt5       import  QtWidgets, uic
  * from time        import  sleep             # <<<<<<<<<<<<<<
  * from tmp_python  import  small_flexible_tunnel_two
- * from tricks      import  DB, sqliteconnection, sqlitecursor, tech
+ * from tricks      import  DB, sqliteconnection, sqlitecursor, tech, Theme
  */
   __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 2, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -13645,7 +14224,7 @@ if (!__Pyx_RefNanny) {
  * from PyQt5       import  QtWidgets, uic
  * from time        import  sleep
  * from tmp_python  import  small_flexible_tunnel_two             # <<<<<<<<<<<<<<
- * from tricks      import  DB, sqliteconnection, sqlitecursor, tech
+ * from tricks      import  DB, sqliteconnection, sqlitecursor, tech, Theme
  * import json
  */
   __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 3, __pyx_L1_error)
@@ -13665,11 +14244,11 @@ if (!__Pyx_RefNanny) {
   /* "cv_connect.pyx":4
  * from time        import  sleep
  * from tmp_python  import  small_flexible_tunnel_two
- * from tricks      import  DB, sqliteconnection, sqlitecursor, tech             # <<<<<<<<<<<<<<
+ * from tricks      import  DB, sqliteconnection, sqlitecursor, tech, Theme             # <<<<<<<<<<<<<<
  * import json
  * import os
  */
-  __pyx_t_2 = PyList_New(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_DB);
   __Pyx_GIVEREF(__pyx_n_s_DB);
@@ -13683,6 +14262,9 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_n_s_tech);
   __Pyx_GIVEREF(__pyx_n_s_tech);
   PyList_SET_ITEM(__pyx_t_2, 3, __pyx_n_s_tech);
+  __Pyx_INCREF(__pyx_n_s_Theme);
+  __Pyx_GIVEREF(__pyx_n_s_Theme);
+  PyList_SET_ITEM(__pyx_t_2, 4, __pyx_n_s_Theme);
   __pyx_t_1 = __Pyx_Import(__pyx_n_s_tricks, __pyx_t_2, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -13702,11 +14284,15 @@ if (!__Pyx_RefNanny) {
   __Pyx_GOTREF(__pyx_t_2);
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_tech, __pyx_t_2) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_Theme); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Theme, __pyx_t_2) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "cv_connect.pyx":5
  * from tmp_python  import  small_flexible_tunnel_two
- * from tricks      import  DB, sqliteconnection, sqlitecursor, tech
+ * from tricks      import  DB, sqliteconnection, sqlitecursor, tech, Theme
  * import json             # <<<<<<<<<<<<<<
  * import os
  * import pathlib
@@ -13717,7 +14303,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "cv_connect.pyx":6
- * from tricks      import  DB, sqliteconnection, sqlitecursor, tech
+ * from tricks      import  DB, sqliteconnection, sqlitecursor, tech, Theme
  * import json
  * import os             # <<<<<<<<<<<<<<
  * import pathlib
@@ -14005,16 +14591,16 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_import_rating_comic_id, __pyx_t_5) < 0) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "cv_connect.pyx":342
- *         self.stopper = False
+  /* "cv_connect.pyx":364
+ *                 except AttributeError: pass
  * 
  *     def draw_export_from_drawlist(self):             # <<<<<<<<<<<<<<
  *         cdef str longstring = "", rating
  *         cdef tuple eachcard
  */
-  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_10cv_connect_19ComicIdImportExport_9draw_export_from_drawlist, 0, __pyx_n_s_ComicIdImportExport_draw_export, NULL, __pyx_n_s_cv_connect, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_CyFunction_New(&__pyx_mdef_10cv_connect_19ComicIdImportExport_9draw_export_from_drawlist, 0, __pyx_n_s_ComicIdImportExport_draw_export, NULL, __pyx_n_s_cv_connect, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 364, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_draw_export_from_drawlist, __pyx_t_5) < 0) __PYX_ERR(0, 342, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_3, __pyx_n_s_draw_export_from_drawlist, __pyx_t_5) < 0) __PYX_ERR(0, 364, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
   /* "cv_connect.pyx":211
@@ -14034,15 +14620,15 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "cv_connect.pyx":373
+  /* "cv_connect.pyx":395
  *         self.stopper = False
  * 
  * def advanced_seardch(self):             # <<<<<<<<<<<<<<
  *     small_flexible_tunnel_two(self)
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_10cv_connect_1advanced_seardch, NULL, __pyx_n_s_cv_connect); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 373, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_10cv_connect_1advanced_seardch, NULL, __pyx_n_s_cv_connect); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_advanced_seardch, __pyx_t_1) < 0) __PYX_ERR(0, 373, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_advanced_seardch, __pyx_t_1) < 0) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "cv_connect.pyx":1
@@ -17438,195 +18024,6 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_From_int(int value) {
     }
 
 /* CIntFromPy */
-static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *x) {
-    const long neg_one = (long) ((long) 0 - (long) 1), const_zero = (long) 0;
-    const int is_unsigned = neg_one > const_zero;
-#if PY_MAJOR_VERSION < 3
-    if (likely(PyInt_Check(x))) {
-        if (sizeof(long) < sizeof(long)) {
-            __PYX_VERIFY_RETURN_INT(long, long, PyInt_AS_LONG(x))
-        } else {
-            long val = PyInt_AS_LONG(x);
-            if (is_unsigned && unlikely(val < 0)) {
-                goto raise_neg_overflow;
-            }
-            return (long) val;
-        }
-    } else
-#endif
-    if (likely(PyLong_Check(x))) {
-        if (is_unsigned) {
-#if CYTHON_USE_PYLONG_INTERNALS
-            const digit* digits = ((PyLongObject*)x)->ob_digit;
-            switch (Py_SIZE(x)) {
-                case  0: return (long) 0;
-                case  1: __PYX_VERIFY_RETURN_INT(long, digit, digits[0])
-                case 2:
-                    if (8 * sizeof(long) > 1 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) >= 2 * PyLong_SHIFT) {
-                            return (long) (((((long)digits[1]) << PyLong_SHIFT) | (long)digits[0]));
-                        }
-                    }
-                    break;
-                case 3:
-                    if (8 * sizeof(long) > 2 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) >= 3 * PyLong_SHIFT) {
-                            return (long) (((((((long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0]));
-                        }
-                    }
-                    break;
-                case 4:
-                    if (8 * sizeof(long) > 3 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) >= 4 * PyLong_SHIFT) {
-                            return (long) (((((((((long)digits[3]) << PyLong_SHIFT) | (long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0]));
-                        }
-                    }
-                    break;
-            }
-#endif
-#if CYTHON_COMPILING_IN_CPYTHON
-            if (unlikely(Py_SIZE(x) < 0)) {
-                goto raise_neg_overflow;
-            }
-#else
-            {
-                int result = PyObject_RichCompareBool(x, Py_False, Py_LT);
-                if (unlikely(result < 0))
-                    return (long) -1;
-                if (unlikely(result == 1))
-                    goto raise_neg_overflow;
-            }
-#endif
-            if (sizeof(long) <= sizeof(unsigned long)) {
-                __PYX_VERIFY_RETURN_INT_EXC(long, unsigned long, PyLong_AsUnsignedLong(x))
-#ifdef HAVE_LONG_LONG
-            } else if (sizeof(long) <= sizeof(unsigned PY_LONG_LONG)) {
-                __PYX_VERIFY_RETURN_INT_EXC(long, unsigned PY_LONG_LONG, PyLong_AsUnsignedLongLong(x))
-#endif
-            }
-        } else {
-#if CYTHON_USE_PYLONG_INTERNALS
-            const digit* digits = ((PyLongObject*)x)->ob_digit;
-            switch (Py_SIZE(x)) {
-                case  0: return (long) 0;
-                case -1: __PYX_VERIFY_RETURN_INT(long, sdigit, (sdigit) (-(sdigit)digits[0]))
-                case  1: __PYX_VERIFY_RETURN_INT(long,  digit, +digits[0])
-                case -2:
-                    if (8 * sizeof(long) - 1 > 1 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, long, -(long) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) - 1 > 2 * PyLong_SHIFT) {
-                            return (long) (((long)-1)*(((((long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
-                        }
-                    }
-                    break;
-                case 2:
-                    if (8 * sizeof(long) > 1 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) - 1 > 2 * PyLong_SHIFT) {
-                            return (long) ((((((long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
-                        }
-                    }
-                    break;
-                case -3:
-                    if (8 * sizeof(long) - 1 > 2 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, long, -(long) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) - 1 > 3 * PyLong_SHIFT) {
-                            return (long) (((long)-1)*(((((((long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
-                        }
-                    }
-                    break;
-                case 3:
-                    if (8 * sizeof(long) > 2 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) - 1 > 3 * PyLong_SHIFT) {
-                            return (long) ((((((((long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
-                        }
-                    }
-                    break;
-                case -4:
-                    if (8 * sizeof(long) - 1 > 3 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, long, -(long) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) - 1 > 4 * PyLong_SHIFT) {
-                            return (long) (((long)-1)*(((((((((long)digits[3]) << PyLong_SHIFT) | (long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
-                        }
-                    }
-                    break;
-                case 4:
-                    if (8 * sizeof(long) > 3 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(long) - 1 > 4 * PyLong_SHIFT) {
-                            return (long) ((((((((((long)digits[3]) << PyLong_SHIFT) | (long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
-                        }
-                    }
-                    break;
-            }
-#endif
-            if (sizeof(long) <= sizeof(long)) {
-                __PYX_VERIFY_RETURN_INT_EXC(long, long, PyLong_AsLong(x))
-#ifdef HAVE_LONG_LONG
-            } else if (sizeof(long) <= sizeof(PY_LONG_LONG)) {
-                __PYX_VERIFY_RETURN_INT_EXC(long, PY_LONG_LONG, PyLong_AsLongLong(x))
-#endif
-            }
-        }
-        {
-#if CYTHON_COMPILING_IN_PYPY && !defined(_PyLong_AsByteArray)
-            PyErr_SetString(PyExc_RuntimeError,
-                            "_PyLong_AsByteArray() not available in PyPy, cannot convert large numbers");
-#else
-            long val;
-            PyObject *v = __Pyx_PyNumber_IntOrLong(x);
- #if PY_MAJOR_VERSION < 3
-            if (likely(v) && !PyLong_Check(v)) {
-                PyObject *tmp = v;
-                v = PyNumber_Long(tmp);
-                Py_DECREF(tmp);
-            }
- #endif
-            if (likely(v)) {
-                int one = 1; int is_little = (int)*(unsigned char *)&one;
-                unsigned char *bytes = (unsigned char *)&val;
-                int ret = _PyLong_AsByteArray((PyLongObject *)v,
-                                              bytes, sizeof(val),
-                                              is_little, !is_unsigned);
-                Py_DECREF(v);
-                if (likely(!ret))
-                    return val;
-            }
-#endif
-            return (long) -1;
-        }
-    } else {
-        long val;
-        PyObject *tmp = __Pyx_PyNumber_IntOrLong(x);
-        if (!tmp) return (long) -1;
-        val = __Pyx_PyInt_As_long(tmp);
-        Py_DECREF(tmp);
-        return val;
-    }
-raise_overflow:
-    PyErr_SetString(PyExc_OverflowError,
-        "value too large to convert to long");
-    return (long) -1;
-raise_neg_overflow:
-    PyErr_SetString(PyExc_OverflowError,
-        "can't convert negative value to long");
-    return (long) -1;
-}
-
-/* CIntFromPy */
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *x) {
     const int neg_one = (int) ((int) 0 - (int) 1), const_zero = (int) 0;
     const int is_unsigned = neg_one > const_zero;
@@ -17813,6 +18210,195 @@ raise_neg_overflow:
     PyErr_SetString(PyExc_OverflowError,
         "can't convert negative value to int");
     return (int) -1;
+}
+
+/* CIntFromPy */
+static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *x) {
+    const long neg_one = (long) ((long) 0 - (long) 1), const_zero = (long) 0;
+    const int is_unsigned = neg_one > const_zero;
+#if PY_MAJOR_VERSION < 3
+    if (likely(PyInt_Check(x))) {
+        if (sizeof(long) < sizeof(long)) {
+            __PYX_VERIFY_RETURN_INT(long, long, PyInt_AS_LONG(x))
+        } else {
+            long val = PyInt_AS_LONG(x);
+            if (is_unsigned && unlikely(val < 0)) {
+                goto raise_neg_overflow;
+            }
+            return (long) val;
+        }
+    } else
+#endif
+    if (likely(PyLong_Check(x))) {
+        if (is_unsigned) {
+#if CYTHON_USE_PYLONG_INTERNALS
+            const digit* digits = ((PyLongObject*)x)->ob_digit;
+            switch (Py_SIZE(x)) {
+                case  0: return (long) 0;
+                case  1: __PYX_VERIFY_RETURN_INT(long, digit, digits[0])
+                case 2:
+                    if (8 * sizeof(long) > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) >= 2 * PyLong_SHIFT) {
+                            return (long) (((((long)digits[1]) << PyLong_SHIFT) | (long)digits[0]));
+                        }
+                    }
+                    break;
+                case 3:
+                    if (8 * sizeof(long) > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) >= 3 * PyLong_SHIFT) {
+                            return (long) (((((((long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0]));
+                        }
+                    }
+                    break;
+                case 4:
+                    if (8 * sizeof(long) > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) >= 4 * PyLong_SHIFT) {
+                            return (long) (((((((((long)digits[3]) << PyLong_SHIFT) | (long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0]));
+                        }
+                    }
+                    break;
+            }
+#endif
+#if CYTHON_COMPILING_IN_CPYTHON
+            if (unlikely(Py_SIZE(x) < 0)) {
+                goto raise_neg_overflow;
+            }
+#else
+            {
+                int result = PyObject_RichCompareBool(x, Py_False, Py_LT);
+                if (unlikely(result < 0))
+                    return (long) -1;
+                if (unlikely(result == 1))
+                    goto raise_neg_overflow;
+            }
+#endif
+            if (sizeof(long) <= sizeof(unsigned long)) {
+                __PYX_VERIFY_RETURN_INT_EXC(long, unsigned long, PyLong_AsUnsignedLong(x))
+#ifdef HAVE_LONG_LONG
+            } else if (sizeof(long) <= sizeof(unsigned PY_LONG_LONG)) {
+                __PYX_VERIFY_RETURN_INT_EXC(long, unsigned PY_LONG_LONG, PyLong_AsUnsignedLongLong(x))
+#endif
+            }
+        } else {
+#if CYTHON_USE_PYLONG_INTERNALS
+            const digit* digits = ((PyLongObject*)x)->ob_digit;
+            switch (Py_SIZE(x)) {
+                case  0: return (long) 0;
+                case -1: __PYX_VERIFY_RETURN_INT(long, sdigit, (sdigit) (-(sdigit)digits[0]))
+                case  1: __PYX_VERIFY_RETURN_INT(long,  digit, +digits[0])
+                case -2:
+                    if (8 * sizeof(long) - 1 > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, long, -(long) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) - 1 > 2 * PyLong_SHIFT) {
+                            return (long) (((long)-1)*(((((long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
+                        }
+                    }
+                    break;
+                case 2:
+                    if (8 * sizeof(long) > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) - 1 > 2 * PyLong_SHIFT) {
+                            return (long) ((((((long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
+                        }
+                    }
+                    break;
+                case -3:
+                    if (8 * sizeof(long) - 1 > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, long, -(long) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) - 1 > 3 * PyLong_SHIFT) {
+                            return (long) (((long)-1)*(((((((long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
+                        }
+                    }
+                    break;
+                case 3:
+                    if (8 * sizeof(long) > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) - 1 > 3 * PyLong_SHIFT) {
+                            return (long) ((((((((long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
+                        }
+                    }
+                    break;
+                case -4:
+                    if (8 * sizeof(long) - 1 > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, long, -(long) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) - 1 > 4 * PyLong_SHIFT) {
+                            return (long) (((long)-1)*(((((((((long)digits[3]) << PyLong_SHIFT) | (long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
+                        }
+                    }
+                    break;
+                case 4:
+                    if (8 * sizeof(long) > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(long, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(long) - 1 > 4 * PyLong_SHIFT) {
+                            return (long) ((((((((((long)digits[3]) << PyLong_SHIFT) | (long)digits[2]) << PyLong_SHIFT) | (long)digits[1]) << PyLong_SHIFT) | (long)digits[0])));
+                        }
+                    }
+                    break;
+            }
+#endif
+            if (sizeof(long) <= sizeof(long)) {
+                __PYX_VERIFY_RETURN_INT_EXC(long, long, PyLong_AsLong(x))
+#ifdef HAVE_LONG_LONG
+            } else if (sizeof(long) <= sizeof(PY_LONG_LONG)) {
+                __PYX_VERIFY_RETURN_INT_EXC(long, PY_LONG_LONG, PyLong_AsLongLong(x))
+#endif
+            }
+        }
+        {
+#if CYTHON_COMPILING_IN_PYPY && !defined(_PyLong_AsByteArray)
+            PyErr_SetString(PyExc_RuntimeError,
+                            "_PyLong_AsByteArray() not available in PyPy, cannot convert large numbers");
+#else
+            long val;
+            PyObject *v = __Pyx_PyNumber_IntOrLong(x);
+ #if PY_MAJOR_VERSION < 3
+            if (likely(v) && !PyLong_Check(v)) {
+                PyObject *tmp = v;
+                v = PyNumber_Long(tmp);
+                Py_DECREF(tmp);
+            }
+ #endif
+            if (likely(v)) {
+                int one = 1; int is_little = (int)*(unsigned char *)&one;
+                unsigned char *bytes = (unsigned char *)&val;
+                int ret = _PyLong_AsByteArray((PyLongObject *)v,
+                                              bytes, sizeof(val),
+                                              is_little, !is_unsigned);
+                Py_DECREF(v);
+                if (likely(!ret))
+                    return val;
+            }
+#endif
+            return (long) -1;
+        }
+    } else {
+        long val;
+        PyObject *tmp = __Pyx_PyNumber_IntOrLong(x);
+        if (!tmp) return (long) -1;
+        val = __Pyx_PyInt_As_long(tmp);
+        Py_DECREF(tmp);
+        return val;
+    }
+raise_overflow:
+    PyErr_SetString(PyExc_OverflowError,
+        "value too large to convert to long");
+    return (long) -1;
+raise_neg_overflow:
+    PyErr_SetString(PyExc_OverflowError,
+        "can't convert negative value to long");
+    return (long) -1;
 }
 
 /* CheckBinaryVersion */
