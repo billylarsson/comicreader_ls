@@ -833,7 +833,7 @@ struct __pyx_obj_6tricks_DB {
 };
 
 
-/* "tricks.pyx":742
+/* "tricks.pyx":743
  * 
  *     @staticmethod
  *     def md5_hash(str local_path):             # <<<<<<<<<<<<<<
@@ -2020,6 +2020,7 @@ static const char __pyx_k_recompressed[] = "recompressed";
 static const char __pyx_k_requestimage[] = "requestimage";
 static const char __pyx_k_search_value[] = "search_value";
 static const char __pyx_k_settings_ini[] = "settings.ini";
+static const char __pyx_k_skip_a_while[] = "skip_a_while";
 static const char __pyx_k_sqlitecursor[] = "sqlitecursor";
 static const char __pyx_k_staticmethod[] = "staticmethod";
 static const char __pyx_k_stringsource[] = "stringsource";
@@ -2060,6 +2061,7 @@ static const char __pyx_k_clear_comic_id[] = "clear_comic_id";
 static const char __pyx_k_dummy_location[] = "dummy_location";
 static const char __pyx_k_dummyjpeg_jpeg[] = "/dummyjpeg.jpeg";
 static const char __pyx_k_location_state[] = "location_state";
+static const char __pyx_k_maxThreadCount[] = "maxThreadCount";
 static const char __pyx_k_other_rating_a[] = "other_rating_a";
 static const char __pyx_k_other_rating_b[] = "other_rating_b";
 static const char __pyx_k_publisher_name[] = "publisher_name";
@@ -2169,10 +2171,11 @@ static const char __pyx_k_tech_uni_sort_locals_lambda[] = "tech.uni_sort.<locals
 static const char __pyx_k_https_comicvine_gamespot_com[] = "\">https://comicvine.gamespot.com/";
 static const char __pyx_k_tech_check_alternative_covers[] = "tech.check_alternative_covers";
 static const char __pyx_k_tech_tmp_downloaded_thumbnails[] = "tech.tmp_downloaded_thumbnails";
+static const char __pyx_k_C_Users_Find_Nemo_Desktop_build[] = "C:\\Users\\Find Nemo\\Desktop\\build\\tricks.pyx";
 static const char __pyx_k_Mozilla_5_0_Macintosh_Intel_Mac[] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36";
 static const char __pyx_k_background_color_rgba_0_0_0_255[] = "background-color: rgba(0, 0, 0, 255); color: rgb(255, 255, 255)\nbackground-color: rgba(27, 102, 194, 255); color: rgb(255, 255, 255)\nbackground-color: rgba(255, 53, 255, 255); color: rgb(255, 255, 255)\nbackground-color: rgba(202, 202, 202, 255); color: rgb(0, 0, 0)";
 static const char __pyx_k_background_color_rgba_171_91_11[] = "background-color: rgba(171, 91, 11, 255); color: rgb(255, 255, 255)\nbackground-color: rgba(8, 0, 255, 255); color: rgb(255, 255, 255)\nbackground-color: rgba(82, 27, 106, 255); color: rgb(255, 255, 255)\nbackground-color: rgba(202, 202, 202, 255); color: rgb(0, 0, 0)";
-static const char __pyx_k_home_plutonergy_Coding_CComicRe[] = "/home/plutonergy/Coding/CComicReader/tricks.pyx";
+static const char __pyx_k_home_plutonergy_Coding_CComicRe[] = "/home/plutonergy/Coding/CComicReader/sandbox/sandbox_database.backup";
 static const char __pyx_k_id_INTEGER_PRIMARY_KEY_AUTOINCR[] = " (id INTEGER PRIMARY KEY AUTOINCREMENT)";
 static const char __pyx_k_mnt_ramdisk_sandbox_database_sq[] = "/mnt/ramdisk/sandbox_database.sqlite";
 static const char __pyx_k_sandbox_sandbox_database_winbac[] = "./sandbox/sandbox_database.winbackup";
@@ -2186,7 +2189,6 @@ static const char __pyx_k_fake_id_generated_by_long_snabel[] = "fake_id_generate
 static const char __pyx_k_select_from_settings_where_id_is[] = "select * from settings where id is 1";
 static const char __pyx_k_select_from_volumes_where_volume[] = "select * from volumes where volume_id = (?)";
 static const char __pyx_k_update_comics_set_publisher_id_w[] = "update comics set publisher_id = (?) where id = (?)";
-static const char __pyx_k_home_plutonergy_Coding_CComicRe_2[] = "/home/plutonergy/Coding/CComicReader/sandbox/sandbox_database.backup";
 static PyObject *__pyx_kp_u_0_30m;
 static PyObject *__pyx_kp_u_0_31m;
 static PyObject *__pyx_kp_u_0_32m;
@@ -2230,6 +2232,7 @@ static PyObject *__pyx_n_s_BROWN;
 static PyObject *__pyx_n_s_CROSSED;
 static PyObject *__pyx_n_s_CVIOLET;
 static PyObject *__pyx_n_s_CYAN;
+static PyObject *__pyx_kp_s_C_Users_Find_Nemo_Desktop_build;
 static PyObject *__pyx_n_s_C_publisher_id;
 static PyObject *__pyx_n_s_C_volume_id;
 static PyObject *__pyx_kp_u_Could_not_download;
@@ -2488,8 +2491,7 @@ static PyObject *__pyx_n_s_header;
 static PyObject *__pyx_n_s_headers;
 static PyObject *__pyx_n_u_height;
 static PyObject *__pyx_n_s_hexdigest;
-static PyObject *__pyx_kp_s_home_plutonergy_Coding_CComicRe;
-static PyObject *__pyx_kp_u_home_plutonergy_Coding_CComicRe_2;
+static PyObject *__pyx_kp_u_home_plutonergy_Coding_CComicRe;
 static PyObject *__pyx_kp_u_https_comicvine_gamespot_com;
 static PyObject *__pyx_n_s_i;
 static PyObject *__pyx_n_s_icon_size;
@@ -2545,6 +2547,7 @@ static PyObject *__pyx_n_s_lower;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_mainframe;
 static PyObject *__pyx_n_u_mainframe;
+static PyObject *__pyx_n_s_maxThreadCount;
 static PyObject *__pyx_n_s_md5;
 static PyObject *__pyx_n_u_md5;
 static PyObject *__pyx_n_s_md5_hash;
@@ -2683,6 +2686,8 @@ static PyObject *__pyx_n_u_show_pagecount;
 static PyObject *__pyx_n_s_show_text;
 static PyObject *__pyx_n_s_shutil;
 static PyObject *__pyx_n_s_signals;
+static PyObject *__pyx_n_s_skip_a_while;
+static PyObject *__pyx_n_u_skip_a_while;
 static PyObject *__pyx_n_s_somestr;
 static PyObject *__pyx_n_s_sorted;
 static PyObject *__pyx_n_s_source;
@@ -4902,7 +4907,7 @@ static PyObject *__pyx_pf_6tricks_2DB_2__setstate_cython__(struct __pyx_obj_6tri
   return __pyx_r;
 }
 
-/* "tricks.pyx":227
+/* "tricks.pyx":228
  *     publisher_api_detail_url  = sqlite_function("publishers", "publisher_api_detail_url",  "TEXT")
  * 
  * def Theme(self):             # <<<<<<<<<<<<<<
@@ -4957,27 +4962,27 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("Theme", 0);
 
-  /* "tricks.pyx":230
+  /* "tricks.pyx":231
  *     global techdict
  *     cdef int count
  *     cdef str covertype = self.covertype, stringtry             # <<<<<<<<<<<<<<
  *     cdef list styles, triers = ['library_label', 'process_label', 'cv_link']
  *     cdef list cycle = [self]
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_covertype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 230, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_covertype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 230, __pyx_L1_error)
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 231, __pyx_L1_error)
   __pyx_v_covertype = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":231
+  /* "tricks.pyx":232
  *     cdef int count
  *     cdef str covertype = self.covertype, stringtry
  *     cdef list styles, triers = ['library_label', 'process_label', 'cv_link']             # <<<<<<<<<<<<<<
  *     cdef list cycle = [self]
  * 
  */
-  __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 231, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_u_library_label);
   __Pyx_GIVEREF(__pyx_n_u_library_label);
@@ -4991,14 +4996,14 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
   __pyx_v_triers = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":232
+  /* "tricks.pyx":233
  *     cdef str covertype = self.covertype, stringtry
  *     cdef list styles, triers = ['library_label', 'process_label', 'cv_link']
  *     cdef list cycle = [self]             # <<<<<<<<<<<<<<
  * 
  *     if 'themes' not in techdict:
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_self);
   __Pyx_GIVEREF(__pyx_v_self);
@@ -5006,7 +5011,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
   __pyx_v_cycle = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":234
+  /* "tricks.pyx":235
  *     cdef list cycle = [self]
  * 
  *     if 'themes' not in techdict:             # <<<<<<<<<<<<<<
@@ -5015,29 +5020,29 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 234, __pyx_L1_error)
+    __PYX_ERR(0, 235, __pyx_L1_error)
   }
-  __pyx_t_2 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_themes, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_themes, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 235, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "tricks.pyx":235
+    /* "tricks.pyx":236
  * 
  *     if 'themes' not in techdict:
  *         techdict['themes'] = {}             # <<<<<<<<<<<<<<
  * 
  *     for stringtry in triers:
  */
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 235, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 236, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 235, __pyx_L1_error)
+      __PYX_ERR(0, 236, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes, __pyx_t_1) < 0)) __PYX_ERR(0, 235, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes, __pyx_t_1) < 0)) __PYX_ERR(0, 236, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "tricks.pyx":234
+    /* "tricks.pyx":235
  *     cdef list cycle = [self]
  * 
  *     if 'themes' not in techdict:             # <<<<<<<<<<<<<<
@@ -5046,7 +5051,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
   }
 
-  /* "tricks.pyx":237
+  /* "tricks.pyx":238
  *         techdict['themes'] = {}
  * 
  *     for stringtry in triers:             # <<<<<<<<<<<<<<
@@ -5057,42 +5062,42 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
   for (;;) {
     if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_5 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_5); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 237, __pyx_L1_error)
+    __pyx_t_5 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_4); __Pyx_INCREF(__pyx_t_5); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 238, __pyx_L1_error)
     #else
-    __pyx_t_5 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
+    __pyx_t_5 = PySequence_ITEM(__pyx_t_1, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 238, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     #endif
-    if (!(likely(PyUnicode_CheckExact(__pyx_t_5))||((__pyx_t_5) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_5)->tp_name), 0))) __PYX_ERR(0, 237, __pyx_L1_error)
+    if (!(likely(PyUnicode_CheckExact(__pyx_t_5))||((__pyx_t_5) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_5)->tp_name), 0))) __PYX_ERR(0, 238, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_stringtry, ((PyObject*)__pyx_t_5));
     __pyx_t_5 = 0;
 
-    /* "tricks.pyx":238
+    /* "tricks.pyx":239
  * 
  *     for stringtry in triers:
  *         if stringtry in dir(self):             # <<<<<<<<<<<<<<
  *             cycle.append(getattr(self, stringtry))
  *         else:
  */
-    __pyx_t_5 = PyObject_Dir(__pyx_v_self); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 238, __pyx_L1_error)
+    __pyx_t_5 = PyObject_Dir(__pyx_v_self); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 239, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_v_stringtry, __pyx_t_5, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 238, __pyx_L1_error)
+    __pyx_t_3 = (__Pyx_PySequence_ContainsTF(__pyx_v_stringtry, __pyx_t_5, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 239, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_2 = (__pyx_t_3 != 0);
     if (__pyx_t_2) {
 
-      /* "tricks.pyx":239
+      /* "tricks.pyx":240
  *     for stringtry in triers:
  *         if stringtry in dir(self):
  *             cycle.append(getattr(self, stringtry))             # <<<<<<<<<<<<<<
  *         else:
  *             cycle.append(False)
  */
-      __pyx_t_5 = __Pyx_GetAttr(__pyx_v_self, __pyx_v_stringtry); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 239, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_GetAttr(__pyx_v_self, __pyx_v_stringtry); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 240, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_cycle, __pyx_t_5); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 239, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_cycle, __pyx_t_5); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 240, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "tricks.pyx":238
+      /* "tricks.pyx":239
  * 
  *     for stringtry in triers:
  *         if stringtry in dir(self):             # <<<<<<<<<<<<<<
@@ -5102,7 +5107,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
       goto __pyx_L6;
     }
 
-    /* "tricks.pyx":241
+    /* "tricks.pyx":242
  *             cycle.append(getattr(self, stringtry))
  *         else:
  *             cycle.append(False)             # <<<<<<<<<<<<<<
@@ -5110,11 +5115,11 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  *     if covertype not in techdict['themes']:
  */
     /*else*/ {
-      __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_cycle, Py_False); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 241, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyList_Append(__pyx_v_cycle, Py_False); if (unlikely(__pyx_t_6 == ((int)-1))) __PYX_ERR(0, 242, __pyx_L1_error)
     }
     __pyx_L6:;
 
-    /* "tricks.pyx":237
+    /* "tricks.pyx":238
  *         techdict['themes'] = {}
  * 
  *     for stringtry in triers:             # <<<<<<<<<<<<<<
@@ -5124,7 +5129,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":243
+  /* "tricks.pyx":244
  *             cycle.append(False)
  * 
  *     if covertype not in techdict['themes']:             # <<<<<<<<<<<<<<
@@ -5133,25 +5138,25 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 243, __pyx_L1_error)
+    __PYX_ERR(0, 244, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 243, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_v_covertype, __pyx_t_1, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 243, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_v_covertype, __pyx_t_1, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "tricks.pyx":244
+    /* "tricks.pyx":245
  * 
  *     if covertype not in techdict['themes']:
  *         sqlitecursor.execute('select * from settings where id is 1')             # <<<<<<<<<<<<<<
  *         settings_data = sqlitecursor.fetchone()
  *         try:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 244, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_execute); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 244, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_execute); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -5166,21 +5171,21 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_5, __pyx_kp_u_select_from_settings_where_id_is) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_kp_u_select_from_settings_where_id_is);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 245, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "tricks.pyx":245
+    /* "tricks.pyx":246
  *     if covertype not in techdict['themes']:
  *         sqlitecursor.execute('select * from settings where id is 1')
  *         settings_data = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *         try:
  *             if settings_data[getattr(DB, covertype)] != None:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 245, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 246, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 245, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 246, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -5195,13 +5200,13 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     }
     __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 245, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 246, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_settings_data = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "tricks.pyx":246
+    /* "tricks.pyx":247
  *         sqlitecursor.execute('select * from settings where id is 1')
  *         settings_data = sqlitecursor.fetchone()
  *         try:             # <<<<<<<<<<<<<<
@@ -5217,37 +5222,37 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
       __Pyx_XGOTREF(__pyx_t_10);
       /*try:*/ {
 
-        /* "tricks.pyx":247
+        /* "tricks.pyx":248
  *         settings_data = sqlitecursor.fetchone()
  *         try:
  *             if settings_data[getattr(DB, covertype)] != None:             # <<<<<<<<<<<<<<
  *                 styles = settings_data[getattr(DB, covertype)].split('\n')
  *                 techdict['themes'][covertype] = styles
  */
-        __pyx_t_1 = __Pyx_GetAttr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_v_covertype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L8_error)
+        __pyx_t_1 = __Pyx_GetAttr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_v_covertype); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L8_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 247, __pyx_L8_error)
+        __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 248, __pyx_L8_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyObject_RichCompare(__pyx_t_5, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 247, __pyx_L8_error)
+        __pyx_t_1 = PyObject_RichCompare(__pyx_t_5, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L8_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 247, __pyx_L8_error)
+        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 248, __pyx_L8_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_3) {
 
-          /* "tricks.pyx":248
+          /* "tricks.pyx":249
  *         try:
  *             if settings_data[getattr(DB, covertype)] != None:
  *                 styles = settings_data[getattr(DB, covertype)].split('\n')             # <<<<<<<<<<<<<<
  *                 techdict['themes'][covertype] = styles
  *             else:
  */
-          __pyx_t_5 = __Pyx_GetAttr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_v_covertype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 248, __pyx_L8_error)
+          __pyx_t_5 = __Pyx_GetAttr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_v_covertype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 249, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_5);
-          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 248, __pyx_L8_error)
+          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 249, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_split); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 248, __pyx_L8_error)
+          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_split); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 249, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __pyx_t_7 = NULL;
@@ -5262,14 +5267,14 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
           }
           __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_7, __pyx_kp_u__4) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_kp_u__4);
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 248, __pyx_L8_error)
+          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 249, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-          if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 248, __pyx_L8_error)
+          if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 249, __pyx_L8_error)
           __pyx_v_styles = ((PyObject*)__pyx_t_1);
           __pyx_t_1 = 0;
 
-          /* "tricks.pyx":249
+          /* "tricks.pyx":250
  *             if settings_data[getattr(DB, covertype)] != None:
  *                 styles = settings_data[getattr(DB, covertype)].split('\n')
  *                 techdict['themes'][covertype] = styles             # <<<<<<<<<<<<<<
@@ -5278,14 +5283,14 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
           if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 249, __pyx_L8_error)
+            __PYX_ERR(0, 250, __pyx_L8_error)
           }
-          __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 249, __pyx_L8_error)
+          __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 250, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_1);
-          if (unlikely(PyObject_SetItem(__pyx_t_1, __pyx_v_covertype, __pyx_v_styles) < 0)) __PYX_ERR(0, 249, __pyx_L8_error)
+          if (unlikely(PyObject_SetItem(__pyx_t_1, __pyx_v_covertype, __pyx_v_styles) < 0)) __PYX_ERR(0, 250, __pyx_L8_error)
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "tricks.pyx":247
+          /* "tricks.pyx":248
  *         settings_data = sqlitecursor.fetchone()
  *         try:
  *             if settings_data[getattr(DB, covertype)] != None:             # <<<<<<<<<<<<<<
@@ -5295,7 +5300,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
           goto __pyx_L14;
         }
 
-        /* "tricks.pyx":251
+        /* "tricks.pyx":252
  *                 techdict['themes'][covertype] = styles
  *             else:
  *                 techdict['themes'][covertype] = presets_stylesheet[covertype].split('\n')             # <<<<<<<<<<<<<<
@@ -5305,11 +5310,11 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         /*else*/ {
           if (unlikely(__pyx_v_6tricks_presets_stylesheet == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 251, __pyx_L8_error)
+            __PYX_ERR(0, 252, __pyx_L8_error)
           }
-          __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_presets_stylesheet, __pyx_v_covertype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 251, __pyx_L8_error)
+          __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_presets_stylesheet, __pyx_v_covertype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 252, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_5);
-          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_split); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 251, __pyx_L8_error)
+          __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_split); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 252, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           __pyx_t_5 = NULL;
@@ -5324,22 +5329,22 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
           }
           __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_5, __pyx_kp_u__4) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_kp_u__4);
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 251, __pyx_L8_error)
+          if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 252, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 251, __pyx_L8_error)
+            __PYX_ERR(0, 252, __pyx_L8_error)
           }
-          __pyx_t_7 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 251, __pyx_L8_error)
+          __pyx_t_7 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 252, __pyx_L8_error)
           __Pyx_GOTREF(__pyx_t_7);
-          if (unlikely(PyObject_SetItem(__pyx_t_7, __pyx_v_covertype, __pyx_t_1) < 0)) __PYX_ERR(0, 251, __pyx_L8_error)
+          if (unlikely(PyObject_SetItem(__pyx_t_7, __pyx_v_covertype, __pyx_t_1) < 0)) __PYX_ERR(0, 252, __pyx_L8_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         }
         __pyx_L14:;
 
-        /* "tricks.pyx":246
+        /* "tricks.pyx":247
  *         sqlitecursor.execute('select * from settings where id is 1')
  *         settings_data = sqlitecursor.fetchone()
  *         try:             # <<<<<<<<<<<<<<
@@ -5356,7 +5361,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "tricks.pyx":252
+      /* "tricks.pyx":253
  *             else:
  *                 techdict['themes'][covertype] = presets_stylesheet[covertype].split('\n')
  *         except AttributeError: pass             # <<<<<<<<<<<<<<
@@ -5371,7 +5376,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
       goto __pyx_L10_except_error;
       __pyx_L10_except_error:;
 
-      /* "tricks.pyx":246
+      /* "tricks.pyx":247
  *         sqlitecursor.execute('select * from settings where id is 1')
  *         settings_data = sqlitecursor.fetchone()
  *         try:             # <<<<<<<<<<<<<<
@@ -5391,7 +5396,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
       __pyx_L13_try_end:;
     }
 
-    /* "tricks.pyx":243
+    /* "tricks.pyx":244
  *             cycle.append(False)
  * 
  *     if covertype not in techdict['themes']:             # <<<<<<<<<<<<<<
@@ -5400,7 +5405,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
   }
 
-  /* "tricks.pyx":253
+  /* "tricks.pyx":254
  *                 techdict['themes'][covertype] = presets_stylesheet[covertype].split('\n')
  *         except AttributeError: pass
  *     try: styles = techdict['themes'][covertype]             # <<<<<<<<<<<<<<
@@ -5417,14 +5422,14 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     /*try:*/ {
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 253, __pyx_L15_error)
+        __PYX_ERR(0, 254, __pyx_L15_error)
       }
-      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 253, __pyx_L15_error)
+      __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_themes); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 254, __pyx_L15_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_7 = __Pyx_PyObject_Dict_GetItem(__pyx_t_1, __pyx_v_covertype); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 253, __pyx_L15_error)
+      __pyx_t_7 = __Pyx_PyObject_Dict_GetItem(__pyx_t_1, __pyx_v_covertype); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 254, __pyx_L15_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (!(likely(PyList_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 253, __pyx_L15_error)
+      if (!(likely(PyList_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 254, __pyx_L15_error)
       __Pyx_XDECREF_SET(__pyx_v_styles, ((PyObject*)__pyx_t_7));
       __pyx_t_7 = 0;
     }
@@ -5437,7 +5442,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-    /* "tricks.pyx":254
+    /* "tricks.pyx":255
  *         except AttributeError: pass
  *     try: styles = techdict['themes'][covertype]
  *     except KeyError: return             # <<<<<<<<<<<<<<
@@ -5447,7 +5452,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     __pyx_t_11 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_11) {
       __Pyx_AddTraceback("tricks.Theme", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_1, &__pyx_t_5) < 0) __PYX_ERR(0, 254, __pyx_L17_except_error)
+      if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_1, &__pyx_t_5) < 0) __PYX_ERR(0, 255, __pyx_L17_except_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GOTREF(__pyx_t_5);
@@ -5461,7 +5466,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     goto __pyx_L17_except_error;
     __pyx_L17_except_error:;
 
-    /* "tricks.pyx":253
+    /* "tricks.pyx":254
  *                 techdict['themes'][covertype] = presets_stylesheet[covertype].split('\n')
  *         except AttributeError: pass
  *     try: styles = techdict['themes'][covertype]             # <<<<<<<<<<<<<<
@@ -5482,7 +5487,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     __pyx_L20_try_end:;
   }
 
-  /* "tricks.pyx":255
+  /* "tricks.pyx":256
  *     try: styles = techdict['themes'][covertype]
  *     except KeyError: return
  *     for count in range(len(styles)):             # <<<<<<<<<<<<<<
@@ -5491,29 +5496,29 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
   if (unlikely(__pyx_v_styles == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 255, __pyx_L1_error)
+    __PYX_ERR(0, 256, __pyx_L1_error)
   }
-  __pyx_t_4 = PyList_GET_SIZE(__pyx_v_styles); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_4 = PyList_GET_SIZE(__pyx_v_styles); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 256, __pyx_L1_error)
   __pyx_t_12 = __pyx_t_4;
   for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_12; __pyx_t_11+=1) {
     __pyx_v_count = __pyx_t_11;
 
-    /* "tricks.pyx":256
+    /* "tricks.pyx":257
  *     except KeyError: return
  *     for count in range(len(styles)):
  *         if cycle[count] == False:             # <<<<<<<<<<<<<<
  *             continue
  *         cycle[count].setStyleSheet(styles[count])
  */
-    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_cycle, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 256, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_cycle, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_5, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 256, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_5, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 256, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 257, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_3) {
 
-      /* "tricks.pyx":257
+      /* "tricks.pyx":258
  *     for count in range(len(styles)):
  *         if cycle[count] == False:
  *             continue             # <<<<<<<<<<<<<<
@@ -5522,7 +5527,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
       goto __pyx_L23_continue;
 
-      /* "tricks.pyx":256
+      /* "tricks.pyx":257
  *     except KeyError: return
  *     for count in range(len(styles)):
  *         if cycle[count] == False:             # <<<<<<<<<<<<<<
@@ -5531,23 +5536,23 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
     }
 
-    /* "tricks.pyx":258
+    /* "tricks.pyx":259
  *         if cycle[count] == False:
  *             continue
  *         cycle[count].setStyleSheet(styles[count])             # <<<<<<<<<<<<<<
  *         if count+1 == len(styles):
  * 
  */
-    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_cycle, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_cycle, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_setStyleSheet); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 258, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_setStyleSheet); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 259, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (unlikely(__pyx_v_styles == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 258, __pyx_L1_error)
+      __PYX_ERR(0, 259, __pyx_L1_error)
     }
-    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 258, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 259, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_13 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
@@ -5562,12 +5567,12 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     __pyx_t_1 = (__pyx_t_13) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_13, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_5);
     __Pyx_XDECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 258, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 259, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "tricks.pyx":259
+    /* "tricks.pyx":260
  *             continue
  *         cycle[count].setStyleSheet(styles[count])
  *         if count+1 == len(styles):             # <<<<<<<<<<<<<<
@@ -5576,22 +5581,22 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  */
     if (unlikely(__pyx_v_styles == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 259, __pyx_L1_error)
+      __PYX_ERR(0, 260, __pyx_L1_error)
     }
-    __pyx_t_14 = PyList_GET_SIZE(__pyx_v_styles); if (unlikely(__pyx_t_14 == ((Py_ssize_t)-1))) __PYX_ERR(0, 259, __pyx_L1_error)
+    __pyx_t_14 = PyList_GET_SIZE(__pyx_v_styles); if (unlikely(__pyx_t_14 == ((Py_ssize_t)-1))) __PYX_ERR(0, 260, __pyx_L1_error)
     __pyx_t_3 = (((__pyx_v_count + 1) == __pyx_t_14) != 0);
     if (__pyx_t_3) {
 
-      /* "tricks.pyx":261
+      /* "tricks.pyx":262
  *         if count+1 == len(styles):
  * 
  *             if tech.check_defer_comicvine() == True and self.covertype != 'fake':             # <<<<<<<<<<<<<<
  *                 cycle[count].setText(f'<a href=\"{self.text_url}\" style="color: rgb{styles[count][styles[count].rfind("("):]}">{self.show_text}</a>')
  *             else:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_tech); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_tech); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_check_defer_comicvine); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_check_defer_comicvine); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_7 = NULL;
@@ -5606,39 +5611,39 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
       }
       __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_5 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (__pyx_t_2) {
       } else {
         __pyx_t_3 = __pyx_t_2;
         goto __pyx_L28_bool_binop_done;
       }
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_covertype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_covertype); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_t_5, __pyx_n_u_fake, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 261, __pyx_L1_error)
+      __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_t_5, __pyx_n_u_fake, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 262, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_3 = __pyx_t_2;
       __pyx_L28_bool_binop_done:;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":262
+        /* "tricks.pyx":263
  * 
  *             if tech.check_defer_comicvine() == True and self.covertype != 'fake':
  *                 cycle[count].setText(f'<a href=\"{self.text_url}\" style="color: rgb{styles[count][styles[count].rfind("("):]}">{self.show_text}</a>')             # <<<<<<<<<<<<<<
  *             else:
  *                 cycle[count].setText(f'<a href=\"{self.database[DB.issue_site_detail_url]}\" style="color: rgb{styles[count][styles[count].rfind("("):]}">https://comicvine.gamespot.com/{self.database[DB.comic_id]}</a>')
  */
-        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_cycle, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_cycle, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_setText); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_setText); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyTuple_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_1 = PyTuple_New(7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __pyx_t_14 = 0;
         __pyx_t_15 = 127;
@@ -5646,9 +5651,9 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         __pyx_t_14 += 9;
         __Pyx_GIVEREF(__pyx_kp_u_a_href);
         PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_kp_u_a_href);
-        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_text_url); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_text_url); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
-        __pyx_t_16 = __Pyx_PyObject_FormatSimple(__pyx_t_13, __pyx_empty_unicode); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_PyObject_FormatSimple(__pyx_t_13, __pyx_empty_unicode); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         __pyx_t_15 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_16) > __pyx_t_15) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_16) : __pyx_t_15;
@@ -5662,17 +5667,17 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_kp_u_style_color_rgb);
         if (unlikely(__pyx_v_styles == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 262, __pyx_L1_error)
+          __PYX_ERR(0, 263, __pyx_L1_error)
         }
-        __pyx_t_16 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
         if (unlikely(__pyx_v_styles == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 262, __pyx_L1_error)
+          __PYX_ERR(0, 263, __pyx_L1_error)
         }
-        __pyx_t_17 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_17 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_17);
-        __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_t_17, __pyx_n_s_rfind); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_t_17, __pyx_n_s_rfind); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_18);
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
         __pyx_t_17 = NULL;
@@ -5687,14 +5692,14 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         }
         __pyx_t_13 = (__pyx_t_17) ? __Pyx_PyObject_Call2Args(__pyx_t_18, __pyx_t_17, __pyx_kp_u__5) : __Pyx_PyObject_CallOneArg(__pyx_t_18, __pyx_kp_u__5);
         __Pyx_XDECREF(__pyx_t_17); __pyx_t_17 = 0;
-        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 262, __pyx_L1_error)
+        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-        __pyx_t_18 = __Pyx_PyObject_GetSlice(__pyx_t_16, 0, 0, &__pyx_t_13, NULL, NULL, 0, 0, 1); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_18 = __Pyx_PyObject_GetSlice(__pyx_t_16, 0, 0, &__pyx_t_13, NULL, NULL, 0, 0, 1); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_18);
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = __Pyx_PyObject_FormatSimple(__pyx_t_18, __pyx_empty_unicode); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyObject_FormatSimple(__pyx_t_18, __pyx_empty_unicode); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
         __pyx_t_15 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_13) > __pyx_t_15) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_13) : __pyx_t_15;
@@ -5706,9 +5711,9 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         __pyx_t_14 += 2;
         __Pyx_GIVEREF(__pyx_kp_u__6);
         PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_kp_u__6);
-        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_show_text); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_show_text); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
-        __pyx_t_18 = __Pyx_PyObject_FormatSimple(__pyx_t_13, __pyx_empty_unicode); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_18 = __Pyx_PyObject_FormatSimple(__pyx_t_13, __pyx_empty_unicode); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_18);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         __pyx_t_15 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_18) > __pyx_t_15) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_18) : __pyx_t_15;
@@ -5720,7 +5725,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         __pyx_t_14 += 4;
         __Pyx_GIVEREF(__pyx_kp_u_a);
         PyTuple_SET_ITEM(__pyx_t_1, 6, __pyx_kp_u_a);
-        __pyx_t_18 = __Pyx_PyUnicode_Join(__pyx_t_1, 7, __pyx_t_14, __pyx_t_15); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 262, __pyx_L1_error)
+        __pyx_t_18 = __Pyx_PyUnicode_Join(__pyx_t_1, 7, __pyx_t_14, __pyx_t_15); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_18);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_1 = NULL;
@@ -5736,12 +5741,12 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         __pyx_t_5 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_1, __pyx_t_18) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_18);
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 262, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 263, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "tricks.pyx":261
+        /* "tricks.pyx":262
  *         if count+1 == len(styles):
  * 
  *             if tech.check_defer_comicvine() == True and self.covertype != 'fake':             # <<<<<<<<<<<<<<
@@ -5751,7 +5756,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         goto __pyx_L27;
       }
 
-      /* "tricks.pyx":264
+      /* "tricks.pyx":265
  *                 cycle[count].setText(f'<a href=\"{self.text_url}\" style="color: rgb{styles[count][styles[count].rfind("("):]}">{self.show_text}</a>')
  *             else:
  *                 cycle[count].setText(f'<a href=\"{self.database[DB.issue_site_detail_url]}\" style="color: rgb{styles[count][styles[count].rfind("("):]}">https://comicvine.gamespot.com/{self.database[DB.comic_id]}</a>')             # <<<<<<<<<<<<<<
@@ -5759,12 +5764,12 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
  * 
  */
       /*else*/ {
-        __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_cycle, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_cycle, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_setText); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_18 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_setText); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_18);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = PyTuple_New(7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __pyx_t_14 = 0;
         __pyx_t_15 = 127;
@@ -5772,15 +5777,15 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         __pyx_t_14 += 9;
         __Pyx_GIVEREF(__pyx_kp_u_a_href);
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_kp_u_a_href);
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_database); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_database); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_issue_site_detail_url); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_issue_site_detail_url); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
-        __pyx_t_16 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_13); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_PyObject_GetItem(__pyx_t_1, __pyx_t_13); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __pyx_t_13 = __Pyx_PyObject_FormatSimple(__pyx_t_16, __pyx_empty_unicode); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyObject_FormatSimple(__pyx_t_16, __pyx_empty_unicode); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
         __pyx_t_15 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_13) > __pyx_t_15) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_13) : __pyx_t_15;
@@ -5794,17 +5799,17 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_kp_u_style_color_rgb);
         if (unlikely(__pyx_v_styles == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 264, __pyx_L1_error)
+          __PYX_ERR(0, 265, __pyx_L1_error)
         }
-        __pyx_t_13 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         if (unlikely(__pyx_v_styles == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 264, __pyx_L1_error)
+          __PYX_ERR(0, 265, __pyx_L1_error)
         }
-        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_styles, __pyx_v_count, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_rfind); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_rfind); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_17);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_1 = NULL;
@@ -5819,14 +5824,14 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         }
         __pyx_t_16 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_17, __pyx_t_1, __pyx_kp_u__5) : __Pyx_PyObject_CallOneArg(__pyx_t_17, __pyx_kp_u__5);
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 264, __pyx_L1_error)
+        if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-        __pyx_t_17 = __Pyx_PyObject_GetSlice(__pyx_t_13, 0, 0, &__pyx_t_16, NULL, NULL, 0, 0, 1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_17 = __Pyx_PyObject_GetSlice(__pyx_t_13, 0, 0, &__pyx_t_16, NULL, NULL, 0, 0, 1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_17);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
-        __pyx_t_16 = __Pyx_PyObject_FormatSimple(__pyx_t_17, __pyx_empty_unicode); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_PyObject_FormatSimple(__pyx_t_17, __pyx_empty_unicode); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
         __pyx_t_15 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_16) > __pyx_t_15) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_16) : __pyx_t_15;
@@ -5838,15 +5843,15 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         __pyx_t_14 += 33;
         __Pyx_GIVEREF(__pyx_kp_u_https_comicvine_gamespot_com);
         PyTuple_SET_ITEM(__pyx_t_7, 4, __pyx_kp_u_https_comicvine_gamespot_com);
-        __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_database); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_16 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_database); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_16);
-        __pyx_t_17 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_17 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_17);
-        __pyx_t_13 = __Pyx_PyObject_GetItem(__pyx_t_16, __pyx_t_17); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyObject_GetItem(__pyx_t_16, __pyx_t_17); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-        __pyx_t_17 = __Pyx_PyObject_FormatSimple(__pyx_t_13, __pyx_empty_unicode); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_17 = __Pyx_PyObject_FormatSimple(__pyx_t_13, __pyx_empty_unicode); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_17);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         __pyx_t_15 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_17) > __pyx_t_15) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_17) : __pyx_t_15;
@@ -5858,7 +5863,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         __pyx_t_14 += 4;
         __Pyx_GIVEREF(__pyx_kp_u_a);
         PyTuple_SET_ITEM(__pyx_t_7, 6, __pyx_kp_u_a);
-        __pyx_t_17 = __Pyx_PyUnicode_Join(__pyx_t_7, 7, __pyx_t_14, __pyx_t_15); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 264, __pyx_L1_error)
+        __pyx_t_17 = __Pyx_PyUnicode_Join(__pyx_t_7, 7, __pyx_t_14, __pyx_t_15); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_17);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __pyx_t_7 = NULL;
@@ -5874,14 +5879,14 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
         __pyx_t_5 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_18, __pyx_t_7, __pyx_t_17) : __Pyx_PyObject_CallOneArg(__pyx_t_18, __pyx_t_17);
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
+        if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 265, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       }
       __pyx_L27:;
 
-      /* "tricks.pyx":259
+      /* "tricks.pyx":260
  *             continue
  *         cycle[count].setStyleSheet(styles[count])
  *         if count+1 == len(styles):             # <<<<<<<<<<<<<<
@@ -5892,7 +5897,7 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
     __pyx_L23_continue:;
   }
 
-  /* "tricks.pyx":227
+  /* "tricks.pyx":228
  *     publisher_api_detail_url  = sqlite_function("publishers", "publisher_api_detail_url",  "TEXT")
  * 
  * def Theme(self):             # <<<<<<<<<<<<<<
@@ -5925,12 +5930,12 @@ static PyObject *__pyx_pf_6tricks_Theme(CYTHON_UNUSED PyObject *__pyx_self, PyOb
   return __pyx_r;
 }
 
-/* "tricks.pyx":270
+/* "tricks.pyx":271
  *     global techdict
  *     @staticmethod
  *     def tricks_threadpool():             # <<<<<<<<<<<<<<
  *         if 'threadpool' not in techdict:
- *             techdict['threadpool'] = QThreadPool()
+ *             techdict['threadpool'] = QThreadPool(maxThreadCount=1)
  */
 
 /* Python wrapper */
@@ -5960,64 +5965,56 @@ static PyObject *__pyx_pf_6tricks_4tech_tricks_threadpool(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tricks_threadpool", 0);
 
-  /* "tricks.pyx":271
+  /* "tricks.pyx":272
  *     @staticmethod
  *     def tricks_threadpool():
  *         if 'threadpool' not in techdict:             # <<<<<<<<<<<<<<
- *             techdict['threadpool'] = QThreadPool()
+ *             techdict['threadpool'] = QThreadPool(maxThreadCount=1)
  *         return techdict['threadpool']
  */
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 271, __pyx_L1_error)
+    __PYX_ERR(0, 272, __pyx_L1_error)
   }
-  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_threadpool, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_threadpool, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 272, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "tricks.pyx":272
+    /* "tricks.pyx":273
  *     def tricks_threadpool():
  *         if 'threadpool' not in techdict:
- *             techdict['threadpool'] = QThreadPool()             # <<<<<<<<<<<<<<
+ *             techdict['threadpool'] = QThreadPool(maxThreadCount=1)             # <<<<<<<<<<<<<<
  *         return techdict['threadpool']
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_QThreadPool); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 272, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
-      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
-      if (likely(__pyx_t_5)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-        __Pyx_INCREF(__pyx_t_5);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_4, function);
-      }
-    }
-    __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 272, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_QThreadPool); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 273, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 273, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_maxThreadCount, __pyx_int_1) < 0) __PYX_ERR(0, 273, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_empty_tuple, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 273, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 272, __pyx_L1_error)
+      __PYX_ERR(0, 273, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_threadpool, __pyx_t_3) < 0)) __PYX_ERR(0, 272, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_threadpool, __pyx_t_5) < 0)) __PYX_ERR(0, 273, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "tricks.pyx":271
+    /* "tricks.pyx":272
  *     @staticmethod
  *     def tricks_threadpool():
  *         if 'threadpool' not in techdict:             # <<<<<<<<<<<<<<
- *             techdict['threadpool'] = QThreadPool()
+ *             techdict['threadpool'] = QThreadPool(maxThreadCount=1)
  *         return techdict['threadpool']
  */
   }
 
-  /* "tricks.pyx":273
+  /* "tricks.pyx":274
  *         if 'threadpool' not in techdict:
- *             techdict['threadpool'] = QThreadPool()
+ *             techdict['threadpool'] = QThreadPool(maxThreadCount=1)
  *         return techdict['threadpool']             # <<<<<<<<<<<<<<
  * 
  *     @staticmethod
@@ -6025,20 +6022,20 @@ static PyObject *__pyx_pf_6tricks_4tech_tricks_threadpool(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 273, __pyx_L1_error)
+    __PYX_ERR(0, 274, __pyx_L1_error)
   }
-  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_threadpool); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 273, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_r = __pyx_t_3;
-  __pyx_t_3 = 0;
+  __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_threadpool); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 274, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_r = __pyx_t_5;
+  __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":270
+  /* "tricks.pyx":271
  *     global techdict
  *     @staticmethod
  *     def tricks_threadpool():             # <<<<<<<<<<<<<<
  *         if 'threadpool' not in techdict:
- *             techdict['threadpool'] = QThreadPool()
+ *             techdict['threadpool'] = QThreadPool(maxThreadCount=1)
  */
 
   /* function exit code */
@@ -6054,7 +6051,7 @@ static PyObject *__pyx_pf_6tricks_4tech_tricks_threadpool(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "tricks.pyx":276
+/* "tricks.pyx":277
  * 
  *     @staticmethod
  *     def clear_comic_id(tuple db_input):             # <<<<<<<<<<<<<<
@@ -6072,7 +6069,7 @@ static PyObject *__pyx_pw_6tricks_4tech_3clear_comic_id(PyObject *__pyx_self, Py
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("clear_comic_id (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_db_input), (&PyTuple_Type), 1, "db_input", 1))) __PYX_ERR(0, 276, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_db_input), (&PyTuple_Type), 1, "db_input", 1))) __PYX_ERR(0, 277, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_2clear_comic_id(__pyx_self, ((PyObject*)__pyx_v_db_input));
 
   /* function exit code */
@@ -6110,7 +6107,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("clear_comic_id", 0);
 
-  /* "tricks.pyx":277
+  /* "tricks.pyx":278
  *     @staticmethod
  *     def clear_comic_id(tuple db_input):
  *         if db_input[0] == None:             # <<<<<<<<<<<<<<
@@ -6119,17 +6116,17 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
  */
   if (unlikely(__pyx_v_db_input == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 277, __pyx_L1_error)
+    __PYX_ERR(0, 278, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 277, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 277, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 277, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "tricks.pyx":278
+    /* "tricks.pyx":279
  *     def clear_comic_id(tuple db_input):
  *         if db_input[0] == None:
  *             return             # <<<<<<<<<<<<<<
@@ -6140,7 +6137,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "tricks.pyx":277
+    /* "tricks.pyx":278
  *     @staticmethod
  *     def clear_comic_id(tuple db_input):
  *         if db_input[0] == None:             # <<<<<<<<<<<<<<
@@ -6149,14 +6146,14 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
  */
   }
 
-  /* "tricks.pyx":279
+  /* "tricks.pyx":280
  *         if db_input[0] == None:
  *             return
  *         cdef list cycle = ['comic_id', 'volume_id', 'publisher_id', 'issue_api_detail_url', 'issue_site_detail_url', 'issue_number', 'comic_name', 'publisher_id']             # <<<<<<<<<<<<<<
  *         cdef str i, query
  *         with sqliteconnection:
  */
-  __pyx_t_2 = PyList_New(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_u_comic_id);
   __Pyx_GIVEREF(__pyx_n_u_comic_id);
@@ -6185,7 +6182,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
   __pyx_v_cycle = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "tricks.pyx":281
+  /* "tricks.pyx":282
  *         cdef list cycle = ['comic_id', 'volume_id', 'publisher_id', 'issue_api_detail_url', 'issue_site_detail_url', 'issue_number', 'comic_name', 'publisher_id']
  *         cdef str i, query
  *         with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -6193,11 +6190,11 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
  *                 query = 'update comics set ' + i + ' = (?) where id = (?)'
  */
   /*with:*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 282, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 282, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 281, __pyx_L4_error)
+    __pyx_t_5 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 282, __pyx_L4_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -6211,7 +6208,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
     }
     __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L4_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 282, __pyx_L4_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -6226,7 +6223,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
         __Pyx_XGOTREF(__pyx_t_9);
         /*try:*/ {
 
-          /* "tricks.pyx":282
+          /* "tricks.pyx":283
  *         cdef str i, query
  *         with sqliteconnection:
  *             for i in cycle:             # <<<<<<<<<<<<<<
@@ -6237,49 +6234,49 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
           for (;;) {
             if (__pyx_t_10 >= PyList_GET_SIZE(__pyx_t_2)) break;
             #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-            __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_10); __Pyx_INCREF(__pyx_t_1); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 282, __pyx_L8_error)
+            __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_10); __Pyx_INCREF(__pyx_t_1); __pyx_t_10++; if (unlikely(0 < 0)) __PYX_ERR(0, 283, __pyx_L8_error)
             #else
-            __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 282, __pyx_L8_error)
+            __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_10); __pyx_t_10++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 283, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_1);
             #endif
-            if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 282, __pyx_L8_error)
+            if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 283, __pyx_L8_error)
             __Pyx_XDECREF_SET(__pyx_v_i, ((PyObject*)__pyx_t_1));
             __pyx_t_1 = 0;
 
-            /* "tricks.pyx":283
+            /* "tricks.pyx":284
  *         with sqliteconnection:
  *             for i in cycle:
  *                 query = 'update comics set ' + i + ' = (?) where id = (?)'             # <<<<<<<<<<<<<<
  *                 sqlitecursor.execute(query, (None, db_input[0],))
  *     @staticmethod
  */
-            __pyx_t_1 = __Pyx_PyUnicode_ConcatSafe(__pyx_kp_u_update_comics_set, __pyx_v_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 283, __pyx_L8_error)
+            __pyx_t_1 = __Pyx_PyUnicode_ConcatSafe(__pyx_kp_u_update_comics_set, __pyx_v_i); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_1);
-            __pyx_t_5 = __Pyx_PyUnicode_Concat(__pyx_t_1, __pyx_kp_u_where_id); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 283, __pyx_L8_error)
+            __pyx_t_5 = __Pyx_PyUnicode_Concat(__pyx_t_1, __pyx_kp_u_where_id); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 284, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_5);
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             __Pyx_XDECREF_SET(__pyx_v_query, ((PyObject*)__pyx_t_5));
             __pyx_t_5 = 0;
 
-            /* "tricks.pyx":284
+            /* "tricks.pyx":285
  *             for i in cycle:
  *                 query = 'update comics set ' + i + ' = (?) where id = (?)'
  *                 sqlitecursor.execute(query, (None, db_input[0],))             # <<<<<<<<<<<<<<
  *     @staticmethod
  *     def fpath(path_to_fix):
  */
-            __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L8_error)
+            __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 285, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_1);
-            __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_execute); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 284, __pyx_L8_error)
+            __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_execute); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 285, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_6);
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             if (unlikely(__pyx_v_db_input == Py_None)) {
               PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-              __PYX_ERR(0, 284, __pyx_L8_error)
+              __PYX_ERR(0, 285, __pyx_L8_error)
             }
-            __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L8_error)
+            __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 285, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_1);
-            __pyx_t_11 = PyTuple_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 284, __pyx_L8_error)
+            __pyx_t_11 = PyTuple_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 285, __pyx_L8_error)
             __Pyx_GOTREF(__pyx_t_11);
             __Pyx_INCREF(Py_None);
             __Pyx_GIVEREF(Py_None);
@@ -6302,7 +6299,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
             #if CYTHON_FAST_PYCALL
             if (PyFunction_Check(__pyx_t_6)) {
               PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_query, __pyx_t_11};
-              __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_12, 2+__pyx_t_12); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 284, __pyx_L8_error)
+              __pyx_t_5 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_12, 2+__pyx_t_12); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 285, __pyx_L8_error)
               __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
               __Pyx_GOTREF(__pyx_t_5);
               __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
@@ -6311,14 +6308,14 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
             #if CYTHON_FAST_PYCCALL
             if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
               PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_query, __pyx_t_11};
-              __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_12, 2+__pyx_t_12); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 284, __pyx_L8_error)
+              __pyx_t_5 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-__pyx_t_12, 2+__pyx_t_12); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 285, __pyx_L8_error)
               __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
               __Pyx_GOTREF(__pyx_t_5);
               __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
             } else
             #endif
             {
-              __pyx_t_13 = PyTuple_New(2+__pyx_t_12); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 284, __pyx_L8_error)
+              __pyx_t_13 = PyTuple_New(2+__pyx_t_12); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 285, __pyx_L8_error)
               __Pyx_GOTREF(__pyx_t_13);
               if (__pyx_t_1) {
                 __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -6329,14 +6326,14 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
               __Pyx_GIVEREF(__pyx_t_11);
               PyTuple_SET_ITEM(__pyx_t_13, 1+__pyx_t_12, __pyx_t_11);
               __pyx_t_11 = 0;
-              __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_13, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 284, __pyx_L8_error)
+              __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_13, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 285, __pyx_L8_error)
               __Pyx_GOTREF(__pyx_t_5);
               __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
             }
             __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-            /* "tricks.pyx":282
+            /* "tricks.pyx":283
  *         cdef str i, query
  *         with sqliteconnection:
  *             for i in cycle:             # <<<<<<<<<<<<<<
@@ -6346,7 +6343,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
           }
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "tricks.pyx":281
+          /* "tricks.pyx":282
  *         cdef list cycle = ['comic_id', 'volume_id', 'publisher_id', 'issue_api_detail_url', 'issue_site_detail_url', 'issue_number', 'comic_name', 'publisher_id']
  *         cdef str i, query
  *         with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -6367,20 +6364,20 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
         __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
         /*except:*/ {
           __Pyx_AddTraceback("tricks.tech.clear_comic_id", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_5, &__pyx_t_6) < 0) __PYX_ERR(0, 281, __pyx_L10_except_error)
+          if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_5, &__pyx_t_6) < 0) __PYX_ERR(0, 282, __pyx_L10_except_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_13 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 281, __pyx_L10_except_error)
+          __pyx_t_13 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 282, __pyx_L10_except_error)
           __Pyx_GOTREF(__pyx_t_13);
           __pyx_t_14 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_13, NULL);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-          if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 281, __pyx_L10_except_error)
+          if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 282, __pyx_L10_except_error)
           __Pyx_GOTREF(__pyx_t_14);
           __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_14);
           __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-          if (__pyx_t_3 < 0) __PYX_ERR(0, 281, __pyx_L10_except_error)
+          if (__pyx_t_3 < 0) __PYX_ERR(0, 282, __pyx_L10_except_error)
           __pyx_t_15 = ((!(__pyx_t_3 != 0)) != 0);
           if (__pyx_t_15) {
             __Pyx_GIVEREF(__pyx_t_2);
@@ -6388,7 +6385,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
             __Pyx_XGIVEREF(__pyx_t_6);
             __Pyx_ErrRestoreWithState(__pyx_t_2, __pyx_t_5, __pyx_t_6);
             __pyx_t_2 = 0; __pyx_t_5 = 0; __pyx_t_6 = 0; 
-            __PYX_ERR(0, 281, __pyx_L10_except_error)
+            __PYX_ERR(0, 282, __pyx_L10_except_error)
           }
           __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -6414,7 +6411,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
         if (__pyx_t_4) {
           __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple_, NULL);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-          if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 281, __pyx_L1_error)
+          if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 282, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_9);
           __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         }
@@ -6429,7 +6426,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
     __pyx_L19:;
   }
 
-  /* "tricks.pyx":276
+  /* "tricks.pyx":277
  * 
  *     @staticmethod
  *     def clear_comic_id(tuple db_input):             # <<<<<<<<<<<<<<
@@ -6458,7 +6455,7 @@ static PyObject *__pyx_pf_6tricks_4tech_2clear_comic_id(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "tricks.pyx":286
+/* "tricks.pyx":287
  *                 sqlitecursor.execute(query, (None, db_input[0],))
  *     @staticmethod
  *     def fpath(path_to_fix):             # <<<<<<<<<<<<<<
@@ -6493,7 +6490,7 @@ static PyObject *__pyx_pf_6tricks_4tech_4fpath(CYTHON_UNUSED PyObject *__pyx_sel
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("fpath", 0);
 
-  /* "tricks.pyx":287
+  /* "tricks.pyx":288
  *     @staticmethod
  *     def fpath(path_to_fix):
  *         return os.path.abspath(os.path.expanduser(path_to_fix))             # <<<<<<<<<<<<<<
@@ -6501,20 +6498,20 @@ static PyObject *__pyx_pf_6tricks_4tech_4fpath(CYTHON_UNUSED PyObject *__pyx_sel
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_abspath); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_abspath); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_os); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_path); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_expanduser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_expanduser); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -6529,7 +6526,7 @@ static PyObject *__pyx_pf_6tricks_4tech_4fpath(CYTHON_UNUSED PyObject *__pyx_sel
   }
   __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_v_path_to_fix) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_path_to_fix);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 287, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -6545,14 +6542,14 @@ static PyObject *__pyx_pf_6tricks_4tech_4fpath(CYTHON_UNUSED PyObject *__pyx_sel
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 288, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":286
+  /* "tricks.pyx":287
  *                 sqlitecursor.execute(query, (None, db_input[0],))
  *     @staticmethod
  *     def fpath(path_to_fix):             # <<<<<<<<<<<<<<
@@ -6575,7 +6572,7 @@ static PyObject *__pyx_pf_6tricks_4tech_4fpath(CYTHON_UNUSED PyObject *__pyx_sel
   return __pyx_r;
 }
 
-/* "tricks.pyx":290
+/* "tricks.pyx":291
  * 
  *     @staticmethod
  *     def webp_or_jpeg():             # <<<<<<<<<<<<<<
@@ -6618,7 +6615,7 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("webp_or_jpeg", 0);
 
-  /* "tricks.pyx":291
+  /* "tricks.pyx":292
  *     @staticmethod
  *     def webp_or_jpeg():
  *         if 'thumbextension' not in techdict:             # <<<<<<<<<<<<<<
@@ -6627,45 +6624,45 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
  */
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 291, __pyx_L1_error)
+    __PYX_ERR(0, 292, __pyx_L1_error)
   }
-  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_thumbextension, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 291, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_thumbextension, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 292, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "tricks.pyx":292
+    /* "tricks.pyx":293
  *     def webp_or_jpeg():
  *         if 'thumbextension' not in techdict:
  *             im = Image.new('RGB', (1, 1), (100, 100, 100))             # <<<<<<<<<<<<<<
  *             dummy_location = tech.fpath(f'{tempfile.gettempdir()}/webp_testimage.webp')
  *             try:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Image); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Image); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 293, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_new); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 292, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_new); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 293, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__9, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 293, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_im = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "tricks.pyx":293
+    /* "tricks.pyx":294
  *         if 'thumbextension' not in techdict:
  *             im = Image.new('RGB', (1, 1), (100, 100, 100))
  *             dummy_location = tech.fpath(f'{tempfile.gettempdir()}/webp_testimage.webp')             # <<<<<<<<<<<<<<
  *             try:
  *                 im.save(dummy_location, 'webp', method=1, quality=1)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_tech); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_tech); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_fpath); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_fpath); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_tempfile); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_tempfile); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_gettempdir); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_gettempdir); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -6680,13 +6677,13 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
     }
     __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 293, __pyx_L1_error)
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_t_7, __pyx_kp_u_webp_testimage_webp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Concat(__pyx_t_7, __pyx_kp_u_webp_testimage_webp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -6702,13 +6699,13 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
     __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_7, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 293, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_dummy_location = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "tricks.pyx":294
+    /* "tricks.pyx":295
  *             im = Image.new('RGB', (1, 1), (100, 100, 100))
  *             dummy_location = tech.fpath(f'{tempfile.gettempdir()}/webp_testimage.webp')
  *             try:             # <<<<<<<<<<<<<<
@@ -6724,16 +6721,16 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
       __Pyx_XGOTREF(__pyx_t_10);
       /*try:*/ {
 
-        /* "tricks.pyx":295
+        /* "tricks.pyx":296
  *             dummy_location = tech.fpath(f'{tempfile.gettempdir()}/webp_testimage.webp')
  *             try:
  *                 im.save(dummy_location, 'webp', method=1, quality=1)             # <<<<<<<<<<<<<<
  *                 techdict['thumbextension'] = 'webp'
  *             except KeyError:
  */
-        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_im, __pyx_n_s_save); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 295, __pyx_L4_error)
+        __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_im, __pyx_n_s_save); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 296, __pyx_L4_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 295, __pyx_L4_error)
+        __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 296, __pyx_L4_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_INCREF(__pyx_v_dummy_location);
         __Pyx_GIVEREF(__pyx_v_dummy_location);
@@ -6741,18 +6738,18 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
         __Pyx_INCREF(__pyx_n_u_webp);
         __Pyx_GIVEREF(__pyx_n_u_webp);
         PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_n_u_webp);
-        __pyx_t_4 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 295, __pyx_L4_error)
+        __pyx_t_4 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 296, __pyx_L4_error)
         __Pyx_GOTREF(__pyx_t_4);
-        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_method, __pyx_int_1) < 0) __PYX_ERR(0, 295, __pyx_L4_error)
-        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_quality, __pyx_int_1) < 0) __PYX_ERR(0, 295, __pyx_L4_error)
-        __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 295, __pyx_L4_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_method, __pyx_int_1) < 0) __PYX_ERR(0, 296, __pyx_L4_error)
+        if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_quality, __pyx_int_1) < 0) __PYX_ERR(0, 296, __pyx_L4_error)
+        __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 296, __pyx_L4_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-        /* "tricks.pyx":296
+        /* "tricks.pyx":297
  *             try:
  *                 im.save(dummy_location, 'webp', method=1, quality=1)
  *                 techdict['thumbextension'] = 'webp'             # <<<<<<<<<<<<<<
@@ -6761,11 +6758,11 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
  */
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 296, __pyx_L4_error)
+          __PYX_ERR(0, 297, __pyx_L4_error)
         }
-        if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_thumbextension, __pyx_n_u_webp) < 0)) __PYX_ERR(0, 296, __pyx_L4_error)
+        if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_thumbextension, __pyx_n_u_webp) < 0)) __PYX_ERR(0, 297, __pyx_L4_error)
 
-        /* "tricks.pyx":294
+        /* "tricks.pyx":295
  *             im = Image.new('RGB', (1, 1), (100, 100, 100))
  *             dummy_location = tech.fpath(f'{tempfile.gettempdir()}/webp_testimage.webp')
  *             try:             # <<<<<<<<<<<<<<
@@ -6784,7 +6781,7 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "tricks.pyx":297
+      /* "tricks.pyx":298
  *                 im.save(dummy_location, 'webp', method=1, quality=1)
  *                 techdict['thumbextension'] = 'webp'
  *             except KeyError:             # <<<<<<<<<<<<<<
@@ -6794,12 +6791,12 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
       __pyx_t_11 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
       if (__pyx_t_11) {
         __Pyx_AddTraceback("tricks.tech.webp_or_jpeg", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_4, &__pyx_t_5) < 0) __PYX_ERR(0, 297, __pyx_L6_except_error)
+        if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_4, &__pyx_t_5) < 0) __PYX_ERR(0, 298, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GOTREF(__pyx_t_5);
 
-        /* "tricks.pyx":298
+        /* "tricks.pyx":299
  *                 techdict['thumbextension'] = 'webp'
  *             except KeyError:
  *                 techdict['thumbextension'] = 'jpeg'             # <<<<<<<<<<<<<<
@@ -6808,9 +6805,9 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
  */
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 298, __pyx_L6_except_error)
+          __PYX_ERR(0, 299, __pyx_L6_except_error)
         }
-        if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_thumbextension, __pyx_n_u_jpeg) < 0)) __PYX_ERR(0, 298, __pyx_L6_except_error)
+        if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_thumbextension, __pyx_n_u_jpeg) < 0)) __PYX_ERR(0, 299, __pyx_L6_except_error)
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -6819,7 +6816,7 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
       goto __pyx_L6_except_error;
       __pyx_L6_except_error:;
 
-      /* "tricks.pyx":294
+      /* "tricks.pyx":295
  *             im = Image.new('RGB', (1, 1), (100, 100, 100))
  *             dummy_location = tech.fpath(f'{tempfile.gettempdir()}/webp_testimage.webp')
  *             try:             # <<<<<<<<<<<<<<
@@ -6839,7 +6836,7 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
       __pyx_L9_try_end:;
     }
 
-    /* "tricks.pyx":291
+    /* "tricks.pyx":292
  *     @staticmethod
  *     def webp_or_jpeg():
  *         if 'thumbextension' not in techdict:             # <<<<<<<<<<<<<<
@@ -6848,7 +6845,7 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "tricks.pyx":299
+  /* "tricks.pyx":300
  *             except KeyError:
  *                 techdict['thumbextension'] = 'jpeg'
  *         return techdict['thumbextension']             # <<<<<<<<<<<<<<
@@ -6858,15 +6855,15 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 299, __pyx_L1_error)
+    __PYX_ERR(0, 300, __pyx_L1_error)
   }
-  __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_thumbextension); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_thumbextension); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_r = __pyx_t_5;
   __pyx_t_5 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":290
+  /* "tricks.pyx":291
  * 
  *     @staticmethod
  *     def webp_or_jpeg():             # <<<<<<<<<<<<<<
@@ -6891,7 +6888,7 @@ static PyObject *__pyx_pf_6tricks_4tech_6webp_or_jpeg(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "tricks.pyx":302
+/* "tricks.pyx":303
  * 
  *     @staticmethod
  *     def refresh_publisher(tuple db_input):             # <<<<<<<<<<<<<<
@@ -6909,7 +6906,7 @@ static PyObject *__pyx_pw_6tricks_4tech_9refresh_publisher(PyObject *__pyx_self,
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("refresh_publisher (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_db_input), (&PyTuple_Type), 1, "db_input", 1))) __PYX_ERR(0, 302, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_db_input), (&PyTuple_Type), 1, "db_input", 1))) __PYX_ERR(0, 303, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_8refresh_publisher(__pyx_self, ((PyObject*)__pyx_v_db_input));
 
   /* function exit code */
@@ -6944,7 +6941,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
   __Pyx_RefNannySetupContext("refresh_publisher", 0);
   __Pyx_INCREF(__pyx_v_db_input);
 
-  /* "tricks.pyx":303
+  /* "tricks.pyx":304
  *     @staticmethod
  *     def refresh_publisher(tuple db_input):
  *         if db_input[DB.C_volume_id] != None and db_input[DB.C_publisher_id] == None:             # <<<<<<<<<<<<<<
@@ -6953,16 +6950,16 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
  */
   if (unlikely(__pyx_v_db_input == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 303, __pyx_L1_error)
+    __PYX_ERR(0, 304, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_volume_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_volume_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_db_input, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_db_input, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
   } else {
@@ -6971,43 +6968,43 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
   }
   if (unlikely(__pyx_v_db_input == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 303, __pyx_L1_error)
+    __PYX_ERR(0, 304, __pyx_L1_error)
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_publisher_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_publisher_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_db_input, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_db_input, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 304, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_1 = __pyx_t_4;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "tricks.pyx":304
+    /* "tricks.pyx":305
  *     def refresh_publisher(tuple db_input):
  *         if db_input[DB.C_volume_id] != None and db_input[DB.C_publisher_id] == None:
  *             sqlitecursor.execute('select * from volumes where volume_id = (?)', (db_input[DB.C_volume_id],))             # <<<<<<<<<<<<<<
  *             vdata = sqlitecursor.fetchone()
  *             if vdata != None:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (unlikely(__pyx_v_db_input == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 304, __pyx_L1_error)
+      __PYX_ERR(0, 305, __pyx_L1_error)
     }
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_volume_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_volume_id); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_db_input, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_db_input, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_6);
     PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_6);
@@ -7027,7 +7024,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_kp_u_select_from_volumes_where_volume, __pyx_t_3};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7036,14 +7033,14 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_kp_u_select_from_volumes_where_volume, __pyx_t_3};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else
     #endif
     {
-      __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 304, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 305, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       if (__pyx_t_6) {
         __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -7054,23 +7051,23 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
       __Pyx_GIVEREF(__pyx_t_3);
       PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_t_3);
       __pyx_t_3 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "tricks.pyx":305
+    /* "tricks.pyx":306
  *         if db_input[DB.C_volume_id] != None and db_input[DB.C_publisher_id] == None:
  *             sqlitecursor.execute('select * from volumes where volume_id = (?)', (db_input[DB.C_volume_id],))
  *             vdata = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *             if vdata != None:
  *                 with sqliteconnection:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 305, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 305, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -7085,25 +7082,25 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
     }
     __pyx_t_2 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_8, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_8);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __pyx_v_vdata = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "tricks.pyx":306
+    /* "tricks.pyx":307
  *             sqlitecursor.execute('select * from volumes where volume_id = (?)', (db_input[DB.C_volume_id],))
  *             vdata = sqlitecursor.fetchone()
  *             if vdata != None:             # <<<<<<<<<<<<<<
  *                 with sqliteconnection:
  *                     sqlitecursor.execute('update comics set publisher_id = (?) where id = (?)', (vdata[DB.V_publisher_id], db_input[0],))
  */
-    __pyx_t_2 = PyObject_RichCompare(__pyx_v_vdata, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L1_error)
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 306, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_v_vdata, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 307, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_1) {
 
-      /* "tricks.pyx":307
+      /* "tricks.pyx":308
  *             vdata = sqlitecursor.fetchone()
  *             if vdata != None:
  *                 with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -7111,11 +7108,11 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
  *                 db_input = tech.refresh_db_input(db_input)
  */
       /*with:*/ {
-        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 307, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 307, __pyx_L1_error)
+        __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 308, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_5 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 307, __pyx_L7_error)
+        __pyx_t_5 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 308, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_5);
         __pyx_t_3 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -7129,7 +7126,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
         }
         __pyx_t_8 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 307, __pyx_L7_error)
+        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 308, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -7144,30 +7141,30 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
             __Pyx_XGOTREF(__pyx_t_12);
             /*try:*/ {
 
-              /* "tricks.pyx":308
+              /* "tricks.pyx":309
  *             if vdata != None:
  *                 with sqliteconnection:
  *                     sqlitecursor.execute('update comics set publisher_id = (?) where id = (?)', (vdata[DB.V_publisher_id], db_input[0],))             # <<<<<<<<<<<<<<
  *                 db_input = tech.refresh_db_input(db_input)
  *         return db_input
  */
-              __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 308, __pyx_L11_error)
+              __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 309, __pyx_L11_error)
               __Pyx_GOTREF(__pyx_t_8);
-              __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 308, __pyx_L11_error)
+              __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 309, __pyx_L11_error)
               __Pyx_GOTREF(__pyx_t_5);
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-              __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_V_publisher_id); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 308, __pyx_L11_error)
+              __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_V_publisher_id); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 309, __pyx_L11_error)
               __Pyx_GOTREF(__pyx_t_8);
-              __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_vdata, __pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 308, __pyx_L11_error)
+              __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_v_vdata, __pyx_t_8); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L11_error)
               __Pyx_GOTREF(__pyx_t_3);
               __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
               if (unlikely(__pyx_v_db_input == Py_None)) {
                 PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                __PYX_ERR(0, 308, __pyx_L11_error)
+                __PYX_ERR(0, 309, __pyx_L11_error)
               }
-              __pyx_t_8 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 308, __pyx_L11_error)
+              __pyx_t_8 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 309, __pyx_L11_error)
               __Pyx_GOTREF(__pyx_t_8);
-              __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 308, __pyx_L11_error)
+              __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 309, __pyx_L11_error)
               __Pyx_GOTREF(__pyx_t_6);
               __Pyx_GIVEREF(__pyx_t_3);
               PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3);
@@ -7190,7 +7187,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
               #if CYTHON_FAST_PYCALL
               if (PyFunction_Check(__pyx_t_5)) {
                 PyObject *__pyx_temp[3] = {__pyx_t_8, __pyx_kp_u_update_comics_set_publisher_id_w, __pyx_t_6};
-                __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L11_error)
+                __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L11_error)
                 __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
                 __Pyx_GOTREF(__pyx_t_2);
                 __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -7199,14 +7196,14 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
               #if CYTHON_FAST_PYCCALL
               if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
                 PyObject *__pyx_temp[3] = {__pyx_t_8, __pyx_kp_u_update_comics_set_publisher_id_w, __pyx_t_6};
-                __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L11_error)
+                __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L11_error)
                 __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
                 __Pyx_GOTREF(__pyx_t_2);
                 __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
               } else
               #endif
               {
-                __pyx_t_3 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 308, __pyx_L11_error)
+                __pyx_t_3 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L11_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 if (__pyx_t_8) {
                   __Pyx_GIVEREF(__pyx_t_8); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_8); __pyx_t_8 = NULL;
@@ -7217,14 +7214,14 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
                 __Pyx_GIVEREF(__pyx_t_6);
                 PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_7, __pyx_t_6);
                 __pyx_t_6 = 0;
-                __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 308, __pyx_L11_error)
+                __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L11_error)
                 __Pyx_GOTREF(__pyx_t_2);
                 __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
               }
               __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-              /* "tricks.pyx":307
+              /* "tricks.pyx":308
  *             vdata = sqlitecursor.fetchone()
  *             if vdata != None:
  *                 with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -7244,20 +7241,20 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
             __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
             /*except:*/ {
               __Pyx_AddTraceback("tricks.tech.refresh_publisher", __pyx_clineno, __pyx_lineno, __pyx_filename);
-              if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_5, &__pyx_t_3) < 0) __PYX_ERR(0, 307, __pyx_L13_except_error)
+              if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_5, &__pyx_t_3) < 0) __PYX_ERR(0, 308, __pyx_L13_except_error)
               __Pyx_GOTREF(__pyx_t_2);
               __Pyx_GOTREF(__pyx_t_5);
               __Pyx_GOTREF(__pyx_t_3);
-              __pyx_t_6 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 307, __pyx_L13_except_error)
+              __pyx_t_6 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 308, __pyx_L13_except_error)
               __Pyx_GOTREF(__pyx_t_6);
               __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_6, NULL);
               __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
               __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-              if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 307, __pyx_L13_except_error)
+              if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 308, __pyx_L13_except_error)
               __Pyx_GOTREF(__pyx_t_13);
               __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_13);
               __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-              if (__pyx_t_1 < 0) __PYX_ERR(0, 307, __pyx_L13_except_error)
+              if (__pyx_t_1 < 0) __PYX_ERR(0, 308, __pyx_L13_except_error)
               __pyx_t_4 = ((!(__pyx_t_1 != 0)) != 0);
               if (__pyx_t_4) {
                 __Pyx_GIVEREF(__pyx_t_2);
@@ -7265,7 +7262,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
                 __Pyx_XGIVEREF(__pyx_t_3);
                 __Pyx_ErrRestoreWithState(__pyx_t_2, __pyx_t_5, __pyx_t_3);
                 __pyx_t_2 = 0; __pyx_t_5 = 0; __pyx_t_3 = 0; 
-                __PYX_ERR(0, 307, __pyx_L13_except_error)
+                __PYX_ERR(0, 308, __pyx_L13_except_error)
               }
               __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
               __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -7291,7 +7288,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
             if (__pyx_t_9) {
               __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple_, NULL);
               __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-              if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 307, __pyx_L1_error)
+              if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 308, __pyx_L1_error)
               __Pyx_GOTREF(__pyx_t_12);
               __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
             }
@@ -7306,16 +7303,16 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
         __pyx_L20:;
       }
 
-      /* "tricks.pyx":309
+      /* "tricks.pyx":310
  *                 with sqliteconnection:
  *                     sqlitecursor.execute('update comics set publisher_id = (?) where id = (?)', (vdata[DB.V_publisher_id], db_input[0],))
  *                 db_input = tech.refresh_db_input(db_input)             # <<<<<<<<<<<<<<
  *         return db_input
  * 
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_tech); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 309, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_tech); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 310, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_refresh_db_input); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_refresh_db_input); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_5 = NULL;
@@ -7330,14 +7327,14 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
       }
       __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_5, __pyx_v_db_input) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_db_input);
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 310, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      if (!(likely(PyTuple_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 309, __pyx_L1_error)
+      if (!(likely(PyTuple_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 310, __pyx_L1_error)
       __Pyx_DECREF_SET(__pyx_v_db_input, ((PyObject*)__pyx_t_3));
       __pyx_t_3 = 0;
 
-      /* "tricks.pyx":306
+      /* "tricks.pyx":307
  *             sqlitecursor.execute('select * from volumes where volume_id = (?)', (db_input[DB.C_volume_id],))
  *             vdata = sqlitecursor.fetchone()
  *             if vdata != None:             # <<<<<<<<<<<<<<
@@ -7346,7 +7343,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
  */
     }
 
-    /* "tricks.pyx":303
+    /* "tricks.pyx":304
  *     @staticmethod
  *     def refresh_publisher(tuple db_input):
  *         if db_input[DB.C_volume_id] != None and db_input[DB.C_publisher_id] == None:             # <<<<<<<<<<<<<<
@@ -7355,7 +7352,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
  */
   }
 
-  /* "tricks.pyx":310
+  /* "tricks.pyx":311
  *                     sqlitecursor.execute('update comics set publisher_id = (?) where id = (?)', (vdata[DB.V_publisher_id], db_input[0],))
  *                 db_input = tech.refresh_db_input(db_input)
  *         return db_input             # <<<<<<<<<<<<<<
@@ -7367,7 +7364,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_db_input;
   goto __pyx_L0;
 
-  /* "tricks.pyx":302
+  /* "tricks.pyx":303
  * 
  *     @staticmethod
  *     def refresh_publisher(tuple db_input):             # <<<<<<<<<<<<<<
@@ -7392,7 +7389,7 @@ static PyObject *__pyx_pf_6tricks_4tech_8refresh_publisher(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "tricks.pyx":313
+/* "tricks.pyx":314
  * 
  *     @staticmethod
  *     def string_normer(str string_to_fix, allow_unicode=False):             # <<<<<<<<<<<<<<
@@ -7440,7 +7437,7 @@ static PyObject *__pyx_pw_6tricks_4tech_11string_normer(PyObject *__pyx_self, Py
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "string_normer") < 0)) __PYX_ERR(0, 313, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "string_normer") < 0)) __PYX_ERR(0, 314, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -7456,13 +7453,13 @@ static PyObject *__pyx_pw_6tricks_4tech_11string_normer(PyObject *__pyx_self, Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("string_normer", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 313, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("string_normer", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 314, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("tricks.tech.string_normer", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_string_to_fix), (&PyUnicode_Type), 1, "string_to_fix", 1))) __PYX_ERR(0, 313, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_string_to_fix), (&PyUnicode_Type), 1, "string_to_fix", 1))) __PYX_ERR(0, 314, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_10string_normer(__pyx_self, __pyx_v_string_to_fix, __pyx_v_allow_unicode);
 
   /* function exit code */
@@ -7490,26 +7487,26 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
   __Pyx_RefNannySetupContext("string_normer", 0);
   __Pyx_INCREF(__pyx_v_string_to_fix);
 
-  /* "tricks.pyx":314
+  /* "tricks.pyx":315
  *     @staticmethod
  *     def string_normer(str string_to_fix, allow_unicode=False):
  *         if allow_unicode:             # <<<<<<<<<<<<<<
  *             string_to_fix = unicodedata.normalize('NFKC', string_to_fix)
  *         else:
  */
-  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_allow_unicode); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_allow_unicode); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 315, __pyx_L1_error)
   if (__pyx_t_1) {
 
-    /* "tricks.pyx":315
+    /* "tricks.pyx":316
  *     def string_normer(str string_to_fix, allow_unicode=False):
  *         if allow_unicode:
  *             string_to_fix = unicodedata.normalize('NFKC', string_to_fix)             # <<<<<<<<<<<<<<
  *         else:
  *             string_to_fix = unicodedata.normalize('NFKD', string_to_fix).encode('ascii', 'ignore').decode('ascii')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_unicodedata); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 315, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_unicodedata); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 316, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_normalize); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 315, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_normalize); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 316, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -7527,7 +7524,7 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_n_u_NFKC, __pyx_v_string_to_fix};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else
@@ -7535,13 +7532,13 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_n_u_NFKC, __pyx_v_string_to_fix};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_GOTREF(__pyx_t_2);
     } else
     #endif
     {
-      __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 315, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       if (__pyx_t_3) {
         __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -7552,16 +7549,16 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
       __Pyx_INCREF(__pyx_v_string_to_fix);
       __Pyx_GIVEREF(__pyx_v_string_to_fix);
       PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_string_to_fix);
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 315, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 316, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (!(likely(PyUnicode_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 315, __pyx_L1_error)
+    if (!(likely(PyUnicode_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 316, __pyx_L1_error)
     __Pyx_DECREF_SET(__pyx_v_string_to_fix, ((PyObject*)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "tricks.pyx":314
+    /* "tricks.pyx":315
  *     @staticmethod
  *     def string_normer(str string_to_fix, allow_unicode=False):
  *         if allow_unicode:             # <<<<<<<<<<<<<<
@@ -7571,7 +7568,7 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
     goto __pyx_L3;
   }
 
-  /* "tricks.pyx":317
+  /* "tricks.pyx":318
  *             string_to_fix = unicodedata.normalize('NFKC', string_to_fix)
  *         else:
  *             string_to_fix = unicodedata.normalize('NFKD', string_to_fix).encode('ascii', 'ignore').decode('ascii')             # <<<<<<<<<<<<<<
@@ -7579,9 +7576,9 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
  *         return re.sub(r'[-\s]+', '-', string_to_fix).strip('-_')
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_unicodedata); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 317, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_unicodedata); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 318, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_normalize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_normalize); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_t_6 = NULL;
@@ -7599,7 +7596,7 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_n_u_NFKD, __pyx_v_string_to_fix};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 318, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else
@@ -7607,13 +7604,13 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_n_u_NFKD, __pyx_v_string_to_fix};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 318, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     {
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 317, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 318, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_6) {
         __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -7624,18 +7621,18 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
       __Pyx_INCREF(__pyx_v_string_to_fix);
       __Pyx_GIVEREF(__pyx_v_string_to_fix);
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_5, __pyx_v_string_to_fix);
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 318, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_encode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_encode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_tuple__10, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 318, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_decode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_decode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -7650,28 +7647,28 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
     }
     __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_n_u_ascii) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_n_u_ascii);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 317, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (!(likely(PyUnicode_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 317, __pyx_L1_error)
+    if (!(likely(PyUnicode_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 318, __pyx_L1_error)
     __Pyx_DECREF_SET(__pyx_v_string_to_fix, ((PyObject*)__pyx_t_2));
     __pyx_t_2 = 0;
   }
   __pyx_L3:;
 
-  /* "tricks.pyx":318
+  /* "tricks.pyx":319
  *         else:
  *             string_to_fix = unicodedata.normalize('NFKD', string_to_fix).encode('ascii', 'ignore').decode('ascii')
  *         string_to_fix = re.sub(r'[^\w\s-]', '', string_to_fix.lower())             # <<<<<<<<<<<<<<
  *         return re.sub(r'[-\s]+', '-', string_to_fix).strip('-_')
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_re); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_re); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_sub); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_sub); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_string_to_fix, __pyx_n_s_lower); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_string_to_fix, __pyx_n_s_lower); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_t_6 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_7))) {
@@ -7685,7 +7682,7 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
   }
   __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 318, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __pyx_t_7 = NULL;
@@ -7703,7 +7700,7 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_kp_u_w_s, __pyx_kp_u__11, __pyx_t_3};
-    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_5, 3+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_5, 3+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 319, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -7712,14 +7709,14 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[4] = {__pyx_t_7, __pyx_kp_u_w_s, __pyx_kp_u__11, __pyx_t_3};
-    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_5, 3+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_5, 3+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 319, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(3+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 318, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(3+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 319, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_7) {
       __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -7733,16 +7730,16 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
     __Pyx_GIVEREF(__pyx_t_3);
     PyTuple_SET_ITEM(__pyx_t_6, 2+__pyx_t_5, __pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 318, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_6, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 319, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(PyUnicode_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 318, __pyx_L1_error)
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 319, __pyx_L1_error)
   __Pyx_DECREF_SET(__pyx_v_string_to_fix, ((PyObject*)__pyx_t_2));
   __pyx_t_2 = 0;
 
-  /* "tricks.pyx":319
+  /* "tricks.pyx":320
  *             string_to_fix = unicodedata.normalize('NFKD', string_to_fix).encode('ascii', 'ignore').decode('ascii')
  *         string_to_fix = re.sub(r'[^\w\s-]', '', string_to_fix.lower())
  *         return re.sub(r'[-\s]+', '-', string_to_fix).strip('-_')             # <<<<<<<<<<<<<<
@@ -7750,9 +7747,9 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_re); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 319, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_re); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 320, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_sub); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_sub); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_6 = NULL;
@@ -7770,7 +7767,7 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[4] = {__pyx_t_6, __pyx_kp_u_s, __pyx_kp_u__12, __pyx_v_string_to_fix};
-    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 3+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 319, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 3+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else
@@ -7778,13 +7775,13 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[4] = {__pyx_t_6, __pyx_kp_u_s, __pyx_kp_u__12, __pyx_v_string_to_fix};
-    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 3+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 319, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_5, 3+__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(3+__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 319, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(3+__pyx_t_5); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_6) {
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -7798,12 +7795,12 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
     __Pyx_INCREF(__pyx_v_string_to_fix);
     __Pyx_GIVEREF(__pyx_v_string_to_fix);
     PyTuple_SET_ITEM(__pyx_t_7, 2+__pyx_t_5, __pyx_v_string_to_fix);
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 319, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_strip); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_strip); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -7818,14 +7815,14 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
   }
   __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_kp_u__13) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_u__13);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 319, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 320, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":313
+  /* "tricks.pyx":314
  * 
  *     @staticmethod
  *     def string_normer(str string_to_fix, allow_unicode=False):             # <<<<<<<<<<<<<<
@@ -7849,7 +7846,7 @@ static PyObject *__pyx_pf_6tricks_4tech_10string_normer(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "tricks.pyx":322
+/* "tricks.pyx":323
  * 
  *     @staticmethod
  *     def store_restore_state(self, bint store):             # <<<<<<<<<<<<<<
@@ -7892,11 +7889,11 @@ static PyObject *__pyx_pw_6tricks_4tech_13store_restore_state(PyObject *__pyx_se
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_store)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("store_restore_state", 1, 2, 2, 1); __PYX_ERR(0, 322, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("store_restore_state", 1, 2, 2, 1); __PYX_ERR(0, 323, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "store_restore_state") < 0)) __PYX_ERR(0, 322, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "store_restore_state") < 0)) __PYX_ERR(0, 323, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -7905,11 +7902,11 @@ static PyObject *__pyx_pw_6tricks_4tech_13store_restore_state(PyObject *__pyx_se
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_self = values[0];
-    __pyx_v_store = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_store == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 322, __pyx_L3_error)
+    __pyx_v_store = __Pyx_PyObject_IsTrue(values[1]); if (unlikely((__pyx_v_store == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 323, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("store_restore_state", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 322, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("store_restore_state", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 323, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("tricks.tech.store_restore_state", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7950,104 +7947,104 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("store_restore_state", 0);
 
-  /* "tricks.pyx":327
+  /* "tricks.pyx":328
  * 
  *         radio_cycle = [
  *             self.file_name_radio,             # <<<<<<<<<<<<<<
  *             self.db_id_radio,
  *             self.file_size_radio,
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_name_radio); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 327, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_name_radio); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
 
-  /* "tricks.pyx":328
+  /* "tricks.pyx":329
  *         radio_cycle = [
  *             self.file_name_radio,
  *             self.db_id_radio,             # <<<<<<<<<<<<<<
  *             self.file_size_radio,
  *             self.user_rating_radio,
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_db_id_radio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 328, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_db_id_radio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 329, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":329
+  /* "tricks.pyx":330
  *             self.file_name_radio,
  *             self.db_id_radio,
  *             self.file_size_radio,             # <<<<<<<<<<<<<<
  *             self.user_rating_radio,
  *             self.comicvine_id_radio,
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_size_radio); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_size_radio); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 330, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "tricks.pyx":330
+  /* "tricks.pyx":331
  *             self.db_id_radio,
  *             self.file_size_radio,
  *             self.user_rating_radio,             # <<<<<<<<<<<<<<
  *             self.comicvine_id_radio,
  *             self.asc_radio,
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_user_rating_radio); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_user_rating_radio); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "tricks.pyx":331
+  /* "tricks.pyx":332
  *             self.file_size_radio,
  *             self.user_rating_radio,
  *             self.comicvine_id_radio,             # <<<<<<<<<<<<<<
  *             self.asc_radio,
  *             self.dec_radio,
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_comicvine_id_radio); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 331, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_comicvine_id_radio); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "tricks.pyx":332
+  /* "tricks.pyx":333
  *             self.user_rating_radio,
  *             self.comicvine_id_radio,
  *             self.asc_radio,             # <<<<<<<<<<<<<<
  *             self.dec_radio,
  *             self.radio_issue_number,
  */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_asc_radio); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_asc_radio); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 333, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "tricks.pyx":333
+  /* "tricks.pyx":334
  *             self.comicvine_id_radio,
  *             self.asc_radio,
  *             self.dec_radio,             # <<<<<<<<<<<<<<
  *             self.radio_issue_number,
  *             self.radio_last_opened
  */
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_dec_radio); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 333, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_dec_radio); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 334, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":334
+  /* "tricks.pyx":335
  *             self.asc_radio,
  *             self.dec_radio,
  *             self.radio_issue_number,             # <<<<<<<<<<<<<<
  *             self.radio_last_opened
  *             ]
  */
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_radio_issue_number); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 334, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_radio_issue_number); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 335, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
 
-  /* "tricks.pyx":335
+  /* "tricks.pyx":336
  *             self.dec_radio,
  *             self.radio_issue_number,
  *             self.radio_last_opened             # <<<<<<<<<<<<<<
  *             ]
  * 
  */
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_radio_last_opened); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_radio_last_opened); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 336, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
 
-  /* "tricks.pyx":326
+  /* "tricks.pyx":327
  *         cdef list cyclelist, radio_cycle, check_cycle, cycle, eachlist
  * 
  *         radio_cycle = [             # <<<<<<<<<<<<<<
  *             self.file_name_radio,
  *             self.db_id_radio,
  */
-  __pyx_t_10 = PyList_New(9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_10 = PyList_New(9); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 327, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_GIVEREF(__pyx_t_1);
   PyList_SET_ITEM(__pyx_t_10, 0, __pyx_t_1);
@@ -8079,94 +8076,94 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
   __pyx_v_radio_cycle = ((PyObject*)__pyx_t_10);
   __pyx_t_10 = 0;
 
-  /* "tricks.pyx":339
+  /* "tricks.pyx":340
  * 
  *         check_cycle = [
  *             self.file_names_check,             # <<<<<<<<<<<<<<
  *             self.issue_names_check,
  *             self.check_into_volumes,
  */
-  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_names_check); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_names_check); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 340, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
 
-  /* "tricks.pyx":340
+  /* "tricks.pyx":341
  *         check_cycle = [
  *             self.file_names_check,
  *             self.issue_names_check,             # <<<<<<<<<<<<<<
  *             self.check_into_volumes,
  *             self.check_hide_linked,
  */
-  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_issue_names_check); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_issue_names_check); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
 
-  /* "tricks.pyx":341
+  /* "tricks.pyx":342
  *             self.file_names_check,
  *             self.issue_names_check,
  *             self.check_into_volumes,             # <<<<<<<<<<<<<<
  *             self.check_hide_linked,
  *             self.check_hide_unlinked,
  */
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_into_volumes); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_into_volumes); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
 
-  /* "tricks.pyx":342
+  /* "tricks.pyx":343
  *             self.issue_names_check,
  *             self.check_into_volumes,
  *             self.check_hide_linked,             # <<<<<<<<<<<<<<
  *             self.check_hide_unlinked,
  *             self.clear_checkbox,
  */
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_hide_linked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_hide_linked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 343, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":343
+  /* "tricks.pyx":344
  *             self.check_into_volumes,
  *             self.check_hide_linked,
  *             self.check_hide_unlinked,             # <<<<<<<<<<<<<<
  *             self.clear_checkbox,
  *             self.update_checkbox,
  */
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_hide_unlinked); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_hide_unlinked); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 344, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
 
-  /* "tricks.pyx":344
+  /* "tricks.pyx":345
  *             self.check_hide_linked,
  *             self.check_hide_unlinked,
  *             self.clear_checkbox,             # <<<<<<<<<<<<<<
  *             self.update_checkbox,
  *             self.check_include_md5
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_clear_checkbox); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_clear_checkbox); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
 
-  /* "tricks.pyx":345
+  /* "tricks.pyx":346
  *             self.check_hide_unlinked,
  *             self.clear_checkbox,
  *             self.update_checkbox,             # <<<<<<<<<<<<<<
  *             self.check_include_md5
  *             ]
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_update_checkbox); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 345, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_update_checkbox); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
 
-  /* "tricks.pyx":346
+  /* "tricks.pyx":347
  *             self.clear_checkbox,
  *             self.update_checkbox,
  *             self.check_include_md5             # <<<<<<<<<<<<<<
  *             ]
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_include_md5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_include_md5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "tricks.pyx":338
+  /* "tricks.pyx":339
  *             ]
  * 
  *         check_cycle = [             # <<<<<<<<<<<<<<
  *             self.file_names_check,
  *             self.issue_names_check,
  */
-  __pyx_t_2 = PyList_New(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 338, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(8); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_10);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_t_10);
@@ -8195,14 +8192,14 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
   __pyx_v_check_cycle = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "tricks.pyx":349
+  /* "tricks.pyx":350
  *             ]
  * 
  *         cycle = [radio_cycle, check_cycle]             # <<<<<<<<<<<<<<
  * 
  *         if store == True:
  */
-  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_radio_cycle);
   __Pyx_GIVEREF(__pyx_v_radio_cycle);
@@ -8213,7 +8210,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
   __pyx_v_cycle = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "tricks.pyx":351
+  /* "tricks.pyx":352
  *         cycle = [radio_cycle, check_cycle]
  * 
  *         if store == True:             # <<<<<<<<<<<<<<
@@ -8223,41 +8220,41 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
   __pyx_t_11 = ((__pyx_v_store == 1) != 0);
   if (__pyx_t_11) {
 
-    /* "tricks.pyx":352
+    /* "tricks.pyx":353
  * 
  *         if store == True:
  *             self.store_restore_settings = {'settings' : {'checked' : [], 'unchecked' : []}, 'searchbar' : ""}             # <<<<<<<<<<<<<<
  *             self.store_restore_settings['searchbar'] = self.search_bar_edit.currentText()
  *             for eachlist in cycle:
  */
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
+    __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_checked, __pyx_t_4) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_checked, __pyx_t_4) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
+    __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_unchecked, __pyx_t_4) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_unchecked, __pyx_t_4) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_settings, __pyx_t_3) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_settings, __pyx_t_3) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_searchbar, __pyx_kp_u__11) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings, __pyx_t_2) < 0) __PYX_ERR(0, 352, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_u_searchbar, __pyx_kp_u__11) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings, __pyx_t_2) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "tricks.pyx":353
+    /* "tricks.pyx":354
  *         if store == True:
  *             self.store_restore_settings = {'settings' : {'checked' : [], 'unchecked' : []}, 'searchbar' : ""}
  *             self.store_restore_settings['searchbar'] = self.search_bar_edit.currentText()             # <<<<<<<<<<<<<<
  *             for eachlist in cycle:
  *                 for i in eachlist:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_search_bar_edit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 353, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_search_bar_edit); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_currentText); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_currentText); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -8272,16 +8269,16 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
     }
     __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (unlikely(PyObject_SetItem(__pyx_t_4, __pyx_n_u_searchbar, __pyx_t_2) < 0)) __PYX_ERR(0, 353, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_t_4, __pyx_n_u_searchbar, __pyx_t_2) < 0)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "tricks.pyx":354
+    /* "tricks.pyx":355
  *             self.store_restore_settings = {'settings' : {'checked' : [], 'unchecked' : []}, 'searchbar' : ""}
  *             self.store_restore_settings['searchbar'] = self.search_bar_edit.currentText()
  *             for eachlist in cycle:             # <<<<<<<<<<<<<<
@@ -8292,16 +8289,16 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
     for (;;) {
       if (__pyx_t_12 >= PyList_GET_SIZE(__pyx_t_2)) break;
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 354, __pyx_L1_error)
+      __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_12); __Pyx_INCREF(__pyx_t_4); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 355, __pyx_L1_error)
       #else
-      __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
+      __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 355, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       #endif
-      if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_4)->tp_name), 0))) __PYX_ERR(0, 354, __pyx_L1_error)
+      if (!(likely(PyList_CheckExact(__pyx_t_4))||((__pyx_t_4) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_4)->tp_name), 0))) __PYX_ERR(0, 355, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_eachlist, ((PyObject*)__pyx_t_4));
       __pyx_t_4 = 0;
 
-      /* "tricks.pyx":355
+      /* "tricks.pyx":356
  *             self.store_restore_settings['searchbar'] = self.search_bar_edit.currentText()
  *             for eachlist in cycle:
  *                 for i in eachlist:             # <<<<<<<<<<<<<<
@@ -8310,28 +8307,28 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
  */
       if (unlikely(__pyx_v_eachlist == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-        __PYX_ERR(0, 355, __pyx_L1_error)
+        __PYX_ERR(0, 356, __pyx_L1_error)
       }
       __pyx_t_4 = __pyx_v_eachlist; __Pyx_INCREF(__pyx_t_4); __pyx_t_13 = 0;
       for (;;) {
         if (__pyx_t_13 >= PyList_GET_SIZE(__pyx_t_4)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_13); __Pyx_INCREF(__pyx_t_3); __pyx_t_13++; if (unlikely(0 < 0)) __PYX_ERR(0, 355, __pyx_L1_error)
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_13); __Pyx_INCREF(__pyx_t_3); __pyx_t_13++; if (unlikely(0 < 0)) __PYX_ERR(0, 356, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_13); __pyx_t_13++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 355, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_13); __pyx_t_13++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
         __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "tricks.pyx":356
+        /* "tricks.pyx":357
  *             for eachlist in cycle:
  *                 for i in eachlist:
  *                     if i.isChecked() == True:             # <<<<<<<<<<<<<<
  *                         self.store_restore_settings['settings']['checked'].append(i)
  *                     else:
  */
-        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 356, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __pyx_t_6 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -8345,34 +8342,34 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
         }
         __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
         __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L1_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-        __pyx_t_5 = PyObject_RichCompare(__pyx_t_3, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 356, __pyx_L1_error)
+        __pyx_t_5 = PyObject_RichCompare(__pyx_t_3, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 356, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_5); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 357, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         if (__pyx_t_11) {
 
-          /* "tricks.pyx":357
+          /* "tricks.pyx":358
  *                 for i in eachlist:
  *                     if i.isChecked() == True:
  *                         self.store_restore_settings['settings']['checked'].append(i)             # <<<<<<<<<<<<<<
  *                     else:
  *                         self.store_restore_settings['settings']['unchecked'].append(i)
  */
-          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 358, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
-          __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_u_settings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_u_settings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-          __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_u_checked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_u_checked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 358, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          __pyx_t_14 = __Pyx_PyObject_Append(__pyx_t_5, __pyx_v_i); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 357, __pyx_L1_error)
+          __pyx_t_14 = __Pyx_PyObject_Append(__pyx_t_5, __pyx_v_i); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 358, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-          /* "tricks.pyx":356
+          /* "tricks.pyx":357
  *             for eachlist in cycle:
  *                 for i in eachlist:
  *                     if i.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -8382,7 +8379,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
           goto __pyx_L8;
         }
 
-        /* "tricks.pyx":359
+        /* "tricks.pyx":360
  *                         self.store_restore_settings['settings']['checked'].append(i)
  *                     else:
  *                         self.store_restore_settings['settings']['unchecked'].append(i)             # <<<<<<<<<<<<<<
@@ -8390,20 +8387,20 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
  *         else:
  */
         /*else*/ {
-          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 359, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 360, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
-          __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_u_settings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_u_settings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 360, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-          __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_u_unchecked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 359, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_u_unchecked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 360, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-          __pyx_t_14 = __Pyx_PyObject_Append(__pyx_t_5, __pyx_v_i); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 359, __pyx_L1_error)
+          __pyx_t_14 = __Pyx_PyObject_Append(__pyx_t_5, __pyx_v_i); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 360, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         }
         __pyx_L8:;
 
-        /* "tricks.pyx":355
+        /* "tricks.pyx":356
  *             self.store_restore_settings['searchbar'] = self.search_bar_edit.currentText()
  *             for eachlist in cycle:
  *                 for i in eachlist:             # <<<<<<<<<<<<<<
@@ -8413,7 +8410,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
       }
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "tricks.pyx":354
+      /* "tricks.pyx":355
  *             self.store_restore_settings = {'settings' : {'checked' : [], 'unchecked' : []}, 'searchbar' : ""}
  *             self.store_restore_settings['searchbar'] = self.search_bar_edit.currentText()
  *             for eachlist in cycle:             # <<<<<<<<<<<<<<
@@ -8423,7 +8420,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "tricks.pyx":351
+    /* "tricks.pyx":352
  *         cycle = [radio_cycle, check_cycle]
  * 
  *         if store == True:             # <<<<<<<<<<<<<<
@@ -8433,7 +8430,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
     goto __pyx_L3;
   }
 
-  /* "tricks.pyx":362
+  /* "tricks.pyx":363
  * 
  *         else:
  *             self.search_bar_edit.setCurrentText(self.store_restore_settings['searchbar'])             # <<<<<<<<<<<<<<
@@ -8441,14 +8438,14 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
  *                 if i.isChecked() == False:
  */
   /*else*/ {
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_search_bar_edit); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 362, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_search_bar_edit); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_setCurrentText); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 362, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_setCurrentText); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 362, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_4, __pyx_n_u_searchbar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 362, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_4, __pyx_n_u_searchbar); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -8464,33 +8461,33 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
     __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_3);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 362, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "tricks.pyx":363
+    /* "tricks.pyx":364
  *         else:
  *             self.search_bar_edit.setCurrentText(self.store_restore_settings['searchbar'])
  *             for i in self.store_restore_settings['settings']['checked']:             # <<<<<<<<<<<<<<
  *                 if i.isChecked() == False:
  *                     i.setChecked(True)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_2, __pyx_n_u_settings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 363, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_2, __pyx_n_u_settings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_u_checked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_u_checked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     if (likely(PyList_CheckExact(__pyx_t_2)) || PyTuple_CheckExact(__pyx_t_2)) {
       __pyx_t_5 = __pyx_t_2; __Pyx_INCREF(__pyx_t_5); __pyx_t_12 = 0;
       __pyx_t_15 = NULL;
     } else {
-      __pyx_t_12 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 363, __pyx_L1_error)
+      __pyx_t_12 = -1; __pyx_t_5 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 364, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_15 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 363, __pyx_L1_error)
+      __pyx_t_15 = Py_TYPE(__pyx_t_5)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 364, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     for (;;) {
@@ -8498,17 +8495,17 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
         if (likely(PyList_CheckExact(__pyx_t_5))) {
           if (__pyx_t_12 >= PyList_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 363, __pyx_L1_error)
+          __pyx_t_2 = PyList_GET_ITEM(__pyx_t_5, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 364, __pyx_L1_error)
           #else
-          __pyx_t_2 = PySequence_ITEM(__pyx_t_5, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+          __pyx_t_2 = PySequence_ITEM(__pyx_t_5, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         } else {
           if (__pyx_t_12 >= PyTuple_GET_SIZE(__pyx_t_5)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 363, __pyx_L1_error)
+          __pyx_t_2 = PyTuple_GET_ITEM(__pyx_t_5, __pyx_t_12); __Pyx_INCREF(__pyx_t_2); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 364, __pyx_L1_error)
           #else
-          __pyx_t_2 = PySequence_ITEM(__pyx_t_5, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
+          __pyx_t_2 = PySequence_ITEM(__pyx_t_5, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           #endif
         }
@@ -8518,7 +8515,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 363, __pyx_L1_error)
+            else __PYX_ERR(0, 364, __pyx_L1_error)
           }
           break;
         }
@@ -8527,14 +8524,14 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "tricks.pyx":364
+      /* "tricks.pyx":365
  *             self.search_bar_edit.setCurrentText(self.store_restore_settings['searchbar'])
  *             for i in self.store_restore_settings['settings']['checked']:
  *                 if i.isChecked() == False:             # <<<<<<<<<<<<<<
  *                     i.setChecked(True)
  *             for i in self.store_restore_settings['settings']['unchecked']:
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 364, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_4 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -8548,23 +8545,23 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
       }
       __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 365, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 364, __pyx_L1_error)
+      __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 364, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 365, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (__pyx_t_11) {
 
-        /* "tricks.pyx":365
+        /* "tricks.pyx":366
  *             for i in self.store_restore_settings['settings']['checked']:
  *                 if i.isChecked() == False:
  *                     i.setChecked(True)             # <<<<<<<<<<<<<<
  *             for i in self.store_restore_settings['settings']['unchecked']:
  *                 if i.isChecked() == True:
  */
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_setChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 365, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_setChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8578,12 +8575,12 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
         }
         __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, Py_True) : __Pyx_PyObject_CallOneArg(__pyx_t_2, Py_True);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 365, __pyx_L1_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-        /* "tricks.pyx":364
+        /* "tricks.pyx":365
  *             self.search_bar_edit.setCurrentText(self.store_restore_settings['searchbar'])
  *             for i in self.store_restore_settings['settings']['checked']:
  *                 if i.isChecked() == False:             # <<<<<<<<<<<<<<
@@ -8592,7 +8589,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
  */
       }
 
-      /* "tricks.pyx":363
+      /* "tricks.pyx":364
  *         else:
  *             self.search_bar_edit.setCurrentText(self.store_restore_settings['searchbar'])
  *             for i in self.store_restore_settings['settings']['checked']:             # <<<<<<<<<<<<<<
@@ -8602,28 +8599,28 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "tricks.pyx":366
+    /* "tricks.pyx":367
  *                 if i.isChecked() == False:
  *                     i.setChecked(True)
  *             for i in self.store_restore_settings['settings']['unchecked']:             # <<<<<<<<<<<<<<
  *                 if i.isChecked() == True:
  *                     i.setChecked(False)
  */
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_store_restore_settings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 367, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_u_settings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Dict_GetItem(__pyx_t_5, __pyx_n_u_settings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_u_unchecked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_Dict_GetItem(__pyx_t_3, __pyx_n_u_unchecked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 367, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (likely(PyList_CheckExact(__pyx_t_5)) || PyTuple_CheckExact(__pyx_t_5)) {
       __pyx_t_3 = __pyx_t_5; __Pyx_INCREF(__pyx_t_3); __pyx_t_12 = 0;
       __pyx_t_15 = NULL;
     } else {
-      __pyx_t_12 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_12 = -1; __pyx_t_3 = PyObject_GetIter(__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_15 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 366, __pyx_L1_error)
+      __pyx_t_15 = Py_TYPE(__pyx_t_3)->tp_iternext; if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 367, __pyx_L1_error)
     }
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     for (;;) {
@@ -8631,17 +8628,17 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
         if (likely(PyList_CheckExact(__pyx_t_3))) {
           if (__pyx_t_12 >= PyList_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_12); __Pyx_INCREF(__pyx_t_5); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 366, __pyx_L1_error)
+          __pyx_t_5 = PyList_GET_ITEM(__pyx_t_3, __pyx_t_12); __Pyx_INCREF(__pyx_t_5); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 367, __pyx_L1_error)
           #else
-          __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 366, __pyx_L1_error)
+          __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 367, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         } else {
           if (__pyx_t_12 >= PyTuple_GET_SIZE(__pyx_t_3)) break;
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_12); __Pyx_INCREF(__pyx_t_5); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 366, __pyx_L1_error)
+          __pyx_t_5 = PyTuple_GET_ITEM(__pyx_t_3, __pyx_t_12); __Pyx_INCREF(__pyx_t_5); __pyx_t_12++; if (unlikely(0 < 0)) __PYX_ERR(0, 367, __pyx_L1_error)
           #else
-          __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 366, __pyx_L1_error)
+          __pyx_t_5 = PySequence_ITEM(__pyx_t_3, __pyx_t_12); __pyx_t_12++; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 367, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           #endif
         }
@@ -8651,7 +8648,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
           PyObject* exc_type = PyErr_Occurred();
           if (exc_type) {
             if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-            else __PYX_ERR(0, 366, __pyx_L1_error)
+            else __PYX_ERR(0, 367, __pyx_L1_error)
           }
           break;
         }
@@ -8660,14 +8657,14 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
       __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "tricks.pyx":367
+      /* "tricks.pyx":368
  *                     i.setChecked(True)
  *             for i in self.store_restore_settings['settings']['unchecked']:
  *                 if i.isChecked() == True:             # <<<<<<<<<<<<<<
  *                     i.setChecked(False)
  * 
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 367, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_4 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -8681,23 +8678,23 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
       }
       __pyx_t_5 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 367, __pyx_L1_error)
+      if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyObject_RichCompare(__pyx_t_5, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 367, __pyx_L1_error)
+      __pyx_t_2 = PyObject_RichCompare(__pyx_t_5, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 367, __pyx_L1_error)
+      __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (__pyx_t_11) {
 
-        /* "tricks.pyx":368
+        /* "tricks.pyx":369
  *             for i in self.store_restore_settings['settings']['unchecked']:
  *                 if i.isChecked() == True:
  *                     i.setChecked(False)             # <<<<<<<<<<<<<<
  * 
  *     @staticmethod
  */
-        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_setChecked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 368, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_i, __pyx_n_s_setChecked); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 369, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __pyx_t_4 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -8711,12 +8708,12 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, Py_False) : __Pyx_PyObject_CallOneArg(__pyx_t_5, Py_False);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 368, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 369, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "tricks.pyx":367
+        /* "tricks.pyx":368
  *                     i.setChecked(True)
  *             for i in self.store_restore_settings['settings']['unchecked']:
  *                 if i.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -8725,7 +8722,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
  */
       }
 
-      /* "tricks.pyx":366
+      /* "tricks.pyx":367
  *                 if i.isChecked() == False:
  *                     i.setChecked(True)
  *             for i in self.store_restore_settings['settings']['unchecked']:             # <<<<<<<<<<<<<<
@@ -8737,7 +8734,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
   }
   __pyx_L3:;
 
-  /* "tricks.pyx":322
+  /* "tricks.pyx":323
  * 
  *     @staticmethod
  *     def store_restore_state(self, bint store):             # <<<<<<<<<<<<<<
@@ -8772,7 +8769,7 @@ static PyObject *__pyx_pf_6tricks_4tech_12store_restore_state(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "tricks.pyx":371
+/* "tricks.pyx":372
  * 
  *     @staticmethod
  *     def empty_insert_query(str table):             # <<<<<<<<<<<<<<
@@ -8790,7 +8787,7 @@ static PyObject *__pyx_pw_6tricks_4tech_15empty_insert_query(PyObject *__pyx_sel
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("empty_insert_query (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_table), (&PyUnicode_Type), 1, "table", 1))) __PYX_ERR(0, 371, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_table), (&PyUnicode_Type), 1, "table", 1))) __PYX_ERR(0, 372, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_14empty_insert_query(__pyx_self, ((PyObject*)__pyx_v_table));
 
   /* function exit code */
@@ -8820,19 +8817,19 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("empty_insert_query", 0);
 
-  /* "tricks.pyx":374
+  /* "tricks.pyx":375
  *         cdef str query_part1, query_part2
  *         cdef list values
  *         sqlitecursor.execute('PRAGMA table_info("{}")'.format(table,))             # <<<<<<<<<<<<<<
  *         tables = sqlitecursor.fetchall()
  *         query_part1 = "insert into " + table + " values"
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_kp_u_PRAGMA_table_info, __pyx_n_s_format); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 374, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_kp_u_PRAGMA_table_info, __pyx_n_s_format); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -8846,7 +8843,7 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
   }
   __pyx_t_2 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_v_table) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_table);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -8862,21 +8859,21 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":375
+  /* "tricks.pyx":376
  *         cdef list values
  *         sqlitecursor.execute('PRAGMA table_info("{}")'.format(table,))
  *         tables = sqlitecursor.fetchall()             # <<<<<<<<<<<<<<
  *         query_part1 = "insert into " + table + " values"
  *         query_part2 = "(" + ','.join(['?']*len(tables)) + ")"
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 375, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 376, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fetchall); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fetchall); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 376, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -8891,36 +8888,36 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 375, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 376, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_tables = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":376
+  /* "tricks.pyx":377
  *         sqlitecursor.execute('PRAGMA table_info("{}")'.format(table,))
  *         tables = sqlitecursor.fetchall()
  *         query_part1 = "insert into " + table + " values"             # <<<<<<<<<<<<<<
  *         query_part2 = "(" + ','.join(['?']*len(tables)) + ")"
  *         values = [None] * len(tables)
  */
-  __pyx_t_1 = __Pyx_PyUnicode_ConcatSafe(__pyx_kp_u_insert_into, __pyx_v_table); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 376, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyUnicode_ConcatSafe(__pyx_kp_u_insert_into, __pyx_v_table); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_t_1, __pyx_kp_u_values); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 376, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_t_1, __pyx_kp_u_values); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_query_part1 = ((PyObject*)__pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "tricks.pyx":377
+  /* "tricks.pyx":378
  *         tables = sqlitecursor.fetchall()
  *         query_part1 = "insert into " + table + " values"
  *         query_part2 = "(" + ','.join(['?']*len(tables)) + ")"             # <<<<<<<<<<<<<<
  *         values = [None] * len(tables)
  *         return query_part1 + query_part2, values
  */
-  __pyx_t_6 = PyObject_Length(__pyx_v_tables); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 377, __pyx_L1_error)
-  __pyx_t_2 = PyList_New(1 * ((__pyx_t_6<0) ? 0:__pyx_t_6)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_6 = PyObject_Length(__pyx_v_tables); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 378, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1 * ((__pyx_t_6<0) ? 0:__pyx_t_6)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 378, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   { Py_ssize_t __pyx_temp;
     for (__pyx_temp=0; __pyx_temp < __pyx_t_6; __pyx_temp++) {
@@ -8929,27 +8926,27 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
       PyList_SET_ITEM(__pyx_t_2, __pyx_temp, __pyx_kp_u__15);
     }
   }
-  __pyx_t_1 = PyUnicode_Join(__pyx_kp_u__14, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_1 = PyUnicode_Join(__pyx_kp_u__14, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u__5, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_kp_u__5, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 378, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_t_2, __pyx_kp_u__16); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_t_2, __pyx_kp_u__16); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_query_part2 = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":378
+  /* "tricks.pyx":379
  *         query_part1 = "insert into " + table + " values"
  *         query_part2 = "(" + ','.join(['?']*len(tables)) + ")"
  *         values = [None] * len(tables)             # <<<<<<<<<<<<<<
  *         return query_part1 + query_part2, values
  * 
  */
-  __pyx_t_6 = PyObject_Length(__pyx_v_tables); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 378, __pyx_L1_error)
-  __pyx_t_1 = PyList_New(1 * ((__pyx_t_6<0) ? 0:__pyx_t_6)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
+  __pyx_t_6 = PyObject_Length(__pyx_v_tables); if (unlikely(__pyx_t_6 == ((Py_ssize_t)-1))) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1 * ((__pyx_t_6<0) ? 0:__pyx_t_6)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   { Py_ssize_t __pyx_temp;
     for (__pyx_temp=0; __pyx_temp < __pyx_t_6; __pyx_temp++) {
@@ -8961,7 +8958,7 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
   __pyx_v_values = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":379
+  /* "tricks.pyx":380
  *         query_part2 = "(" + ','.join(['?']*len(tables)) + ")"
  *         values = [None] * len(tables)
  *         return query_part1 + query_part2, values             # <<<<<<<<<<<<<<
@@ -8969,9 +8966,9 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_v_query_part1, __pyx_v_query_part2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyUnicode_Concat(__pyx_v_query_part1, __pyx_v_query_part2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 379, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 380, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -8983,7 +8980,7 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":371
+  /* "tricks.pyx":372
  * 
  *     @staticmethod
  *     def empty_insert_query(str table):             # <<<<<<<<<<<<<<
@@ -9010,7 +9007,7 @@ static PyObject *__pyx_pf_6tricks_4tech_14empty_insert_query(CYTHON_UNUSED PyObj
   return __pyx_r;
 }
 
-/* "tricks.pyx":382
+/* "tricks.pyx":383
  * 
  *     @staticmethod
  *     def clear_from_techdict(str key):             # <<<<<<<<<<<<<<
@@ -9028,7 +9025,7 @@ static PyObject *__pyx_pw_6tricks_4tech_17clear_from_techdict(PyObject *__pyx_se
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("clear_from_techdict (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 382, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_key), (&PyUnicode_Type), 1, "key", 1))) __PYX_ERR(0, 383, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_16clear_from_techdict(__pyx_self, ((PyObject*)__pyx_v_key));
 
   /* function exit code */
@@ -9053,7 +9050,7 @@ static PyObject *__pyx_pf_6tricks_4tech_16clear_from_techdict(CYTHON_UNUSED PyOb
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("clear_from_techdict", 0);
 
-  /* "tricks.pyx":383
+  /* "tricks.pyx":384
  *     @staticmethod
  *     def clear_from_techdict(str key):
  *         try: techdict.pop(key)             # <<<<<<<<<<<<<<
@@ -9070,9 +9067,9 @@ static PyObject *__pyx_pf_6tricks_4tech_16clear_from_techdict(CYTHON_UNUSED PyOb
     /*try:*/ {
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "pop");
-        __PYX_ERR(0, 383, __pyx_L3_error)
+        __PYX_ERR(0, 384, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_Pop(__pyx_v_6tricks_techdict, __pyx_v_key, ((PyObject *)NULL)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 383, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_Pop(__pyx_v_6tricks_techdict, __pyx_v_key, ((PyObject *)NULL)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 384, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
@@ -9083,7 +9080,7 @@ static PyObject *__pyx_pf_6tricks_4tech_16clear_from_techdict(CYTHON_UNUSED PyOb
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":384
+    /* "tricks.pyx":385
  *     def clear_from_techdict(str key):
  *         try: techdict.pop(key)
  *         except KeyError: pass             # <<<<<<<<<<<<<<
@@ -9098,7 +9095,7 @@ static PyObject *__pyx_pf_6tricks_4tech_16clear_from_techdict(CYTHON_UNUSED PyOb
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":383
+    /* "tricks.pyx":384
  *     @staticmethod
  *     def clear_from_techdict(str key):
  *         try: techdict.pop(key)             # <<<<<<<<<<<<<<
@@ -9118,7 +9115,7 @@ static PyObject *__pyx_pf_6tricks_4tech_16clear_from_techdict(CYTHON_UNUSED PyOb
     __pyx_L8_try_end:;
   }
 
-  /* "tricks.pyx":382
+  /* "tricks.pyx":383
  * 
  *     @staticmethod
  *     def clear_from_techdict(str key):             # <<<<<<<<<<<<<<
@@ -9139,7 +9136,7 @@ static PyObject *__pyx_pf_6tricks_4tech_16clear_from_techdict(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "tricks.pyx":387
+/* "tricks.pyx":388
  * 
  *     @staticmethod
  *     def remove_NSFW(list data):             # <<<<<<<<<<<<<<
@@ -9158,7 +9155,7 @@ static PyObject *__pyx_pw_6tricks_4tech_19remove_NSFW(PyObject *__pyx_self, PyOb
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("remove_NSFW (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyList_Type), 1, "data", 1))) __PYX_ERR(0, 387, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyList_Type), 1, "data", 1))) __PYX_ERR(0, 388, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_18remove_NSFW(__pyx_self, ((PyObject*)__pyx_v_data));
 
   /* function exit code */
@@ -9189,16 +9186,16 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("remove_NSFW", 0);
 
-  /* "tricks.pyx":394
+  /* "tricks.pyx":395
  *         """
  *         cdef int revcount
  *         sqlitecursor.execute('select * from settings where id is 1')             # <<<<<<<<<<<<<<
  *         settings_data = sqlitecursor.fetchone()
  *         if settings_data[DB.show_NSFW] != True:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 394, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -9213,21 +9210,21 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_u_select_from_settings_where_id_is) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_u_select_from_settings_where_id_is);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 394, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":395
+  /* "tricks.pyx":396
  *         cdef int revcount
  *         sqlitecursor.execute('select * from settings where id is 1')
  *         settings_data = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *         if settings_data[DB.show_NSFW] != True:
  *             sqlitecursor.execute('select * from comics where id = (?)', (data[0][0],))
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 395, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 396, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 396, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -9242,52 +9239,52 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_settings_data = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":396
+  /* "tricks.pyx":397
  *         sqlitecursor.execute('select * from settings where id is 1')
  *         settings_data = sqlitecursor.fetchone()
  *         if settings_data[DB.show_NSFW] != True:             # <<<<<<<<<<<<<<
  *             sqlitecursor.execute('select * from comics where id = (?)', (data[0][0],))
  *             temp = sqlitecursor.fetchone()
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_show_NSFW); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_show_NSFW); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 396, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, Py_True, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, Py_True, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 396, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_4) {
 
-    /* "tricks.pyx":397
+    /* "tricks.pyx":398
  *         settings_data = sqlitecursor.fetchone()
  *         if settings_data[DB.show_NSFW] != True:
  *             sqlitecursor.execute('select * from comics where id = (?)', (data[0][0],))             # <<<<<<<<<<<<<<
  *             temp = sqlitecursor.fetchone()
  *             if temp == data[0]:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_execute); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (unlikely(__pyx_v_data == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 397, __pyx_L1_error)
+      __PYX_ERR(0, 398, __pyx_L1_error)
     }
-    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt_List(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 398, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_GIVEREF(__pyx_t_5);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5);
@@ -9307,7 +9304,7 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_kp_u_select_from_comics_where_id, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -9316,14 +9313,14 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_kp_u_select_from_comics_where_id, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 397, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 398, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_5) {
         __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -9334,23 +9331,23 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_7, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "tricks.pyx":398
+    /* "tricks.pyx":399
  *         if settings_data[DB.show_NSFW] != True:
  *             sqlitecursor.execute('select * from comics where id = (?)', (data[0][0],))
  *             temp = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *             if temp == data[0]:
  *                 for revcount in range(len(data)-1,-1,-1):
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 398, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -9365,13 +9362,13 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
     }
     __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_v_temp = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "tricks.pyx":399
+    /* "tricks.pyx":400
  *             sqlitecursor.execute('select * from comics where id = (?)', (data[0][0],))
  *             temp = sqlitecursor.fetchone()
  *             if temp == data[0]:             # <<<<<<<<<<<<<<
@@ -9380,17 +9377,17 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
  */
     if (unlikely(__pyx_v_data == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 399, __pyx_L1_error)
+      __PYX_ERR(0, 400, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 399, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt_List(__pyx_v_data, 0, long, 1, __Pyx_PyInt_From_long, 1, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 400, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = PyObject_RichCompare(__pyx_v_temp, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 399, __pyx_L1_error)
+    __pyx_t_7 = PyObject_RichCompare(__pyx_v_temp, __pyx_t_1, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 400, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 399, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 400, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     if (__pyx_t_4) {
 
-      /* "tricks.pyx":400
+      /* "tricks.pyx":401
  *             temp = sqlitecursor.fetchone()
  *             if temp == data[0]:
  *                 for revcount in range(len(data)-1,-1,-1):             # <<<<<<<<<<<<<<
@@ -9399,13 +9396,13 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
  */
       if (unlikely(__pyx_v_data == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-        __PYX_ERR(0, 400, __pyx_L1_error)
+        __PYX_ERR(0, 401, __pyx_L1_error)
       }
-      __pyx_t_8 = PyList_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 400, __pyx_L1_error)
+      __pyx_t_8 = PyList_GET_SIZE(__pyx_v_data); if (unlikely(__pyx_t_8 == ((Py_ssize_t)-1))) __PYX_ERR(0, 401, __pyx_L1_error)
       for (__pyx_t_6 = (__pyx_t_8 - 1); __pyx_t_6 > -1; __pyx_t_6-=1) {
         __pyx_v_revcount = __pyx_t_6;
 
-        /* "tricks.pyx":401
+        /* "tricks.pyx":402
  *             if temp == data[0]:
  *                 for revcount in range(len(data)-1,-1,-1):
  *                     if data[revcount][DB.NSFW] == True:             # <<<<<<<<<<<<<<
@@ -9414,23 +9411,23 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
  */
         if (unlikely(__pyx_v_data == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 401, __pyx_L1_error)
+          __PYX_ERR(0, 402, __pyx_L1_error)
         }
-        __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_data, __pyx_v_revcount, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 401, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_GetItemInt_List(__pyx_v_data, __pyx_v_revcount, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 402, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_NSFW); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_NSFW); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_7, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 401, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_GetItem(__pyx_t_7, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 402, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyObject_RichCompare(__pyx_t_3, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 401, __pyx_L1_error)
+        __pyx_t_1 = PyObject_RichCompare(__pyx_t_3, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 401, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 402, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_4) {
 
-          /* "tricks.pyx":402
+          /* "tricks.pyx":403
  *                 for revcount in range(len(data)-1,-1,-1):
  *                     if data[revcount][DB.NSFW] == True:
  *                         data.pop(revcount)             # <<<<<<<<<<<<<<
@@ -9439,13 +9436,13 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
  */
           if (unlikely(__pyx_v_data == Py_None)) {
             PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "pop");
-            __PYX_ERR(0, 402, __pyx_L1_error)
+            __PYX_ERR(0, 403, __pyx_L1_error)
           }
-          __pyx_t_1 = __Pyx_PyList_PopIndex(__pyx_v_data, Py_None, __pyx_v_revcount, 1, int, __Pyx_PyInt_From_int); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
+          __pyx_t_1 = __Pyx_PyList_PopIndex(__pyx_v_data, Py_None, __pyx_v_revcount, 1, int, __Pyx_PyInt_From_int); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 403, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-          /* "tricks.pyx":401
+          /* "tricks.pyx":402
  *             if temp == data[0]:
  *                 for revcount in range(len(data)-1,-1,-1):
  *                     if data[revcount][DB.NSFW] == True:             # <<<<<<<<<<<<<<
@@ -9455,7 +9452,7 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
         }
       }
 
-      /* "tricks.pyx":399
+      /* "tricks.pyx":400
  *             sqlitecursor.execute('select * from comics where id = (?)', (data[0][0],))
  *             temp = sqlitecursor.fetchone()
  *             if temp == data[0]:             # <<<<<<<<<<<<<<
@@ -9464,7 +9461,7 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
  */
     }
 
-    /* "tricks.pyx":396
+    /* "tricks.pyx":397
  *         sqlitecursor.execute('select * from settings where id is 1')
  *         settings_data = sqlitecursor.fetchone()
  *         if settings_data[DB.show_NSFW] != True:             # <<<<<<<<<<<<<<
@@ -9473,7 +9470,7 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "tricks.pyx":387
+  /* "tricks.pyx":388
  * 
  *     @staticmethod
  *     def remove_NSFW(list data):             # <<<<<<<<<<<<<<
@@ -9500,7 +9497,7 @@ static PyObject *__pyx_pf_6tricks_4tech_18remove_NSFW(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "tricks.pyx":405
+/* "tricks.pyx":406
  * 
  *     @staticmethod
  *     def refresh_db_input(tuple db_input):             # <<<<<<<<<<<<<<
@@ -9519,7 +9516,7 @@ static PyObject *__pyx_pw_6tricks_4tech_21refresh_db_input(PyObject *__pyx_self,
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("refresh_db_input (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_db_input), (&PyTuple_Type), 1, "db_input", 1))) __PYX_ERR(0, 405, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_db_input), (&PyTuple_Type), 1, "db_input", 1))) __PYX_ERR(0, 406, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_20refresh_db_input(__pyx_self, ((PyObject*)__pyx_v_db_input));
 
   /* function exit code */
@@ -9554,7 +9551,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("refresh_db_input", 0);
 
-  /* "tricks.pyx":414
+  /* "tricks.pyx":415
  *         cdef tuple refreshed_db_input
  *         cdef tuple vdata
  *         if db_input[0] != None:             # <<<<<<<<<<<<<<
@@ -9563,35 +9560,35 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
  */
   if (unlikely(__pyx_v_db_input == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 414, __pyx_L1_error)
+    __PYX_ERR(0, 415, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 415, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 415, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 414, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 415, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "tricks.pyx":415
+    /* "tricks.pyx":416
  *         cdef tuple vdata
  *         if db_input[0] != None:
  *             sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))             # <<<<<<<<<<<<<<
  *             refreshed_db_input = sqlitecursor.fetchone()
  *             if refreshed_db_input != None:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 415, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 416, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_execute); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 415, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_execute); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 416, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (unlikely(__pyx_v_db_input == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 415, __pyx_L1_error)
+      __PYX_ERR(0, 416, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 415, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 416, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 415, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 416, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1);
@@ -9611,7 +9608,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_kp_u_select_from_comics_where_id, __pyx_t_5};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 415, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 416, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -9620,14 +9617,14 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_kp_u_select_from_comics_where_id, __pyx_t_5};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 415, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 416, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 415, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 416, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_1) {
         __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -9638,23 +9635,23 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 415, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 416, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "tricks.pyx":416
+    /* "tricks.pyx":417
  *         if db_input[0] != None:
  *             sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))
  *             refreshed_db_input = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *             if refreshed_db_input != None:
  *                 if refreshed_db_input[DB.C_volume_id] != None and refreshed_db_input[DB.C_publisher_id] == None:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 416, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 417, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 416, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 417, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -9669,26 +9666,26 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
     }
     __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 416, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 417, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (!(likely(PyTuple_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 416, __pyx_L1_error)
+    if (!(likely(PyTuple_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 417, __pyx_L1_error)
     __pyx_v_refreshed_db_input = ((PyObject*)__pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "tricks.pyx":417
+    /* "tricks.pyx":418
  *             sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))
  *             refreshed_db_input = sqlitecursor.fetchone()
  *             if refreshed_db_input != None:             # <<<<<<<<<<<<<<
  *                 if refreshed_db_input[DB.C_volume_id] != None and refreshed_db_input[DB.C_publisher_id] == None:
  *                     sqlitecursor.execute('select * from volumes where volume_id = (?)', (refreshed_db_input[DB.C_volume_id],))
  */
-    __pyx_t_2 = PyObject_RichCompare(__pyx_v_refreshed_db_input, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 417, __pyx_L1_error)
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 417, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_v_refreshed_db_input, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 418, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_3) {
 
-      /* "tricks.pyx":418
+      /* "tricks.pyx":419
  *             refreshed_db_input = sqlitecursor.fetchone()
  *             if refreshed_db_input != None:
  *                 if refreshed_db_input[DB.C_volume_id] != None and refreshed_db_input[DB.C_publisher_id] == None:             # <<<<<<<<<<<<<<
@@ -9697,16 +9694,16 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
  */
       if (unlikely(__pyx_v_refreshed_db_input == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 418, __pyx_L1_error)
+        __PYX_ERR(0, 419, __pyx_L1_error)
       }
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_volume_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_volume_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_refreshed_db_input, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_refreshed_db_input, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_2 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       if (__pyx_t_8) {
       } else {
@@ -9715,43 +9712,43 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
       }
       if (unlikely(__pyx_v_refreshed_db_input == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 418, __pyx_L1_error)
+        __PYX_ERR(0, 419, __pyx_L1_error)
       }
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_publisher_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_publisher_id); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_refreshed_db_input, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_refreshed_db_input, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_2 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 418, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 419, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __pyx_t_3 = __pyx_t_8;
       __pyx_L6_bool_binop_done:;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":419
+        /* "tricks.pyx":420
  *             if refreshed_db_input != None:
  *                 if refreshed_db_input[DB.C_volume_id] != None and refreshed_db_input[DB.C_publisher_id] == None:
  *                     sqlitecursor.execute('select * from volumes where volume_id = (?)', (refreshed_db_input[DB.C_volume_id],))             # <<<<<<<<<<<<<<
  *                     vdata = sqlitecursor.fetchone()
  *                     if vdata != None:
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 419, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 420, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_execute); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 419, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_execute); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 420, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         if (unlikely(__pyx_v_refreshed_db_input == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 419, __pyx_L1_error)
+          __PYX_ERR(0, 420, __pyx_L1_error)
         }
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_volume_id); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 419, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_C_volume_id); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 420, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_refreshed_db_input, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 419, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_refreshed_db_input, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 420, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = PyTuple_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 419, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 420, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_GIVEREF(__pyx_t_5);
         PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5);
@@ -9771,7 +9768,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_4)) {
           PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_kp_u_select_from_volumes_where_volume, __pyx_t_7};
-          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 419, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 420, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -9780,14 +9777,14 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
           PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_kp_u_select_from_volumes_where_volume, __pyx_t_7};
-          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 419, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 420, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         } else
         #endif
         {
-          __pyx_t_1 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 419, __pyx_L1_error)
+          __pyx_t_1 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 420, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           if (__pyx_t_5) {
             __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -9798,23 +9795,23 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
           __Pyx_GIVEREF(__pyx_t_7);
           PyTuple_SET_ITEM(__pyx_t_1, 1+__pyx_t_6, __pyx_t_7);
           __pyx_t_7 = 0;
-          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 419, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_1, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 420, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         }
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-        /* "tricks.pyx":420
+        /* "tricks.pyx":421
  *                 if refreshed_db_input[DB.C_volume_id] != None and refreshed_db_input[DB.C_publisher_id] == None:
  *                     sqlitecursor.execute('select * from volumes where volume_id = (?)', (refreshed_db_input[DB.C_volume_id],))
  *                     vdata = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *                     if vdata != None:
  *                         with sqliteconnection:
  */
-        __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 420, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 421, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 420, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 421, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_t_4 = NULL;
@@ -9829,26 +9826,26 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
         }
         __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 420, __pyx_L1_error)
+        if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 421, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (!(likely(PyTuple_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 420, __pyx_L1_error)
+        if (!(likely(PyTuple_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 421, __pyx_L1_error)
         __pyx_v_vdata = ((PyObject*)__pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "tricks.pyx":421
+        /* "tricks.pyx":422
  *                     sqlitecursor.execute('select * from volumes where volume_id = (?)', (refreshed_db_input[DB.C_volume_id],))
  *                     vdata = sqlitecursor.fetchone()
  *                     if vdata != None:             # <<<<<<<<<<<<<<
  *                         with sqliteconnection:
  *                             sqlitecursor.execute('update comics set publisher_id = (?) where id = (?)', (vdata[DB.V_publisher_id], refreshed_db_input[0],))
  */
-        __pyx_t_2 = PyObject_RichCompare(__pyx_v_vdata, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 421, __pyx_L1_error)
-        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 421, __pyx_L1_error)
+        __pyx_t_2 = PyObject_RichCompare(__pyx_v_vdata, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 422, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         if (__pyx_t_3) {
 
-          /* "tricks.pyx":422
+          /* "tricks.pyx":423
  *                     vdata = sqlitecursor.fetchone()
  *                     if vdata != None:
  *                         with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -9856,11 +9853,11 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
  *                         sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))
  */
           /*with:*/ {
-            __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+            __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqliteconnection); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 423, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_2);
-            __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 422, __pyx_L1_error)
+            __pyx_t_9 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 423, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_9);
-            __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 422, __pyx_L9_error)
+            __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 423, __pyx_L9_error)
             __Pyx_GOTREF(__pyx_t_4);
             __pyx_t_7 = NULL;
             if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -9874,7 +9871,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
             }
             __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
             __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-            if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 422, __pyx_L9_error)
+            if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L9_error)
             __Pyx_GOTREF(__pyx_t_1);
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -9889,34 +9886,34 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
                 __Pyx_XGOTREF(__pyx_t_12);
                 /*try:*/ {
 
-                  /* "tricks.pyx":423
+                  /* "tricks.pyx":424
  *                     if vdata != None:
  *                         with sqliteconnection:
  *                             sqlitecursor.execute('update comics set publisher_id = (?) where id = (?)', (vdata[DB.V_publisher_id], refreshed_db_input[0],))             # <<<<<<<<<<<<<<
  *                         sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))
  *                         refreshed_db_input = sqlitecursor.fetchone()
  */
-                  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L13_error)
+                  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L13_error)
                   __Pyx_GOTREF(__pyx_t_1);
-                  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_execute); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 423, __pyx_L13_error)
+                  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_execute); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 424, __pyx_L13_error)
                   __Pyx_GOTREF(__pyx_t_4);
                   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
                   if (unlikely(__pyx_v_vdata == Py_None)) {
                     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                    __PYX_ERR(0, 423, __pyx_L13_error)
+                    __PYX_ERR(0, 424, __pyx_L13_error)
                   }
-                  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_V_publisher_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L13_error)
+                  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_V_publisher_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L13_error)
                   __Pyx_GOTREF(__pyx_t_1);
-                  __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_vdata, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 423, __pyx_L13_error)
+                  __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_vdata, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 424, __pyx_L13_error)
                   __Pyx_GOTREF(__pyx_t_7);
                   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
                   if (unlikely(__pyx_v_refreshed_db_input == Py_None)) {
                     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                    __PYX_ERR(0, 423, __pyx_L13_error)
+                    __PYX_ERR(0, 424, __pyx_L13_error)
                   }
-                  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_refreshed_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L13_error)
+                  __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_refreshed_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L13_error)
                   __Pyx_GOTREF(__pyx_t_1);
-                  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 423, __pyx_L13_error)
+                  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 424, __pyx_L13_error)
                   __Pyx_GOTREF(__pyx_t_5);
                   __Pyx_GIVEREF(__pyx_t_7);
                   PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_7);
@@ -9939,7 +9936,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
                   #if CYTHON_FAST_PYCALL
                   if (PyFunction_Check(__pyx_t_4)) {
                     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_kp_u_update_comics_set_publisher_id_w, __pyx_t_5};
-                    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 423, __pyx_L13_error)
+                    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 424, __pyx_L13_error)
                     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
                     __Pyx_GOTREF(__pyx_t_2);
                     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -9948,14 +9945,14 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
                   #if CYTHON_FAST_PYCCALL
                   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
                     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_kp_u_update_comics_set_publisher_id_w, __pyx_t_5};
-                    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 423, __pyx_L13_error)
+                    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 424, __pyx_L13_error)
                     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
                     __Pyx_GOTREF(__pyx_t_2);
                     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
                   } else
                   #endif
                   {
-                    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 423, __pyx_L13_error)
+                    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 424, __pyx_L13_error)
                     __Pyx_GOTREF(__pyx_t_7);
                     if (__pyx_t_1) {
                       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -9966,14 +9963,14 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
                     __Pyx_GIVEREF(__pyx_t_5);
                     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_t_5);
                     __pyx_t_5 = 0;
-                    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 423, __pyx_L13_error)
+                    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 424, __pyx_L13_error)
                     __Pyx_GOTREF(__pyx_t_2);
                     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
                   }
                   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
                   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-                  /* "tricks.pyx":422
+                  /* "tricks.pyx":423
  *                     vdata = sqlitecursor.fetchone()
  *                     if vdata != None:
  *                         with sqliteconnection:             # <<<<<<<<<<<<<<
@@ -9993,20 +9990,20 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
                 __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
                 /*except:*/ {
                   __Pyx_AddTraceback("tricks.tech.refresh_db_input", __pyx_clineno, __pyx_lineno, __pyx_filename);
-                  if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_4, &__pyx_t_7) < 0) __PYX_ERR(0, 422, __pyx_L15_except_error)
+                  if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_4, &__pyx_t_7) < 0) __PYX_ERR(0, 423, __pyx_L15_except_error)
                   __Pyx_GOTREF(__pyx_t_2);
                   __Pyx_GOTREF(__pyx_t_4);
                   __Pyx_GOTREF(__pyx_t_7);
-                  __pyx_t_5 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 422, __pyx_L15_except_error)
+                  __pyx_t_5 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 423, __pyx_L15_except_error)
                   __Pyx_GOTREF(__pyx_t_5);
                   __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_t_5, NULL);
                   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
                   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-                  if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 422, __pyx_L15_except_error)
+                  if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 423, __pyx_L15_except_error)
                   __Pyx_GOTREF(__pyx_t_13);
                   __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_13);
                   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-                  if (__pyx_t_3 < 0) __PYX_ERR(0, 422, __pyx_L15_except_error)
+                  if (__pyx_t_3 < 0) __PYX_ERR(0, 423, __pyx_L15_except_error)
                   __pyx_t_8 = ((!(__pyx_t_3 != 0)) != 0);
                   if (__pyx_t_8) {
                     __Pyx_GIVEREF(__pyx_t_2);
@@ -10014,7 +10011,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
                     __Pyx_XGIVEREF(__pyx_t_7);
                     __Pyx_ErrRestoreWithState(__pyx_t_2, __pyx_t_4, __pyx_t_7);
                     __pyx_t_2 = 0; __pyx_t_4 = 0; __pyx_t_7 = 0; 
-                    __PYX_ERR(0, 422, __pyx_L15_except_error)
+                    __PYX_ERR(0, 423, __pyx_L15_except_error)
                   }
                   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
                   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -10040,7 +10037,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
                 if (__pyx_t_9) {
                   __pyx_t_12 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple_, NULL);
                   __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-                  if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 422, __pyx_L1_error)
+                  if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 423, __pyx_L1_error)
                   __Pyx_GOTREF(__pyx_t_12);
                   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
                 }
@@ -10055,25 +10052,25 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
             __pyx_L22:;
           }
 
-          /* "tricks.pyx":424
+          /* "tricks.pyx":425
  *                         with sqliteconnection:
  *                             sqlitecursor.execute('update comics set publisher_id = (?) where id = (?)', (vdata[DB.V_publisher_id], refreshed_db_input[0],))
  *                         sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))             # <<<<<<<<<<<<<<
  *                         refreshed_db_input = sqlitecursor.fetchone()
  *                 return refreshed_db_input
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 424, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 424, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 425, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           if (unlikely(__pyx_v_db_input == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 424, __pyx_L1_error)
+            __PYX_ERR(0, 425, __pyx_L1_error)
           }
-          __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 424, __pyx_L1_error)
+          __pyx_t_4 = __Pyx_GetItemInt_Tuple(__pyx_v_db_input, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 425, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_4);
-          __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 424, __pyx_L1_error)
+          __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 425, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_5);
           __Pyx_GIVEREF(__pyx_t_4);
           PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4);
@@ -10093,7 +10090,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
           #if CYTHON_FAST_PYCALL
           if (PyFunction_Check(__pyx_t_2)) {
             PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_kp_u_select_from_comics_where_id, __pyx_t_5};
-            __pyx_t_7 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 424, __pyx_L1_error)
+            __pyx_t_7 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 425, __pyx_L1_error)
             __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -10102,14 +10099,14 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
           #if CYTHON_FAST_PYCCALL
           if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
             PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_kp_u_select_from_comics_where_id, __pyx_t_5};
-            __pyx_t_7 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 424, __pyx_L1_error)
+            __pyx_t_7 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 425, __pyx_L1_error)
             __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
           } else
           #endif
           {
-            __pyx_t_1 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L1_error)
+            __pyx_t_1 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_1);
             if (__pyx_t_4) {
               __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -10120,23 +10117,23 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
             __Pyx_GIVEREF(__pyx_t_5);
             PyTuple_SET_ITEM(__pyx_t_1, 1+__pyx_t_6, __pyx_t_5);
             __pyx_t_5 = 0;
-            __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 424, __pyx_L1_error)
+            __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 425, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_7);
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           }
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "tricks.pyx":425
+          /* "tricks.pyx":426
  *                             sqlitecursor.execute('update comics set publisher_id = (?) where id = (?)', (vdata[DB.V_publisher_id], refreshed_db_input[0],))
  *                         sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))
  *                         refreshed_db_input = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *                 return refreshed_db_input
  *         return db_input
  */
-          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 425, __pyx_L1_error)
+          __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 426, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 425, __pyx_L1_error)
+          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 426, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           __pyx_t_2 = NULL;
@@ -10151,14 +10148,14 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
           }
           __pyx_t_7 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
           __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-          if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 425, __pyx_L1_error)
+          if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 426, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (!(likely(PyTuple_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 425, __pyx_L1_error)
+          if (!(likely(PyTuple_CheckExact(__pyx_t_7))||((__pyx_t_7) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_7)->tp_name), 0))) __PYX_ERR(0, 426, __pyx_L1_error)
           __Pyx_DECREF_SET(__pyx_v_refreshed_db_input, ((PyObject*)__pyx_t_7));
           __pyx_t_7 = 0;
 
-          /* "tricks.pyx":421
+          /* "tricks.pyx":422
  *                     sqlitecursor.execute('select * from volumes where volume_id = (?)', (refreshed_db_input[DB.C_volume_id],))
  *                     vdata = sqlitecursor.fetchone()
  *                     if vdata != None:             # <<<<<<<<<<<<<<
@@ -10167,7 +10164,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
  */
         }
 
-        /* "tricks.pyx":418
+        /* "tricks.pyx":419
  *             refreshed_db_input = sqlitecursor.fetchone()
  *             if refreshed_db_input != None:
  *                 if refreshed_db_input[DB.C_volume_id] != None and refreshed_db_input[DB.C_publisher_id] == None:             # <<<<<<<<<<<<<<
@@ -10176,7 +10173,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
  */
       }
 
-      /* "tricks.pyx":426
+      /* "tricks.pyx":427
  *                         sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))
  *                         refreshed_db_input = sqlitecursor.fetchone()
  *                 return refreshed_db_input             # <<<<<<<<<<<<<<
@@ -10188,7 +10185,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
       __pyx_r = __pyx_v_refreshed_db_input;
       goto __pyx_L0;
 
-      /* "tricks.pyx":417
+      /* "tricks.pyx":418
  *             sqlitecursor.execute('select * from comics where id = (?)', (db_input[0],))
  *             refreshed_db_input = sqlitecursor.fetchone()
  *             if refreshed_db_input != None:             # <<<<<<<<<<<<<<
@@ -10197,7 +10194,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
  */
     }
 
-    /* "tricks.pyx":414
+    /* "tricks.pyx":415
  *         cdef tuple refreshed_db_input
  *         cdef tuple vdata
  *         if db_input[0] != None:             # <<<<<<<<<<<<<<
@@ -10206,7 +10203,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
  */
   }
 
-  /* "tricks.pyx":427
+  /* "tricks.pyx":428
  *                         refreshed_db_input = sqlitecursor.fetchone()
  *                 return refreshed_db_input
  *         return db_input             # <<<<<<<<<<<<<<
@@ -10218,7 +10215,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
   __pyx_r = __pyx_v_db_input;
   goto __pyx_L0;
 
-  /* "tricks.pyx":405
+  /* "tricks.pyx":406
  * 
  *     @staticmethod
  *     def refresh_db_input(tuple db_input):             # <<<<<<<<<<<<<<
@@ -10243,7 +10240,7 @@ static PyObject *__pyx_pf_6tricks_4tech_20refresh_db_input(CYTHON_UNUSED PyObjec
   return __pyx_r;
 }
 
-/* "tricks.pyx":430
+/* "tricks.pyx":431
  * 
  *     @staticmethod
  *     def timeconverter(unixtime):             # <<<<<<<<<<<<<<
@@ -10277,7 +10274,7 @@ static PyObject *__pyx_pf_6tricks_4tech_22timeconverter(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("timeconverter", 0);
 
-  /* "tricks.pyx":431
+  /* "tricks.pyx":432
  *     @staticmethod
  *     def timeconverter(unixtime):
  *         return datetime.fromtimestamp(unixtime).strftime('%Y-%m-%d')             # <<<<<<<<<<<<<<
@@ -10285,9 +10282,9 @@ static PyObject *__pyx_pf_6tricks_4tech_22timeconverter(CYTHON_UNUSED PyObject *
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_datetime); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_datetime); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fromtimestamp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_fromtimestamp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -10302,10 +10299,10 @@ static PyObject *__pyx_pf_6tricks_4tech_22timeconverter(CYTHON_UNUSED PyObject *
   }
   __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_3, __pyx_v_unixtime) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_unixtime);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 431, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_strftime); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_strftime); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -10320,14 +10317,14 @@ static PyObject *__pyx_pf_6tricks_4tech_22timeconverter(CYTHON_UNUSED PyObject *
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_kp_u_Y_m_d) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_u_Y_m_d);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":430
+  /* "tricks.pyx":431
  * 
  *     @staticmethod
  *     def timeconverter(unixtime):             # <<<<<<<<<<<<<<
@@ -10349,7 +10346,7 @@ static PyObject *__pyx_pf_6tricks_4tech_22timeconverter(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "tricks.pyx":434
+/* "tricks.pyx":435
  * 
  *     @staticmethod
  *     def layout_shrink(layout):             # <<<<<<<<<<<<<<
@@ -10386,7 +10383,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("layout_shrink", 0);
 
-  /* "tricks.pyx":435
+  /* "tricks.pyx":436
  *     @staticmethod
  *     def layout_shrink(layout):
  *         try:             # <<<<<<<<<<<<<<
@@ -10402,14 +10399,14 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "tricks.pyx":436
+      /* "tricks.pyx":437
  *     def layout_shrink(layout):
  *         try:
  *             layout.setHorizontalSpacing(0)             # <<<<<<<<<<<<<<
  *         except AttributeError:
  *             pass
  */
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_layout, __pyx_n_s_setHorizontalSpacing); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 436, __pyx_L3_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_layout, __pyx_n_s_setHorizontalSpacing); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 437, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_6 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -10423,12 +10420,12 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
       }
       __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_6, __pyx_int_0) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_int_0);
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 436, __pyx_L3_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 437, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "tricks.pyx":435
+      /* "tricks.pyx":436
  *     @staticmethod
  *     def layout_shrink(layout):
  *         try:             # <<<<<<<<<<<<<<
@@ -10445,7 +10442,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "tricks.pyx":437
+    /* "tricks.pyx":438
  *         try:
  *             layout.setHorizontalSpacing(0)
  *         except AttributeError:             # <<<<<<<<<<<<<<
@@ -10460,7 +10457,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":435
+    /* "tricks.pyx":436
  *     @staticmethod
  *     def layout_shrink(layout):
  *         try:             # <<<<<<<<<<<<<<
@@ -10480,7 +10477,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __pyx_L8_try_end:;
   }
 
-  /* "tricks.pyx":439
+  /* "tricks.pyx":440
  *         except AttributeError:
  *             pass
  *         try:             # <<<<<<<<<<<<<<
@@ -10496,14 +10493,14 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __Pyx_XGOTREF(__pyx_t_1);
     /*try:*/ {
 
-      /* "tricks.pyx":440
+      /* "tricks.pyx":441
  *             pass
  *         try:
  *             layout.setVerticalSpacing(0)             # <<<<<<<<<<<<<<
  *         except AttributeError:
  *             pass
  */
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_layout, __pyx_n_s_setVerticalSpacing); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 440, __pyx_L9_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_layout, __pyx_n_s_setVerticalSpacing); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 441, __pyx_L9_error)
       __Pyx_GOTREF(__pyx_t_5);
       __pyx_t_6 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
@@ -10517,12 +10514,12 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
       }
       __pyx_t_4 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_6, __pyx_int_0) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_int_0);
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 440, __pyx_L9_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 441, __pyx_L9_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "tricks.pyx":439
+      /* "tricks.pyx":440
  *         except AttributeError:
  *             pass
  *         try:             # <<<<<<<<<<<<<<
@@ -10539,7 +10536,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "tricks.pyx":441
+    /* "tricks.pyx":442
  *         try:
  *             layout.setVerticalSpacing(0)
  *         except AttributeError:             # <<<<<<<<<<<<<<
@@ -10554,7 +10551,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     goto __pyx_L11_except_error;
     __pyx_L11_except_error:;
 
-    /* "tricks.pyx":439
+    /* "tricks.pyx":440
  *         except AttributeError:
  *             pass
  *         try:             # <<<<<<<<<<<<<<
@@ -10574,7 +10571,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __pyx_L14_try_end:;
   }
 
-  /* "tricks.pyx":443
+  /* "tricks.pyx":444
  *         except AttributeError:
  *             pass
  *         try:             # <<<<<<<<<<<<<<
@@ -10590,21 +10587,21 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __Pyx_XGOTREF(__pyx_t_3);
     /*try:*/ {
 
-      /* "tricks.pyx":444
+      /* "tricks.pyx":445
  *             pass
  *         try:
  *             layout.setContentsMargins(0, 0, 0, 0)             # <<<<<<<<<<<<<<
  *         except AttributeError:
  *             pass
  */
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_layout, __pyx_n_s_setContentsMargins); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 444, __pyx_L15_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_layout, __pyx_n_s_setContentsMargins); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 445, __pyx_L15_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 444, __pyx_L15_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple__17, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 445, __pyx_L15_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-      /* "tricks.pyx":443
+      /* "tricks.pyx":444
  *         except AttributeError:
  *             pass
  *         try:             # <<<<<<<<<<<<<<
@@ -10621,7 +10618,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-    /* "tricks.pyx":445
+    /* "tricks.pyx":446
  *         try:
  *             layout.setContentsMargins(0, 0, 0, 0)
  *         except AttributeError:             # <<<<<<<<<<<<<<
@@ -10636,7 +10633,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     goto __pyx_L17_except_error;
     __pyx_L17_except_error:;
 
-    /* "tricks.pyx":443
+    /* "tricks.pyx":444
  *         except AttributeError:
  *             pass
  *         try:             # <<<<<<<<<<<<<<
@@ -10656,7 +10653,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
     __pyx_L20_try_end:;
   }
 
-  /* "tricks.pyx":434
+  /* "tricks.pyx":435
  * 
  *     @staticmethod
  *     def layout_shrink(layout):             # <<<<<<<<<<<<<<
@@ -10679,7 +10676,7 @@ static PyObject *__pyx_pf_6tricks_4tech_24layout_shrink(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "tricks.pyx":449
+/* "tricks.pyx":450
  * 
  *     @staticmethod
  *     def greates_len(list lenlist, int key):             # <<<<<<<<<<<<<<
@@ -10722,11 +10719,11 @@ static PyObject *__pyx_pw_6tricks_4tech_27greates_len(PyObject *__pyx_self, PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_key)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("greates_len", 1, 2, 2, 1); __PYX_ERR(0, 449, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("greates_len", 1, 2, 2, 1); __PYX_ERR(0, 450, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "greates_len") < 0)) __PYX_ERR(0, 449, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "greates_len") < 0)) __PYX_ERR(0, 450, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -10735,17 +10732,17 @@ static PyObject *__pyx_pw_6tricks_4tech_27greates_len(PyObject *__pyx_self, PyOb
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_lenlist = ((PyObject*)values[0]);
-    __pyx_v_key = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_key == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 449, __pyx_L3_error)
+    __pyx_v_key = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_key == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 450, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("greates_len", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 449, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("greates_len", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 450, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("tricks.tech.greates_len", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_lenlist), (&PyList_Type), 1, "lenlist", 1))) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_lenlist), (&PyList_Type), 1, "lenlist", 1))) __PYX_ERR(0, 450, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_26greates_len(__pyx_self, __pyx_v_lenlist, __pyx_v_key);
 
   /* function exit code */
@@ -10781,19 +10778,19 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("greates_len", 0);
 
-  /* "tricks.pyx":450
+  /* "tricks.pyx":451
  *     @staticmethod
  *     def greates_len(list lenlist, int key):
  *         cdef list returnlist = []             # <<<<<<<<<<<<<<
  *         cdef int eachnumber, greatest = 0
  *         cdef str somestr
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 450, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 451, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_returnlist = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":451
+  /* "tricks.pyx":452
  *     def greates_len(list lenlist, int key):
  *         cdef list returnlist = []
  *         cdef int eachnumber, greatest = 0             # <<<<<<<<<<<<<<
@@ -10802,7 +10799,7 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
  */
   __pyx_v_greatest = 0;
 
-  /* "tricks.pyx":455
+  /* "tricks.pyx":456
  *         cdef tuple eachcomic
  * 
  *         for eachcomic in lenlist:             # <<<<<<<<<<<<<<
@@ -10811,22 +10808,22 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
  */
   if (unlikely(__pyx_v_lenlist == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 455, __pyx_L1_error)
+    __PYX_ERR(0, 456, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_v_lenlist; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 455, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 456, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 455, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
-    if (!(likely(PyTuple_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 455, __pyx_L1_error)
+    if (!(likely(PyTuple_CheckExact(__pyx_t_3))||((__pyx_t_3) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 456, __pyx_L1_error)
     __Pyx_XDECREF_SET(__pyx_v_eachcomic, ((PyObject*)__pyx_t_3));
     __pyx_t_3 = 0;
 
-    /* "tricks.pyx":456
+    /* "tricks.pyx":457
  * 
  *         for eachcomic in lenlist:
  *             returnlist.append(eachcomic[key])             # <<<<<<<<<<<<<<
@@ -10835,14 +10832,14 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
  */
     if (unlikely(__pyx_v_eachcomic == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 456, __pyx_L1_error)
+      __PYX_ERR(0, 457, __pyx_L1_error)
     }
-    __pyx_t_3 = __Pyx_GetItemInt_Tuple(__pyx_v_eachcomic, __pyx_v_key, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 456, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt_Tuple(__pyx_v_eachcomic, __pyx_v_key, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 457, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyList_Append(__pyx_v_returnlist, __pyx_t_3); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 456, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyList_Append(__pyx_v_returnlist, __pyx_t_3); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 457, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tricks.pyx":455
+    /* "tricks.pyx":456
  *         cdef tuple eachcomic
  * 
  *         for eachcomic in lenlist:             # <<<<<<<<<<<<<<
@@ -10852,7 +10849,7 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":458
+  /* "tricks.pyx":459
  *             returnlist.append(eachcomic[key])
  * 
  *         for eachnumber in returnlist:             # <<<<<<<<<<<<<<
@@ -10863,16 +10860,16 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 458, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 459, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 458, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 459, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
-    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 458, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyInt_As_int(__pyx_t_3); if (unlikely((__pyx_t_5 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 459, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_eachnumber = __pyx_t_5;
 
-    /* "tricks.pyx":459
+    /* "tricks.pyx":460
  * 
  *         for eachnumber in returnlist:
  *             try:             # <<<<<<<<<<<<<<
@@ -10888,43 +10885,43 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
       __Pyx_XGOTREF(__pyx_t_8);
       /*try:*/ {
 
-        /* "tricks.pyx":460
+        /* "tricks.pyx":461
  *         for eachnumber in returnlist:
  *             try:
  *                 somestr = str(eachnumber)             # <<<<<<<<<<<<<<
  *                 if len(somestr) > greatest:
  *                     greatest = len(somestr)
  */
-        __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_eachnumber); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 460, __pyx_L7_error)
+        __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_eachnumber); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 461, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_9 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 460, __pyx_L7_error)
+        __pyx_t_9 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 461, __pyx_L7_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_XDECREF_SET(__pyx_v_somestr, ((PyObject*)__pyx_t_9));
         __pyx_t_9 = 0;
 
-        /* "tricks.pyx":461
+        /* "tricks.pyx":462
  *             try:
  *                 somestr = str(eachnumber)
  *                 if len(somestr) > greatest:             # <<<<<<<<<<<<<<
  *                     greatest = len(somestr)
  *             except ValueError: pass
  */
-        __pyx_t_10 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_somestr); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 461, __pyx_L7_error)
+        __pyx_t_10 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_somestr); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 462, __pyx_L7_error)
         __pyx_t_11 = ((__pyx_t_10 > __pyx_v_greatest) != 0);
         if (__pyx_t_11) {
 
-          /* "tricks.pyx":462
+          /* "tricks.pyx":463
  *                 somestr = str(eachnumber)
  *                 if len(somestr) > greatest:
  *                     greatest = len(somestr)             # <<<<<<<<<<<<<<
  *             except ValueError: pass
  *         return greatest
  */
-          __pyx_t_10 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_somestr); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 462, __pyx_L7_error)
+          __pyx_t_10 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_somestr); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 463, __pyx_L7_error)
           __pyx_v_greatest = __pyx_t_10;
 
-          /* "tricks.pyx":461
+          /* "tricks.pyx":462
  *             try:
  *                 somestr = str(eachnumber)
  *                 if len(somestr) > greatest:             # <<<<<<<<<<<<<<
@@ -10933,7 +10930,7 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
  */
         }
 
-        /* "tricks.pyx":459
+        /* "tricks.pyx":460
  * 
  *         for eachnumber in returnlist:
  *             try:             # <<<<<<<<<<<<<<
@@ -10949,7 +10946,7 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "tricks.pyx":463
+      /* "tricks.pyx":464
  *                 if len(somestr) > greatest:
  *                     greatest = len(somestr)
  *             except ValueError: pass             # <<<<<<<<<<<<<<
@@ -10964,7 +10961,7 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
       goto __pyx_L9_except_error;
       __pyx_L9_except_error:;
 
-      /* "tricks.pyx":459
+      /* "tricks.pyx":460
  * 
  *         for eachnumber in returnlist:
  *             try:             # <<<<<<<<<<<<<<
@@ -10984,7 +10981,7 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
       __pyx_L14_try_end:;
     }
 
-    /* "tricks.pyx":458
+    /* "tricks.pyx":459
  *             returnlist.append(eachcomic[key])
  * 
  *         for eachnumber in returnlist:             # <<<<<<<<<<<<<<
@@ -10994,7 +10991,7 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":464
+  /* "tricks.pyx":465
  *                     greatest = len(somestr)
  *             except ValueError: pass
  *         return greatest             # <<<<<<<<<<<<<<
@@ -11002,13 +10999,13 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_greatest); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_greatest); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 465, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":449
+  /* "tricks.pyx":450
  * 
  *     @staticmethod
  *     def greates_len(list lenlist, int key):             # <<<<<<<<<<<<<<
@@ -11032,7 +11029,7 @@ static PyObject *__pyx_pf_6tricks_4tech_26greates_len(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "tricks.pyx":467
+/* "tricks.pyx":468
  * 
  *     @staticmethod
  *     def download_file(str dl_from, str save_to):             # <<<<<<<<<<<<<<
@@ -11076,11 +11073,11 @@ static PyObject *__pyx_pw_6tricks_4tech_29download_file(PyObject *__pyx_self, Py
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_save_to)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("download_file", 1, 2, 2, 1); __PYX_ERR(0, 467, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("download_file", 1, 2, 2, 1); __PYX_ERR(0, 468, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "download_file") < 0)) __PYX_ERR(0, 467, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "download_file") < 0)) __PYX_ERR(0, 468, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -11093,14 +11090,14 @@ static PyObject *__pyx_pw_6tricks_4tech_29download_file(PyObject *__pyx_self, Py
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("download_file", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 467, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("download_file", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 468, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("tricks.tech.download_file", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dl_from), (&PyUnicode_Type), 1, "dl_from", 1))) __PYX_ERR(0, 467, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_save_to), (&PyUnicode_Type), 1, "save_to", 1))) __PYX_ERR(0, 467, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_dl_from), (&PyUnicode_Type), 1, "dl_from", 1))) __PYX_ERR(0, 468, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_save_to), (&PyUnicode_Type), 1, "save_to", 1))) __PYX_ERR(0, 468, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_28download_file(__pyx_self, __pyx_v_dl_from, __pyx_v_save_to);
 
   /* function exit code */
@@ -11140,7 +11137,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("download_file", 0);
 
-  /* "tricks.pyx":472
+  /* "tricks.pyx":473
  *         save_to  = /home/user/....
  *         """
  *         cdef int retrycount = -1             # <<<<<<<<<<<<<<
@@ -11149,7 +11146,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
  */
   __pyx_v_retrycount = -1;
 
-  /* "tricks.pyx":473
+  /* "tricks.pyx":474
  *         """
  *         cdef int retrycount = -1
  *         while retrycount < 5:             # <<<<<<<<<<<<<<
@@ -11160,19 +11157,19 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
     __pyx_t_1 = ((__pyx_v_retrycount < 5) != 0);
     if (!__pyx_t_1) break;
 
-    /* "tricks.pyx":474
+    /* "tricks.pyx":475
  *         cdef int retrycount = -1
  *         while retrycount < 5:
  *             if os.path.exists(save_to) == True:             # <<<<<<<<<<<<<<
  *                 return True
  *             elif os.path.exists(save_to[0:save_to.rfind('/')]) == False:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_os); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_os); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 475, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 475, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 475, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -11187,16 +11184,16 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
     }
     __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_v_save_to) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_save_to);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 474, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 475, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_2, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 475, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 474, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 475, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_1) {
 
-      /* "tricks.pyx":475
+      /* "tricks.pyx":476
  *         while retrycount < 5:
  *             if os.path.exists(save_to) == True:
  *                 return True             # <<<<<<<<<<<<<<
@@ -11208,7 +11205,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       __pyx_r = Py_True;
       goto __pyx_L0;
 
-      /* "tricks.pyx":474
+      /* "tricks.pyx":475
  *         cdef int retrycount = -1
  *         while retrycount < 5:
  *             if os.path.exists(save_to) == True:             # <<<<<<<<<<<<<<
@@ -11217,41 +11214,41 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
  */
     }
 
-    /* "tricks.pyx":476
+    /* "tricks.pyx":477
  *             if os.path.exists(save_to) == True:
  *                 return True
  *             elif os.path.exists(save_to[0:save_to.rfind('/')]) == False:             # <<<<<<<<<<<<<<
  *                 pathlib.Path(save_to[0:save_to.rfind('/')]).mkdir(parents=True)
  *             retrycount +=1
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 476, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 476, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 476, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (unlikely(__pyx_v_save_to == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 476, __pyx_L1_error)
+      __PYX_ERR(0, 477, __pyx_L1_error)
     }
     if (unlikely(__pyx_v_save_to == Py_None)) {
       PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "rfind");
-      __PYX_ERR(0, 476, __pyx_L1_error)
+      __PYX_ERR(0, 477, __pyx_L1_error)
     }
-    __pyx_t_5 = PyUnicode_Find(__pyx_v_save_to, __pyx_kp_u__18, 0, PY_SSIZE_T_MAX, -1); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-2))) __PYX_ERR(0, 476, __pyx_L1_error)
-    __pyx_t_4 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 476, __pyx_L1_error)
+    __pyx_t_5 = PyUnicode_Find(__pyx_v_save_to, __pyx_kp_u__18, 0, PY_SSIZE_T_MAX, -1); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-2))) __PYX_ERR(0, 477, __pyx_L1_error)
+    __pyx_t_4 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_1 = (__pyx_t_4 == Py_None);
     if (__pyx_t_1) {
       __pyx_t_5 = PY_SSIZE_T_MAX;
     } else {
-      __pyx_t_6 = __Pyx_PyIndex_AsSsize_t(__pyx_t_4); if (unlikely((__pyx_t_6 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 476, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyIndex_AsSsize_t(__pyx_t_4); if (unlikely((__pyx_t_6 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 477, __pyx_L1_error)
       __pyx_t_5 = __pyx_t_6;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyUnicode_Substring(__pyx_v_save_to, 0, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 476, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyUnicode_Substring(__pyx_v_save_to, 0, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -11266,47 +11263,47 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
     __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_7, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 476, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 476, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 476, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 477, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_1) {
 
-      /* "tricks.pyx":477
+      /* "tricks.pyx":478
  *                 return True
  *             elif os.path.exists(save_to[0:save_to.rfind('/')]) == False:
  *                 pathlib.Path(save_to[0:save_to.rfind('/')]).mkdir(parents=True)             # <<<<<<<<<<<<<<
  *             retrycount +=1
  *             url = Request(dl_from, headers=tech.header())
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_pathlib); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_pathlib); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 477, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_Path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (unlikely(__pyx_v_save_to == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 477, __pyx_L1_error)
+        __PYX_ERR(0, 478, __pyx_L1_error)
       }
       if (unlikely(__pyx_v_save_to == Py_None)) {
         PyErr_Format(PyExc_AttributeError, "'NoneType' object has no attribute '%.30s'", "rfind");
-        __PYX_ERR(0, 477, __pyx_L1_error)
+        __PYX_ERR(0, 478, __pyx_L1_error)
       }
-      __pyx_t_5 = PyUnicode_Find(__pyx_v_save_to, __pyx_kp_u__18, 0, PY_SSIZE_T_MAX, -1); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-2))) __PYX_ERR(0, 477, __pyx_L1_error)
-      __pyx_t_3 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
+      __pyx_t_5 = PyUnicode_Find(__pyx_v_save_to, __pyx_kp_u__18, 0, PY_SSIZE_T_MAX, -1); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-2))) __PYX_ERR(0, 478, __pyx_L1_error)
+      __pyx_t_3 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_1 = (__pyx_t_3 == Py_None);
       if (__pyx_t_1) {
         __pyx_t_5 = PY_SSIZE_T_MAX;
       } else {
-        __pyx_t_6 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_6 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 477, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_6 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 478, __pyx_L1_error)
         __pyx_t_5 = __pyx_t_6;
       }
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyUnicode_Substring(__pyx_v_save_to, 0, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyUnicode_Substring(__pyx_v_save_to, 0, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_7 = NULL;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
@@ -11321,22 +11318,22 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       __pyx_t_2 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_7, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 477, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_mkdir); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 477, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_mkdir); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 477, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_parents, Py_True) < 0) __PYX_ERR(0, 477, __pyx_L1_error)
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 477, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_parents, Py_True) < 0) __PYX_ERR(0, 478, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "tricks.pyx":476
+      /* "tricks.pyx":477
  *             if os.path.exists(save_to) == True:
  *                 return True
  *             elif os.path.exists(save_to[0:save_to.rfind('/')]) == False:             # <<<<<<<<<<<<<<
@@ -11345,7 +11342,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
  */
     }
 
-    /* "tricks.pyx":478
+    /* "tricks.pyx":479
  *             elif os.path.exists(save_to[0:save_to.rfind('/')]) == False:
  *                 pathlib.Path(save_to[0:save_to.rfind('/')]).mkdir(parents=True)
  *             retrycount +=1             # <<<<<<<<<<<<<<
@@ -11354,25 +11351,25 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
  */
     __pyx_v_retrycount = (__pyx_v_retrycount + 1);
 
-    /* "tricks.pyx":479
+    /* "tricks.pyx":480
  *                 pathlib.Path(save_to[0:save_to.rfind('/')]).mkdir(parents=True)
  *             retrycount +=1
  *             url = Request(dl_from, headers=tech.header())             # <<<<<<<<<<<<<<
  *             try: webpage = urlopen(url).read()
  *             except urllib.error.HTTPError:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Request); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 479, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_Request); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 479, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_dl_from);
     __Pyx_GIVEREF(__pyx_v_dl_from);
     PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_v_dl_from);
-    __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 479, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_tech); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 479, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_tech); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_header); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 479, __pyx_L1_error)
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_header); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_9);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __pyx_t_8 = NULL;
@@ -11387,12 +11384,12 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
     }
     __pyx_t_7 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_9);
     __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 479, __pyx_L1_error)
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_headers, __pyx_t_7) < 0) __PYX_ERR(0, 479, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_headers, __pyx_t_7) < 0) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 479, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 480, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -11400,7 +11397,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
     __Pyx_XDECREF_SET(__pyx_v_url, __pyx_t_7);
     __pyx_t_7 = 0;
 
-    /* "tricks.pyx":480
+    /* "tricks.pyx":481
  *             retrycount +=1
  *             url = Request(dl_from, headers=tech.header())
  *             try: webpage = urlopen(url).read()             # <<<<<<<<<<<<<<
@@ -11415,7 +11412,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       __Pyx_XGOTREF(__pyx_t_11);
       __Pyx_XGOTREF(__pyx_t_12);
       /*try:*/ {
-        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_urlopen); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 480, __pyx_L6_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_urlopen); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 481, __pyx_L6_error)
         __Pyx_GOTREF(__pyx_t_2);
         __pyx_t_3 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -11429,10 +11426,10 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
         }
         __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_url) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_url);
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 480, __pyx_L6_error)
+        if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 481, __pyx_L6_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 480, __pyx_L6_error)
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 481, __pyx_L6_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __pyx_t_4 = NULL;
@@ -11447,7 +11444,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
         }
         __pyx_t_7 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
         __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-        if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 480, __pyx_L6_error)
+        if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 481, __pyx_L6_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_XDECREF_SET(__pyx_v_webpage, __pyx_t_7);
@@ -11465,7 +11462,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "tricks.pyx":481
+      /* "tricks.pyx":482
  *             url = Request(dl_from, headers=tech.header())
  *             try: webpage = urlopen(url).read()
  *             except urllib.error.HTTPError:             # <<<<<<<<<<<<<<
@@ -11473,12 +11470,12 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
  *             with open(save_to, "wb") as new_file:
  */
       __Pyx_ErrFetch(&__pyx_t_7, &__pyx_t_2, &__pyx_t_4);
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_urllib); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L8_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_urllib); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 482, __pyx_L8_except_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_error); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 481, __pyx_L8_except_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_error); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 482, __pyx_L8_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_HTTPError); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 481, __pyx_L8_except_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_HTTPError); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 482, __pyx_L8_except_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_13 = __Pyx_PyErr_GivenExceptionMatches(__pyx_t_7, __pyx_t_3);
@@ -11487,12 +11484,12 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       __pyx_t_7 = 0; __pyx_t_2 = 0; __pyx_t_4 = 0;
       if (__pyx_t_13) {
         __Pyx_AddTraceback("tricks.tech.download_file", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_2, &__pyx_t_7) < 0) __PYX_ERR(0, 481, __pyx_L8_except_error)
+        if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_2, &__pyx_t_7) < 0) __PYX_ERR(0, 482, __pyx_L8_except_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_GOTREF(__pyx_t_7);
 
-        /* "tricks.pyx":482
+        /* "tricks.pyx":483
  *             try: webpage = urlopen(url).read()
  *             except urllib.error.HTTPError:
  *                 return False             # <<<<<<<<<<<<<<
@@ -11510,7 +11507,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       goto __pyx_L8_except_error;
       __pyx_L8_except_error:;
 
-      /* "tricks.pyx":480
+      /* "tricks.pyx":481
  *             retrycount +=1
  *             url = Request(dl_from, headers=tech.header())
  *             try: webpage = urlopen(url).read()             # <<<<<<<<<<<<<<
@@ -11531,7 +11528,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       __pyx_L13_try_end:;
     }
 
-    /* "tricks.pyx":483
+    /* "tricks.pyx":484
  *             except urllib.error.HTTPError:
  *                 return False
  *             with open(save_to, "wb") as new_file:             # <<<<<<<<<<<<<<
@@ -11539,7 +11536,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
  *             if os.path.exists(save_to) == True:
  */
     /*with:*/ {
-      __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 483, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 484, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_INCREF(__pyx_v_save_to);
       __Pyx_GIVEREF(__pyx_v_save_to);
@@ -11547,12 +11544,12 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       __Pyx_INCREF(__pyx_n_u_wb);
       __Pyx_GIVEREF(__pyx_n_u_wb);
       PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_n_u_wb);
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 483, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_7, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 484, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_12 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 483, __pyx_L1_error)
+      __pyx_t_12 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_exit); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 484, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_12);
-      __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 483, __pyx_L16_error)
+      __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_2, __pyx_n_s_enter); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L16_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_3 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
@@ -11566,7 +11563,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       }
       __pyx_t_7 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 483, __pyx_L16_error)
+      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 484, __pyx_L16_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = __pyx_t_7;
@@ -11584,14 +11581,14 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
             __Pyx_XDECREF_SET(__pyx_v_new_file, __pyx_t_4);
             __pyx_t_4 = 0;
 
-            /* "tricks.pyx":484
+            /* "tricks.pyx":485
  *                 return False
  *             with open(save_to, "wb") as new_file:
  *                 new_file.write(webpage)             # <<<<<<<<<<<<<<
  *             if os.path.exists(save_to) == True:
  *                 if os.path.getsize(save_to) > 0:
  */
-            __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_file, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 484, __pyx_L22_error)
+            __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_file, __pyx_n_s_write); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 485, __pyx_L22_error)
             __Pyx_GOTREF(__pyx_t_2);
             __pyx_t_7 = NULL;
             if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -11605,12 +11602,12 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
             }
             __pyx_t_4 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_7, __pyx_v_webpage) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_webpage);
             __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L22_error)
+            if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 485, __pyx_L22_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
             __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-            /* "tricks.pyx":483
+            /* "tricks.pyx":484
  *             except urllib.error.HTTPError:
  *                 return False
  *             with open(save_to, "wb") as new_file:             # <<<<<<<<<<<<<<
@@ -11631,20 +11628,20 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
           __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
           /*except:*/ {
             __Pyx_AddTraceback("tricks.tech.download_file", __pyx_clineno, __pyx_lineno, __pyx_filename);
-            if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_2, &__pyx_t_7) < 0) __PYX_ERR(0, 483, __pyx_L24_except_error)
+            if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_2, &__pyx_t_7) < 0) __PYX_ERR(0, 484, __pyx_L24_except_error)
             __Pyx_GOTREF(__pyx_t_4);
             __Pyx_GOTREF(__pyx_t_2);
             __Pyx_GOTREF(__pyx_t_7);
-            __pyx_t_3 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 483, __pyx_L24_except_error)
+            __pyx_t_3 = PyTuple_Pack(3, __pyx_t_4, __pyx_t_2, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L24_except_error)
             __Pyx_GOTREF(__pyx_t_3);
             __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_t_3, NULL);
             __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-            if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 483, __pyx_L24_except_error)
+            if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 484, __pyx_L24_except_error)
             __Pyx_GOTREF(__pyx_t_15);
             __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_15);
             __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-            if (__pyx_t_1 < 0) __PYX_ERR(0, 483, __pyx_L24_except_error)
+            if (__pyx_t_1 < 0) __PYX_ERR(0, 484, __pyx_L24_except_error)
             __pyx_t_16 = ((!(__pyx_t_1 != 0)) != 0);
             if (__pyx_t_16) {
               __Pyx_GIVEREF(__pyx_t_4);
@@ -11652,7 +11649,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
               __Pyx_XGIVEREF(__pyx_t_7);
               __Pyx_ErrRestoreWithState(__pyx_t_4, __pyx_t_2, __pyx_t_7);
               __pyx_t_4 = 0; __pyx_t_2 = 0; __pyx_t_7 = 0; 
-              __PYX_ERR(0, 483, __pyx_L24_except_error)
+              __PYX_ERR(0, 484, __pyx_L24_except_error)
             }
             __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
             __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -11678,7 +11675,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
           if (__pyx_t_12) {
             __pyx_t_14 = __Pyx_PyObject_Call(__pyx_t_12, __pyx_tuple_, NULL);
             __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-            if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 483, __pyx_L1_error)
+            if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 484, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_14);
             __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
           }
@@ -11693,19 +11690,19 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       __pyx_L33:;
     }
 
-    /* "tricks.pyx":485
+    /* "tricks.pyx":486
  *             with open(save_to, "wb") as new_file:
  *                 new_file.write(webpage)
  *             if os.path.exists(save_to) == True:             # <<<<<<<<<<<<<<
  *                 if os.path.getsize(save_to) > 0:
  *                     return True
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 486, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 486, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_exists); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 486, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -11720,28 +11717,28 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
     }
     __pyx_t_7 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_v_save_to) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_save_to);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 485, __pyx_L1_error)
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 486, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_7, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_7, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 486, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_16 < 0)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_16 < 0)) __PYX_ERR(0, 486, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if (__pyx_t_16) {
 
-      /* "tricks.pyx":486
+      /* "tricks.pyx":487
  *                 new_file.write(webpage)
  *             if os.path.exists(save_to) == True:
  *                 if os.path.getsize(save_to) > 0:             # <<<<<<<<<<<<<<
  *                     return True
  *                 else:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_os); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 486, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_os); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 487, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 486, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_path); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 487, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_getsize); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 486, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_getsize); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 487, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_4 = NULL;
@@ -11756,16 +11753,16 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
       }
       __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_4, __pyx_v_save_to) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_v_save_to);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 486, __pyx_L1_error)
+      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 487, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyObject_RichCompare(__pyx_t_2, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 486, __pyx_L1_error)
+      __pyx_t_7 = PyObject_RichCompare(__pyx_t_2, __pyx_int_0, Py_GT); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 487, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_16 < 0)) __PYX_ERR(0, 486, __pyx_L1_error)
+      __pyx_t_16 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_16 < 0)) __PYX_ERR(0, 487, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (__pyx_t_16) {
 
-        /* "tricks.pyx":487
+        /* "tricks.pyx":488
  *             if os.path.exists(save_to) == True:
  *                 if os.path.getsize(save_to) > 0:
  *                     return True             # <<<<<<<<<<<<<<
@@ -11777,7 +11774,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
         __pyx_r = Py_True;
         goto __pyx_L0;
 
-        /* "tricks.pyx":486
+        /* "tricks.pyx":487
  *                 new_file.write(webpage)
  *             if os.path.exists(save_to) == True:
  *                 if os.path.getsize(save_to) > 0:             # <<<<<<<<<<<<<<
@@ -11786,7 +11783,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
  */
       }
 
-      /* "tricks.pyx":489
+      /* "tricks.pyx":490
  *                     return True
  *                 else:
  *                     os.remove(save_to)             # <<<<<<<<<<<<<<
@@ -11794,9 +11791,9 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
  * 
  */
       /*else*/ {
-        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 489, __pyx_L1_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_os); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 490, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_remove); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 489, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_remove); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_2 = NULL;
@@ -11811,13 +11808,13 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
         }
         __pyx_t_7 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_v_save_to) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_v_save_to);
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-        if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 489, __pyx_L1_error)
+        if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 490, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
 
-      /* "tricks.pyx":485
+      /* "tricks.pyx":486
  *             with open(save_to, "wb") as new_file:
  *                 new_file.write(webpage)
  *             if os.path.exists(save_to) == True:             # <<<<<<<<<<<<<<
@@ -11827,72 +11824,72 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
     }
   }
 
-  /* "tricks.pyx":490
+  /* "tricks.pyx":491
  *                 else:
  *                     os.remove(save_to)
  *         print(tech.color.RED + "ERROR" + tech.color.END + " Could not download: " + tech.color.CYAN + dl_from + tech.color.END)             # <<<<<<<<<<<<<<
  * 
  *     @staticmethod
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_tech); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_tech); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_color); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_color); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_RED); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_RED); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_t_7, __pyx_n_u_ERROR); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_7, __pyx_n_u_ERROR); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_tech); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_tech); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_color); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_color); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_END); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_END); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Add(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_4, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = PyNumber_Add(__pyx_t_2, __pyx_kp_u_Could_not_download); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_7 = PyNumber_Add(__pyx_t_2, __pyx_kp_u_Could_not_download); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_color); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_color); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_CYAN); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_CYAN); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_t_7, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_7, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyNumber_Add(__pyx_t_4, __pyx_v_dl_from); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_t_4, __pyx_v_dl_from); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_tech); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_tech); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_color); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_color); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_END); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_END); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = PyNumber_Add(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_7 = PyNumber_Add(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 491, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "tricks.pyx":467
+  /* "tricks.pyx":468
  * 
  *     @staticmethod
  *     def download_file(str dl_from, str save_to):             # <<<<<<<<<<<<<<
@@ -11921,7 +11918,7 @@ static PyObject *__pyx_pf_6tricks_4tech_28download_file(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "tricks.pyx":493
+/* "tricks.pyx":494
  * 
  *     @staticmethod
  *     def uni_sort(self, list data):             # <<<<<<<<<<<<<<
@@ -11965,11 +11962,11 @@ static PyObject *__pyx_pw_6tricks_4tech_31uni_sort(PyObject *__pyx_self, PyObjec
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_data)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("uni_sort", 1, 2, 2, 1); __PYX_ERR(0, 493, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("uni_sort", 1, 2, 2, 1); __PYX_ERR(0, 494, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "uni_sort") < 0)) __PYX_ERR(0, 493, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "uni_sort") < 0)) __PYX_ERR(0, 494, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -11982,13 +11979,13 @@ static PyObject *__pyx_pw_6tricks_4tech_31uni_sort(PyObject *__pyx_self, PyObjec
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("uni_sort", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 493, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("uni_sort", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 494, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("tricks.tech.uni_sort", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyList_Type), 1, "data", 1))) __PYX_ERR(0, 493, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_data), (&PyList_Type), 1, "data", 1))) __PYX_ERR(0, 494, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_30uni_sort(__pyx_self, __pyx_v_self, __pyx_v_data);
 
   /* function exit code */
@@ -12000,7 +11997,7 @@ static PyObject *__pyx_pw_6tricks_4tech_31uni_sort(PyObject *__pyx_self, PyObjec
   return __pyx_r;
 }
 
-/* "tricks.pyx":545
+/* "tricks.pyx":546
  *             if rvdict != {}:
  *                 try:
  *                     rvdict = {k: v for k, v in sorted(rvdict.items(), key=lambda item: item[1])}             # <<<<<<<<<<<<<<
@@ -12031,7 +12028,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("lambda", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_item, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_item, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -12048,7 +12045,7 @@ static PyObject *__pyx_lambda_funcdef_lambda(CYTHON_UNUSED PyObject *__pyx_self,
   return __pyx_r;
 }
 
-/* "tricks.pyx":493
+/* "tricks.pyx":494
  * 
  *     @staticmethod
  *     def uni_sort(self, list data):             # <<<<<<<<<<<<<<
@@ -12095,34 +12092,34 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
   __Pyx_RefNannySetupContext("uni_sort", 0);
   __Pyx_INCREF(__pyx_v_data);
 
-  /* "tricks.pyx":500
+  /* "tricks.pyx":501
  *         :param data:
  *         """
  *         cdef dict rvdict = {}             # <<<<<<<<<<<<<<
  *         cdef int count
  *         cdef tuple i
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 500, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 501, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_rvdict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":503
+  /* "tricks.pyx":504
  *         cdef int count
  *         cdef tuple i
  *         if data != []:             # <<<<<<<<<<<<<<
  *             for count, i in enumerate(data):
  *                 if self.check_NSFW.isChecked() == False and i[DB.NSFW] == True:
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 504, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_v_data, __pyx_t_1, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_v_data, __pyx_t_1, Py_NE); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 504, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 504, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_3) {
 
-    /* "tricks.pyx":504
+    /* "tricks.pyx":505
  *         cdef tuple i
  *         if data != []:
  *             for count, i in enumerate(data):             # <<<<<<<<<<<<<<
@@ -12134,27 +12131,27 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
     for (;;) {
       if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 504, __pyx_L1_error)
+      __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_1); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 505, __pyx_L1_error)
       #else
-      __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 504, __pyx_L1_error)
+      __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 505, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       #endif
-      if (!(likely(PyTuple_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 504, __pyx_L1_error)
+      if (!(likely(PyTuple_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 505, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_i, ((PyObject*)__pyx_t_1));
       __pyx_t_1 = 0;
       __pyx_v_count = __pyx_t_4;
       __pyx_t_4 = (__pyx_t_4 + 1);
 
-      /* "tricks.pyx":505
+      /* "tricks.pyx":506
  *         if data != []:
  *             for count, i in enumerate(data):
  *                 if self.check_NSFW.isChecked() == False and i[DB.NSFW] == True:             # <<<<<<<<<<<<<<
  *                     continue
  *                 elif self.check_hide_linked.isChecked() == True and i[DB.comic_id] != None:
  */
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_NSFW); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 505, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_NSFW); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 505, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_t_6 = NULL;
@@ -12169,12 +12166,12 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 505, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyObject_RichCompare(__pyx_t_1, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 505, __pyx_L1_error)
+      __pyx_t_7 = PyObject_RichCompare(__pyx_t_1, Py_False, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 505, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (__pyx_t_8) {
       } else {
@@ -12183,22 +12180,22 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       if (unlikely(__pyx_v_i == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 505, __pyx_L1_error)
+        __PYX_ERR(0, 506, __pyx_L1_error)
       }
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_NSFW); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 505, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_NSFW); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 505, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 505, __pyx_L1_error)
+      __pyx_t_7 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 505, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 506, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_3 = __pyx_t_8;
       __pyx_L7_bool_binop_done:;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":506
+        /* "tricks.pyx":507
  *             for count, i in enumerate(data):
  *                 if self.check_NSFW.isChecked() == False and i[DB.NSFW] == True:
  *                     continue             # <<<<<<<<<<<<<<
@@ -12207,7 +12204,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         goto __pyx_L4_continue;
 
-        /* "tricks.pyx":505
+        /* "tricks.pyx":506
  *         if data != []:
  *             for count, i in enumerate(data):
  *                 if self.check_NSFW.isChecked() == False and i[DB.NSFW] == True:             # <<<<<<<<<<<<<<
@@ -12216,16 +12213,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
       }
 
-      /* "tricks.pyx":507
+      /* "tricks.pyx":508
  *                 if self.check_NSFW.isChecked() == False and i[DB.NSFW] == True:
  *                     continue
  *                 elif self.check_hide_linked.isChecked() == True and i[DB.comic_id] != None:             # <<<<<<<<<<<<<<
  *                     continue
  *                 elif self.check_hide_unlinked.isChecked() == True and i[DB.comic_id] == None:
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_hide_linked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 507, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_hide_linked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 507, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_1 = NULL;
@@ -12240,12 +12237,12 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_7 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 507, __pyx_L1_error)
+      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyObject_RichCompare(__pyx_t_7, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 507, __pyx_L1_error)
+      __pyx_t_6 = PyObject_RichCompare(__pyx_t_7, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 507, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       if (__pyx_t_8) {
       } else {
@@ -12254,22 +12251,22 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       if (unlikely(__pyx_v_i == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 507, __pyx_L1_error)
+        __PYX_ERR(0, 508, __pyx_L1_error)
       }
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 507, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 507, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 507, __pyx_L1_error)
+      __pyx_t_6 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 507, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 508, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_t_3 = __pyx_t_8;
       __pyx_L9_bool_binop_done:;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":508
+        /* "tricks.pyx":509
  *                     continue
  *                 elif self.check_hide_linked.isChecked() == True and i[DB.comic_id] != None:
  *                     continue             # <<<<<<<<<<<<<<
@@ -12278,7 +12275,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         goto __pyx_L4_continue;
 
-        /* "tricks.pyx":507
+        /* "tricks.pyx":508
  *                 if self.check_NSFW.isChecked() == False and i[DB.NSFW] == True:
  *                     continue
  *                 elif self.check_hide_linked.isChecked() == True and i[DB.comic_id] != None:             # <<<<<<<<<<<<<<
@@ -12287,16 +12284,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
       }
 
-      /* "tricks.pyx":509
+      /* "tricks.pyx":510
  *                 elif self.check_hide_linked.isChecked() == True and i[DB.comic_id] != None:
  *                     continue
  *                 elif self.check_hide_unlinked.isChecked() == True and i[DB.comic_id] == None:             # <<<<<<<<<<<<<<
  *                     continue
  *                 elif i[DB.md5] == 'fake_id_generated_by_long_snabel':
  */
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_hide_unlinked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 509, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_check_hide_unlinked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 509, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_7 = NULL;
@@ -12311,12 +12308,12 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_6 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 509, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 509, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 509, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_8) {
       } else {
@@ -12325,22 +12322,22 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       if (unlikely(__pyx_v_i == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 509, __pyx_L1_error)
+        __PYX_ERR(0, 510, __pyx_L1_error)
       }
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 509, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 509, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 509, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 509, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 510, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_3 = __pyx_t_8;
       __pyx_L11_bool_binop_done:;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":510
+        /* "tricks.pyx":511
  *                     continue
  *                 elif self.check_hide_unlinked.isChecked() == True and i[DB.comic_id] == None:
  *                     continue             # <<<<<<<<<<<<<<
@@ -12349,7 +12346,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         goto __pyx_L4_continue;
 
-        /* "tricks.pyx":509
+        /* "tricks.pyx":510
  *                 elif self.check_hide_linked.isChecked() == True and i[DB.comic_id] != None:
  *                     continue
  *                 elif self.check_hide_unlinked.isChecked() == True and i[DB.comic_id] == None:             # <<<<<<<<<<<<<<
@@ -12358,7 +12355,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
       }
 
-      /* "tricks.pyx":511
+      /* "tricks.pyx":512
  *                 elif self.check_hide_unlinked.isChecked() == True and i[DB.comic_id] == None:
  *                     continue
  *                 elif i[DB.md5] == 'fake_id_generated_by_long_snabel':             # <<<<<<<<<<<<<<
@@ -12367,18 +12364,18 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
       if (unlikely(__pyx_v_i == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 511, __pyx_L1_error)
+        __PYX_ERR(0, 512, __pyx_L1_error)
       }
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_md5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_md5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 512, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 511, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 512, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_3 = (__Pyx_PyUnicode_Equals(__pyx_t_6, __pyx_n_u_fake_id_generated_by_long_snabel, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 511, __pyx_L1_error)
+      __pyx_t_3 = (__Pyx_PyUnicode_Equals(__pyx_t_6, __pyx_n_u_fake_id_generated_by_long_snabel, Py_EQ)); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 512, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":512
+        /* "tricks.pyx":513
  *                     continue
  *                 elif i[DB.md5] == 'fake_id_generated_by_long_snabel':
  *                     continue             # <<<<<<<<<<<<<<
@@ -12387,7 +12384,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         goto __pyx_L4_continue;
 
-        /* "tricks.pyx":511
+        /* "tricks.pyx":512
  *                 elif self.check_hide_unlinked.isChecked() == True and i[DB.comic_id] == None:
  *                     continue
  *                 elif i[DB.md5] == 'fake_id_generated_by_long_snabel':             # <<<<<<<<<<<<<<
@@ -12396,16 +12393,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
       }
 
-      /* "tricks.pyx":514
+      /* "tricks.pyx":515
  *                     continue
  * 
  *                 if self.file_name_radio.isChecked() == True:             # <<<<<<<<<<<<<<
  *                     rvdict[i] = i[DB.file_name]
  *                 elif self.radio_issue_number.isChecked() == True:
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_name_radio); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 514, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_name_radio); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 515, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 514, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 515, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_1 = NULL;
@@ -12420,16 +12417,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_6 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 514, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 515, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 514, __pyx_L1_error)
+      __pyx_t_7 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 515, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 514, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 515, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":515
+        /* "tricks.pyx":516
  * 
  *                 if self.file_name_radio.isChecked() == True:
  *                     rvdict[i] = i[DB.file_name]             # <<<<<<<<<<<<<<
@@ -12438,17 +12435,17 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         if (unlikely(__pyx_v_i == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 515, __pyx_L1_error)
+          __PYX_ERR(0, 516, __pyx_L1_error)
         }
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_file_name); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 515, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_file_name); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 515, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_6) < 0)) __PYX_ERR(0, 515, __pyx_L1_error)
+        if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_6) < 0)) __PYX_ERR(0, 516, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "tricks.pyx":514
+        /* "tricks.pyx":515
  *                     continue
  * 
  *                 if self.file_name_radio.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -12458,16 +12455,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         goto __pyx_L13;
       }
 
-      /* "tricks.pyx":516
+      /* "tricks.pyx":517
  *                 if self.file_name_radio.isChecked() == True:
  *                     rvdict[i] = i[DB.file_name]
  *                 elif self.radio_issue_number.isChecked() == True:             # <<<<<<<<<<<<<<
  *                     if i[DB.issue_number] != None:
  *                         try: rvdict[i] = int(i[DB.issue_number])
  */
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_radio_issue_number); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 516, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_radio_issue_number); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 517, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 516, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_7 = NULL;
@@ -12482,16 +12479,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_6 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 516, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 517, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 516, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 516, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 517, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":517
+        /* "tricks.pyx":518
  *                     rvdict[i] = i[DB.file_name]
  *                 elif self.radio_issue_number.isChecked() == True:
  *                     if i[DB.issue_number] != None:             # <<<<<<<<<<<<<<
@@ -12500,20 +12497,20 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         if (unlikely(__pyx_v_i == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 517, __pyx_L1_error)
+          __PYX_ERR(0, 518, __pyx_L1_error)
         }
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_issue_number); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_issue_number); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 518, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 517, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 518, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_3) {
 
-          /* "tricks.pyx":518
+          /* "tricks.pyx":519
  *                 elif self.radio_issue_number.isChecked() == True:
  *                     if i[DB.issue_number] != None:
  *                         try: rvdict[i] = int(i[DB.issue_number])             # <<<<<<<<<<<<<<
@@ -12530,17 +12527,17 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
             /*try:*/ {
               if (unlikely(__pyx_v_i == Py_None)) {
                 PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-                __PYX_ERR(0, 518, __pyx_L15_error)
+                __PYX_ERR(0, 519, __pyx_L15_error)
               }
-              __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_issue_number); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L15_error)
+              __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_issue_number); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 519, __pyx_L15_error)
               __Pyx_GOTREF(__pyx_t_1);
-              __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 518, __pyx_L15_error)
+              __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 519, __pyx_L15_error)
               __Pyx_GOTREF(__pyx_t_6);
               __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-              __pyx_t_1 = __Pyx_PyNumber_Int(__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L15_error)
+              __pyx_t_1 = __Pyx_PyNumber_Int(__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 519, __pyx_L15_error)
               __Pyx_GOTREF(__pyx_t_1);
               __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-              if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_1) < 0)) __PYX_ERR(0, 518, __pyx_L15_error)
+              if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_1) < 0)) __PYX_ERR(0, 519, __pyx_L15_error)
               __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             }
             __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
@@ -12552,7 +12549,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
             __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
             __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-            /* "tricks.pyx":519
+            /* "tricks.pyx":520
  *                     if i[DB.issue_number] != None:
  *                         try: rvdict[i] = int(i[DB.issue_number])
  *                         except TypeError: rvdict[i] = 0             # <<<<<<<<<<<<<<
@@ -12562,18 +12559,18 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
             __pyx_t_12 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_TypeError);
             if (__pyx_t_12) {
               __Pyx_AddTraceback("tricks.tech.uni_sort", __pyx_clineno, __pyx_lineno, __pyx_filename);
-              if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 519, __pyx_L17_except_error)
+              if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 520, __pyx_L17_except_error)
               __Pyx_GOTREF(__pyx_t_1);
               __Pyx_GOTREF(__pyx_t_6);
               __Pyx_GOTREF(__pyx_t_7);
-              if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_0) < 0)) __PYX_ERR(0, 519, __pyx_L17_except_error)
+              if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_0) < 0)) __PYX_ERR(0, 520, __pyx_L17_except_error)
               __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
               __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
               __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
               goto __pyx_L16_exception_handled;
             }
 
-            /* "tricks.pyx":520
+            /* "tricks.pyx":521
  *                         try: rvdict[i] = int(i[DB.issue_number])
  *                         except TypeError: rvdict[i] = 0
  *                         except ValueError: rvdict[i] = 0             # <<<<<<<<<<<<<<
@@ -12583,11 +12580,11 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
             __pyx_t_12 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_ValueError);
             if (__pyx_t_12) {
               __Pyx_AddTraceback("tricks.tech.uni_sort", __pyx_clineno, __pyx_lineno, __pyx_filename);
-              if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_6, &__pyx_t_1) < 0) __PYX_ERR(0, 520, __pyx_L17_except_error)
+              if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_6, &__pyx_t_1) < 0) __PYX_ERR(0, 521, __pyx_L17_except_error)
               __Pyx_GOTREF(__pyx_t_7);
               __Pyx_GOTREF(__pyx_t_6);
               __Pyx_GOTREF(__pyx_t_1);
-              if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_0) < 0)) __PYX_ERR(0, 520, __pyx_L17_except_error)
+              if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_0) < 0)) __PYX_ERR(0, 521, __pyx_L17_except_error)
               __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
               __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
               __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -12596,7 +12593,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
             goto __pyx_L17_except_error;
             __pyx_L17_except_error:;
 
-            /* "tricks.pyx":518
+            /* "tricks.pyx":519
  *                 elif self.radio_issue_number.isChecked() == True:
  *                     if i[DB.issue_number] != None:
  *                         try: rvdict[i] = int(i[DB.issue_number])             # <<<<<<<<<<<<<<
@@ -12616,7 +12613,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
             __pyx_L22_try_end:;
           }
 
-          /* "tricks.pyx":517
+          /* "tricks.pyx":518
  *                     rvdict[i] = i[DB.file_name]
  *                 elif self.radio_issue_number.isChecked() == True:
  *                     if i[DB.issue_number] != None:             # <<<<<<<<<<<<<<
@@ -12626,7 +12623,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           goto __pyx_L14;
         }
 
-        /* "tricks.pyx":522
+        /* "tricks.pyx":523
  *                         except ValueError: rvdict[i] = 0
  *                     else:
  *                         rvdict[i] = 999999999             # <<<<<<<<<<<<<<
@@ -12634,11 +12631,11 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  *                 elif self.radio_last_opened.isChecked() == True:
  */
         /*else*/ {
-          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_999999999) < 0)) __PYX_ERR(0, 522, __pyx_L1_error)
+          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_999999999) < 0)) __PYX_ERR(0, 523, __pyx_L1_error)
         }
         __pyx_L14:;
 
-        /* "tricks.pyx":516
+        /* "tricks.pyx":517
  *                 if self.file_name_radio.isChecked() == True:
  *                     rvdict[i] = i[DB.file_name]
  *                 elif self.radio_issue_number.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -12648,16 +12645,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         goto __pyx_L13;
       }
 
-      /* "tricks.pyx":524
+      /* "tricks.pyx":525
  *                         rvdict[i] = 999999999
  * 
  *                 elif self.radio_last_opened.isChecked() == True:             # <<<<<<<<<<<<<<
  *                     rvdict[i] = i[DB.last_viewed]
  *                 elif self.db_id_radio.isChecked() == True:
  */
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_radio_last_opened); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 524, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_radio_last_opened); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 525, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 524, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 525, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_t_6 = NULL;
@@ -12672,16 +12669,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_1 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 524, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 525, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 524, __pyx_L1_error)
+      __pyx_t_7 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 525, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 524, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 525, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":525
+        /* "tricks.pyx":526
  * 
  *                 elif self.radio_last_opened.isChecked() == True:
  *                     rvdict[i] = i[DB.last_viewed]             # <<<<<<<<<<<<<<
@@ -12690,17 +12687,17 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         if (unlikely(__pyx_v_i == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 525, __pyx_L1_error)
+          __PYX_ERR(0, 526, __pyx_L1_error)
         }
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_last_viewed); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 525, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_last_viewed); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 526, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 525, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 526, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_1) < 0)) __PYX_ERR(0, 525, __pyx_L1_error)
+        if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_1) < 0)) __PYX_ERR(0, 526, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-        /* "tricks.pyx":524
+        /* "tricks.pyx":525
  *                         rvdict[i] = 999999999
  * 
  *                 elif self.radio_last_opened.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -12710,16 +12707,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         goto __pyx_L13;
       }
 
-      /* "tricks.pyx":526
+      /* "tricks.pyx":527
  *                 elif self.radio_last_opened.isChecked() == True:
  *                     rvdict[i] = i[DB.last_viewed]
  *                 elif self.db_id_radio.isChecked() == True:             # <<<<<<<<<<<<<<
  *                     rvdict[i] = i[0]
  *                 elif self.file_size_radio.isChecked() == True:
  */
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_db_id_radio); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 526, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_db_id_radio); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 527, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 526, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 527, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_7 = NULL;
@@ -12734,16 +12731,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_1 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 526, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 527, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 526, __pyx_L1_error)
+      __pyx_t_6 = PyObject_RichCompare(__pyx_t_1, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 527, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 526, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 527, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":527
+        /* "tricks.pyx":528
  *                     rvdict[i] = i[DB.last_viewed]
  *                 elif self.db_id_radio.isChecked() == True:
  *                     rvdict[i] = i[0]             # <<<<<<<<<<<<<<
@@ -12752,14 +12749,14 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         if (unlikely(__pyx_v_i == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 527, __pyx_L1_error)
+          __PYX_ERR(0, 528, __pyx_L1_error)
         }
-        __pyx_t_6 = __Pyx_GetItemInt_Tuple(__pyx_v_i, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 527, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_GetItemInt_Tuple(__pyx_v_i, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 528, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_6) < 0)) __PYX_ERR(0, 527, __pyx_L1_error)
+        if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_6) < 0)) __PYX_ERR(0, 528, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "tricks.pyx":526
+        /* "tricks.pyx":527
  *                 elif self.radio_last_opened.isChecked() == True:
  *                     rvdict[i] = i[DB.last_viewed]
  *                 elif self.db_id_radio.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -12769,16 +12766,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         goto __pyx_L13;
       }
 
-      /* "tricks.pyx":528
+      /* "tricks.pyx":529
  *                 elif self.db_id_radio.isChecked() == True:
  *                     rvdict[i] = i[0]
  *                 elif self.file_size_radio.isChecked() == True:             # <<<<<<<<<<<<<<
  *                     rvdict[i] = i[DB.file_size]
  *                 elif self.comicvine_id_radio.isChecked() == True:
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_size_radio); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 528, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_file_size_radio); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 528, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 529, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_1 = NULL;
@@ -12793,16 +12790,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_6 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 528, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 529, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 528, __pyx_L1_error)
+      __pyx_t_7 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 529, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 528, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 529, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":529
+        /* "tricks.pyx":530
  *                     rvdict[i] = i[0]
  *                 elif self.file_size_radio.isChecked() == True:
  *                     rvdict[i] = i[DB.file_size]             # <<<<<<<<<<<<<<
@@ -12811,17 +12808,17 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         if (unlikely(__pyx_v_i == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 529, __pyx_L1_error)
+          __PYX_ERR(0, 530, __pyx_L1_error)
         }
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_file_size); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 529, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_file_size); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 530, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 529, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 530, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_6) < 0)) __PYX_ERR(0, 529, __pyx_L1_error)
+        if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_6) < 0)) __PYX_ERR(0, 530, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-        /* "tricks.pyx":528
+        /* "tricks.pyx":529
  *                 elif self.db_id_radio.isChecked() == True:
  *                     rvdict[i] = i[0]
  *                 elif self.file_size_radio.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -12831,16 +12828,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         goto __pyx_L13;
       }
 
-      /* "tricks.pyx":530
+      /* "tricks.pyx":531
  *                 elif self.file_size_radio.isChecked() == True:
  *                     rvdict[i] = i[DB.file_size]
  *                 elif self.comicvine_id_radio.isChecked() == True:             # <<<<<<<<<<<<<<
  *                     if i[DB.comic_id] != None:
  *                         rvdict[i] = i[DB.comic_id]
  */
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_comicvine_id_radio); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 530, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_comicvine_id_radio); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 531, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 530, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 531, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_t_7 = NULL;
@@ -12855,16 +12852,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_6 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 530, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 531, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 530, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 531, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 530, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 531, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":531
+        /* "tricks.pyx":532
  *                     rvdict[i] = i[DB.file_size]
  *                 elif self.comicvine_id_radio.isChecked() == True:
  *                     if i[DB.comic_id] != None:             # <<<<<<<<<<<<<<
@@ -12873,20 +12870,20 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         if (unlikely(__pyx_v_i == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 531, __pyx_L1_error)
+          __PYX_ERR(0, 532, __pyx_L1_error)
         }
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 531, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 531, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 532, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 531, __pyx_L1_error)
+        __pyx_t_1 = PyObject_RichCompare(__pyx_t_6, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 531, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 532, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_3) {
 
-          /* "tricks.pyx":532
+          /* "tricks.pyx":533
  *                 elif self.comicvine_id_radio.isChecked() == True:
  *                     if i[DB.comic_id] != None:
  *                         rvdict[i] = i[DB.comic_id]             # <<<<<<<<<<<<<<
@@ -12895,17 +12892,17 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
           if (unlikely(__pyx_v_i == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 532, __pyx_L1_error)
+            __PYX_ERR(0, 533, __pyx_L1_error)
           }
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_id); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 532, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 533, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_6) < 0)) __PYX_ERR(0, 532, __pyx_L1_error)
+          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_6) < 0)) __PYX_ERR(0, 533, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
 
-          /* "tricks.pyx":531
+          /* "tricks.pyx":532
  *                     rvdict[i] = i[DB.file_size]
  *                 elif self.comicvine_id_radio.isChecked() == True:
  *                     if i[DB.comic_id] != None:             # <<<<<<<<<<<<<<
@@ -12915,16 +12912,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           goto __pyx_L27;
         }
 
-        /* "tricks.pyx":533
+        /* "tricks.pyx":534
  *                     if i[DB.comic_id] != None:
  *                         rvdict[i] = i[DB.comic_id]
  *                     elif self.asc_radio.isChecked() == True:             # <<<<<<<<<<<<<<
  *                         rvdict[i] = 999999999
  *                     else:
  */
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_asc_radio); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_asc_radio); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 534, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 533, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 534, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_t_1 = NULL;
@@ -12939,25 +12936,25 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         }
         __pyx_t_6 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 533, __pyx_L1_error)
+        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 534, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 533, __pyx_L1_error)
+        __pyx_t_7 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 534, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 533, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 534, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         if (__pyx_t_3) {
 
-          /* "tricks.pyx":534
+          /* "tricks.pyx":535
  *                         rvdict[i] = i[DB.comic_id]
  *                     elif self.asc_radio.isChecked() == True:
  *                         rvdict[i] = 999999999             # <<<<<<<<<<<<<<
  *                     else:
  *                         rvdict[i] = 0
  */
-          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_999999999) < 0)) __PYX_ERR(0, 534, __pyx_L1_error)
+          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_999999999) < 0)) __PYX_ERR(0, 535, __pyx_L1_error)
 
-          /* "tricks.pyx":533
+          /* "tricks.pyx":534
  *                     if i[DB.comic_id] != None:
  *                         rvdict[i] = i[DB.comic_id]
  *                     elif self.asc_radio.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -12967,7 +12964,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           goto __pyx_L27;
         }
 
-        /* "tricks.pyx":536
+        /* "tricks.pyx":537
  *                         rvdict[i] = 999999999
  *                     else:
  *                         rvdict[i] = 0             # <<<<<<<<<<<<<<
@@ -12975,11 +12972,11 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  *                     if i[DB.user_rating] != None:
  */
         /*else*/ {
-          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_0) < 0)) __PYX_ERR(0, 536, __pyx_L1_error)
+          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_0) < 0)) __PYX_ERR(0, 537, __pyx_L1_error)
         }
         __pyx_L27:;
 
-        /* "tricks.pyx":530
+        /* "tricks.pyx":531
  *                 elif self.file_size_radio.isChecked() == True:
  *                     rvdict[i] = i[DB.file_size]
  *                 elif self.comicvine_id_radio.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -12989,16 +12986,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         goto __pyx_L13;
       }
 
-      /* "tricks.pyx":537
+      /* "tricks.pyx":538
  *                     else:
  *                         rvdict[i] = 0
  *                 elif self.user_rating_radio.isChecked() == True:             # <<<<<<<<<<<<<<
  *                     if i[DB.user_rating] != None:
  *                         rvdict[i] = i[DB.user_rating]
  */
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_user_rating_radio); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 537, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_user_rating_radio); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_t_6 = NULL;
@@ -13013,16 +13010,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_t_7 = (__pyx_t_6) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_6) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 537, __pyx_L1_error)
+      if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = PyObject_RichCompare(__pyx_t_7, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_t_7, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 537, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 538, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_3) {
 
-        /* "tricks.pyx":538
+        /* "tricks.pyx":539
  *                         rvdict[i] = 0
  *                 elif self.user_rating_radio.isChecked() == True:
  *                     if i[DB.user_rating] != None:             # <<<<<<<<<<<<<<
@@ -13031,20 +13028,20 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
         if (unlikely(__pyx_v_i == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 538, __pyx_L1_error)
+          __PYX_ERR(0, 539, __pyx_L1_error)
         }
-        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_user_rating); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_user_rating); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 538, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 539, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_1 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
+        __pyx_t_1 = PyObject_RichCompare(__pyx_t_7, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 538, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 539, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         if (__pyx_t_3) {
 
-          /* "tricks.pyx":539
+          /* "tricks.pyx":540
  *                 elif self.user_rating_radio.isChecked() == True:
  *                     if i[DB.user_rating] != None:
  *                         rvdict[i] = i[DB.user_rating]             # <<<<<<<<<<<<<<
@@ -13053,17 +13050,17 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
           if (unlikely(__pyx_v_i == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-            __PYX_ERR(0, 539, __pyx_L1_error)
+            __PYX_ERR(0, 540, __pyx_L1_error)
           }
-          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_user_rating); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
+          __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_user_rating); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 539, __pyx_L1_error)
+          __pyx_t_7 = __Pyx_PyObject_GetItem(__pyx_v_i, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 540, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_7) < 0)) __PYX_ERR(0, 539, __pyx_L1_error)
+          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_t_7) < 0)) __PYX_ERR(0, 540, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "tricks.pyx":538
+          /* "tricks.pyx":539
  *                         rvdict[i] = 0
  *                 elif self.user_rating_radio.isChecked() == True:
  *                     if i[DB.user_rating] != None:             # <<<<<<<<<<<<<<
@@ -13073,7 +13070,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           goto __pyx_L28;
         }
 
-        /* "tricks.pyx":541
+        /* "tricks.pyx":542
  *                         rvdict[i] = i[DB.user_rating]
  *                     else:
  *                         rvdict[i] = 0             # <<<<<<<<<<<<<<
@@ -13081,11 +13078,11 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  *             if rvdict != {}:
  */
         /*else*/ {
-          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_0) < 0)) __PYX_ERR(0, 541, __pyx_L1_error)
+          if (unlikely(PyDict_SetItem(__pyx_v_rvdict, __pyx_v_i, __pyx_int_0) < 0)) __PYX_ERR(0, 542, __pyx_L1_error)
         }
         __pyx_L28:;
 
-        /* "tricks.pyx":537
+        /* "tricks.pyx":538
  *                     else:
  *                         rvdict[i] = 0
  *                 elif self.user_rating_radio.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -13095,7 +13092,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       }
       __pyx_L13:;
 
-      /* "tricks.pyx":504
+      /* "tricks.pyx":505
  *         cdef tuple i
  *         if data != []:
  *             for count, i in enumerate(data):             # <<<<<<<<<<<<<<
@@ -13106,34 +13103,34 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "tricks.pyx":542
+    /* "tricks.pyx":543
  *                     else:
  *                         rvdict[i] = 0
  *             data = []             # <<<<<<<<<<<<<<
  *             if rvdict != {}:
  *                 try:
  */
-    __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 542, __pyx_L1_error)
+    __pyx_t_2 = PyList_New(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 543, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF_SET(__pyx_v_data, ((PyObject*)__pyx_t_2));
     __pyx_t_2 = 0;
 
-    /* "tricks.pyx":543
+    /* "tricks.pyx":544
  *                         rvdict[i] = 0
  *             data = []
  *             if rvdict != {}:             # <<<<<<<<<<<<<<
  *                 try:
  *                     rvdict = {k: v for k, v in sorted(rvdict.items(), key=lambda item: item[1])}
  */
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 543, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_7 = PyObject_RichCompare(__pyx_v_rvdict, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 543, __pyx_L1_error)
+    __pyx_t_7 = PyObject_RichCompare(__pyx_v_rvdict, __pyx_t_2, Py_NE); __Pyx_XGOTREF(__pyx_t_7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 543, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_7); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 544, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     if (__pyx_t_3) {
 
-      /* "tricks.pyx":544
+      /* "tricks.pyx":545
  *             data = []
  *             if rvdict != {}:
  *                 try:             # <<<<<<<<<<<<<<
@@ -13150,7 +13147,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           __Pyx_XGOTREF(__pyx_t_9);
           /*try:*/ {
 
-            /* "tricks.pyx":545
+            /* "tricks.pyx":546
  *             if rvdict != {}:
  *                 try:
  *                     rvdict = {k: v for k, v in sorted(rvdict.items(), key=lambda item: item[1])}             # <<<<<<<<<<<<<<
@@ -13158,22 +13155,22 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  *                 finally:
  */
             { /* enter inner scope */
-              __pyx_t_7 = PyDict_New(); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 545, __pyx_L41_error)
+              __pyx_t_7 = PyDict_New(); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 546, __pyx_L41_error)
               __Pyx_GOTREF(__pyx_t_7);
-              __pyx_t_2 = __Pyx_PyDict_Items(__pyx_v_rvdict); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 545, __pyx_L41_error)
+              __pyx_t_2 = __Pyx_PyDict_Items(__pyx_v_rvdict); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L41_error)
               __Pyx_GOTREF(__pyx_t_2);
-              __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L41_error)
+              __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L41_error)
               __Pyx_GOTREF(__pyx_t_1);
               __Pyx_GIVEREF(__pyx_t_2);
               PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
               __pyx_t_2 = 0;
-              __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 545, __pyx_L41_error)
+              __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L41_error)
               __Pyx_GOTREF(__pyx_t_2);
-              __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_8uni_sort_7genexpr_lambda, 0, __pyx_n_s_tech_uni_sort_locals_lambda, NULL, __pyx_n_s_tricks, __pyx_d, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 545, __pyx_L41_error)
+              __pyx_t_6 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_8uni_sort_7genexpr_lambda, 0, __pyx_n_s_tech_uni_sort_locals_lambda, NULL, __pyx_n_s_tricks, __pyx_d, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 546, __pyx_L41_error)
               __Pyx_GOTREF(__pyx_t_6);
-              if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_key, __pyx_t_6) < 0) __PYX_ERR(0, 545, __pyx_L41_error)
+              if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_key, __pyx_t_6) < 0) __PYX_ERR(0, 546, __pyx_L41_error)
               __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-              __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_sorted, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 545, __pyx_L41_error)
+              __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_sorted, __pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 546, __pyx_L41_error)
               __Pyx_GOTREF(__pyx_t_6);
               __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -13181,9 +13178,9 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
                 __pyx_t_2 = __pyx_t_6; __Pyx_INCREF(__pyx_t_2); __pyx_t_5 = 0;
                 __pyx_t_13 = NULL;
               } else {
-                __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 545, __pyx_L41_error)
+                __pyx_t_5 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 546, __pyx_L41_error)
                 __Pyx_GOTREF(__pyx_t_2);
-                __pyx_t_13 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 545, __pyx_L41_error)
+                __pyx_t_13 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 546, __pyx_L41_error)
               }
               __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
               for (;;) {
@@ -13191,17 +13188,17 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
                   if (likely(PyList_CheckExact(__pyx_t_2))) {
                     if (__pyx_t_5 >= PyList_GET_SIZE(__pyx_t_2)) break;
                     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                    __pyx_t_6 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_6); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 545, __pyx_L41_error)
+                    __pyx_t_6 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_6); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 546, __pyx_L41_error)
                     #else
-                    __pyx_t_6 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 545, __pyx_L41_error)
+                    __pyx_t_6 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 546, __pyx_L41_error)
                     __Pyx_GOTREF(__pyx_t_6);
                     #endif
                   } else {
                     if (__pyx_t_5 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
                     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                    __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_6); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 545, __pyx_L41_error)
+                    __pyx_t_6 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_6); __pyx_t_5++; if (unlikely(0 < 0)) __PYX_ERR(0, 546, __pyx_L41_error)
                     #else
-                    __pyx_t_6 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 545, __pyx_L41_error)
+                    __pyx_t_6 = PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 546, __pyx_L41_error)
                     __Pyx_GOTREF(__pyx_t_6);
                     #endif
                   }
@@ -13211,7 +13208,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
                     PyObject* exc_type = PyErr_Occurred();
                     if (exc_type) {
                       if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                      else __PYX_ERR(0, 545, __pyx_L41_error)
+                      else __PYX_ERR(0, 546, __pyx_L41_error)
                     }
                     break;
                   }
@@ -13223,7 +13220,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
                   if (unlikely(size != 2)) {
                     if (size > 2) __Pyx_RaiseTooManyValuesError(2);
                     else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-                    __PYX_ERR(0, 545, __pyx_L41_error)
+                    __PYX_ERR(0, 546, __pyx_L41_error)
                   }
                   #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
                   if (likely(PyTuple_CheckExact(sequence))) {
@@ -13236,15 +13233,15 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
                   __Pyx_INCREF(__pyx_t_1);
                   __Pyx_INCREF(__pyx_t_14);
                   #else
-                  __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L41_error)
+                  __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L41_error)
                   __Pyx_GOTREF(__pyx_t_1);
-                  __pyx_t_14 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 545, __pyx_L41_error)
+                  __pyx_t_14 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 546, __pyx_L41_error)
                   __Pyx_GOTREF(__pyx_t_14);
                   #endif
                   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
                 } else {
                   Py_ssize_t index = -1;
-                  __pyx_t_15 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 545, __pyx_L41_error)
+                  __pyx_t_15 = PyObject_GetIter(__pyx_t_6); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 546, __pyx_L41_error)
                   __Pyx_GOTREF(__pyx_t_15);
                   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
                   __pyx_t_16 = Py_TYPE(__pyx_t_15)->tp_iternext;
@@ -13252,7 +13249,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
                   __Pyx_GOTREF(__pyx_t_1);
                   index = 1; __pyx_t_14 = __pyx_t_16(__pyx_t_15); if (unlikely(!__pyx_t_14)) goto __pyx_L44_unpacking_failed;
                   __Pyx_GOTREF(__pyx_t_14);
-                  if (__Pyx_IternextUnpackEndCheck(__pyx_t_16(__pyx_t_15), 2) < 0) __PYX_ERR(0, 545, __pyx_L41_error)
+                  if (__Pyx_IternextUnpackEndCheck(__pyx_t_16(__pyx_t_15), 2) < 0) __PYX_ERR(0, 546, __pyx_L41_error)
                   __pyx_t_16 = NULL;
                   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
                   goto __pyx_L45_unpacking_done;
@@ -13260,14 +13257,14 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
                   __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
                   __pyx_t_16 = NULL;
                   if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-                  __PYX_ERR(0, 545, __pyx_L41_error)
+                  __PYX_ERR(0, 546, __pyx_L41_error)
                   __pyx_L45_unpacking_done:;
                 }
                 __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_k, __pyx_t_1);
                 __pyx_t_1 = 0;
                 __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_v, __pyx_t_14);
                 __pyx_t_14 = 0;
-                if (unlikely(PyDict_SetItem(__pyx_t_7, (PyObject*)__pyx_7genexpr__pyx_v_k, (PyObject*)__pyx_7genexpr__pyx_v_v))) __PYX_ERR(0, 545, __pyx_L41_error)
+                if (unlikely(PyDict_SetItem(__pyx_t_7, (PyObject*)__pyx_7genexpr__pyx_v_k, (PyObject*)__pyx_7genexpr__pyx_v_v))) __PYX_ERR(0, 546, __pyx_L41_error)
               }
               __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
               __Pyx_XDECREF(__pyx_7genexpr__pyx_v_k); __pyx_7genexpr__pyx_v_k = 0;
@@ -13282,7 +13279,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
             __Pyx_DECREF_SET(__pyx_v_rvdict, ((PyObject*)__pyx_t_7));
             __pyx_t_7 = 0;
 
-            /* "tricks.pyx":544
+            /* "tricks.pyx":545
  *             data = []
  *             if rvdict != {}:
  *                 try:             # <<<<<<<<<<<<<<
@@ -13302,7 +13299,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-          /* "tricks.pyx":546
+          /* "tricks.pyx":547
  *                 try:
  *                     rvdict = {k: v for k, v in sorted(rvdict.items(), key=lambda item: item[1])}
  *                 except TypeError: pass             # <<<<<<<<<<<<<<
@@ -13317,7 +13314,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           goto __pyx_L35_except_error;
           __pyx_L35_except_error:;
 
-          /* "tricks.pyx":544
+          /* "tricks.pyx":545
  *             data = []
  *             if rvdict != {}:
  *                 try:             # <<<<<<<<<<<<<<
@@ -13338,7 +13335,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         }
       }
 
-      /* "tricks.pyx":548
+      /* "tricks.pyx":549
  *                 except TypeError: pass
  *                 finally:
  *                     for i,_ in rvdict.items():             # <<<<<<<<<<<<<<
@@ -13348,7 +13345,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
       /*finally:*/ {
         /*normal exit:*/{
           __pyx_t_5 = 0;
-          __pyx_t_2 = __Pyx_dict_iterator(__pyx_v_rvdict, 1, __pyx_n_s_items, (&__pyx_t_17), (&__pyx_t_4)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 548, __pyx_L1_error)
+          __pyx_t_2 = __Pyx_dict_iterator(__pyx_v_rvdict, 1, __pyx_n_s_items, (&__pyx_t_17), (&__pyx_t_4)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 549, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_XDECREF(__pyx_t_7);
           __pyx_t_7 = __pyx_t_2;
@@ -13356,23 +13353,23 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           while (1) {
             __pyx_t_12 = __Pyx_dict_iter_next(__pyx_t_7, __pyx_t_17, &__pyx_t_5, &__pyx_t_2, &__pyx_t_6, NULL, __pyx_t_4);
             if (unlikely(__pyx_t_12 == 0)) break;
-            if (unlikely(__pyx_t_12 == -1)) __PYX_ERR(0, 548, __pyx_L1_error)
+            if (unlikely(__pyx_t_12 == -1)) __PYX_ERR(0, 549, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_2);
             __Pyx_GOTREF(__pyx_t_6);
-            if (!(likely(PyTuple_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 548, __pyx_L1_error)
+            if (!(likely(PyTuple_CheckExact(__pyx_t_2))||((__pyx_t_2) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_2)->tp_name), 0))) __PYX_ERR(0, 549, __pyx_L1_error)
             __Pyx_XDECREF_SET(__pyx_v_i, ((PyObject*)__pyx_t_2));
             __pyx_t_2 = 0;
             __Pyx_XDECREF_SET(__pyx_v__, __pyx_t_6);
             __pyx_t_6 = 0;
 
-            /* "tricks.pyx":549
+            /* "tricks.pyx":550
  *                 finally:
  *                     for i,_ in rvdict.items():
  *                         data.append(i)             # <<<<<<<<<<<<<<
  * 
  *             if self.dec_radio.isChecked() == True or self.user_rating_radio.isChecked() == True:
  */
-            __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_data, __pyx_v_i); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 549, __pyx_L1_error)
+            __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_data, __pyx_v_i); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 550, __pyx_L1_error)
           }
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           goto __pyx_L32;
@@ -13399,7 +13396,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
           __pyx_t_4 = __pyx_lineno; __pyx_t_12 = __pyx_clineno; __pyx_t_19 = __pyx_filename;
           {
 
-            /* "tricks.pyx":548
+            /* "tricks.pyx":549
  *                 except TypeError: pass
  *                 finally:
  *                     for i,_ in rvdict.items():             # <<<<<<<<<<<<<<
@@ -13407,7 +13404,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  * 
  */
             __pyx_t_17 = 0;
-            __pyx_t_6 = __Pyx_dict_iterator(__pyx_v_rvdict, 1, __pyx_n_s_items, (&__pyx_t_5), (&__pyx_t_23)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 548, __pyx_L50_error)
+            __pyx_t_6 = __Pyx_dict_iterator(__pyx_v_rvdict, 1, __pyx_n_s_items, (&__pyx_t_5), (&__pyx_t_23)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 549, __pyx_L50_error)
             __Pyx_GOTREF(__pyx_t_6);
             __Pyx_XDECREF(__pyx_t_7);
             __pyx_t_7 = __pyx_t_6;
@@ -13415,23 +13412,23 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
             while (1) {
               __pyx_t_24 = __Pyx_dict_iter_next(__pyx_t_7, __pyx_t_5, &__pyx_t_17, &__pyx_t_6, &__pyx_t_2, NULL, __pyx_t_23);
               if (unlikely(__pyx_t_24 == 0)) break;
-              if (unlikely(__pyx_t_24 == -1)) __PYX_ERR(0, 548, __pyx_L50_error)
+              if (unlikely(__pyx_t_24 == -1)) __PYX_ERR(0, 549, __pyx_L50_error)
               __Pyx_GOTREF(__pyx_t_6);
               __Pyx_GOTREF(__pyx_t_2);
-              if (!(likely(PyTuple_CheckExact(__pyx_t_6))||((__pyx_t_6) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_6)->tp_name), 0))) __PYX_ERR(0, 548, __pyx_L50_error)
+              if (!(likely(PyTuple_CheckExact(__pyx_t_6))||((__pyx_t_6) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_6)->tp_name), 0))) __PYX_ERR(0, 549, __pyx_L50_error)
               __Pyx_XDECREF_SET(__pyx_v_i, ((PyObject*)__pyx_t_6));
               __pyx_t_6 = 0;
               __Pyx_XDECREF_SET(__pyx_v__, __pyx_t_2);
               __pyx_t_2 = 0;
 
-              /* "tricks.pyx":549
+              /* "tricks.pyx":550
  *                 finally:
  *                     for i,_ in rvdict.items():
  *                         data.append(i)             # <<<<<<<<<<<<<<
  * 
  *             if self.dec_radio.isChecked() == True or self.user_rating_radio.isChecked() == True:
  */
-              __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_data, __pyx_v_i); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 549, __pyx_L50_error)
+              __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_data, __pyx_v_i); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 550, __pyx_L50_error)
             }
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           }
@@ -13464,7 +13461,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
         __pyx_L32:;
       }
 
-      /* "tricks.pyx":543
+      /* "tricks.pyx":544
  *                         rvdict[i] = 0
  *             data = []
  *             if rvdict != {}:             # <<<<<<<<<<<<<<
@@ -13473,16 +13470,16 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
     }
 
-    /* "tricks.pyx":551
+    /* "tricks.pyx":552
  *                         data.append(i)
  * 
  *             if self.dec_radio.isChecked() == True or self.user_rating_radio.isChecked() == True:             # <<<<<<<<<<<<<<
  *                 data.reverse()
  *         return data
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_dec_radio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_dec_radio); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -13497,21 +13494,21 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
     }
     __pyx_t_7 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_6);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 551, __pyx_L1_error)
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = PyObject_RichCompare(__pyx_t_7, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_6 = PyObject_RichCompare(__pyx_t_7, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_6); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_6); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (!__pyx_t_8) {
     } else {
       __pyx_t_3 = __pyx_t_8;
       goto __pyx_L54_bool_binop_done;
     }
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_user_rating_radio); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_user_rating_radio); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_isChecked); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_7 = NULL;
@@ -13526,27 +13523,27 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
     }
     __pyx_t_6 = (__pyx_t_7) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_7) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 551, __pyx_L1_error)
+    if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_6, Py_True, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 551, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 552, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_3 = __pyx_t_8;
     __pyx_L54_bool_binop_done:;
     if (__pyx_t_3) {
 
-      /* "tricks.pyx":552
+      /* "tricks.pyx":553
  * 
  *             if self.dec_radio.isChecked() == True or self.user_rating_radio.isChecked() == True:
  *                 data.reverse()             # <<<<<<<<<<<<<<
  *         return data
  * 
  */
-      __pyx_t_18 = PyList_Reverse(__pyx_v_data); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 552, __pyx_L1_error)
+      __pyx_t_18 = PyList_Reverse(__pyx_v_data); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 553, __pyx_L1_error)
 
-      /* "tricks.pyx":551
+      /* "tricks.pyx":552
  *                         data.append(i)
  * 
  *             if self.dec_radio.isChecked() == True or self.user_rating_radio.isChecked() == True:             # <<<<<<<<<<<<<<
@@ -13555,7 +13552,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
     }
 
-    /* "tricks.pyx":503
+    /* "tricks.pyx":504
  *         cdef int count
  *         cdef tuple i
  *         if data != []:             # <<<<<<<<<<<<<<
@@ -13564,7 +13561,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
  */
   }
 
-  /* "tricks.pyx":553
+  /* "tricks.pyx":554
  *             if self.dec_radio.isChecked() == True or self.user_rating_radio.isChecked() == True:
  *                 data.reverse()
  *         return data             # <<<<<<<<<<<<<<
@@ -13576,7 +13573,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
   __pyx_r = __pyx_v_data;
   goto __pyx_L0;
 
-  /* "tricks.pyx":493
+  /* "tricks.pyx":494
  * 
  *     @staticmethod
  *     def uni_sort(self, list data):             # <<<<<<<<<<<<<<
@@ -13606,7 +13603,7 @@ static PyObject *__pyx_pf_6tricks_4tech_30uni_sort(CYTHON_UNUSED PyObject *__pyx
   return __pyx_r;
 }
 
-/* "tricks.pyx":556
+/* "tricks.pyx":557
  * 
  *     @staticmethod
  *     def uni_search(list fromlist, str userinput, int key):             # <<<<<<<<<<<<<<
@@ -13653,17 +13650,17 @@ static PyObject *__pyx_pw_6tricks_4tech_33uni_search(PyObject *__pyx_self, PyObj
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_userinput)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("uni_search", 1, 3, 3, 1); __PYX_ERR(0, 556, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("uni_search", 1, 3, 3, 1); __PYX_ERR(0, 557, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_key)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("uni_search", 1, 3, 3, 2); __PYX_ERR(0, 556, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("uni_search", 1, 3, 3, 2); __PYX_ERR(0, 557, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "uni_search") < 0)) __PYX_ERR(0, 556, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "uni_search") < 0)) __PYX_ERR(0, 557, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -13674,18 +13671,18 @@ static PyObject *__pyx_pw_6tricks_4tech_33uni_search(PyObject *__pyx_self, PyObj
     }
     __pyx_v_fromlist = ((PyObject*)values[0]);
     __pyx_v_userinput = ((PyObject*)values[1]);
-    __pyx_v_key = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_key == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 556, __pyx_L3_error)
+    __pyx_v_key = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_key == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 557, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("uni_search", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 556, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("uni_search", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 557, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("tricks.tech.uni_search", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_fromlist), (&PyList_Type), 1, "fromlist", 1))) __PYX_ERR(0, 556, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_userinput), (&PyUnicode_Type), 1, "userinput", 1))) __PYX_ERR(0, 556, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_fromlist), (&PyList_Type), 1, "fromlist", 1))) __PYX_ERR(0, 557, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_userinput), (&PyUnicode_Type), 1, "userinput", 1))) __PYX_ERR(0, 557, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_32uni_search(__pyx_self, __pyx_v_fromlist, __pyx_v_userinput, __pyx_v_key);
 
   /* function exit code */
@@ -13728,16 +13725,16 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("uni_search", 0);
 
-  /* "tricks.pyx":565
+  /* "tricks.pyx":566
  *         :return: drawlist
  *         """
  *         cdef list searchlist = userinput.strip().lower().split()             # <<<<<<<<<<<<<<
  *         cdef list drawlist = []
  *         cdef tuple eachsource
  */
-  __pyx_t_3 = __Pyx_CallUnboundCMethod0(&__pyx_umethod_PyUnicode_Type_strip, __pyx_v_userinput); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 565, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CallUnboundCMethod0(&__pyx_umethod_PyUnicode_Type_strip, __pyx_v_userinput); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 566, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_lower); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 565, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_lower); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 566, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -13752,10 +13749,10 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
   }
   __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 565, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 566, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_split); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 565, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_split); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 566, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -13770,41 +13767,41 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 565, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 566, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 565, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 566, __pyx_L1_error)
   __pyx_v_searchlist = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":566
+  /* "tricks.pyx":567
  *         """
  *         cdef list searchlist = userinput.strip().lower().split()
  *         cdef list drawlist = []             # <<<<<<<<<<<<<<
  *         cdef tuple eachsource
  *         cdef int datacount
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 566, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 567, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_drawlist = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":574
+  /* "tricks.pyx":575
  *         cdef str eachinput
  * 
  *         if searchlist != []:             # <<<<<<<<<<<<<<
  *             for datacount, eachsource in enumerate(fromlist):
  *                 source = str(eachsource[key])
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 574, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 575, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyObject_RichCompare(__pyx_v_searchlist, __pyx_t_1, Py_NE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 574, __pyx_L1_error)
+  __pyx_t_4 = PyObject_RichCompare(__pyx_v_searchlist, __pyx_t_1, Py_NE); __Pyx_XGOTREF(__pyx_t_4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 575, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 574, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 575, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (__pyx_t_5) {
 
-    /* "tricks.pyx":575
+    /* "tricks.pyx":576
  * 
  *         if searchlist != []:
  *             for datacount, eachsource in enumerate(fromlist):             # <<<<<<<<<<<<<<
@@ -13816,18 +13813,18 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
     for (;;) {
       if (__pyx_t_7 >= PyList_GET_SIZE(__pyx_t_4)) break;
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 575, __pyx_L1_error)
+      __pyx_t_1 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_7); __Pyx_INCREF(__pyx_t_1); __pyx_t_7++; if (unlikely(0 < 0)) __PYX_ERR(0, 576, __pyx_L1_error)
       #else
-      __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 575, __pyx_L1_error)
+      __pyx_t_1 = PySequence_ITEM(__pyx_t_4, __pyx_t_7); __pyx_t_7++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       #endif
-      if (!(likely(PyTuple_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 575, __pyx_L1_error)
+      if (!(likely(PyTuple_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "tuple", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 576, __pyx_L1_error)
       __Pyx_XDECREF_SET(__pyx_v_eachsource, ((PyObject*)__pyx_t_1));
       __pyx_t_1 = 0;
       __pyx_v_datacount = __pyx_t_6;
       __pyx_t_6 = (__pyx_t_6 + 1);
 
-      /* "tricks.pyx":576
+      /* "tricks.pyx":577
  *         if searchlist != []:
  *             for datacount, eachsource in enumerate(fromlist):
  *                 source = str(eachsource[key])             # <<<<<<<<<<<<<<
@@ -13836,17 +13833,17 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
  */
       if (unlikely(__pyx_v_eachsource == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 576, __pyx_L1_error)
+        __PYX_ERR(0, 577, __pyx_L1_error)
       }
-      __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_eachsource, __pyx_v_key, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 576, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetItemInt_Tuple(__pyx_v_eachsource, __pyx_v_key, int, 1, __Pyx_PyInt_From_int, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 577, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 576, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_CallOneArg(((PyObject *)(&PyUnicode_Type)), __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 577, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF_SET(__pyx_v_source, ((PyObject*)__pyx_t_2));
       __pyx_t_2 = 0;
 
-      /* "tricks.pyx":577
+      /* "tricks.pyx":578
  *             for datacount, eachsource in enumerate(fromlist):
  *                 source = str(eachsource[key])
  *                 for usercount, eachinput in enumerate(searchlist):             # <<<<<<<<<<<<<<
@@ -13858,36 +13855,36 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
       for (;;) {
         if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_2)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_9); __Pyx_INCREF(__pyx_t_1); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 577, __pyx_L1_error)
+        __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_9); __Pyx_INCREF(__pyx_t_1); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 578, __pyx_L1_error)
         #else
-        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 577, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 578, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         #endif
-        if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 577, __pyx_L1_error)
+        if (!(likely(PyUnicode_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 578, __pyx_L1_error)
         __Pyx_XDECREF_SET(__pyx_v_eachinput, ((PyObject*)__pyx_t_1));
         __pyx_t_1 = 0;
         __pyx_v_usercount = __pyx_t_8;
         __pyx_t_8 = (__pyx_t_8 + 1);
 
-        /* "tricks.pyx":578
+        /* "tricks.pyx":579
  *                 source = str(eachsource[key])
  *                 for usercount, eachinput in enumerate(searchlist):
  *                     if source == None or eachinput == None:             # <<<<<<<<<<<<<<
  *                         continue
  *                     search_value = source.lower().find(eachinput)
  */
-        __pyx_t_10 = (__Pyx_PyUnicode_Equals(__pyx_v_source, Py_None, Py_EQ)); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 578, __pyx_L1_error)
+        __pyx_t_10 = (__Pyx_PyUnicode_Equals(__pyx_v_source, Py_None, Py_EQ)); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 579, __pyx_L1_error)
         if (!__pyx_t_10) {
         } else {
           __pyx_t_5 = __pyx_t_10;
           goto __pyx_L9_bool_binop_done;
         }
-        __pyx_t_10 = (__Pyx_PyUnicode_Equals(__pyx_v_eachinput, Py_None, Py_EQ)); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 578, __pyx_L1_error)
+        __pyx_t_10 = (__Pyx_PyUnicode_Equals(__pyx_v_eachinput, Py_None, Py_EQ)); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 579, __pyx_L1_error)
         __pyx_t_5 = __pyx_t_10;
         __pyx_L9_bool_binop_done:;
         if (__pyx_t_5) {
 
-          /* "tricks.pyx":579
+          /* "tricks.pyx":580
  *                 for usercount, eachinput in enumerate(searchlist):
  *                     if source == None or eachinput == None:
  *                         continue             # <<<<<<<<<<<<<<
@@ -13896,7 +13893,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
  */
           goto __pyx_L6_continue;
 
-          /* "tricks.pyx":578
+          /* "tricks.pyx":579
  *                 source = str(eachsource[key])
  *                 for usercount, eachinput in enumerate(searchlist):
  *                     if source == None or eachinput == None:             # <<<<<<<<<<<<<<
@@ -13905,14 +13902,14 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
  */
         }
 
-        /* "tricks.pyx":580
+        /* "tricks.pyx":581
  *                     if source == None or eachinput == None:
  *                         continue
  *                     search_value = source.lower().find(eachinput)             # <<<<<<<<<<<<<<
  *                     if search_value != -1:
  *                         source = source[0:search_value] + source[search_value+len(eachinput):]
  */
-        __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_source, __pyx_n_s_lower); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 580, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_source, __pyx_n_s_lower); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 581, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         __pyx_t_12 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_11))) {
@@ -13926,10 +13923,10 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
         }
         __pyx_t_3 = (__pyx_t_12) ? __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_12) : __Pyx_PyObject_CallNoArg(__pyx_t_11);
         __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 580, __pyx_L1_error)
+        if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 581, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_find); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 580, __pyx_L1_error)
+        __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_find); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 581, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_t_3 = NULL;
@@ -13944,14 +13941,14 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
         }
         __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_11, __pyx_t_3, __pyx_v_eachinput) : __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_v_eachinput);
         __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 580, __pyx_L1_error)
+        if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 581, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_13 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_13 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 580, __pyx_L1_error)
+        __pyx_t_13 = __Pyx_PyInt_As_int(__pyx_t_1); if (unlikely((__pyx_t_13 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 581, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_v_search_value = __pyx_t_13;
 
-        /* "tricks.pyx":581
+        /* "tricks.pyx":582
  *                         continue
  *                     search_value = source.lower().find(eachinput)
  *                     if search_value != -1:             # <<<<<<<<<<<<<<
@@ -13961,30 +13958,30 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
         __pyx_t_5 = ((__pyx_v_search_value != -1L) != 0);
         if (__pyx_t_5) {
 
-          /* "tricks.pyx":582
+          /* "tricks.pyx":583
  *                     search_value = source.lower().find(eachinput)
  *                     if search_value != -1:
  *                         source = source[0:search_value] + source[search_value+len(eachinput):]             # <<<<<<<<<<<<<<
  *                         if usercount == len(searchlist) -1:
  *                             drawlist.append(fromlist[datacount])
  */
-          __pyx_t_1 = __Pyx_PyUnicode_Substring(__pyx_v_source, 0, __pyx_v_search_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 582, __pyx_L1_error)
+          __pyx_t_1 = __Pyx_PyUnicode_Substring(__pyx_v_source, 0, __pyx_v_search_value); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 583, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           if (unlikely(__pyx_v_eachinput == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-            __PYX_ERR(0, 582, __pyx_L1_error)
+            __PYX_ERR(0, 583, __pyx_L1_error)
           }
-          __pyx_t_14 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_eachinput); if (unlikely(__pyx_t_14 == ((Py_ssize_t)-1))) __PYX_ERR(0, 582, __pyx_L1_error)
-          __pyx_t_11 = __Pyx_PyUnicode_Substring(__pyx_v_source, (__pyx_v_search_value + __pyx_t_14), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 582, __pyx_L1_error)
+          __pyx_t_14 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_eachinput); if (unlikely(__pyx_t_14 == ((Py_ssize_t)-1))) __PYX_ERR(0, 583, __pyx_L1_error)
+          __pyx_t_11 = __Pyx_PyUnicode_Substring(__pyx_v_source, (__pyx_v_search_value + __pyx_t_14), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 583, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_11);
-          __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_t_1, __pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 582, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyUnicode_Concat(__pyx_t_1, __pyx_t_11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 583, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
           __Pyx_DECREF_SET(__pyx_v_source, ((PyObject*)__pyx_t_3));
           __pyx_t_3 = 0;
 
-          /* "tricks.pyx":583
+          /* "tricks.pyx":584
  *                     if search_value != -1:
  *                         source = source[0:search_value] + source[search_value+len(eachinput):]
  *                         if usercount == len(searchlist) -1:             # <<<<<<<<<<<<<<
@@ -13993,13 +13990,13 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
  */
           if (unlikely(__pyx_v_searchlist == Py_None)) {
             PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-            __PYX_ERR(0, 583, __pyx_L1_error)
+            __PYX_ERR(0, 584, __pyx_L1_error)
           }
-          __pyx_t_14 = PyList_GET_SIZE(__pyx_v_searchlist); if (unlikely(__pyx_t_14 == ((Py_ssize_t)-1))) __PYX_ERR(0, 583, __pyx_L1_error)
+          __pyx_t_14 = PyList_GET_SIZE(__pyx_v_searchlist); if (unlikely(__pyx_t_14 == ((Py_ssize_t)-1))) __PYX_ERR(0, 584, __pyx_L1_error)
           __pyx_t_5 = ((__pyx_v_usercount == (__pyx_t_14 - 1)) != 0);
           if (__pyx_t_5) {
 
-            /* "tricks.pyx":584
+            /* "tricks.pyx":585
  *                         source = source[0:search_value] + source[search_value+len(eachinput):]
  *                         if usercount == len(searchlist) -1:
  *                             drawlist.append(fromlist[datacount])             # <<<<<<<<<<<<<<
@@ -14008,14 +14005,14 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
  */
             if (unlikely(__pyx_v_fromlist == Py_None)) {
               PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-              __PYX_ERR(0, 584, __pyx_L1_error)
+              __PYX_ERR(0, 585, __pyx_L1_error)
             }
-            __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fromlist, __pyx_v_datacount, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 584, __pyx_L1_error)
+            __pyx_t_3 = __Pyx_GetItemInt_List(__pyx_v_fromlist, __pyx_v_datacount, int, 1, __Pyx_PyInt_From_int, 1, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 585, __pyx_L1_error)
             __Pyx_GOTREF(__pyx_t_3);
-            __pyx_t_15 = __Pyx_PyList_Append(__pyx_v_drawlist, __pyx_t_3); if (unlikely(__pyx_t_15 == ((int)-1))) __PYX_ERR(0, 584, __pyx_L1_error)
+            __pyx_t_15 = __Pyx_PyList_Append(__pyx_v_drawlist, __pyx_t_3); if (unlikely(__pyx_t_15 == ((int)-1))) __PYX_ERR(0, 585, __pyx_L1_error)
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "tricks.pyx":583
+            /* "tricks.pyx":584
  *                     if search_value != -1:
  *                         source = source[0:search_value] + source[search_value+len(eachinput):]
  *                         if usercount == len(searchlist) -1:             # <<<<<<<<<<<<<<
@@ -14024,7 +14021,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
  */
           }
 
-          /* "tricks.pyx":581
+          /* "tricks.pyx":582
  *                         continue
  *                     search_value = source.lower().find(eachinput)
  *                     if search_value != -1:             # <<<<<<<<<<<<<<
@@ -14034,7 +14031,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
           goto __pyx_L11;
         }
 
-        /* "tricks.pyx":585
+        /* "tricks.pyx":586
  *                         if usercount == len(searchlist) -1:
  *                             drawlist.append(fromlist[datacount])
  *                     else: break             # <<<<<<<<<<<<<<
@@ -14046,7 +14043,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
         }
         __pyx_L11:;
 
-        /* "tricks.pyx":577
+        /* "tricks.pyx":578
  *             for datacount, eachsource in enumerate(fromlist):
  *                 source = str(eachsource[key])
  *                 for usercount, eachinput in enumerate(searchlist):             # <<<<<<<<<<<<<<
@@ -14058,7 +14055,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
       __pyx_L7_break:;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "tricks.pyx":575
+      /* "tricks.pyx":576
  * 
  *         if searchlist != []:
  *             for datacount, eachsource in enumerate(fromlist):             # <<<<<<<<<<<<<<
@@ -14068,7 +14065,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":574
+    /* "tricks.pyx":575
  *         cdef str eachinput
  * 
  *         if searchlist != []:             # <<<<<<<<<<<<<<
@@ -14078,7 +14075,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
     goto __pyx_L3;
   }
 
-  /* "tricks.pyx":587
+  /* "tricks.pyx":588
  *                     else: break
  *         else:
  *             return fromlist             # <<<<<<<<<<<<<<
@@ -14093,7 +14090,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
   }
   __pyx_L3:;
 
-  /* "tricks.pyx":588
+  /* "tricks.pyx":589
  *         else:
  *             return fromlist
  *         return drawlist             # <<<<<<<<<<<<<<
@@ -14105,7 +14102,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
   __pyx_r = __pyx_v_drawlist;
   goto __pyx_L0;
 
-  /* "tricks.pyx":556
+  /* "tricks.pyx":557
  * 
  *     @staticmethod
  *     def uni_search(list fromlist, str userinput, int key):             # <<<<<<<<<<<<<<
@@ -14134,7 +14131,7 @@ static PyObject *__pyx_pf_6tricks_4tech_32uni_search(CYTHON_UNUSED PyObject *__p
   return __pyx_r;
 }
 
-/* "tricks.pyx":591
+/* "tricks.pyx":592
  * 
  *     @staticmethod
  *     def star_pixmap(str requestimage):             # <<<<<<<<<<<<<<
@@ -14152,7 +14149,7 @@ static PyObject *__pyx_pw_6tricks_4tech_35star_pixmap(PyObject *__pyx_self, PyOb
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("star_pixmap (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_requestimage), (&PyUnicode_Type), 1, "requestimage", 1))) __PYX_ERR(0, 591, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_requestimage), (&PyUnicode_Type), 1, "requestimage", 1))) __PYX_ERR(0, 592, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_34star_pixmap(__pyx_self, ((PyObject*)__pyx_v_requestimage));
 
   /* function exit code */
@@ -14164,7 +14161,7 @@ static PyObject *__pyx_pw_6tricks_4tech_35star_pixmap(PyObject *__pyx_self, PyOb
   return __pyx_r;
 }
 
-/* "tricks.pyx":592
+/* "tricks.pyx":593
  *     @staticmethod
  *     def star_pixmap(str requestimage):
  *         def opacity_star(pixmap):             # <<<<<<<<<<<<<<
@@ -14202,16 +14199,16 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("opacity_star", 0);
 
-  /* "tricks.pyx":593
+  /* "tricks.pyx":594
  *     def star_pixmap(str requestimage):
  *         def opacity_star(pixmap):
  *             new_pixmap = QtGui.QPixmap(pixmap)             # <<<<<<<<<<<<<<
  *             new_pixmap.fill(QtCore.Qt.transparent)
  *             painter = QtGui.QPainter(new_pixmap)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_QtGui); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 593, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_QtGui); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 594, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_QPixmap); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 593, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_QPixmap); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 594, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -14226,27 +14223,27 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_pixmap) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_pixmap);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 593, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 594, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_new_pixmap = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":594
+  /* "tricks.pyx":595
  *         def opacity_star(pixmap):
  *             new_pixmap = QtGui.QPixmap(pixmap)
  *             new_pixmap.fill(QtCore.Qt.transparent)             # <<<<<<<<<<<<<<
  *             painter = QtGui.QPainter(new_pixmap)
  *             painter.setOpacity(0.25)
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_pixmap, __pyx_n_s_fill); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 594, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_new_pixmap, __pyx_n_s_fill); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_QtCore); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 594, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_QtCore); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Qt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 594, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Qt); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_transparent); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 594, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_transparent); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -14262,21 +14259,21 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 594, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":595
+  /* "tricks.pyx":596
  *             new_pixmap = QtGui.QPixmap(pixmap)
  *             new_pixmap.fill(QtCore.Qt.transparent)
  *             painter = QtGui.QPainter(new_pixmap)             # <<<<<<<<<<<<<<
  *             painter.setOpacity(0.25)
  *             painter.drawPixmap(QtCore.QPoint(), pixmap)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_QtGui); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_QtGui); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_QPainter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_QPainter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -14291,20 +14288,20 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_new_pixmap) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_new_pixmap);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_painter = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":596
+  /* "tricks.pyx":597
  *             new_pixmap.fill(QtCore.Qt.transparent)
  *             painter = QtGui.QPainter(new_pixmap)
  *             painter.setOpacity(0.25)             # <<<<<<<<<<<<<<
  *             painter.drawPixmap(QtCore.QPoint(), pixmap)
  *             painter.end()
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_painter, __pyx_n_s_setOpacity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 596, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_painter, __pyx_n_s_setOpacity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 597, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -14318,23 +14315,23 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_float_0_25) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_float_0_25);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 597, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":597
+  /* "tricks.pyx":598
  *             painter = QtGui.QPainter(new_pixmap)
  *             painter.setOpacity(0.25)
  *             painter.drawPixmap(QtCore.QPoint(), pixmap)             # <<<<<<<<<<<<<<
  *             painter.end()
  *             return new_pixmap
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_painter, __pyx_n_s_drawPixmap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_painter, __pyx_n_s_drawPixmap); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 598, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_QtCore); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 597, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_QtCore); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 598, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_QPoint); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 597, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_QPoint); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 598, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -14349,7 +14346,7 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   }
   __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 597, __pyx_L1_error)
+  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 598, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -14367,7 +14364,7 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, __pyx_v_pixmap};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 597, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 598, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -14376,14 +14373,14 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_t_3, __pyx_v_pixmap};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 597, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 598, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   } else
   #endif
   {
-    __pyx_t_4 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 597, __pyx_L1_error)
+    __pyx_t_4 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 598, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -14394,21 +14391,21 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
     __Pyx_GIVEREF(__pyx_v_pixmap);
     PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_6, __pyx_v_pixmap);
     __pyx_t_3 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 597, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 598, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":598
+  /* "tricks.pyx":599
  *             painter.setOpacity(0.25)
  *             painter.drawPixmap(QtCore.QPoint(), pixmap)
  *             painter.end()             # <<<<<<<<<<<<<<
  *             return new_pixmap
  * 
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_painter, __pyx_n_s_end); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 598, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_painter, __pyx_n_s_end); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 599, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -14422,12 +14419,12 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   }
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 598, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 599, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "tricks.pyx":599
+  /* "tricks.pyx":600
  *             painter.drawPixmap(QtCore.QPoint(), pixmap)
  *             painter.end()
  *             return new_pixmap             # <<<<<<<<<<<<<<
@@ -14439,7 +14436,7 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   __pyx_r = __pyx_v_new_pixmap;
   goto __pyx_L0;
 
-  /* "tricks.pyx":592
+  /* "tricks.pyx":593
  *     @staticmethod
  *     def star_pixmap(str requestimage):
  *         def opacity_star(pixmap):             # <<<<<<<<<<<<<<
@@ -14464,7 +14461,7 @@ static PyObject *__pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "tricks.pyx":591
+/* "tricks.pyx":592
  * 
  *     @staticmethod
  *     def star_pixmap(str requestimage):             # <<<<<<<<<<<<<<
@@ -14498,50 +14495,50 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("star_pixmap", 0);
 
-  /* "tricks.pyx":592
+  /* "tricks.pyx":593
  *     @staticmethod
  *     def star_pixmap(str requestimage):
  *         def opacity_star(pixmap):             # <<<<<<<<<<<<<<
  *             new_pixmap = QtGui.QPixmap(pixmap)
  *             new_pixmap.fill(QtCore.Qt.transparent)
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_11star_pixmap_1opacity_star, 0, __pyx_n_s_tech_star_pixmap_locals_opacity, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 592, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_11star_pixmap_1opacity_star, 0, __pyx_n_s_tech_star_pixmap_locals_opacity, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__20)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 593, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_opacity_star = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":602
+  /* "tricks.pyx":603
  * 
  *         cdef dict contdict = {
  *             'weak_star'     : './img/star.png',             # <<<<<<<<<<<<<<
  *             'full_star'     : './img/star.png',
  *             'other_a'       : './img/other_a.png',
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 602, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 603, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_weak_star, __pyx_kp_u_img_star_png) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_full_star, __pyx_kp_u_img_star_png) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_other_a, __pyx_kp_u_img_other_a_png) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_other_b, __pyx_kp_u_img_other_b_png) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_user_other_a, __pyx_kp_u_img_user_other_a_png) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_user_other_b, __pyx_kp_u_img_user_other_b_png) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_others_a_b, __pyx_kp_u_img_others_a_b_png) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_all, __pyx_kp_u_img_all_png) < 0) __PYX_ERR(0, 602, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_weak_star, __pyx_kp_u_img_star_png) < 0) __PYX_ERR(0, 603, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_full_star, __pyx_kp_u_img_star_png) < 0) __PYX_ERR(0, 603, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_other_a, __pyx_kp_u_img_other_a_png) < 0) __PYX_ERR(0, 603, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_other_b, __pyx_kp_u_img_other_b_png) < 0) __PYX_ERR(0, 603, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_user_other_a, __pyx_kp_u_img_user_other_a_png) < 0) __PYX_ERR(0, 603, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_user_other_b, __pyx_kp_u_img_user_other_b_png) < 0) __PYX_ERR(0, 603, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_others_a_b, __pyx_kp_u_img_others_a_b_png) < 0) __PYX_ERR(0, 603, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_u_all, __pyx_kp_u_img_all_png) < 0) __PYX_ERR(0, 603, __pyx_L1_error)
   __pyx_v_contdict = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":612
+  /* "tricks.pyx":613
  *         }
  * 
  *         if requestimage == 'weak_star':             # <<<<<<<<<<<<<<
  *             try: return techdict['pixmap'][requestimage]
  *             except KeyError:
  */
-  __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_v_requestimage, __pyx_n_u_weak_star, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 612, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyUnicode_Equals(__pyx_v_requestimage, __pyx_n_u_weak_star, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 613, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "tricks.pyx":613
+    /* "tricks.pyx":614
  * 
  *         if requestimage == 'weak_star':
  *             try: return techdict['pixmap'][requestimage]             # <<<<<<<<<<<<<<
@@ -14559,11 +14556,11 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
         __Pyx_XDECREF(__pyx_r);
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 613, __pyx_L4_error)
+          __PYX_ERR(0, 614, __pyx_L4_error)
         }
-        __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 613, __pyx_L4_error)
+        __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 614, __pyx_L4_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_7 = __Pyx_PyObject_Dict_GetItem(__pyx_t_1, __pyx_v_requestimage); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 613, __pyx_L4_error)
+        __pyx_t_7 = __Pyx_PyObject_Dict_GetItem(__pyx_t_1, __pyx_v_requestimage); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 614, __pyx_L4_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __pyx_r = __pyx_t_7;
@@ -14574,7 +14571,7 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "tricks.pyx":614
+      /* "tricks.pyx":615
  *         if requestimage == 'weak_star':
  *             try: return techdict['pixmap'][requestimage]
  *             except KeyError:             # <<<<<<<<<<<<<<
@@ -14584,12 +14581,12 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
       __pyx_t_8 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
       if (__pyx_t_8) {
         __Pyx_AddTraceback("tricks.tech.star_pixmap", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_1, &__pyx_t_9) < 0) __PYX_ERR(0, 614, __pyx_L6_except_error)
+        if (__Pyx_GetException(&__pyx_t_7, &__pyx_t_1, &__pyx_t_9) < 0) __PYX_ERR(0, 615, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GOTREF(__pyx_t_9);
 
-        /* "tricks.pyx":615
+        /* "tricks.pyx":616
  *             try: return techdict['pixmap'][requestimage]
  *             except KeyError:
  *                 techdict['pixmap'].update({requestimage  : opacity_star(QPixmap(contdict[requestimage]))})             # <<<<<<<<<<<<<<
@@ -14598,18 +14595,18 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
  */
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 615, __pyx_L6_except_error)
+          __PYX_ERR(0, 616, __pyx_L6_except_error)
         }
-        __pyx_t_11 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        __pyx_t_11 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_11);
-        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_update); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_update); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        __pyx_t_11 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        __pyx_t_11 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_11);
-        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_QPixmap); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_QPixmap); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_15 = __Pyx_PyDict_GetItem(__pyx_v_contdict, __pyx_v_requestimage); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        __pyx_t_15 = __Pyx_PyDict_GetItem(__pyx_v_contdict, __pyx_v_requestimage); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_15);
         __pyx_t_16 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_14))) {
@@ -14624,13 +14621,13 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
         __pyx_t_13 = (__pyx_t_16) ? __Pyx_PyObject_Call2Args(__pyx_t_14, __pyx_t_16, __pyx_t_15) : __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_t_15);
         __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-        __pyx_t_14 = __pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(__pyx_v_opacity_star, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        __pyx_t_14 = __pyx_pf_6tricks_4tech_11star_pixmap_opacity_star(__pyx_v_opacity_star, __pyx_t_13); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        if (PyDict_SetItem(__pyx_t_11, __pyx_v_requestimage, __pyx_t_14) < 0) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        if (PyDict_SetItem(__pyx_t_11, __pyx_v_requestimage, __pyx_t_14) < 0) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __pyx_t_14 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_12))) {
@@ -14645,12 +14642,12 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
         __pyx_t_10 = (__pyx_t_14) ? __Pyx_PyObject_Call2Args(__pyx_t_12, __pyx_t_14, __pyx_t_11) : __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_11);
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 615, __pyx_L6_except_error)
+        if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 616, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
 
-        /* "tricks.pyx":616
+        /* "tricks.pyx":617
  *             except KeyError:
  *                 techdict['pixmap'].update({requestimage  : opacity_star(QPixmap(contdict[requestimage]))})
  *                 return techdict['pixmap'][requestimage]             # <<<<<<<<<<<<<<
@@ -14660,11 +14657,11 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
         __Pyx_XDECREF(__pyx_r);
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 616, __pyx_L6_except_error)
+          __PYX_ERR(0, 617, __pyx_L6_except_error)
         }
-        __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 616, __pyx_L6_except_error)
+        __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 617, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_10);
-        __pyx_t_12 = __Pyx_PyObject_Dict_GetItem(__pyx_t_10, __pyx_v_requestimage); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 616, __pyx_L6_except_error)
+        __pyx_t_12 = __Pyx_PyObject_Dict_GetItem(__pyx_t_10, __pyx_v_requestimage); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 617, __pyx_L6_except_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __pyx_r = __pyx_t_12;
@@ -14677,7 +14674,7 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
       goto __pyx_L6_except_error;
       __pyx_L6_except_error:;
 
-      /* "tricks.pyx":613
+      /* "tricks.pyx":614
  * 
  *         if requestimage == 'weak_star':
  *             try: return techdict['pixmap'][requestimage]             # <<<<<<<<<<<<<<
@@ -14703,7 +14700,7 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
       goto __pyx_L0;
     }
 
-    /* "tricks.pyx":612
+    /* "tricks.pyx":613
  *         }
  * 
  *         if requestimage == 'weak_star':             # <<<<<<<<<<<<<<
@@ -14712,7 +14709,7 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
  */
   }
 
-  /* "tricks.pyx":619
+  /* "tricks.pyx":620
  * 
  *         else:
  *             try: return techdict['pixmap'][requestimage]             # <<<<<<<<<<<<<<
@@ -14731,11 +14728,11 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
         __Pyx_XDECREF(__pyx_r);
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 619, __pyx_L12_error)
+          __PYX_ERR(0, 620, __pyx_L12_error)
         }
-        __pyx_t_9 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 619, __pyx_L12_error)
+        __pyx_t_9 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 620, __pyx_L12_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_t_9, __pyx_v_requestimage); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 619, __pyx_L12_error)
+        __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_t_9, __pyx_v_requestimage); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 620, __pyx_L12_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __pyx_r = __pyx_t_1;
@@ -14754,7 +14751,7 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
       __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
 
-      /* "tricks.pyx":620
+      /* "tricks.pyx":621
  *         else:
  *             try: return techdict['pixmap'][requestimage]
  *             except KeyError:             # <<<<<<<<<<<<<<
@@ -14764,12 +14761,12 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
       __pyx_t_8 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
       if (__pyx_t_8) {
         __Pyx_AddTraceback("tricks.tech.star_pixmap", __pyx_clineno, __pyx_lineno, __pyx_filename);
-        if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_9, &__pyx_t_7) < 0) __PYX_ERR(0, 620, __pyx_L14_except_error)
+        if (__Pyx_GetException(&__pyx_t_1, &__pyx_t_9, &__pyx_t_7) < 0) __PYX_ERR(0, 621, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_GOTREF(__pyx_t_7);
 
-        /* "tricks.pyx":621
+        /* "tricks.pyx":622
  *             try: return techdict['pixmap'][requestimage]
  *             except KeyError:
  *                 techdict['pixmap'].update({requestimage : QPixmap(contdict[requestimage])})             # <<<<<<<<<<<<<<
@@ -14778,18 +14775,18 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
  */
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 621, __pyx_L14_except_error)
+          __PYX_ERR(0, 622, __pyx_L14_except_error)
         }
-        __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 621, __pyx_L14_except_error)
+        __pyx_t_10 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 622, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_10);
-        __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_update); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 621, __pyx_L14_except_error)
+        __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_update); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 622, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-        __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 621, __pyx_L14_except_error)
+        __pyx_t_10 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 622, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_10);
-        __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_QPixmap); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 621, __pyx_L14_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_13, __pyx_n_s_QPixmap); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 622, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_13);
-        __pyx_t_15 = __Pyx_PyDict_GetItem(__pyx_v_contdict, __pyx_v_requestimage); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 621, __pyx_L14_except_error)
+        __pyx_t_15 = __Pyx_PyDict_GetItem(__pyx_v_contdict, __pyx_v_requestimage); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 622, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_15);
         __pyx_t_16 = NULL;
         if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_13))) {
@@ -14804,10 +14801,10 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
         __pyx_t_14 = (__pyx_t_16) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_16, __pyx_t_15) : __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_t_15);
         __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-        if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 621, __pyx_L14_except_error)
+        if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 622, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        if (PyDict_SetItem(__pyx_t_10, __pyx_v_requestimage, __pyx_t_14) < 0) __PYX_ERR(0, 621, __pyx_L14_except_error)
+        if (PyDict_SetItem(__pyx_t_10, __pyx_v_requestimage, __pyx_t_14) < 0) __PYX_ERR(0, 622, __pyx_L14_except_error)
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __pyx_t_14 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_11))) {
@@ -14822,12 +14819,12 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
         __pyx_t_12 = (__pyx_t_14) ? __Pyx_PyObject_Call2Args(__pyx_t_11, __pyx_t_14, __pyx_t_10) : __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_10);
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 621, __pyx_L14_except_error)
+        if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 622, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-        /* "tricks.pyx":622
+        /* "tricks.pyx":623
  *             except KeyError:
  *                 techdict['pixmap'].update({requestimage : QPixmap(contdict[requestimage])})
  *                 return techdict['pixmap'][requestimage]             # <<<<<<<<<<<<<<
@@ -14837,11 +14834,11 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
         __Pyx_XDECREF(__pyx_r);
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 622, __pyx_L14_except_error)
+          __PYX_ERR(0, 623, __pyx_L14_except_error)
         }
-        __pyx_t_12 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 622, __pyx_L14_except_error)
+        __pyx_t_12 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_pixmap); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 623, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_12);
-        __pyx_t_11 = __Pyx_PyObject_Dict_GetItem(__pyx_t_12, __pyx_v_requestimage); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 622, __pyx_L14_except_error)
+        __pyx_t_11 = __Pyx_PyObject_Dict_GetItem(__pyx_t_12, __pyx_v_requestimage); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 623, __pyx_L14_except_error)
         __Pyx_GOTREF(__pyx_t_11);
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
         __pyx_r = __pyx_t_11;
@@ -14854,7 +14851,7 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
       goto __pyx_L14_except_error;
       __pyx_L14_except_error:;
 
-      /* "tricks.pyx":619
+      /* "tricks.pyx":620
  * 
  *         else:
  *             try: return techdict['pixmap'][requestimage]             # <<<<<<<<<<<<<<
@@ -14881,7 +14878,7 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
     }
   }
 
-  /* "tricks.pyx":591
+  /* "tricks.pyx":592
  * 
  *     @staticmethod
  *     def star_pixmap(str requestimage):             # <<<<<<<<<<<<<<
@@ -14911,7 +14908,7 @@ static PyObject *__pyx_pf_6tricks_4tech_34star_pixmap(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "tricks.pyx":625
+/* "tricks.pyx":626
  * 
  *     @staticmethod
  *     def icon_size():             # <<<<<<<<<<<<<<
@@ -14947,7 +14944,7 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("icon_size", 0);
 
-  /* "tricks.pyx":626
+  /* "tricks.pyx":627
  *     @staticmethod
  *     def icon_size():
  *         if 'icon_size' not in techdict:             # <<<<<<<<<<<<<<
@@ -14956,22 +14953,22 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
  */
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 626, __pyx_L1_error)
+    __PYX_ERR(0, 627, __pyx_L1_error)
   }
-  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_icon_size, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 626, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_icon_size, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 627, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "tricks.pyx":627
+    /* "tricks.pyx":628
  *     def icon_size():
  *         if 'icon_size' not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')             # <<<<<<<<<<<<<<
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.icon_size] == None:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 627, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 628, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 627, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 628, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -14986,21 +14983,21 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
     }
     __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, __pyx_kp_u_select_from_settings_where_id_is) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_kp_u_select_from_settings_where_id_is);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 627, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 628, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tricks.pyx":628
+    /* "tricks.pyx":629
  *         if 'icon_size' not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *             if settings_data[DB.icon_size] == None:
  *                 techdict['icon_size'] = {'width' : 240, 'height' : 300}
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 628, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 629, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 628, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 629, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -15015,49 +15012,49 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 628, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 629, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_settings_data = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "tricks.pyx":629
+    /* "tricks.pyx":630
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.icon_size] == None:             # <<<<<<<<<<<<<<
  *                 techdict['icon_size'] = {'width' : 240, 'height' : 300}
  *             else:
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_icon_size); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 629, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_icon_size); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 630, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 629, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 630, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 629, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 630, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 629, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 630, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
 
-      /* "tricks.pyx":630
+      /* "tricks.pyx":631
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.icon_size] == None:
  *                 techdict['icon_size'] = {'width' : 240, 'height' : 300}             # <<<<<<<<<<<<<<
  *             else:
  *                 techdict['icon_size'] = {'width' : settings_data[DB.icon_size] * 0.75, 'height' : settings_data[DB.icon_size]}
  */
-      __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 630, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 631, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_width, __pyx_int_240) < 0) __PYX_ERR(0, 630, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_height, __pyx_int_300) < 0) __PYX_ERR(0, 630, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_width, __pyx_int_240) < 0) __PYX_ERR(0, 631, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_height, __pyx_int_300) < 0) __PYX_ERR(0, 631, __pyx_L1_error)
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 630, __pyx_L1_error)
+        __PYX_ERR(0, 631, __pyx_L1_error)
       }
-      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_icon_size, __pyx_t_3) < 0)) __PYX_ERR(0, 630, __pyx_L1_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_icon_size, __pyx_t_3) < 0)) __PYX_ERR(0, 631, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "tricks.pyx":629
+      /* "tricks.pyx":630
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.icon_size] == None:             # <<<<<<<<<<<<<<
@@ -15067,7 +15064,7 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
       goto __pyx_L4;
     }
 
-    /* "tricks.pyx":632
+    /* "tricks.pyx":633
  *                 techdict['icon_size'] = {'width' : 240, 'height' : 300}
  *             else:
  *                 techdict['icon_size'] = {'width' : settings_data[DB.icon_size] * 0.75, 'height' : settings_data[DB.icon_size]}             # <<<<<<<<<<<<<<
@@ -15075,35 +15072,35 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
  *         return techdict['icon_size']
  */
     /*else*/ {
-      __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 632, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_icon_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 632, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_icon_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 632, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyNumber_Multiply(__pyx_t_5, __pyx_float_0_75); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 632, __pyx_L1_error)
+      __pyx_t_4 = PyNumber_Multiply(__pyx_t_5, __pyx_float_0_75); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_width, __pyx_t_4) < 0) __PYX_ERR(0, 632, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_width, __pyx_t_4) < 0) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_icon_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 632, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_icon_size); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 632, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_height, __pyx_t_5) < 0) __PYX_ERR(0, 632, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_3, __pyx_n_u_height, __pyx_t_5) < 0) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 632, __pyx_L1_error)
+        __PYX_ERR(0, 633, __pyx_L1_error)
       }
-      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_icon_size, __pyx_t_3) < 0)) __PYX_ERR(0, 632, __pyx_L1_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_icon_size, __pyx_t_3) < 0)) __PYX_ERR(0, 633, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __pyx_L4:;
 
-    /* "tricks.pyx":626
+    /* "tricks.pyx":627
  *     @staticmethod
  *     def icon_size():
  *         if 'icon_size' not in techdict:             # <<<<<<<<<<<<<<
@@ -15112,7 +15109,7 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
  */
   }
 
-  /* "tricks.pyx":634
+  /* "tricks.pyx":635
  *                 techdict['icon_size'] = {'width' : settings_data[DB.icon_size] * 0.75, 'height' : settings_data[DB.icon_size]}
  * 
  *         return techdict['icon_size']             # <<<<<<<<<<<<<<
@@ -15122,15 +15119,15 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 634, __pyx_L1_error)
+    __PYX_ERR(0, 635, __pyx_L1_error)
   }
-  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_icon_size); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 634, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_icon_size); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 635, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":625
+  /* "tricks.pyx":626
  * 
  *     @staticmethod
  *     def icon_size():             # <<<<<<<<<<<<<<
@@ -15152,7 +15149,7 @@ static PyObject *__pyx_pf_6tricks_4tech_36icon_size(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "tricks.pyx":637
+/* "tricks.pyx":638
  * 
  *     @staticmethod
  *     def apikey():             # <<<<<<<<<<<<<<
@@ -15192,7 +15189,7 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("apikey", 0);
 
-  /* "tricks.pyx":638
+  /* "tricks.pyx":639
  *     @staticmethod
  *     def apikey():
  *         if 'api_key' not in techdict:             # <<<<<<<<<<<<<<
@@ -15201,22 +15198,22 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
  */
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 638, __pyx_L1_error)
+    __PYX_ERR(0, 639, __pyx_L1_error)
   }
-  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_api_key, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 638, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_api_key, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 639, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "tricks.pyx":639
+    /* "tricks.pyx":640
  *     def apikey():
  *         if 'api_key' not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')             # <<<<<<<<<<<<<<
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.api_key] != None:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 639, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 640, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 639, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 640, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -15231,21 +15228,21 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
     }
     __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, __pyx_kp_u_select_from_settings_where_id_is) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_kp_u_select_from_settings_where_id_is);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 639, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 640, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tricks.pyx":640
+    /* "tricks.pyx":641
  *         if 'api_key' not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *             if settings_data[DB.api_key] != None:
  *                 techdict['api_key'] = settings_data[DB.api_key]
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 640, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 641, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 640, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 641, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -15260,50 +15257,50 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 640, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 641, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_settings_data = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "tricks.pyx":641
+    /* "tricks.pyx":642
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.api_key] != None:             # <<<<<<<<<<<<<<
  *                 techdict['api_key'] = settings_data[DB.api_key]
  * 
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_api_key); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 641, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_api_key); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 642, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 641, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 642, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 641, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 642, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 641, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 642, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
 
-      /* "tricks.pyx":642
+      /* "tricks.pyx":643
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.api_key] != None:
  *                 techdict['api_key'] = settings_data[DB.api_key]             # <<<<<<<<<<<<<<
  * 
  *         try: return techdict['api_key']
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_api_key); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 642, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_api_key); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 643, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 642, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 643, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 642, __pyx_L1_error)
+        __PYX_ERR(0, 643, __pyx_L1_error)
       }
-      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_api_key, __pyx_t_4) < 0)) __PYX_ERR(0, 642, __pyx_L1_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_api_key, __pyx_t_4) < 0)) __PYX_ERR(0, 643, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-      /* "tricks.pyx":641
+      /* "tricks.pyx":642
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.api_key] != None:             # <<<<<<<<<<<<<<
@@ -15312,7 +15309,7 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
  */
     }
 
-    /* "tricks.pyx":638
+    /* "tricks.pyx":639
  *     @staticmethod
  *     def apikey():
  *         if 'api_key' not in techdict:             # <<<<<<<<<<<<<<
@@ -15321,7 +15318,7 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
  */
   }
 
-  /* "tricks.pyx":644
+  /* "tricks.pyx":645
  *                 techdict['api_key'] = settings_data[DB.api_key]
  * 
  *         try: return techdict['api_key']             # <<<<<<<<<<<<<<
@@ -15339,9 +15336,9 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 644, __pyx_L5_error)
+        __PYX_ERR(0, 645, __pyx_L5_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_api_key); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 644, __pyx_L5_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_api_key); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 645, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -15352,7 +15349,7 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-    /* "tricks.pyx":645
+    /* "tricks.pyx":646
  * 
  *         try: return techdict['api_key']
  *         except KeyError: return False             # <<<<<<<<<<<<<<
@@ -15362,7 +15359,7 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
     __pyx_t_9 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_9) {
       __Pyx_AddTraceback("tricks.tech.apikey", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_3, &__pyx_t_5) < 0) __PYX_ERR(0, 645, __pyx_L7_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_3, &__pyx_t_5) < 0) __PYX_ERR(0, 646, __pyx_L7_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_GOTREF(__pyx_t_5);
@@ -15377,7 +15374,7 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
     goto __pyx_L7_except_error;
     __pyx_L7_except_error:;
 
-    /* "tricks.pyx":644
+    /* "tricks.pyx":645
  *                 techdict['api_key'] = settings_data[DB.api_key]
  * 
  *         try: return techdict['api_key']             # <<<<<<<<<<<<<<
@@ -15403,7 +15400,7 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
     goto __pyx_L0;
   }
 
-  /* "tricks.pyx":637
+  /* "tricks.pyx":638
  * 
  *     @staticmethod
  *     def apikey():             # <<<<<<<<<<<<<<
@@ -15425,7 +15422,7 @@ static PyObject *__pyx_pf_6tricks_4tech_38apikey(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "tricks.pyx":648
+/* "tricks.pyx":649
  * 
  *     @staticmethod
  *     def header():             # <<<<<<<<<<<<<<
@@ -15459,7 +15456,7 @@ static PyObject *__pyx_pf_6tricks_4tech_40header(CYTHON_UNUSED PyObject *__pyx_s
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("header", 0);
 
-  /* "tricks.pyx":650
+  /* "tricks.pyx":651
  *     def header():
  *         cdef dict header
  *         cdef str agent = 'User-Agent'             # <<<<<<<<<<<<<<
@@ -15469,7 +15466,7 @@ static PyObject *__pyx_pf_6tricks_4tech_40header(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_INCREF(__pyx_kp_u_User_Agent);
   __pyx_v_agent = __pyx_kp_u_User_Agent;
 
-  /* "tricks.pyx":651
+  /* "tricks.pyx":652
  *         cdef dict header
  *         cdef str agent = 'User-Agent'
  *         cdef str second_part = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'             # <<<<<<<<<<<<<<
@@ -15479,20 +15476,20 @@ static PyObject *__pyx_pf_6tricks_4tech_40header(CYTHON_UNUSED PyObject *__pyx_s
   __Pyx_INCREF(__pyx_kp_u_Mozilla_5_0_Macintosh_Intel_Mac);
   __pyx_v_second_part = __pyx_kp_u_Mozilla_5_0_Macintosh_Intel_Mac;
 
-  /* "tricks.pyx":652
+  /* "tricks.pyx":653
  *         cdef str agent = 'User-Agent'
  *         cdef str second_part = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
  *         header = {agent : second_part}             # <<<<<<<<<<<<<<
  *         return header
  * 
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 652, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 653, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_v_agent, __pyx_v_second_part) < 0) __PYX_ERR(0, 652, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_v_agent, __pyx_v_second_part) < 0) __PYX_ERR(0, 653, __pyx_L1_error)
   __pyx_v_header = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":653
+  /* "tricks.pyx":654
  *         cdef str second_part = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
  *         header = {agent : second_part}
  *         return header             # <<<<<<<<<<<<<<
@@ -15504,7 +15501,7 @@ static PyObject *__pyx_pf_6tricks_4tech_40header(CYTHON_UNUSED PyObject *__pyx_s
   __pyx_r = __pyx_v_header;
   goto __pyx_L0;
 
-  /* "tricks.pyx":648
+  /* "tricks.pyx":649
  * 
  *     @staticmethod
  *     def header():             # <<<<<<<<<<<<<<
@@ -15526,7 +15523,7 @@ static PyObject *__pyx_pf_6tricks_4tech_40header(CYTHON_UNUSED PyObject *__pyx_s
   return __pyx_r;
 }
 
-/* "tricks.pyx":656
+/* "tricks.pyx":657
  * 
  *     @staticmethod
  *     def comic_folders():             # <<<<<<<<<<<<<<
@@ -15563,19 +15560,19 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("comic_folders", 0);
 
-  /* "tricks.pyx":657
+  /* "tricks.pyx":658
  *     @staticmethod
  *     def comic_folders():
  *         cdef list comic_folders = []             # <<<<<<<<<<<<<<
  *         if 'comic_folders' not in techdict:
  *             techdict['comic_folders'] = []
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 657, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 658, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_comic_folders = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":658
+  /* "tricks.pyx":659
  *     def comic_folders():
  *         cdef list comic_folders = []
  *         if 'comic_folders' not in techdict:             # <<<<<<<<<<<<<<
@@ -15584,38 +15581,38 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
  */
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 658, __pyx_L1_error)
+    __PYX_ERR(0, 659, __pyx_L1_error)
   }
-  __pyx_t_2 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_comic_folders, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 658, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyDict_ContainsTF(__pyx_n_u_comic_folders, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 659, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "tricks.pyx":659
+    /* "tricks.pyx":660
  *         cdef list comic_folders = []
  *         if 'comic_folders' not in techdict:
  *             techdict['comic_folders'] = []             # <<<<<<<<<<<<<<
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 659, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 660, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 659, __pyx_L1_error)
+      __PYX_ERR(0, 660, __pyx_L1_error)
     }
-    if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_comic_folders, __pyx_t_1) < 0)) __PYX_ERR(0, 659, __pyx_L1_error)
+    if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_comic_folders, __pyx_t_1) < 0)) __PYX_ERR(0, 660, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "tricks.pyx":660
+    /* "tricks.pyx":661
  *         if 'comic_folders' not in techdict:
  *             techdict['comic_folders'] = []
  *             sqlitecursor.execute('select * from settings where id is 1')             # <<<<<<<<<<<<<<
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.comic_folders] != None:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 660, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 661, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 660, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 661, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -15630,21 +15627,21 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
     }
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, __pyx_kp_u_select_from_settings_where_id_is) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_kp_u_select_from_settings_where_id_is);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 660, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 661, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "tricks.pyx":661
+    /* "tricks.pyx":662
  *             techdict['comic_folders'] = []
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *             if settings_data[DB.comic_folders] != None:
  *                 techdict['comic_folders'] = settings_data[DB.comic_folders].split('\n')
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 661, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 662, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 661, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 662, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -15659,43 +15656,43 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 661, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 662, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_settings_data = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "tricks.pyx":662
+    /* "tricks.pyx":663
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.comic_folders] != None:             # <<<<<<<<<<<<<<
  *                 techdict['comic_folders'] = settings_data[DB.comic_folders].split('\n')
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_folders); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 662, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_folders); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 663, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 662, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 663, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 662, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 663, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 662, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_3 < 0)) __PYX_ERR(0, 663, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_3) {
 
-      /* "tricks.pyx":663
+      /* "tricks.pyx":664
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.comic_folders] != None:
  *                 techdict['comic_folders'] = settings_data[DB.comic_folders].split('\n')             # <<<<<<<<<<<<<<
  * 
  *         return techdict['comic_folders']
  */
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_folders); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 663, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_comic_folders); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 664, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 663, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 664, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_split); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 663, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_split); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 664, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_5 = NULL;
@@ -15710,17 +15707,17 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
       }
       __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_5, __pyx_kp_u__4) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_u__4);
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 663, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 664, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 663, __pyx_L1_error)
+        __PYX_ERR(0, 664, __pyx_L1_error)
       }
-      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_comic_folders, __pyx_t_1) < 0)) __PYX_ERR(0, 663, __pyx_L1_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_comic_folders, __pyx_t_1) < 0)) __PYX_ERR(0, 664, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "tricks.pyx":662
+      /* "tricks.pyx":663
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.comic_folders] != None:             # <<<<<<<<<<<<<<
@@ -15729,7 +15726,7 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
  */
     }
 
-    /* "tricks.pyx":658
+    /* "tricks.pyx":659
  *     def comic_folders():
  *         cdef list comic_folders = []
  *         if 'comic_folders' not in techdict:             # <<<<<<<<<<<<<<
@@ -15738,7 +15735,7 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
  */
   }
 
-  /* "tricks.pyx":665
+  /* "tricks.pyx":666
  *                 techdict['comic_folders'] = settings_data[DB.comic_folders].split('\n')
  * 
  *         return techdict['comic_folders']             # <<<<<<<<<<<<<<
@@ -15748,15 +15745,15 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 665, __pyx_L1_error)
+    __PYX_ERR(0, 666, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_comic_folders); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 665, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_comic_folders); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 666, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":656
+  /* "tricks.pyx":657
  * 
  *     @staticmethod
  *     def comic_folders():             # <<<<<<<<<<<<<<
@@ -15779,7 +15776,7 @@ static PyObject *__pyx_pf_6tricks_4tech_42comic_folders(CYTHON_UNUSED PyObject *
   return __pyx_r;
 }
 
-/* "tricks.pyx":668
+/* "tricks.pyx":669
  * 
  *     @staticmethod
  *     def tmp_thumbnails():             # <<<<<<<<<<<<<<
@@ -15812,7 +15809,7 @@ static PyObject *__pyx_pf_6tricks_4tech_44tmp_thumbnails(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tmp_thumbnails", 0);
 
-  /* "tricks.pyx":669
+  /* "tricks.pyx":670
  *     @staticmethod
  *     def tmp_thumbnails():
  *         return tech.cache_folder() + '/thumbs1'             # <<<<<<<<<<<<<<
@@ -15820,9 +15817,9 @@ static PyObject *__pyx_pf_6tricks_4tech_44tmp_thumbnails(CYTHON_UNUSED PyObject 
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 669, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 670, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 669, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 670, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -15837,17 +15834,17 @@ static PyObject *__pyx_pf_6tricks_4tech_44tmp_thumbnails(CYTHON_UNUSED PyObject 
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 669, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 670, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_thumbs1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 669, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_thumbs1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 670, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":668
+  /* "tricks.pyx":669
  * 
  *     @staticmethod
  *     def tmp_thumbnails():             # <<<<<<<<<<<<<<
@@ -15868,7 +15865,7 @@ static PyObject *__pyx_pf_6tricks_4tech_44tmp_thumbnails(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "tricks.pyx":672
+/* "tricks.pyx":673
  * 
  *     @staticmethod
  *     def tmp_downloaded_thumbnails():             # <<<<<<<<<<<<<<
@@ -15901,7 +15898,7 @@ static PyObject *__pyx_pf_6tricks_4tech_46tmp_downloaded_thumbnails(CYTHON_UNUSE
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tmp_downloaded_thumbnails", 0);
 
-  /* "tricks.pyx":673
+  /* "tricks.pyx":674
  *     @staticmethod
  *     def tmp_downloaded_thumbnails():
  *         return tech.cache_folder() + '/thumbs2'             # <<<<<<<<<<<<<<
@@ -15909,9 +15906,9 @@ static PyObject *__pyx_pf_6tricks_4tech_46tmp_downloaded_thumbnails(CYTHON_UNUSE
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 673, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 673, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -15926,17 +15923,17 @@ static PyObject *__pyx_pf_6tricks_4tech_46tmp_downloaded_thumbnails(CYTHON_UNUSE
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 673, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_thumbs2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 673, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_thumbs2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 674, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":672
+  /* "tricks.pyx":673
  * 
  *     @staticmethod
  *     def tmp_downloaded_thumbnails():             # <<<<<<<<<<<<<<
@@ -15957,7 +15954,7 @@ static PyObject *__pyx_pf_6tricks_4tech_46tmp_downloaded_thumbnails(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "tricks.pyx":676
+/* "tricks.pyx":677
  * 
  *     @staticmethod
  *     def tmp_api():             # <<<<<<<<<<<<<<
@@ -15990,7 +15987,7 @@ static PyObject *__pyx_pf_6tricks_4tech_48tmp_api(CYTHON_UNUSED PyObject *__pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tmp_api", 0);
 
-  /* "tricks.pyx":677
+  /* "tricks.pyx":678
  *     @staticmethod
  *     def tmp_api():
  *         return tech.cache_folder() + '/api'             # <<<<<<<<<<<<<<
@@ -15998,9 +15995,9 @@ static PyObject *__pyx_pf_6tricks_4tech_48tmp_api(CYTHON_UNUSED PyObject *__pyx_
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 677, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 678, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 677, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 678, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -16015,17 +16012,17 @@ static PyObject *__pyx_pf_6tricks_4tech_48tmp_api(CYTHON_UNUSED PyObject *__pyx_
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 677, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 678, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_api); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 677, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_api); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 678, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":676
+  /* "tricks.pyx":677
  * 
  *     @staticmethod
  *     def tmp_api():             # <<<<<<<<<<<<<<
@@ -16046,7 +16043,7 @@ static PyObject *__pyx_pf_6tricks_4tech_48tmp_api(CYTHON_UNUSED PyObject *__pyx_
   return __pyx_r;
 }
 
-/* "tricks.pyx":680
+/* "tricks.pyx":681
  * 
  *     @staticmethod
  *     def tmp_pages():             # <<<<<<<<<<<<<<
@@ -16079,7 +16076,7 @@ static PyObject *__pyx_pf_6tricks_4tech_50tmp_pages(CYTHON_UNUSED PyObject *__py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("tmp_pages", 0);
 
-  /* "tricks.pyx":681
+  /* "tricks.pyx":682
  *     @staticmethod
  *     def tmp_pages():
  *         return tech.cache_folder() + '/pages'             # <<<<<<<<<<<<<<
@@ -16087,9 +16084,9 @@ static PyObject *__pyx_pf_6tricks_4tech_50tmp_pages(CYTHON_UNUSED PyObject *__py
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 681, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 682, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 681, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 682, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -16104,17 +16101,17 @@ static PyObject *__pyx_pf_6tricks_4tech_50tmp_pages(CYTHON_UNUSED PyObject *__py
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 681, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 682, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_pages); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 681, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_1, __pyx_kp_u_pages); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 682, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":680
+  /* "tricks.pyx":681
  * 
  *     @staticmethod
  *     def tmp_pages():             # <<<<<<<<<<<<<<
@@ -16135,7 +16132,7 @@ static PyObject *__pyx_pf_6tricks_4tech_50tmp_pages(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "tricks.pyx":684
+/* "tricks.pyx":685
  * 
  *     @staticmethod
  *     def cache_folder():             # <<<<<<<<<<<<<<
@@ -16182,7 +16179,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("cache_folder", 0);
 
-  /* "tricks.pyx":685
+  /* "tricks.pyx":686
  *     @staticmethod
  *     def cache_folder():
  *         try: return techdict['cache_folder']             # <<<<<<<<<<<<<<
@@ -16200,9 +16197,9 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 685, __pyx_L3_error)
+        __PYX_ERR(0, 686, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_cache_folder); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 685, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_cache_folder); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 686, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -16211,7 +16208,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":686
+    /* "tricks.pyx":687
  *     def cache_folder():
  *         try: return techdict['cache_folder']
  *         except KeyError:             # <<<<<<<<<<<<<<
@@ -16221,21 +16218,21 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
     __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_5) {
       __Pyx_AddTraceback("tricks.tech.cache_folder", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 686, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 687, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
 
-      /* "tricks.pyx":687
+      /* "tricks.pyx":688
  *         try: return techdict['cache_folder']
  *         except KeyError:
  *             sqlitecursor.execute('select * from settings where id is 1')             # <<<<<<<<<<<<<<
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.cache_folder] == None:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 687, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 688, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_execute); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 687, __pyx_L5_except_error)
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_execute); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 688, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -16250,21 +16247,21 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
       }
       __pyx_t_8 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_9, __pyx_kp_u_select_from_settings_where_id_is) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_kp_u_select_from_settings_where_id_is);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 687, __pyx_L5_except_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 688, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-      /* "tricks.pyx":688
+      /* "tricks.pyx":689
  *         except KeyError:
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *             if settings_data[DB.cache_folder] == None:
  *                 return tech.fpath(os.path.dirname(os.path.realpath(__file__)) + '/tmp')
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 688, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 689, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_10);
-      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 688, __pyx_L5_except_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 689, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_t_10 = NULL;
@@ -16279,31 +16276,31 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
       }
       __pyx_t_8 = (__pyx_t_10) ? __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_10) : __Pyx_PyObject_CallNoArg(__pyx_t_9);
       __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 688, __pyx_L5_except_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 689, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_v_settings_data = __pyx_t_8;
       __pyx_t_8 = 0;
 
-      /* "tricks.pyx":689
+      /* "tricks.pyx":690
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.cache_folder] == None:             # <<<<<<<<<<<<<<
  *                 return tech.fpath(os.path.dirname(os.path.realpath(__file__)) + '/tmp')
  *             else:
  */
-      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 689, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 690, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 689, __pyx_L5_except_error)
+      __pyx_t_9 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 690, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_8 = PyObject_RichCompare(__pyx_t_9, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 689, __pyx_L5_except_error)
+      __pyx_t_8 = PyObject_RichCompare(__pyx_t_9, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_8); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 690, __pyx_L5_except_error)
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 689, __pyx_L5_except_error)
+      __pyx_t_11 = __Pyx_PyObject_IsTrue(__pyx_t_8); if (unlikely(__pyx_t_11 < 0)) __PYX_ERR(0, 690, __pyx_L5_except_error)
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       if (__pyx_t_11) {
 
-        /* "tricks.pyx":690
+        /* "tricks.pyx":691
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.cache_folder] == None:
  *                 return tech.fpath(os.path.dirname(os.path.realpath(__file__)) + '/tmp')             # <<<<<<<<<<<<<<
@@ -16311,28 +16308,28 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
  *                 techdict['cache_folder'] = tech.fpath(settings_data[DB.cache_folder])
  */
         __Pyx_XDECREF(__pyx_r);
-        __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_9);
-        __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_fpath); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_fpath); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_10);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_os); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_12, __pyx_n_s_os); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_12);
-        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_path); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_path); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_dirname); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_13, __pyx_n_s_dirname); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_os); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_14);
-        __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_path); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_path); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_15);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_realpath); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __pyx_t_14 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_realpath); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_14);
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-        __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_file); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_file); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_15);
         __pyx_t_16 = NULL;
         if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_14))) {
@@ -16347,7 +16344,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
         __pyx_t_13 = (__pyx_t_16) ? __Pyx_PyObject_Call2Args(__pyx_t_14, __pyx_t_16, __pyx_t_15) : __Pyx_PyObject_CallOneArg(__pyx_t_14, __pyx_t_15);
         __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
         __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_13);
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __pyx_t_14 = NULL;
@@ -16363,10 +16360,10 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
         __pyx_t_9 = (__pyx_t_14) ? __Pyx_PyObject_Call2Args(__pyx_t_12, __pyx_t_14, __pyx_t_13) : __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_13);
         __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-        if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-        __pyx_t_12 = PyNumber_Add(__pyx_t_9, __pyx_kp_u_tmp); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        __pyx_t_12 = PyNumber_Add(__pyx_t_9, __pyx_kp_u_tmp); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
         __pyx_t_9 = NULL;
@@ -16382,7 +16379,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
         __pyx_t_8 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_9, __pyx_t_12) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_t_12);
         __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 690, __pyx_L5_except_error)
+        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 691, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __pyx_r = __pyx_t_8;
@@ -16392,7 +16389,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         goto __pyx_L6_except_return;
 
-        /* "tricks.pyx":689
+        /* "tricks.pyx":690
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             settings_data = sqlitecursor.fetchone()
  *             if settings_data[DB.cache_folder] == None:             # <<<<<<<<<<<<<<
@@ -16401,7 +16398,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
  */
       }
 
-      /* "tricks.pyx":692
+      /* "tricks.pyx":693
  *                 return tech.fpath(os.path.dirname(os.path.realpath(__file__)) + '/tmp')
  *             else:
  *                 techdict['cache_folder'] = tech.fpath(settings_data[DB.cache_folder])             # <<<<<<<<<<<<<<
@@ -16409,14 +16406,14 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
  * 
  */
       /*else*/ {
-        __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_tech); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 692, __pyx_L5_except_error)
+        __Pyx_GetModuleGlobalName(__pyx_t_10, __pyx_n_s_tech); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 693, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_10);
-        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_fpath); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 692, __pyx_L5_except_error)
+        __pyx_t_12 = __Pyx_PyObject_GetAttrStr(__pyx_t_10, __pyx_n_s_fpath); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 693, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_12);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
-        __pyx_t_10 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 692, __pyx_L5_except_error)
+        __pyx_t_10 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_n_s_cache_folder); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 693, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_10);
-        __pyx_t_9 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_10); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 692, __pyx_L5_except_error)
+        __pyx_t_9 = __Pyx_PyObject_GetItem(__pyx_v_settings_data, __pyx_t_10); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 693, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_9);
         __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
         __pyx_t_10 = NULL;
@@ -16432,14 +16429,14 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
         __pyx_t_8 = (__pyx_t_10) ? __Pyx_PyObject_Call2Args(__pyx_t_12, __pyx_t_10, __pyx_t_9) : __Pyx_PyObject_CallOneArg(__pyx_t_12, __pyx_t_9);
         __Pyx_XDECREF(__pyx_t_10); __pyx_t_10 = 0;
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 692, __pyx_L5_except_error)
+        if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 693, __pyx_L5_except_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
         if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
           PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-          __PYX_ERR(0, 692, __pyx_L5_except_error)
+          __PYX_ERR(0, 693, __pyx_L5_except_error)
         }
-        if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_cache_folder, __pyx_t_8) < 0)) __PYX_ERR(0, 692, __pyx_L5_except_error)
+        if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_n_u_cache_folder, __pyx_t_8) < 0)) __PYX_ERR(0, 693, __pyx_L5_except_error)
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       }
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -16450,7 +16447,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":685
+    /* "tricks.pyx":686
  *     @staticmethod
  *     def cache_folder():
  *         try: return techdict['cache_folder']             # <<<<<<<<<<<<<<
@@ -16481,7 +16478,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
     __Pyx_ExceptionReset(__pyx_t_1, __pyx_t_2, __pyx_t_3);
   }
 
-  /* "tricks.pyx":693
+  /* "tricks.pyx":694
  *             else:
  *                 techdict['cache_folder'] = tech.fpath(settings_data[DB.cache_folder])
  *         return techdict['cache_folder']             # <<<<<<<<<<<<<<
@@ -16491,15 +16488,15 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 693, __pyx_L1_error)
+    __PYX_ERR(0, 694, __pyx_L1_error)
   }
-  __pyx_t_7 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_cache_folder); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 693, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_cache_folder); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 694, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_r = __pyx_t_7;
   __pyx_t_7 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":684
+  /* "tricks.pyx":685
  * 
  *     @staticmethod
  *     def cache_folder():             # <<<<<<<<<<<<<<
@@ -16529,7 +16526,7 @@ static PyObject *__pyx_pf_6tricks_4tech_52cache_folder(CYTHON_UNUSED PyObject *_
   return __pyx_r;
 }
 
-/* "tricks.pyx":696
+/* "tricks.pyx":697
  * 
  *     @staticmethod
  *     def settings_filler(str setting_string, int default=0):             # <<<<<<<<<<<<<<
@@ -16576,7 +16573,7 @@ static PyObject *__pyx_pw_6tricks_4tech_55settings_filler(PyObject *__pyx_self, 
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "settings_filler") < 0)) __PYX_ERR(0, 696, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "settings_filler") < 0)) __PYX_ERR(0, 697, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -16589,20 +16586,20 @@ static PyObject *__pyx_pw_6tricks_4tech_55settings_filler(PyObject *__pyx_self, 
     }
     __pyx_v_setting_string = ((PyObject*)values[0]);
     if (values[1]) {
-      __pyx_v_default = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_default == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 696, __pyx_L3_error)
+      __pyx_v_default = __Pyx_PyInt_As_int(values[1]); if (unlikely((__pyx_v_default == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 697, __pyx_L3_error)
     } else {
       __pyx_v_default = ((int)((int)0));
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("settings_filler", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 696, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("settings_filler", 0, 1, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 697, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("tricks.tech.settings_filler", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_setting_string), (&PyUnicode_Type), 1, "setting_string", 1))) __PYX_ERR(0, 696, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_setting_string), (&PyUnicode_Type), 1, "setting_string", 1))) __PYX_ERR(0, 697, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_54settings_filler(__pyx_self, __pyx_v_setting_string, __pyx_v_default);
 
   /* function exit code */
@@ -16628,7 +16625,7 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("settings_filler", 0);
 
-  /* "tricks.pyx":697
+  /* "tricks.pyx":698
  *     @staticmethod
  *     def settings_filler(str setting_string, int default=0):
  *         if setting_string not in techdict:             # <<<<<<<<<<<<<<
@@ -16637,22 +16634,22 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
  */
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 697, __pyx_L1_error)
+    __PYX_ERR(0, 698, __pyx_L1_error)
   }
-  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_v_setting_string, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 697, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PyDict_ContainsTF(__pyx_v_setting_string, __pyx_v_6tricks_techdict, Py_NE)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 698, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "tricks.pyx":698
+    /* "tricks.pyx":699
  *     def settings_filler(str setting_string, int default=0):
  *         if setting_string not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')             # <<<<<<<<<<<<<<
  *             data = sqlitecursor.fetchone()
  *             if data[getattr(DB, setting_string)] == 1:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 698, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 699, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 698, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_execute); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 699, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -16667,21 +16664,21 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
     }
     __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, __pyx_kp_u_select_from_settings_where_id_is) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_kp_u_select_from_settings_where_id_is);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 698, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 699, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "tricks.pyx":699
+    /* "tricks.pyx":700
  *         if setting_string not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             data = sqlitecursor.fetchone()             # <<<<<<<<<<<<<<
  *             if data[getattr(DB, setting_string)] == 1:
  *                 techdict[setting_string] = True
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 699, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_sqlitecursor); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 700, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 699, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_fetchone); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 700, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -16696,32 +16693,32 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 699, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 700, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_v_data = __pyx_t_3;
     __pyx_t_3 = 0;
 
-    /* "tricks.pyx":700
+    /* "tricks.pyx":701
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             data = sqlitecursor.fetchone()
  *             if data[getattr(DB, setting_string)] == 1:             # <<<<<<<<<<<<<<
  *                 techdict[setting_string] = True
  *             elif data[getattr(DB, setting_string)] == None and default == 1:
  */
-    __pyx_t_3 = __Pyx_GetAttr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_v_setting_string); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 700, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetAttr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_v_setting_string); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 701, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 700, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 701, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyInt_EqObjC(__pyx_t_4, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 700, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_EqObjC(__pyx_t_4, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 701, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 700, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 701, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
 
-      /* "tricks.pyx":701
+      /* "tricks.pyx":702
  *             data = sqlitecursor.fetchone()
  *             if data[getattr(DB, setting_string)] == 1:
  *                 techdict[setting_string] = True             # <<<<<<<<<<<<<<
@@ -16730,11 +16727,11 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
  */
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 701, __pyx_L1_error)
+        __PYX_ERR(0, 702, __pyx_L1_error)
       }
-      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_v_setting_string, Py_True) < 0)) __PYX_ERR(0, 701, __pyx_L1_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_v_setting_string, Py_True) < 0)) __PYX_ERR(0, 702, __pyx_L1_error)
 
-      /* "tricks.pyx":700
+      /* "tricks.pyx":701
  *             sqlitecursor.execute('select * from settings where id is 1')
  *             data = sqlitecursor.fetchone()
  *             if data[getattr(DB, setting_string)] == 1:             # <<<<<<<<<<<<<<
@@ -16744,21 +16741,21 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
       goto __pyx_L4;
     }
 
-    /* "tricks.pyx":702
+    /* "tricks.pyx":703
  *             if data[getattr(DB, setting_string)] == 1:
  *                 techdict[setting_string] = True
  *             elif data[getattr(DB, setting_string)] == None and default == 1:             # <<<<<<<<<<<<<<
  *                 techdict[setting_string] = True
  *             else:
  */
-    __pyx_t_3 = __Pyx_GetAttr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_v_setting_string); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 702, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetAttr(((PyObject *)__pyx_ptype_6tricks_DB), __pyx_v_setting_string); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 703, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 702, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetItem(__pyx_v_data, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 703, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 702, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 703, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 702, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 703, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_1) {
     } else {
@@ -16770,7 +16767,7 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
     __pyx_L5_bool_binop_done:;
     if (__pyx_t_2) {
 
-      /* "tricks.pyx":703
+      /* "tricks.pyx":704
  *                 techdict[setting_string] = True
  *             elif data[getattr(DB, setting_string)] == None and default == 1:
  *                 techdict[setting_string] = True             # <<<<<<<<<<<<<<
@@ -16779,11 +16776,11 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
  */
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 703, __pyx_L1_error)
+        __PYX_ERR(0, 704, __pyx_L1_error)
       }
-      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_v_setting_string, Py_True) < 0)) __PYX_ERR(0, 703, __pyx_L1_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_v_setting_string, Py_True) < 0)) __PYX_ERR(0, 704, __pyx_L1_error)
 
-      /* "tricks.pyx":702
+      /* "tricks.pyx":703
  *             if data[getattr(DB, setting_string)] == 1:
  *                 techdict[setting_string] = True
  *             elif data[getattr(DB, setting_string)] == None and default == 1:             # <<<<<<<<<<<<<<
@@ -16793,7 +16790,7 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
       goto __pyx_L4;
     }
 
-    /* "tricks.pyx":705
+    /* "tricks.pyx":706
  *                 techdict[setting_string] = True
  *             else:
  *                 techdict[setting_string] = False             # <<<<<<<<<<<<<<
@@ -16803,13 +16800,13 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
     /*else*/ {
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 705, __pyx_L1_error)
+        __PYX_ERR(0, 706, __pyx_L1_error)
       }
-      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_v_setting_string, Py_False) < 0)) __PYX_ERR(0, 705, __pyx_L1_error)
+      if (unlikely(PyDict_SetItem(__pyx_v_6tricks_techdict, __pyx_v_setting_string, Py_False) < 0)) __PYX_ERR(0, 706, __pyx_L1_error)
     }
     __pyx_L4:;
 
-    /* "tricks.pyx":697
+    /* "tricks.pyx":698
  *     @staticmethod
  *     def settings_filler(str setting_string, int default=0):
  *         if setting_string not in techdict:             # <<<<<<<<<<<<<<
@@ -16818,7 +16815,7 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
  */
   }
 
-  /* "tricks.pyx":706
+  /* "tricks.pyx":707
  *             else:
  *                 techdict[setting_string] = False
  *         return techdict[setting_string]             # <<<<<<<<<<<<<<
@@ -16828,15 +16825,15 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
   __Pyx_XDECREF(__pyx_r);
   if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 706, __pyx_L1_error)
+    __PYX_ERR(0, 707, __pyx_L1_error)
   }
-  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_v_setting_string); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 706, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_v_setting_string); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 707, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
   __pyx_t_3 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":696
+  /* "tricks.pyx":697
  * 
  *     @staticmethod
  *     def settings_filler(str setting_string, int default=0):             # <<<<<<<<<<<<<<
@@ -16858,7 +16855,7 @@ static PyObject *__pyx_pf_6tricks_4tech_54settings_filler(CYTHON_UNUSED PyObject
   return __pyx_r;
 }
 
-/* "tricks.pyx":709
+/* "tricks.pyx":710
  * 
  *     @staticmethod
  *     def check_bleed():             # <<<<<<<<<<<<<<
@@ -16898,7 +16895,7 @@ static PyObject *__pyx_pf_6tricks_4tech_56check_bleed(CYTHON_UNUSED PyObject *__
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_bleed", 0);
 
-  /* "tricks.pyx":710
+  /* "tricks.pyx":711
  *     @staticmethod
  *     def check_bleed():
  *         try: return techdict['check_bleed']             # <<<<<<<<<<<<<<
@@ -16916,9 +16913,9 @@ static PyObject *__pyx_pf_6tricks_4tech_56check_bleed(CYTHON_UNUSED PyObject *__
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 710, __pyx_L3_error)
+        __PYX_ERR(0, 711, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_bleed); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 710, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_bleed); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 711, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -16927,7 +16924,7 @@ static PyObject *__pyx_pf_6tricks_4tech_56check_bleed(CYTHON_UNUSED PyObject *__
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":711
+    /* "tricks.pyx":712
  *     def check_bleed():
  *         try: return techdict['check_bleed']
  *         except KeyError: return tech.settings_filler('check_bleed')             # <<<<<<<<<<<<<<
@@ -16937,14 +16934,14 @@ static PyObject *__pyx_pf_6tricks_4tech_56check_bleed(CYTHON_UNUSED PyObject *__
     __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_5) {
       __Pyx_AddTraceback("tricks.tech.check_bleed", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 711, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 712, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 711, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 712, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 711, __pyx_L5_except_error)
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 712, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -16959,7 +16956,7 @@ static PyObject *__pyx_pf_6tricks_4tech_56check_bleed(CYTHON_UNUSED PyObject *__
       }
       __pyx_t_8 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_9, __pyx_n_u_check_bleed) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_n_u_check_bleed);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 711, __pyx_L5_except_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 712, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_r = __pyx_t_8;
@@ -16972,7 +16969,7 @@ static PyObject *__pyx_pf_6tricks_4tech_56check_bleed(CYTHON_UNUSED PyObject *__
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":710
+    /* "tricks.pyx":711
  *     @staticmethod
  *     def check_bleed():
  *         try: return techdict['check_bleed']             # <<<<<<<<<<<<<<
@@ -16998,7 +16995,7 @@ static PyObject *__pyx_pf_6tricks_4tech_56check_bleed(CYTHON_UNUSED PyObject *__
     goto __pyx_L0;
   }
 
-  /* "tricks.pyx":709
+  /* "tricks.pyx":710
  * 
  *     @staticmethod
  *     def check_bleed():             # <<<<<<<<<<<<<<
@@ -17022,7 +17019,7 @@ static PyObject *__pyx_pf_6tricks_4tech_56check_bleed(CYTHON_UNUSED PyObject *__
   return __pyx_r;
 }
 
-/* "tricks.pyx":713
+/* "tricks.pyx":714
  *         except KeyError: return tech.settings_filler('check_bleed')
  *     @staticmethod
  *     def check_spaceout():             # <<<<<<<<<<<<<<
@@ -17062,7 +17059,7 @@ static PyObject *__pyx_pf_6tricks_4tech_58check_spaceout(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_spaceout", 0);
 
-  /* "tricks.pyx":714
+  /* "tricks.pyx":715
  *     @staticmethod
  *     def check_spaceout():
  *         try: return techdict['check_spaceout']             # <<<<<<<<<<<<<<
@@ -17080,9 +17077,9 @@ static PyObject *__pyx_pf_6tricks_4tech_58check_spaceout(CYTHON_UNUSED PyObject 
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 714, __pyx_L3_error)
+        __PYX_ERR(0, 715, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_spaceout); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 714, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_spaceout); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 715, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -17091,7 +17088,7 @@ static PyObject *__pyx_pf_6tricks_4tech_58check_spaceout(CYTHON_UNUSED PyObject 
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":715
+    /* "tricks.pyx":716
  *     def check_spaceout():
  *         try: return techdict['check_spaceout']
  *         except KeyError: return tech.settings_filler('check_spaceout')             # <<<<<<<<<<<<<<
@@ -17101,14 +17098,14 @@ static PyObject *__pyx_pf_6tricks_4tech_58check_spaceout(CYTHON_UNUSED PyObject 
     __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_5) {
       __Pyx_AddTraceback("tricks.tech.check_spaceout", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 715, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 716, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 715, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 716, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 715, __pyx_L5_except_error)
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 716, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -17123,7 +17120,7 @@ static PyObject *__pyx_pf_6tricks_4tech_58check_spaceout(CYTHON_UNUSED PyObject 
       }
       __pyx_t_8 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_9, __pyx_n_u_check_spaceout) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_n_u_check_spaceout);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 715, __pyx_L5_except_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 716, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_r = __pyx_t_8;
@@ -17136,7 +17133,7 @@ static PyObject *__pyx_pf_6tricks_4tech_58check_spaceout(CYTHON_UNUSED PyObject 
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":714
+    /* "tricks.pyx":715
  *     @staticmethod
  *     def check_spaceout():
  *         try: return techdict['check_spaceout']             # <<<<<<<<<<<<<<
@@ -17162,7 +17159,7 @@ static PyObject *__pyx_pf_6tricks_4tech_58check_spaceout(CYTHON_UNUSED PyObject 
     goto __pyx_L0;
   }
 
-  /* "tricks.pyx":713
+  /* "tricks.pyx":714
  *         except KeyError: return tech.settings_filler('check_bleed')
  *     @staticmethod
  *     def check_spaceout():             # <<<<<<<<<<<<<<
@@ -17186,7 +17183,7 @@ static PyObject *__pyx_pf_6tricks_4tech_58check_spaceout(CYTHON_UNUSED PyObject 
   return __pyx_r;
 }
 
-/* "tricks.pyx":717
+/* "tricks.pyx":718
  *         except KeyError: return tech.settings_filler('check_spaceout')
  *     @staticmethod
  *     def check_alternative_covers():             # <<<<<<<<<<<<<<
@@ -17225,7 +17222,7 @@ static PyObject *__pyx_pf_6tricks_4tech_60check_alternative_covers(CYTHON_UNUSED
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_alternative_covers", 0);
 
-  /* "tricks.pyx":718
+  /* "tricks.pyx":719
  *     @staticmethod
  *     def check_alternative_covers():
  *         try: return techdict['check_alternative_covers']             # <<<<<<<<<<<<<<
@@ -17243,9 +17240,9 @@ static PyObject *__pyx_pf_6tricks_4tech_60check_alternative_covers(CYTHON_UNUSED
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 718, __pyx_L3_error)
+        __PYX_ERR(0, 719, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_alternative_covers); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 718, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_alternative_covers); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 719, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -17254,7 +17251,7 @@ static PyObject *__pyx_pf_6tricks_4tech_60check_alternative_covers(CYTHON_UNUSED
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":719
+    /* "tricks.pyx":720
  *     def check_alternative_covers():
  *         try: return techdict['check_alternative_covers']
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)             # <<<<<<<<<<<<<<
@@ -17264,17 +17261,17 @@ static PyObject *__pyx_pf_6tricks_4tech_60check_alternative_covers(CYTHON_UNUSED
     __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_5) {
       __Pyx_AddTraceback("tricks.tech.check_alternative_covers", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 719, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 720, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_tech); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 719, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_tech); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 720, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 719, __pyx_L5_except_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 720, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 719, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__21, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 720, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_r = __pyx_t_8;
@@ -17287,7 +17284,7 @@ static PyObject *__pyx_pf_6tricks_4tech_60check_alternative_covers(CYTHON_UNUSED
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":718
+    /* "tricks.pyx":719
  *     @staticmethod
  *     def check_alternative_covers():
  *         try: return techdict['check_alternative_covers']             # <<<<<<<<<<<<<<
@@ -17313,7 +17310,7 @@ static PyObject *__pyx_pf_6tricks_4tech_60check_alternative_covers(CYTHON_UNUSED
     goto __pyx_L0;
   }
 
-  /* "tricks.pyx":717
+  /* "tricks.pyx":718
  *         except KeyError: return tech.settings_filler('check_spaceout')
  *     @staticmethod
  *     def check_alternative_covers():             # <<<<<<<<<<<<<<
@@ -17336,7 +17333,7 @@ static PyObject *__pyx_pf_6tricks_4tech_60check_alternative_covers(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "tricks.pyx":721
+/* "tricks.pyx":722
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)
  *     @staticmethod
  *     def check_overwrite_covers():             # <<<<<<<<<<<<<<
@@ -17376,7 +17373,7 @@ static PyObject *__pyx_pf_6tricks_4tech_62check_overwrite_covers(CYTHON_UNUSED P
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_overwrite_covers", 0);
 
-  /* "tricks.pyx":722
+  /* "tricks.pyx":723
  *     @staticmethod
  *     def check_overwrite_covers():
  *         try: return techdict['check_overwrite_covers']             # <<<<<<<<<<<<<<
@@ -17394,9 +17391,9 @@ static PyObject *__pyx_pf_6tricks_4tech_62check_overwrite_covers(CYTHON_UNUSED P
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 722, __pyx_L3_error)
+        __PYX_ERR(0, 723, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_overwrite_covers); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 722, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_overwrite_covers); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 723, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -17405,7 +17402,7 @@ static PyObject *__pyx_pf_6tricks_4tech_62check_overwrite_covers(CYTHON_UNUSED P
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":723
+    /* "tricks.pyx":724
  *     def check_overwrite_covers():
  *         try: return techdict['check_overwrite_covers']
  *         except KeyError: return tech.settings_filler('check_overwrite_covers')             # <<<<<<<<<<<<<<
@@ -17415,14 +17412,14 @@ static PyObject *__pyx_pf_6tricks_4tech_62check_overwrite_covers(CYTHON_UNUSED P
     __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_5) {
       __Pyx_AddTraceback("tricks.tech.check_overwrite_covers", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 723, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 724, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 723, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 724, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 723, __pyx_L5_except_error)
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 724, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -17437,7 +17434,7 @@ static PyObject *__pyx_pf_6tricks_4tech_62check_overwrite_covers(CYTHON_UNUSED P
       }
       __pyx_t_8 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_9, __pyx_n_u_check_overwrite_covers) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_n_u_check_overwrite_covers);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 723, __pyx_L5_except_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 724, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_r = __pyx_t_8;
@@ -17450,7 +17447,7 @@ static PyObject *__pyx_pf_6tricks_4tech_62check_overwrite_covers(CYTHON_UNUSED P
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":722
+    /* "tricks.pyx":723
  *     @staticmethod
  *     def check_overwrite_covers():
  *         try: return techdict['check_overwrite_covers']             # <<<<<<<<<<<<<<
@@ -17476,7 +17473,7 @@ static PyObject *__pyx_pf_6tricks_4tech_62check_overwrite_covers(CYTHON_UNUSED P
     goto __pyx_L0;
   }
 
-  /* "tricks.pyx":721
+  /* "tricks.pyx":722
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)
  *     @staticmethod
  *     def check_overwrite_covers():             # <<<<<<<<<<<<<<
@@ -17500,7 +17497,7 @@ static PyObject *__pyx_pf_6tricks_4tech_62check_overwrite_covers(CYTHON_UNUSED P
   return __pyx_r;
 }
 
-/* "tricks.pyx":725
+/* "tricks.pyx":726
  *         except KeyError: return tech.settings_filler('check_overwrite_covers')
  *     @staticmethod
  *     def check_show_filesize():             # <<<<<<<<<<<<<<
@@ -17539,7 +17536,7 @@ static PyObject *__pyx_pf_6tricks_4tech_64check_show_filesize(CYTHON_UNUSED PyOb
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_show_filesize", 0);
 
-  /* "tricks.pyx":726
+  /* "tricks.pyx":727
  *     @staticmethod
  *     def check_show_filesize():
  *         try: return techdict['check_show_filesize']             # <<<<<<<<<<<<<<
@@ -17557,9 +17554,9 @@ static PyObject *__pyx_pf_6tricks_4tech_64check_show_filesize(CYTHON_UNUSED PyOb
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 726, __pyx_L3_error)
+        __PYX_ERR(0, 727, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_show_filesize); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 726, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_show_filesize); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 727, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -17568,7 +17565,7 @@ static PyObject *__pyx_pf_6tricks_4tech_64check_show_filesize(CYTHON_UNUSED PyOb
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":727
+    /* "tricks.pyx":728
  *     def check_show_filesize():
  *         try: return techdict['check_show_filesize']
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)             # <<<<<<<<<<<<<<
@@ -17578,17 +17575,17 @@ static PyObject *__pyx_pf_6tricks_4tech_64check_show_filesize(CYTHON_UNUSED PyOb
     __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_5) {
       __Pyx_AddTraceback("tricks.tech.check_show_filesize", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 727, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 728, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_tech); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 727, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_tech); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 728, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 727, __pyx_L5_except_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 728, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 727, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__22, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 728, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_r = __pyx_t_8;
@@ -17601,7 +17598,7 @@ static PyObject *__pyx_pf_6tricks_4tech_64check_show_filesize(CYTHON_UNUSED PyOb
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":726
+    /* "tricks.pyx":727
  *     @staticmethod
  *     def check_show_filesize():
  *         try: return techdict['check_show_filesize']             # <<<<<<<<<<<<<<
@@ -17627,7 +17624,7 @@ static PyObject *__pyx_pf_6tricks_4tech_64check_show_filesize(CYTHON_UNUSED PyOb
     goto __pyx_L0;
   }
 
-  /* "tricks.pyx":725
+  /* "tricks.pyx":726
  *         except KeyError: return tech.settings_filler('check_overwrite_covers')
  *     @staticmethod
  *     def check_show_filesize():             # <<<<<<<<<<<<<<
@@ -17650,7 +17647,7 @@ static PyObject *__pyx_pf_6tricks_4tech_64check_show_filesize(CYTHON_UNUSED PyOb
   return __pyx_r;
 }
 
-/* "tricks.pyx":729
+/* "tricks.pyx":730
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)
  *     @staticmethod
  *     def check_defer_comicvine():             # <<<<<<<<<<<<<<
@@ -17690,7 +17687,7 @@ static PyObject *__pyx_pf_6tricks_4tech_66check_defer_comicvine(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_defer_comicvine", 0);
 
-  /* "tricks.pyx":730
+  /* "tricks.pyx":731
  *     @staticmethod
  *     def check_defer_comicvine():
  *         try: return techdict['check_defer_comicvine']             # <<<<<<<<<<<<<<
@@ -17708,9 +17705,9 @@ static PyObject *__pyx_pf_6tricks_4tech_66check_defer_comicvine(CYTHON_UNUSED Py
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 730, __pyx_L3_error)
+        __PYX_ERR(0, 731, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_defer_comicvine); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 730, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_defer_comicvine); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 731, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -17719,7 +17716,7 @@ static PyObject *__pyx_pf_6tricks_4tech_66check_defer_comicvine(CYTHON_UNUSED Py
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":731
+    /* "tricks.pyx":732
  *     def check_defer_comicvine():
  *         try: return techdict['check_defer_comicvine']
  *         except KeyError: return tech.settings_filler('check_defer_comicvine')             # <<<<<<<<<<<<<<
@@ -17729,14 +17726,14 @@ static PyObject *__pyx_pf_6tricks_4tech_66check_defer_comicvine(CYTHON_UNUSED Py
     __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_5) {
       __Pyx_AddTraceback("tricks.tech.check_defer_comicvine", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 731, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 732, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 731, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_9, __pyx_n_s_tech); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 732, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
-      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 731, __pyx_L5_except_error)
+      __pyx_t_10 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 732, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_10);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_t_9 = NULL;
@@ -17751,7 +17748,7 @@ static PyObject *__pyx_pf_6tricks_4tech_66check_defer_comicvine(CYTHON_UNUSED Py
       }
       __pyx_t_8 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_10, __pyx_t_9, __pyx_n_u_check_defer_comicvine) : __Pyx_PyObject_CallOneArg(__pyx_t_10, __pyx_n_u_check_defer_comicvine);
       __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 731, __pyx_L5_except_error)
+      if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 732, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_10); __pyx_t_10 = 0;
       __pyx_r = __pyx_t_8;
@@ -17764,7 +17761,7 @@ static PyObject *__pyx_pf_6tricks_4tech_66check_defer_comicvine(CYTHON_UNUSED Py
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":730
+    /* "tricks.pyx":731
  *     @staticmethod
  *     def check_defer_comicvine():
  *         try: return techdict['check_defer_comicvine']             # <<<<<<<<<<<<<<
@@ -17790,7 +17787,7 @@ static PyObject *__pyx_pf_6tricks_4tech_66check_defer_comicvine(CYTHON_UNUSED Py
     goto __pyx_L0;
   }
 
-  /* "tricks.pyx":729
+  /* "tricks.pyx":730
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)
  *     @staticmethod
  *     def check_defer_comicvine():             # <<<<<<<<<<<<<<
@@ -17814,7 +17811,7 @@ static PyObject *__pyx_pf_6tricks_4tech_66check_defer_comicvine(CYTHON_UNUSED Py
   return __pyx_r;
 }
 
-/* "tricks.pyx":733
+/* "tricks.pyx":734
  *         except KeyError: return tech.settings_filler('check_defer_comicvine')
  *     @staticmethod
  *     def check_show_pagecount():             # <<<<<<<<<<<<<<
@@ -17853,7 +17850,7 @@ static PyObject *__pyx_pf_6tricks_4tech_68check_show_pagecount(CYTHON_UNUSED PyO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("check_show_pagecount", 0);
 
-  /* "tricks.pyx":734
+  /* "tricks.pyx":735
  *     @staticmethod
  *     def check_show_pagecount():
  *         try: return techdict['check_show_pagecount']             # <<<<<<<<<<<<<<
@@ -17871,9 +17868,9 @@ static PyObject *__pyx_pf_6tricks_4tech_68check_show_pagecount(CYTHON_UNUSED PyO
       __Pyx_XDECREF(__pyx_r);
       if (unlikely(__pyx_v_6tricks_techdict == Py_None)) {
         PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-        __PYX_ERR(0, 734, __pyx_L3_error)
+        __PYX_ERR(0, 735, __pyx_L3_error)
       }
-      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_show_pagecount); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 734, __pyx_L3_error)
+      __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_6tricks_techdict, __pyx_n_u_check_show_pagecount); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 735, __pyx_L3_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
@@ -17882,7 +17879,7 @@ static PyObject *__pyx_pf_6tricks_4tech_68check_show_pagecount(CYTHON_UNUSED PyO
     __pyx_L3_error:;
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "tricks.pyx":735
+    /* "tricks.pyx":736
  *     def check_show_pagecount():
  *         try: return techdict['check_show_pagecount']
  *         except KeyError: return tech.settings_filler('check_show_pagecount', 1)             # <<<<<<<<<<<<<<
@@ -17892,17 +17889,17 @@ static PyObject *__pyx_pf_6tricks_4tech_68check_show_pagecount(CYTHON_UNUSED PyO
     __pyx_t_5 = __Pyx_PyErr_ExceptionMatches(__pyx_builtin_KeyError);
     if (__pyx_t_5) {
       __Pyx_AddTraceback("tricks.tech.check_show_pagecount", __pyx_clineno, __pyx_lineno, __pyx_filename);
-      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 735, __pyx_L5_except_error)
+      if (__Pyx_GetException(&__pyx_t_4, &__pyx_t_6, &__pyx_t_7) < 0) __PYX_ERR(0, 736, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_tech); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 735, __pyx_L5_except_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_tech); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 736, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
-      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 735, __pyx_L5_except_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_8, __pyx_n_s_settings_filler); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 736, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_9);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__23, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 735, __pyx_L5_except_error)
+      __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_9, __pyx_tuple__23, NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 736, __pyx_L5_except_error)
       __Pyx_GOTREF(__pyx_t_8);
       __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __pyx_r = __pyx_t_8;
@@ -17915,7 +17912,7 @@ static PyObject *__pyx_pf_6tricks_4tech_68check_show_pagecount(CYTHON_UNUSED PyO
     goto __pyx_L5_except_error;
     __pyx_L5_except_error:;
 
-    /* "tricks.pyx":734
+    /* "tricks.pyx":735
  *     @staticmethod
  *     def check_show_pagecount():
  *         try: return techdict['check_show_pagecount']             # <<<<<<<<<<<<<<
@@ -17941,7 +17938,7 @@ static PyObject *__pyx_pf_6tricks_4tech_68check_show_pagecount(CYTHON_UNUSED PyO
     goto __pyx_L0;
   }
 
-  /* "tricks.pyx":733
+  /* "tricks.pyx":734
  *         except KeyError: return tech.settings_filler('check_defer_comicvine')
  *     @staticmethod
  *     def check_show_pagecount():             # <<<<<<<<<<<<<<
@@ -17964,7 +17961,7 @@ static PyObject *__pyx_pf_6tricks_4tech_68check_show_pagecount(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "tricks.pyx":738
+/* "tricks.pyx":739
  * 
  *     @staticmethod
  *     def dummyjpeg():             # <<<<<<<<<<<<<<
@@ -17999,7 +17996,7 @@ static PyObject *__pyx_pf_6tricks_4tech_70dummyjpeg(CYTHON_UNUSED PyObject *__py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("dummyjpeg", 0);
 
-  /* "tricks.pyx":739
+  /* "tricks.pyx":740
  *     @staticmethod
  *     def dummyjpeg():
  *         return tech.fpath(f'{tempfile.gettempdir()}/dummyjpeg.jpeg')             # <<<<<<<<<<<<<<
@@ -18007,14 +18004,14 @@ static PyObject *__pyx_pf_6tricks_4tech_70dummyjpeg(CYTHON_UNUSED PyObject *__py
  *     @staticmethod
  */
   __Pyx_XDECREF(__pyx_r);
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_tech); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fpath); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_fpath); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_tempfile); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_tempfile); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_gettempdir); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_gettempdir); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -18029,13 +18026,13 @@ static PyObject *__pyx_pf_6tricks_4tech_70dummyjpeg(CYTHON_UNUSED PyObject *__py
   }
   __pyx_t_2 = (__pyx_t_4) ? __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallNoArg(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 739, __pyx_L1_error)
+  if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_t_2, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_t_2, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_t_5, __pyx_kp_u_dummyjpeg_jpeg); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 739, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyUnicode_Concat(__pyx_t_5, __pyx_kp_u_dummyjpeg_jpeg); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __pyx_t_5 = NULL;
@@ -18051,14 +18048,14 @@ static PyObject *__pyx_pf_6tricks_4tech_70dummyjpeg(CYTHON_UNUSED PyObject *__py
   __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_5, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2);
   __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 739, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 740, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":738
+  /* "tricks.pyx":739
  * 
  *     @staticmethod
  *     def dummyjpeg():             # <<<<<<<<<<<<<<
@@ -18081,7 +18078,7 @@ static PyObject *__pyx_pf_6tricks_4tech_70dummyjpeg(CYTHON_UNUSED PyObject *__py
   return __pyx_r;
 }
 
-/* "tricks.pyx":742
+/* "tricks.pyx":743
  * 
  *     @staticmethod
  *     def md5_hash(str local_path):             # <<<<<<<<<<<<<<
@@ -18099,7 +18096,7 @@ static PyObject *__pyx_pw_6tricks_4tech_73md5_hash(PyObject *__pyx_self, PyObjec
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("md5_hash (wrapper)", 0);
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_local_path), (&PyUnicode_Type), 1, "local_path", 1))) __PYX_ERR(0, 742, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_local_path), (&PyUnicode_Type), 1, "local_path", 1))) __PYX_ERR(0, 743, __pyx_L1_error)
   __pyx_r = __pyx_pf_6tricks_4tech_72md5_hash(__pyx_self, ((PyObject*)__pyx_v_local_path));
 
   /* function exit code */
@@ -18111,7 +18108,7 @@ static PyObject *__pyx_pw_6tricks_4tech_73md5_hash(PyObject *__pyx_self, PyObjec
   return __pyx_r;
 }
 
-/* "tricks.pyx":745
+/* "tricks.pyx":746
  *         hash_md5 = hashlib.md5()
  *         with open(local_path, "rb") as f:
  *             for chunk in iter(lambda: f.read(4096), b""):             # <<<<<<<<<<<<<<
@@ -18148,8 +18145,8 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self) {
   __pyx_outer_scope = (struct __pyx_obj_6tricks___pyx_scope_struct__md5_hash *) __Pyx_CyFunction_GetClosure(__pyx_self);
   __pyx_cur_scope = __pyx_outer_scope;
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_cur_scope->__pyx_v_f)) { __Pyx_RaiseClosureNameError("f"); __PYX_ERR(0, 745, __pyx_L1_error) }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_f, __pyx_n_s_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 745, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_v_f)) { __Pyx_RaiseClosureNameError("f"); __PYX_ERR(0, 746, __pyx_L1_error) }
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_cur_scope->__pyx_v_f, __pyx_n_s_read); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 746, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -18163,7 +18160,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self) {
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_int_4096) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_int_4096);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 745, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 746, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
@@ -18183,7 +18180,7 @@ static PyObject *__pyx_lambda_funcdef_lambda1(PyObject *__pyx_self) {
   return __pyx_r;
 }
 
-/* "tricks.pyx":742
+/* "tricks.pyx":743
  * 
  *     @staticmethod
  *     def md5_hash(str local_path):             # <<<<<<<<<<<<<<
@@ -18218,21 +18215,21 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_6tricks___pyx_scope_struct__md5_hash *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 742, __pyx_L1_error)
+    __PYX_ERR(0, 743, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
 
-  /* "tricks.pyx":743
+  /* "tricks.pyx":744
  *     @staticmethod
  *     def md5_hash(str local_path):
  *         hash_md5 = hashlib.md5()             # <<<<<<<<<<<<<<
  *         with open(local_path, "rb") as f:
  *             for chunk in iter(lambda: f.read(4096), b""):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_hashlib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 743, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_hashlib); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 744, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_md5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 743, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_md5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 744, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -18247,13 +18244,13 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 743, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 744, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_v_hash_md5 = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "tricks.pyx":744
+  /* "tricks.pyx":745
  *     def md5_hash(str local_path):
  *         hash_md5 = hashlib.md5()
  *         with open(local_path, "rb") as f:             # <<<<<<<<<<<<<<
@@ -18261,7 +18258,7 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
  *                 hash_md5.update(chunk)
  */
   /*with:*/ {
-    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 744, __pyx_L1_error)
+    __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 745, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_v_local_path);
     __Pyx_GIVEREF(__pyx_v_local_path);
@@ -18269,12 +18266,12 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
     __Pyx_INCREF(__pyx_n_u_rb);
     __Pyx_GIVEREF(__pyx_n_u_rb);
     PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_n_u_rb);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 744, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_open, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 745, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 744, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_exit); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 745, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 744, __pyx_L3_error)
+    __pyx_t_2 = __Pyx_PyObject_LookupSpecial(__pyx_t_3, __pyx_n_s_enter); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 745, __pyx_L3_error)
     __Pyx_GOTREF(__pyx_t_2);
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -18288,7 +18285,7 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
     }
     __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 744, __pyx_L3_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 745, __pyx_L3_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = __pyx_t_1;
@@ -18307,25 +18304,25 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
           __pyx_cur_scope->__pyx_v_f = __pyx_t_2;
           __pyx_t_2 = 0;
 
-          /* "tricks.pyx":745
+          /* "tricks.pyx":746
  *         hash_md5 = hashlib.md5()
  *         with open(local_path, "rb") as f:
  *             for chunk in iter(lambda: f.read(4096), b""):             # <<<<<<<<<<<<<<
  *                 hash_md5.update(chunk)
  *         return hash_md5.hexdigest()
  */
-          __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_8md5_hash_lambda1, 0, __pyx_n_s_tech_md5_hash_locals_lambda, ((PyObject*)__pyx_cur_scope), __pyx_n_s_tricks, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 745, __pyx_L7_error)
+          __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_8md5_hash_lambda1, 0, __pyx_n_s_tech_md5_hash_locals_lambda, ((PyObject*)__pyx_cur_scope), __pyx_n_s_tricks, __pyx_d, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 746, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_3 = PyCallIter_New(__pyx_t_2, __pyx_kp_b__11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 745, __pyx_L7_error)
+          __pyx_t_3 = PyCallIter_New(__pyx_t_2, __pyx_kp_b__11); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 746, __pyx_L7_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
           if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
             __pyx_t_2 = __pyx_t_3; __Pyx_INCREF(__pyx_t_2); __pyx_t_9 = 0;
             __pyx_t_10 = NULL;
           } else {
-            __pyx_t_9 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 745, __pyx_L7_error)
+            __pyx_t_9 = -1; __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 746, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_2);
-            __pyx_t_10 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 745, __pyx_L7_error)
+            __pyx_t_10 = Py_TYPE(__pyx_t_2)->tp_iternext; if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 746, __pyx_L7_error)
           }
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           for (;;) {
@@ -18333,17 +18330,17 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
               if (likely(PyList_CheckExact(__pyx_t_2))) {
                 if (__pyx_t_9 >= PyList_GET_SIZE(__pyx_t_2)) break;
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_9); __Pyx_INCREF(__pyx_t_3); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 745, __pyx_L7_error)
+                __pyx_t_3 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_9); __Pyx_INCREF(__pyx_t_3); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 746, __pyx_L7_error)
                 #else
-                __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 745, __pyx_L7_error)
+                __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 746, __pyx_L7_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 #endif
               } else {
                 if (__pyx_t_9 >= PyTuple_GET_SIZE(__pyx_t_2)) break;
                 #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-                __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_9); __Pyx_INCREF(__pyx_t_3); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 745, __pyx_L7_error)
+                __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_9); __Pyx_INCREF(__pyx_t_3); __pyx_t_9++; if (unlikely(0 < 0)) __PYX_ERR(0, 746, __pyx_L7_error)
                 #else
-                __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 745, __pyx_L7_error)
+                __pyx_t_3 = PySequence_ITEM(__pyx_t_2, __pyx_t_9); __pyx_t_9++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 746, __pyx_L7_error)
                 __Pyx_GOTREF(__pyx_t_3);
                 #endif
               }
@@ -18353,7 +18350,7 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
                 PyObject* exc_type = PyErr_Occurred();
                 if (exc_type) {
                   if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-                  else __PYX_ERR(0, 745, __pyx_L7_error)
+                  else __PYX_ERR(0, 746, __pyx_L7_error)
                 }
                 break;
               }
@@ -18362,14 +18359,14 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
             __Pyx_XDECREF_SET(__pyx_v_chunk, __pyx_t_3);
             __pyx_t_3 = 0;
 
-            /* "tricks.pyx":746
+            /* "tricks.pyx":747
  *         with open(local_path, "rb") as f:
  *             for chunk in iter(lambda: f.read(4096), b""):
  *                 hash_md5.update(chunk)             # <<<<<<<<<<<<<<
  *         return hash_md5.hexdigest()
  * 
  */
-            __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_hash_md5, __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 746, __pyx_L7_error)
+            __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_hash_md5, __pyx_n_s_update); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 747, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_1);
             __pyx_t_5 = NULL;
             if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -18383,12 +18380,12 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
             }
             __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_5, __pyx_v_chunk) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_chunk);
             __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-            if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 746, __pyx_L7_error)
+            if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 747, __pyx_L7_error)
             __Pyx_GOTREF(__pyx_t_3);
             __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
             __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-            /* "tricks.pyx":745
+            /* "tricks.pyx":746
  *         hash_md5 = hashlib.md5()
  *         with open(local_path, "rb") as f:
  *             for chunk in iter(lambda: f.read(4096), b""):             # <<<<<<<<<<<<<<
@@ -18398,7 +18395,7 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
           }
           __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-          /* "tricks.pyx":744
+          /* "tricks.pyx":745
  *     def md5_hash(str local_path):
  *         hash_md5 = hashlib.md5()
  *         with open(local_path, "rb") as f:             # <<<<<<<<<<<<<<
@@ -18417,20 +18414,20 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         /*except:*/ {
           __Pyx_AddTraceback("tricks.tech.md5_hash", __pyx_clineno, __pyx_lineno, __pyx_filename);
-          if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_1) < 0) __PYX_ERR(0, 744, __pyx_L9_except_error)
+          if (__Pyx_GetException(&__pyx_t_2, &__pyx_t_3, &__pyx_t_1) < 0) __PYX_ERR(0, 745, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_2);
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_GOTREF(__pyx_t_1);
-          __pyx_t_5 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 744, __pyx_L9_except_error)
+          __pyx_t_5 = PyTuple_Pack(3, __pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 745, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_5);
           __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, NULL);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
           __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 744, __pyx_L9_except_error)
+          if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 745, __pyx_L9_except_error)
           __Pyx_GOTREF(__pyx_t_11);
           __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_11);
           __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-          if (__pyx_t_12 < 0) __PYX_ERR(0, 744, __pyx_L9_except_error)
+          if (__pyx_t_12 < 0) __PYX_ERR(0, 745, __pyx_L9_except_error)
           __pyx_t_13 = ((!(__pyx_t_12 != 0)) != 0);
           if (__pyx_t_13) {
             __Pyx_GIVEREF(__pyx_t_2);
@@ -18438,7 +18435,7 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
             __Pyx_XGIVEREF(__pyx_t_1);
             __Pyx_ErrRestoreWithState(__pyx_t_2, __pyx_t_3, __pyx_t_1);
             __pyx_t_2 = 0; __pyx_t_3 = 0; __pyx_t_1 = 0; 
-            __PYX_ERR(0, 744, __pyx_L9_except_error)
+            __PYX_ERR(0, 745, __pyx_L9_except_error)
           }
           __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
           __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -18464,7 +18461,7 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
         if (__pyx_t_4) {
           __pyx_t_8 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_tuple_, NULL);
           __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-          if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 744, __pyx_L1_error)
+          if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 745, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_8);
           __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
         }
@@ -18479,7 +18476,7 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
     __pyx_L18:;
   }
 
-  /* "tricks.pyx":747
+  /* "tricks.pyx":748
  *             for chunk in iter(lambda: f.read(4096), b""):
  *                 hash_md5.update(chunk)
  *         return hash_md5.hexdigest()             # <<<<<<<<<<<<<<
@@ -18487,7 +18484,7 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
  *     class color:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_hash_md5, __pyx_n_s_hexdigest); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 747, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_hash_md5, __pyx_n_s_hexdigest); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 748, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -18501,14 +18498,14 @@ static PyObject *__pyx_pf_6tricks_4tech_72md5_hash(CYTHON_UNUSED PyObject *__pyx
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 747, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 748, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "tricks.pyx":742
+  /* "tricks.pyx":743
  * 
  *     @staticmethod
  *     def md5_hash(str local_path):             # <<<<<<<<<<<<<<
@@ -19210,6 +19207,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_CROSSED, __pyx_k_CROSSED, sizeof(__pyx_k_CROSSED), 0, 0, 1, 1},
   {&__pyx_n_s_CVIOLET, __pyx_k_CVIOLET, sizeof(__pyx_k_CVIOLET), 0, 0, 1, 1},
   {&__pyx_n_s_CYAN, __pyx_k_CYAN, sizeof(__pyx_k_CYAN), 0, 0, 1, 1},
+  {&__pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_k_C_Users_Find_Nemo_Desktop_build, sizeof(__pyx_k_C_Users_Find_Nemo_Desktop_build), 0, 0, 1, 0},
   {&__pyx_n_s_C_publisher_id, __pyx_k_C_publisher_id, sizeof(__pyx_k_C_publisher_id), 0, 0, 1, 1},
   {&__pyx_n_s_C_volume_id, __pyx_k_C_volume_id, sizeof(__pyx_k_C_volume_id), 0, 0, 1, 1},
   {&__pyx_kp_u_Could_not_download, __pyx_k_Could_not_download, sizeof(__pyx_k_Could_not_download), 0, 1, 0, 0},
@@ -19468,8 +19466,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_headers, __pyx_k_headers, sizeof(__pyx_k_headers), 0, 0, 1, 1},
   {&__pyx_n_u_height, __pyx_k_height, sizeof(__pyx_k_height), 0, 1, 0, 1},
   {&__pyx_n_s_hexdigest, __pyx_k_hexdigest, sizeof(__pyx_k_hexdigest), 0, 0, 1, 1},
-  {&__pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_k_home_plutonergy_Coding_CComicRe, sizeof(__pyx_k_home_plutonergy_Coding_CComicRe), 0, 0, 1, 0},
-  {&__pyx_kp_u_home_plutonergy_Coding_CComicRe_2, __pyx_k_home_plutonergy_Coding_CComicRe_2, sizeof(__pyx_k_home_plutonergy_Coding_CComicRe_2), 0, 1, 0, 0},
+  {&__pyx_kp_u_home_plutonergy_Coding_CComicRe, __pyx_k_home_plutonergy_Coding_CComicRe, sizeof(__pyx_k_home_plutonergy_Coding_CComicRe), 0, 1, 0, 0},
   {&__pyx_kp_u_https_comicvine_gamespot_com, __pyx_k_https_comicvine_gamespot_com, sizeof(__pyx_k_https_comicvine_gamespot_com), 0, 1, 0, 0},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
   {&__pyx_n_s_icon_size, __pyx_k_icon_size, sizeof(__pyx_k_icon_size), 0, 0, 1, 1},
@@ -19525,6 +19522,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_mainframe, __pyx_k_mainframe, sizeof(__pyx_k_mainframe), 0, 0, 1, 1},
   {&__pyx_n_u_mainframe, __pyx_k_mainframe, sizeof(__pyx_k_mainframe), 0, 1, 0, 1},
+  {&__pyx_n_s_maxThreadCount, __pyx_k_maxThreadCount, sizeof(__pyx_k_maxThreadCount), 0, 0, 1, 1},
   {&__pyx_n_s_md5, __pyx_k_md5, sizeof(__pyx_k_md5), 0, 0, 1, 1},
   {&__pyx_n_u_md5, __pyx_k_md5, sizeof(__pyx_k_md5), 0, 1, 0, 1},
   {&__pyx_n_s_md5_hash, __pyx_k_md5_hash, sizeof(__pyx_k_md5_hash), 0, 0, 1, 1},
@@ -19663,6 +19661,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_show_text, __pyx_k_show_text, sizeof(__pyx_k_show_text), 0, 0, 1, 1},
   {&__pyx_n_s_shutil, __pyx_k_shutil, sizeof(__pyx_k_shutil), 0, 0, 1, 1},
   {&__pyx_n_s_signals, __pyx_k_signals, sizeof(__pyx_k_signals), 0, 0, 1, 1},
+  {&__pyx_n_s_skip_a_while, __pyx_k_skip_a_while, sizeof(__pyx_k_skip_a_while), 0, 0, 1, 1},
+  {&__pyx_n_u_skip_a_while, __pyx_k_skip_a_while, sizeof(__pyx_k_skip_a_while), 0, 1, 0, 1},
   {&__pyx_n_s_somestr, __pyx_k_somestr, sizeof(__pyx_k_somestr), 0, 0, 1, 1},
   {&__pyx_n_s_sorted, __pyx_k_sorted, sizeof(__pyx_k_sorted), 0, 0, 1, 1},
   {&__pyx_n_s_source, __pyx_k_source, sizeof(__pyx_k_source), 0, 0, 1, 1},
@@ -19806,16 +19806,16 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_open = __Pyx_GetBuiltinName(__pyx_n_s_open); if (!__pyx_builtin_open) __PYX_ERR(0, 69, __pyx_L1_error)
   __pyx_builtin_object = __Pyx_GetBuiltinName(__pyx_n_s_object); if (!__pyx_builtin_object) __PYX_ERR(0, 126, __pyx_L1_error)
-  __pyx_builtin_staticmethod = __Pyx_GetBuiltinName(__pyx_n_s_staticmethod); if (!__pyx_builtin_staticmethod) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_builtin_staticmethod = __Pyx_GetBuiltinName(__pyx_n_s_staticmethod); if (!__pyx_builtin_staticmethod) __PYX_ERR(0, 270, __pyx_L1_error)
   __pyx_builtin_KeyError = __Pyx_GetBuiltinName(__pyx_n_s_KeyError); if (!__pyx_builtin_KeyError) __PYX_ERR(0, 99, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(0, 113, __pyx_L1_error)
   __pyx_builtin_super = __Pyx_GetBuiltinName(__pyx_n_s_super); if (!__pyx_builtin_super) __PYX_ERR(0, 131, __pyx_L1_error)
-  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) __PYX_ERR(0, 252, __pyx_L1_error)
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 255, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 463, __pyx_L1_error)
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 490, __pyx_L1_error)
-  __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(0, 519, __pyx_L1_error)
-  __pyx_builtin_sorted = __Pyx_GetBuiltinName(__pyx_n_s_sorted); if (!__pyx_builtin_sorted) __PYX_ERR(0, 545, __pyx_L1_error)
+  __pyx_builtin_AttributeError = __Pyx_GetBuiltinName(__pyx_n_s_AttributeError); if (!__pyx_builtin_AttributeError) __PYX_ERR(0, 253, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 256, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 464, __pyx_L1_error)
+  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 491, __pyx_L1_error)
+  __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(0, 520, __pyx_L1_error)
+  __pyx_builtin_sorted = __Pyx_GetBuiltinName(__pyx_n_s_sorted); if (!__pyx_builtin_sorted) __PYX_ERR(0, 546, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -19847,87 +19847,87 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_slice__3);
   __Pyx_GIVEREF(__pyx_slice__3);
 
-  /* "tricks.pyx":292
+  /* "tricks.pyx":293
  *     def webp_or_jpeg():
  *         if 'thumbextension' not in techdict:
  *             im = Image.new('RGB', (1, 1), (100, 100, 100))             # <<<<<<<<<<<<<<
  *             dummy_location = tech.fpath(f'{tempfile.gettempdir()}/webp_testimage.webp')
  *             try:
  */
-  __pyx_tuple__7 = PyTuple_Pack(2, __pyx_int_1, __pyx_int_1); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_tuple__7 = PyTuple_Pack(2, __pyx_int_1, __pyx_int_1); if (unlikely(!__pyx_tuple__7)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
-  __pyx_tuple__8 = PyTuple_Pack(3, __pyx_int_100, __pyx_int_100, __pyx_int_100); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(3, __pyx_int_100, __pyx_int_100, __pyx_int_100); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_tuple__9 = PyTuple_Pack(3, __pyx_n_u_RGB, __pyx_tuple__7, __pyx_tuple__8); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_tuple__9 = PyTuple_Pack(3, __pyx_n_u_RGB, __pyx_tuple__7, __pyx_tuple__8); if (unlikely(!__pyx_tuple__9)) __PYX_ERR(0, 293, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__9);
   __Pyx_GIVEREF(__pyx_tuple__9);
 
-  /* "tricks.pyx":317
+  /* "tricks.pyx":318
  *             string_to_fix = unicodedata.normalize('NFKC', string_to_fix)
  *         else:
  *             string_to_fix = unicodedata.normalize('NFKD', string_to_fix).encode('ascii', 'ignore').decode('ascii')             # <<<<<<<<<<<<<<
  *         string_to_fix = re.sub(r'[^\w\s-]', '', string_to_fix.lower())
  *         return re.sub(r'[-\s]+', '-', string_to_fix).strip('-_')
  */
-  __pyx_tuple__10 = PyTuple_Pack(2, __pyx_n_u_ascii, __pyx_n_u_ignore); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __pyx_tuple__10 = PyTuple_Pack(2, __pyx_n_u_ascii, __pyx_n_u_ignore); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 318, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
 
-  /* "tricks.pyx":444
+  /* "tricks.pyx":445
  *             pass
  *         try:
  *             layout.setContentsMargins(0, 0, 0, 0)             # <<<<<<<<<<<<<<
  *         except AttributeError:
  *             pass
  */
-  __pyx_tuple__17 = PyTuple_Pack(4, __pyx_int_0, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 444, __pyx_L1_error)
+  __pyx_tuple__17 = PyTuple_Pack(4, __pyx_int_0, __pyx_int_0, __pyx_int_0, __pyx_int_0); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 445, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
 
-  /* "tricks.pyx":592
+  /* "tricks.pyx":593
  *     @staticmethod
  *     def star_pixmap(str requestimage):
  *         def opacity_star(pixmap):             # <<<<<<<<<<<<<<
  *             new_pixmap = QtGui.QPixmap(pixmap)
  *             new_pixmap.fill(QtCore.Qt.transparent)
  */
-  __pyx_tuple__19 = PyTuple_Pack(3, __pyx_n_s_pixmap, __pyx_n_s_new_pixmap, __pyx_n_s_painter); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 592, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(3, __pyx_n_s_pixmap, __pyx_n_s_new_pixmap, __pyx_n_s_painter); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 593, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_opacity_star, 592, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 592, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_opacity_star, 593, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 593, __pyx_L1_error)
 
-  /* "tricks.pyx":719
+  /* "tricks.pyx":720
  *     def check_alternative_covers():
  *         try: return techdict['check_alternative_covers']
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)             # <<<<<<<<<<<<<<
  *     @staticmethod
  *     def check_overwrite_covers():
  */
-  __pyx_tuple__21 = PyTuple_Pack(2, __pyx_n_u_check_alternative_covers, __pyx_int_1); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 719, __pyx_L1_error)
+  __pyx_tuple__21 = PyTuple_Pack(2, __pyx_n_u_check_alternative_covers, __pyx_int_1); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 720, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
 
-  /* "tricks.pyx":727
+  /* "tricks.pyx":728
  *     def check_show_filesize():
  *         try: return techdict['check_show_filesize']
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)             # <<<<<<<<<<<<<<
  *     @staticmethod
  *     def check_defer_comicvine():
  */
-  __pyx_tuple__22 = PyTuple_Pack(2, __pyx_n_u_check_show_filesize, __pyx_int_1); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 727, __pyx_L1_error)
+  __pyx_tuple__22 = PyTuple_Pack(2, __pyx_n_u_check_show_filesize, __pyx_int_1); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 728, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
 
-  /* "tricks.pyx":735
+  /* "tricks.pyx":736
  *     def check_show_pagecount():
  *         try: return techdict['check_show_pagecount']
  *         except KeyError: return tech.settings_filler('check_show_pagecount', 1)             # <<<<<<<<<<<<<<
  * 
  *     @staticmethod
  */
-  __pyx_tuple__23 = PyTuple_Pack(2, __pyx_n_u_check_show_pagecount, __pyx_int_1); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 735, __pyx_L1_error)
+  __pyx_tuple__23 = PyTuple_Pack(2, __pyx_n_u_check_show_pagecount, __pyx_int_1); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 736, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
 
@@ -19996,7 +19996,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__30 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_function); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_init, 130, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_init, 130, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 130, __pyx_L1_error)
 
   /* "tricks.pyx":136
  * 
@@ -20008,427 +20008,427 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__32 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_result, __pyx_n_s_exctype, __pyx_n_s_value); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_run, 136, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 136, __pyx_L1_error)
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_run, 136, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 136, __pyx_L1_error)
 
-  /* "tricks.pyx":227
+  /* "tricks.pyx":228
  *     publisher_api_detail_url  = sqlite_function("publishers", "publisher_api_detail_url",  "TEXT")
  * 
  * def Theme(self):             # <<<<<<<<<<<<<<
  *     global techdict
  *     cdef int count
  */
-  __pyx_tuple__34 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_count, __pyx_n_s_covertype, __pyx_n_s_stringtry, __pyx_n_s_styles, __pyx_n_s_triers, __pyx_n_s_cycle, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_tuple__34 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_count, __pyx_n_s_covertype, __pyx_n_s_stringtry, __pyx_n_s_styles, __pyx_n_s_triers, __pyx_n_s_cycle, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_Theme, 227, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_Theme, 228, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 228, __pyx_L1_error)
 
-  /* "tricks.pyx":270
+  /* "tricks.pyx":271
  *     global techdict
  *     @staticmethod
  *     def tricks_threadpool():             # <<<<<<<<<<<<<<
  *         if 'threadpool' not in techdict:
- *             techdict['threadpool'] = QThreadPool()
+ *             techdict['threadpool'] = QThreadPool(maxThreadCount=1)
  */
-  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_tricks_threadpool, 270, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 270, __pyx_L1_error)
+  __pyx_codeobj__36 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_tricks_threadpool, 271, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__36)) __PYX_ERR(0, 271, __pyx_L1_error)
 
-  /* "tricks.pyx":276
+  /* "tricks.pyx":277
  * 
  *     @staticmethod
  *     def clear_comic_id(tuple db_input):             # <<<<<<<<<<<<<<
  *         if db_input[0] == None:
  *             return
  */
-  __pyx_tuple__37 = PyTuple_Pack(4, __pyx_n_s_db_input, __pyx_n_s_cycle, __pyx_n_s_i, __pyx_n_s_query); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 276, __pyx_L1_error)
+  __pyx_tuple__37 = PyTuple_Pack(4, __pyx_n_s_db_input, __pyx_n_s_cycle, __pyx_n_s_i, __pyx_n_s_query); if (unlikely(!__pyx_tuple__37)) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__37);
   __Pyx_GIVEREF(__pyx_tuple__37);
-  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_clear_comic_id, 276, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 276, __pyx_L1_error)
+  __pyx_codeobj__38 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__37, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_clear_comic_id, 277, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__38)) __PYX_ERR(0, 277, __pyx_L1_error)
 
-  /* "tricks.pyx":286
+  /* "tricks.pyx":287
  *                 sqlitecursor.execute(query, (None, db_input[0],))
  *     @staticmethod
  *     def fpath(path_to_fix):             # <<<<<<<<<<<<<<
  *         return os.path.abspath(os.path.expanduser(path_to_fix))
  * 
  */
-  __pyx_tuple__39 = PyTuple_Pack(1, __pyx_n_s_path_to_fix); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 286, __pyx_L1_error)
+  __pyx_tuple__39 = PyTuple_Pack(1, __pyx_n_s_path_to_fix); if (unlikely(!__pyx_tuple__39)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__39);
   __Pyx_GIVEREF(__pyx_tuple__39);
-  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_fpath, 286, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 286, __pyx_L1_error)
+  __pyx_codeobj__40 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__39, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_fpath, 287, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__40)) __PYX_ERR(0, 287, __pyx_L1_error)
 
-  /* "tricks.pyx":290
+  /* "tricks.pyx":291
  * 
  *     @staticmethod
  *     def webp_or_jpeg():             # <<<<<<<<<<<<<<
  *         if 'thumbextension' not in techdict:
  *             im = Image.new('RGB', (1, 1), (100, 100, 100))
  */
-  __pyx_tuple__41 = PyTuple_Pack(2, __pyx_n_s_im, __pyx_n_s_dummy_location); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 290, __pyx_L1_error)
+  __pyx_tuple__41 = PyTuple_Pack(2, __pyx_n_s_im, __pyx_n_s_dummy_location); if (unlikely(!__pyx_tuple__41)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__41);
   __Pyx_GIVEREF(__pyx_tuple__41);
-  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_webp_or_jpeg, 290, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 290, __pyx_L1_error)
+  __pyx_codeobj__42 = (PyObject*)__Pyx_PyCode_New(0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__41, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_webp_or_jpeg, 291, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__42)) __PYX_ERR(0, 291, __pyx_L1_error)
 
-  /* "tricks.pyx":302
+  /* "tricks.pyx":303
  * 
  *     @staticmethod
  *     def refresh_publisher(tuple db_input):             # <<<<<<<<<<<<<<
  *         if db_input[DB.C_volume_id] != None and db_input[DB.C_publisher_id] == None:
  *             sqlitecursor.execute('select * from volumes where volume_id = (?)', (db_input[DB.C_volume_id],))
  */
-  __pyx_tuple__43 = PyTuple_Pack(2, __pyx_n_s_db_input, __pyx_n_s_vdata); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 302, __pyx_L1_error)
+  __pyx_tuple__43 = PyTuple_Pack(2, __pyx_n_s_db_input, __pyx_n_s_vdata); if (unlikely(!__pyx_tuple__43)) __PYX_ERR(0, 303, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__43);
   __Pyx_GIVEREF(__pyx_tuple__43);
-  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_refresh_publisher, 302, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 302, __pyx_L1_error)
+  __pyx_codeobj__44 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__43, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_refresh_publisher, 303, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__44)) __PYX_ERR(0, 303, __pyx_L1_error)
 
-  /* "tricks.pyx":313
+  /* "tricks.pyx":314
  * 
  *     @staticmethod
  *     def string_normer(str string_to_fix, allow_unicode=False):             # <<<<<<<<<<<<<<
  *         if allow_unicode:
  *             string_to_fix = unicodedata.normalize('NFKC', string_to_fix)
  */
-  __pyx_tuple__45 = PyTuple_Pack(2, __pyx_n_s_string_to_fix, __pyx_n_s_allow_unicode); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 313, __pyx_L1_error)
+  __pyx_tuple__45 = PyTuple_Pack(2, __pyx_n_s_string_to_fix, __pyx_n_s_allow_unicode); if (unlikely(!__pyx_tuple__45)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__45);
   __Pyx_GIVEREF(__pyx_tuple__45);
-  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_string_normer, 313, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 313, __pyx_L1_error)
-  __pyx_tuple__47 = PyTuple_Pack(1, ((PyObject *)Py_False)); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 313, __pyx_L1_error)
+  __pyx_codeobj__46 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__45, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_string_normer, 314, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__46)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_tuple__47 = PyTuple_Pack(1, ((PyObject *)Py_False)); if (unlikely(!__pyx_tuple__47)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__47);
   __Pyx_GIVEREF(__pyx_tuple__47);
 
-  /* "tricks.pyx":322
+  /* "tricks.pyx":323
  * 
  *     @staticmethod
  *     def store_restore_state(self, bint store):             # <<<<<<<<<<<<<<
  *         cdef dict store_restore_settings
  *         cdef list cyclelist, radio_cycle, check_cycle, cycle, eachlist
  */
-  __pyx_tuple__48 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_store, __pyx_n_s_store_restore_settings, __pyx_n_s_cyclelist, __pyx_n_s_radio_cycle, __pyx_n_s_check_cycle, __pyx_n_s_cycle, __pyx_n_s_eachlist, __pyx_n_s_i); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_tuple__48 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_store, __pyx_n_s_store_restore_settings, __pyx_n_s_cyclelist, __pyx_n_s_radio_cycle, __pyx_n_s_check_cycle, __pyx_n_s_cycle, __pyx_n_s_eachlist, __pyx_n_s_i); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__48);
   __Pyx_GIVEREF(__pyx_tuple__48);
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_store_restore_state, 322, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_store_restore_state, 323, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 323, __pyx_L1_error)
 
-  /* "tricks.pyx":371
+  /* "tricks.pyx":372
  * 
  *     @staticmethod
  *     def empty_insert_query(str table):             # <<<<<<<<<<<<<<
  *         cdef str query_part1, query_part2
  *         cdef list values
  */
-  __pyx_tuple__50 = PyTuple_Pack(5, __pyx_n_s_table, __pyx_n_s_query_part1, __pyx_n_s_query_part2, __pyx_n_s_values_2, __pyx_n_s_tables); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __pyx_tuple__50 = PyTuple_Pack(5, __pyx_n_s_table, __pyx_n_s_query_part1, __pyx_n_s_query_part2, __pyx_n_s_values_2, __pyx_n_s_tables); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__50);
   __Pyx_GIVEREF(__pyx_tuple__50);
-  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_empty_insert_query, 371, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __pyx_codeobj__51 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__50, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_empty_insert_query, 372, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__51)) __PYX_ERR(0, 372, __pyx_L1_error)
 
-  /* "tricks.pyx":382
+  /* "tricks.pyx":383
  * 
  *     @staticmethod
  *     def clear_from_techdict(str key):             # <<<<<<<<<<<<<<
  *         try: techdict.pop(key)
  *         except KeyError: pass
  */
-  __pyx_tuple__52 = PyTuple_Pack(1, __pyx_n_s_key); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_tuple__52 = PyTuple_Pack(1, __pyx_n_s_key); if (unlikely(!__pyx_tuple__52)) __PYX_ERR(0, 383, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__52);
   __Pyx_GIVEREF(__pyx_tuple__52);
-  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_clear_from_techdict, 382, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_codeobj__53 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__52, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_clear_from_techdict, 383, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__53)) __PYX_ERR(0, 383, __pyx_L1_error)
 
-  /* "tricks.pyx":387
+  /* "tricks.pyx":388
  * 
  *     @staticmethod
  *     def remove_NSFW(list data):             # <<<<<<<<<<<<<<
  *         """
  *         currently not used, but this one filters out
  */
-  __pyx_tuple__54 = PyTuple_Pack(4, __pyx_n_s_data, __pyx_n_s_revcount, __pyx_n_s_settings_data, __pyx_n_s_temp); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 387, __pyx_L1_error)
+  __pyx_tuple__54 = PyTuple_Pack(4, __pyx_n_s_data, __pyx_n_s_revcount, __pyx_n_s_settings_data, __pyx_n_s_temp); if (unlikely(!__pyx_tuple__54)) __PYX_ERR(0, 388, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__54);
   __Pyx_GIVEREF(__pyx_tuple__54);
-  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_remove_NSFW, 387, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 387, __pyx_L1_error)
+  __pyx_codeobj__55 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__54, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_remove_NSFW, 388, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__55)) __PYX_ERR(0, 388, __pyx_L1_error)
 
-  /* "tricks.pyx":405
+  /* "tricks.pyx":406
  * 
  *     @staticmethod
  *     def refresh_db_input(tuple db_input):             # <<<<<<<<<<<<<<
  *         """
  *         simply refreshes the database input, perhaps something happened, also as it
  */
-  __pyx_tuple__56 = PyTuple_Pack(3, __pyx_n_s_db_input, __pyx_n_s_refreshed_db_input, __pyx_n_s_vdata); if (unlikely(!__pyx_tuple__56)) __PYX_ERR(0, 405, __pyx_L1_error)
+  __pyx_tuple__56 = PyTuple_Pack(3, __pyx_n_s_db_input, __pyx_n_s_refreshed_db_input, __pyx_n_s_vdata); if (unlikely(!__pyx_tuple__56)) __PYX_ERR(0, 406, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__56);
   __Pyx_GIVEREF(__pyx_tuple__56);
-  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_refresh_db_input, 405, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 405, __pyx_L1_error)
+  __pyx_codeobj__57 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__56, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_refresh_db_input, 406, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__57)) __PYX_ERR(0, 406, __pyx_L1_error)
 
-  /* "tricks.pyx":430
+  /* "tricks.pyx":431
  * 
  *     @staticmethod
  *     def timeconverter(unixtime):             # <<<<<<<<<<<<<<
  *         return datetime.fromtimestamp(unixtime).strftime('%Y-%m-%d')
  * 
  */
-  __pyx_tuple__58 = PyTuple_Pack(1, __pyx_n_s_unixtime); if (unlikely(!__pyx_tuple__58)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_tuple__58 = PyTuple_Pack(1, __pyx_n_s_unixtime); if (unlikely(!__pyx_tuple__58)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__58);
   __Pyx_GIVEREF(__pyx_tuple__58);
-  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_timeconverter, 430, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_codeobj__59 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__58, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_timeconverter, 431, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__59)) __PYX_ERR(0, 431, __pyx_L1_error)
 
-  /* "tricks.pyx":434
+  /* "tricks.pyx":435
  * 
  *     @staticmethod
  *     def layout_shrink(layout):             # <<<<<<<<<<<<<<
  *         try:
  *             layout.setHorizontalSpacing(0)
  */
-  __pyx_tuple__60 = PyTuple_Pack(1, __pyx_n_s_layout); if (unlikely(!__pyx_tuple__60)) __PYX_ERR(0, 434, __pyx_L1_error)
+  __pyx_tuple__60 = PyTuple_Pack(1, __pyx_n_s_layout); if (unlikely(!__pyx_tuple__60)) __PYX_ERR(0, 435, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__60);
   __Pyx_GIVEREF(__pyx_tuple__60);
-  __pyx_codeobj__61 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__60, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_layout_shrink, 434, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__61)) __PYX_ERR(0, 434, __pyx_L1_error)
+  __pyx_codeobj__61 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__60, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_layout_shrink, 435, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__61)) __PYX_ERR(0, 435, __pyx_L1_error)
 
-  /* "tricks.pyx":449
+  /* "tricks.pyx":450
  * 
  *     @staticmethod
  *     def greates_len(list lenlist, int key):             # <<<<<<<<<<<<<<
  *         cdef list returnlist = []
  *         cdef int eachnumber, greatest = 0
  */
-  __pyx_tuple__62 = PyTuple_Pack(7, __pyx_n_s_lenlist, __pyx_n_s_key, __pyx_n_s_returnlist, __pyx_n_s_eachnumber, __pyx_n_s_greatest, __pyx_n_s_somestr, __pyx_n_s_eachcomic); if (unlikely(!__pyx_tuple__62)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_tuple__62 = PyTuple_Pack(7, __pyx_n_s_lenlist, __pyx_n_s_key, __pyx_n_s_returnlist, __pyx_n_s_eachnumber, __pyx_n_s_greatest, __pyx_n_s_somestr, __pyx_n_s_eachcomic); if (unlikely(!__pyx_tuple__62)) __PYX_ERR(0, 450, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__62);
   __Pyx_GIVEREF(__pyx_tuple__62);
-  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_greates_len, 449, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_codeobj__63 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__62, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_greates_len, 450, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__63)) __PYX_ERR(0, 450, __pyx_L1_error)
 
-  /* "tricks.pyx":467
+  /* "tricks.pyx":468
  * 
  *     @staticmethod
  *     def download_file(str dl_from, str save_to):             # <<<<<<<<<<<<<<
  *         """
  *         dl_from  = http://...
  */
-  __pyx_tuple__64 = PyTuple_Pack(6, __pyx_n_s_dl_from, __pyx_n_s_save_to, __pyx_n_s_retrycount, __pyx_n_s_url, __pyx_n_s_webpage, __pyx_n_s_new_file); if (unlikely(!__pyx_tuple__64)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_tuple__64 = PyTuple_Pack(6, __pyx_n_s_dl_from, __pyx_n_s_save_to, __pyx_n_s_retrycount, __pyx_n_s_url, __pyx_n_s_webpage, __pyx_n_s_new_file); if (unlikely(!__pyx_tuple__64)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__64);
   __Pyx_GIVEREF(__pyx_tuple__64);
-  __pyx_codeobj__65 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__64, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_download_file, 467, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__65)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_codeobj__65 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__64, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_download_file, 468, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__65)) __PYX_ERR(0, 468, __pyx_L1_error)
 
-  /* "tricks.pyx":493
+  /* "tricks.pyx":494
  * 
  *     @staticmethod
  *     def uni_sort(self, list data):             # <<<<<<<<<<<<<<
  *         """
  *         sorts data and honors mainframe settings,
  */
-  __pyx_tuple__67 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_data, __pyx_n_s_rvdict, __pyx_n_s_count, __pyx_n_s_i, __pyx_n_s__66, __pyx_n_s_k, __pyx_n_s_v); if (unlikely(!__pyx_tuple__67)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_tuple__67 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_data, __pyx_n_s_rvdict, __pyx_n_s_count, __pyx_n_s_i, __pyx_n_s__66, __pyx_n_s_k, __pyx_n_s_v); if (unlikely(!__pyx_tuple__67)) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__67);
   __Pyx_GIVEREF(__pyx_tuple__67);
-  __pyx_codeobj__68 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__67, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_uni_sort, 493, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__68)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_codeobj__68 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__67, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_uni_sort, 494, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__68)) __PYX_ERR(0, 494, __pyx_L1_error)
 
-  /* "tricks.pyx":556
+  /* "tricks.pyx":557
  * 
  *     @staticmethod
  *     def uni_search(list fromlist, str userinput, int key):             # <<<<<<<<<<<<<<
  *         """
  *         makes list of userinput and searches
  */
-  __pyx_tuple__69 = PyTuple_Pack(11, __pyx_n_s_fromlist, __pyx_n_s_userinput, __pyx_n_s_key, __pyx_n_s_searchlist, __pyx_n_s_drawlist, __pyx_n_s_eachsource, __pyx_n_s_datacount, __pyx_n_s_usercount, __pyx_n_s_search_value, __pyx_n_s_source, __pyx_n_s_eachinput); if (unlikely(!__pyx_tuple__69)) __PYX_ERR(0, 556, __pyx_L1_error)
+  __pyx_tuple__69 = PyTuple_Pack(11, __pyx_n_s_fromlist, __pyx_n_s_userinput, __pyx_n_s_key, __pyx_n_s_searchlist, __pyx_n_s_drawlist, __pyx_n_s_eachsource, __pyx_n_s_datacount, __pyx_n_s_usercount, __pyx_n_s_search_value, __pyx_n_s_source, __pyx_n_s_eachinput); if (unlikely(!__pyx_tuple__69)) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__69);
   __Pyx_GIVEREF(__pyx_tuple__69);
-  __pyx_codeobj__70 = (PyObject*)__Pyx_PyCode_New(3, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__69, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_uni_search, 556, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__70)) __PYX_ERR(0, 556, __pyx_L1_error)
+  __pyx_codeobj__70 = (PyObject*)__Pyx_PyCode_New(3, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__69, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_uni_search, 557, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__70)) __PYX_ERR(0, 557, __pyx_L1_error)
 
-  /* "tricks.pyx":591
+  /* "tricks.pyx":592
  * 
  *     @staticmethod
  *     def star_pixmap(str requestimage):             # <<<<<<<<<<<<<<
  *         def opacity_star(pixmap):
  *             new_pixmap = QtGui.QPixmap(pixmap)
  */
-  __pyx_tuple__71 = PyTuple_Pack(4, __pyx_n_s_requestimage, __pyx_n_s_opacity_star, __pyx_n_s_opacity_star, __pyx_n_s_contdict); if (unlikely(!__pyx_tuple__71)) __PYX_ERR(0, 591, __pyx_L1_error)
+  __pyx_tuple__71 = PyTuple_Pack(4, __pyx_n_s_requestimage, __pyx_n_s_opacity_star, __pyx_n_s_opacity_star, __pyx_n_s_contdict); if (unlikely(!__pyx_tuple__71)) __PYX_ERR(0, 592, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__71);
   __Pyx_GIVEREF(__pyx_tuple__71);
-  __pyx_codeobj__72 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__71, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_star_pixmap, 591, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__72)) __PYX_ERR(0, 591, __pyx_L1_error)
+  __pyx_codeobj__72 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__71, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_star_pixmap, 592, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__72)) __PYX_ERR(0, 592, __pyx_L1_error)
 
-  /* "tricks.pyx":625
+  /* "tricks.pyx":626
  * 
  *     @staticmethod
  *     def icon_size():             # <<<<<<<<<<<<<<
  *         if 'icon_size' not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  */
-  __pyx_tuple__73 = PyTuple_Pack(1, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__73)) __PYX_ERR(0, 625, __pyx_L1_error)
+  __pyx_tuple__73 = PyTuple_Pack(1, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__73)) __PYX_ERR(0, 626, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__73);
   __Pyx_GIVEREF(__pyx_tuple__73);
-  __pyx_codeobj__74 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__73, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_icon_size, 625, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__74)) __PYX_ERR(0, 625, __pyx_L1_error)
+  __pyx_codeobj__74 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__73, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_icon_size, 626, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__74)) __PYX_ERR(0, 626, __pyx_L1_error)
 
-  /* "tricks.pyx":637
+  /* "tricks.pyx":638
  * 
  *     @staticmethod
  *     def apikey():             # <<<<<<<<<<<<<<
  *         if 'api_key' not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  */
-  __pyx_tuple__75 = PyTuple_Pack(1, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__75)) __PYX_ERR(0, 637, __pyx_L1_error)
+  __pyx_tuple__75 = PyTuple_Pack(1, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__75)) __PYX_ERR(0, 638, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__75);
   __Pyx_GIVEREF(__pyx_tuple__75);
-  __pyx_codeobj__76 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__75, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_apikey, 637, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__76)) __PYX_ERR(0, 637, __pyx_L1_error)
+  __pyx_codeobj__76 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__75, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_apikey, 638, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__76)) __PYX_ERR(0, 638, __pyx_L1_error)
 
-  /* "tricks.pyx":648
+  /* "tricks.pyx":649
  * 
  *     @staticmethod
  *     def header():             # <<<<<<<<<<<<<<
  *         cdef dict header
  *         cdef str agent = 'User-Agent'
  */
-  __pyx_tuple__77 = PyTuple_Pack(3, __pyx_n_s_header, __pyx_n_s_agent, __pyx_n_s_second_part); if (unlikely(!__pyx_tuple__77)) __PYX_ERR(0, 648, __pyx_L1_error)
+  __pyx_tuple__77 = PyTuple_Pack(3, __pyx_n_s_header, __pyx_n_s_agent, __pyx_n_s_second_part); if (unlikely(!__pyx_tuple__77)) __PYX_ERR(0, 649, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__77);
   __Pyx_GIVEREF(__pyx_tuple__77);
-  __pyx_codeobj__78 = (PyObject*)__Pyx_PyCode_New(0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__77, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_header, 648, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__78)) __PYX_ERR(0, 648, __pyx_L1_error)
+  __pyx_codeobj__78 = (PyObject*)__Pyx_PyCode_New(0, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__77, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_header, 649, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__78)) __PYX_ERR(0, 649, __pyx_L1_error)
 
-  /* "tricks.pyx":656
+  /* "tricks.pyx":657
  * 
  *     @staticmethod
  *     def comic_folders():             # <<<<<<<<<<<<<<
  *         cdef list comic_folders = []
  *         if 'comic_folders' not in techdict:
  */
-  __pyx_tuple__79 = PyTuple_Pack(2, __pyx_n_s_comic_folders, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__79)) __PYX_ERR(0, 656, __pyx_L1_error)
+  __pyx_tuple__79 = PyTuple_Pack(2, __pyx_n_s_comic_folders, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__79)) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__79);
   __Pyx_GIVEREF(__pyx_tuple__79);
-  __pyx_codeobj__80 = (PyObject*)__Pyx_PyCode_New(0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__79, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_comic_folders, 656, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__80)) __PYX_ERR(0, 656, __pyx_L1_error)
+  __pyx_codeobj__80 = (PyObject*)__Pyx_PyCode_New(0, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__79, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_comic_folders, 657, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__80)) __PYX_ERR(0, 657, __pyx_L1_error)
 
-  /* "tricks.pyx":668
+  /* "tricks.pyx":669
  * 
  *     @staticmethod
  *     def tmp_thumbnails():             # <<<<<<<<<<<<<<
  *         return tech.cache_folder() + '/thumbs1'
  * 
  */
-  __pyx_codeobj__81 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_tmp_thumbnails, 668, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__81)) __PYX_ERR(0, 668, __pyx_L1_error)
+  __pyx_codeobj__81 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_tmp_thumbnails, 669, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__81)) __PYX_ERR(0, 669, __pyx_L1_error)
 
-  /* "tricks.pyx":672
+  /* "tricks.pyx":673
  * 
  *     @staticmethod
  *     def tmp_downloaded_thumbnails():             # <<<<<<<<<<<<<<
  *         return tech.cache_folder() + '/thumbs2'
  * 
  */
-  __pyx_codeobj__82 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_tmp_downloaded_thumbnails, 672, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__82)) __PYX_ERR(0, 672, __pyx_L1_error)
+  __pyx_codeobj__82 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_tmp_downloaded_thumbnails, 673, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__82)) __PYX_ERR(0, 673, __pyx_L1_error)
 
-  /* "tricks.pyx":676
+  /* "tricks.pyx":677
  * 
  *     @staticmethod
  *     def tmp_api():             # <<<<<<<<<<<<<<
  *         return tech.cache_folder() + '/api'
  * 
  */
-  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_tmp_api, 676, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 676, __pyx_L1_error)
+  __pyx_codeobj__83 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_tmp_api, 677, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__83)) __PYX_ERR(0, 677, __pyx_L1_error)
 
-  /* "tricks.pyx":680
+  /* "tricks.pyx":681
  * 
  *     @staticmethod
  *     def tmp_pages():             # <<<<<<<<<<<<<<
  *         return tech.cache_folder() + '/pages'
  * 
  */
-  __pyx_codeobj__84 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_tmp_pages, 680, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__84)) __PYX_ERR(0, 680, __pyx_L1_error)
+  __pyx_codeobj__84 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_tmp_pages, 681, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__84)) __PYX_ERR(0, 681, __pyx_L1_error)
 
-  /* "tricks.pyx":684
+  /* "tricks.pyx":685
  * 
  *     @staticmethod
  *     def cache_folder():             # <<<<<<<<<<<<<<
  *         try: return techdict['cache_folder']
  *         except KeyError:
  */
-  __pyx_tuple__85 = PyTuple_Pack(1, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__85)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_tuple__85 = PyTuple_Pack(1, __pyx_n_s_settings_data); if (unlikely(!__pyx_tuple__85)) __PYX_ERR(0, 685, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__85);
   __Pyx_GIVEREF(__pyx_tuple__85);
-  __pyx_codeobj__86 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__85, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_cache_folder, 684, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__86)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_codeobj__86 = (PyObject*)__Pyx_PyCode_New(0, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__85, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_cache_folder, 685, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__86)) __PYX_ERR(0, 685, __pyx_L1_error)
 
-  /* "tricks.pyx":696
+  /* "tricks.pyx":697
  * 
  *     @staticmethod
  *     def settings_filler(str setting_string, int default=0):             # <<<<<<<<<<<<<<
  *         if setting_string not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  */
-  __pyx_tuple__87 = PyTuple_Pack(3, __pyx_n_s_setting_string, __pyx_n_s_default, __pyx_n_s_data); if (unlikely(!__pyx_tuple__87)) __PYX_ERR(0, 696, __pyx_L1_error)
+  __pyx_tuple__87 = PyTuple_Pack(3, __pyx_n_s_setting_string, __pyx_n_s_default, __pyx_n_s_data); if (unlikely(!__pyx_tuple__87)) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__87);
   __Pyx_GIVEREF(__pyx_tuple__87);
-  __pyx_codeobj__88 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__87, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_settings_filler, 696, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__88)) __PYX_ERR(0, 696, __pyx_L1_error)
+  __pyx_codeobj__88 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__87, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_settings_filler, 697, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__88)) __PYX_ERR(0, 697, __pyx_L1_error)
 
-  /* "tricks.pyx":709
+  /* "tricks.pyx":710
  * 
  *     @staticmethod
  *     def check_bleed():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_bleed']
  *         except KeyError: return tech.settings_filler('check_bleed')
  */
-  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_check_bleed, 709, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 709, __pyx_L1_error)
+  __pyx_codeobj__89 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_check_bleed, 710, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__89)) __PYX_ERR(0, 710, __pyx_L1_error)
 
-  /* "tricks.pyx":713
+  /* "tricks.pyx":714
  *         except KeyError: return tech.settings_filler('check_bleed')
  *     @staticmethod
  *     def check_spaceout():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_spaceout']
  *         except KeyError: return tech.settings_filler('check_spaceout')
  */
-  __pyx_codeobj__90 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_check_spaceout, 713, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__90)) __PYX_ERR(0, 713, __pyx_L1_error)
+  __pyx_codeobj__90 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_check_spaceout, 714, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__90)) __PYX_ERR(0, 714, __pyx_L1_error)
 
-  /* "tricks.pyx":717
+  /* "tricks.pyx":718
  *         except KeyError: return tech.settings_filler('check_spaceout')
  *     @staticmethod
  *     def check_alternative_covers():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_alternative_covers']
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)
  */
-  __pyx_codeobj__91 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_check_alternative_covers, 717, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__91)) __PYX_ERR(0, 717, __pyx_L1_error)
+  __pyx_codeobj__91 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_check_alternative_covers, 718, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__91)) __PYX_ERR(0, 718, __pyx_L1_error)
 
-  /* "tricks.pyx":721
+  /* "tricks.pyx":722
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)
  *     @staticmethod
  *     def check_overwrite_covers():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_overwrite_covers']
  *         except KeyError: return tech.settings_filler('check_overwrite_covers')
  */
-  __pyx_codeobj__92 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_check_overwrite_covers, 721, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__92)) __PYX_ERR(0, 721, __pyx_L1_error)
+  __pyx_codeobj__92 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_check_overwrite_covers, 722, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__92)) __PYX_ERR(0, 722, __pyx_L1_error)
 
-  /* "tricks.pyx":725
+  /* "tricks.pyx":726
  *         except KeyError: return tech.settings_filler('check_overwrite_covers')
  *     @staticmethod
  *     def check_show_filesize():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_show_filesize']
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)
  */
-  __pyx_codeobj__93 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_check_show_filesize, 725, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__93)) __PYX_ERR(0, 725, __pyx_L1_error)
+  __pyx_codeobj__93 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_check_show_filesize, 726, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__93)) __PYX_ERR(0, 726, __pyx_L1_error)
 
-  /* "tricks.pyx":729
+  /* "tricks.pyx":730
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)
  *     @staticmethod
  *     def check_defer_comicvine():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_defer_comicvine']
  *         except KeyError: return tech.settings_filler('check_defer_comicvine')
  */
-  __pyx_codeobj__94 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_check_defer_comicvine, 729, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__94)) __PYX_ERR(0, 729, __pyx_L1_error)
+  __pyx_codeobj__94 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_check_defer_comicvine, 730, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__94)) __PYX_ERR(0, 730, __pyx_L1_error)
 
-  /* "tricks.pyx":733
+  /* "tricks.pyx":734
  *         except KeyError: return tech.settings_filler('check_defer_comicvine')
  *     @staticmethod
  *     def check_show_pagecount():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_show_pagecount']
  *         except KeyError: return tech.settings_filler('check_show_pagecount', 1)
  */
-  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_check_show_pagecount, 733, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 733, __pyx_L1_error)
+  __pyx_codeobj__95 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_check_show_pagecount, 734, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__95)) __PYX_ERR(0, 734, __pyx_L1_error)
 
-  /* "tricks.pyx":738
+  /* "tricks.pyx":739
  * 
  *     @staticmethod
  *     def dummyjpeg():             # <<<<<<<<<<<<<<
  *         return tech.fpath(f'{tempfile.gettempdir()}/dummyjpeg.jpeg')
  * 
  */
-  __pyx_codeobj__96 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_dummyjpeg, 738, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__96)) __PYX_ERR(0, 738, __pyx_L1_error)
+  __pyx_codeobj__96 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_dummyjpeg, 739, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__96)) __PYX_ERR(0, 739, __pyx_L1_error)
 
-  /* "tricks.pyx":742
+  /* "tricks.pyx":743
  * 
  *     @staticmethod
  *     def md5_hash(str local_path):             # <<<<<<<<<<<<<<
  *         hash_md5 = hashlib.md5()
  *         with open(local_path, "rb") as f:
  */
-  __pyx_tuple__97 = PyTuple_Pack(4, __pyx_n_s_local_path, __pyx_n_s_hash_md5, __pyx_n_s_f, __pyx_n_s_chunk); if (unlikely(!__pyx_tuple__97)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_tuple__97 = PyTuple_Pack(4, __pyx_n_s_local_path, __pyx_n_s_hash_md5, __pyx_n_s_f, __pyx_n_s_chunk); if (unlikely(!__pyx_tuple__97)) __PYX_ERR(0, 743, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__97);
   __Pyx_GIVEREF(__pyx_tuple__97);
-  __pyx_codeobj__98 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__97, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_md5_hash, 742, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__98)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_codeobj__98 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__97, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_md5_hash, 743, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__98)) __PYX_ERR(0, 743, __pyx_L1_error)
 
   /* "(tree fragment)":1
  * def __pyx_unpickle_DB(__pyx_type, long __pyx_checksum, __pyx_state):             # <<<<<<<<<<<<<<
@@ -20519,7 +20519,7 @@ static int __Pyx_modinit_type_init_code(void) {
   if (PyObject_SetAttr(__pyx_m, __pyx_n_s_DB, (PyObject *)&__pyx_type_6tricks_DB) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   if (__Pyx_setup_reduce((PyObject*)&__pyx_type_6tricks_DB) < 0) __PYX_ERR(0, 149, __pyx_L1_error)
   __pyx_ptype_6tricks_DB = &__pyx_type_6tricks_DB;
-  if (PyType_Ready(&__pyx_type_6tricks___pyx_scope_struct__md5_hash) < 0) __PYX_ERR(0, 742, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_6tricks___pyx_scope_struct__md5_hash) < 0) __PYX_ERR(0, 743, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_6tricks___pyx_scope_struct__md5_hash.tp_print = 0;
   #endif
@@ -21769,9 +21769,9 @@ if (!__Pyx_RefNanny) {
  */
             __pyx_t_7 = PyList_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 77, __pyx_L28_error)
             __Pyx_GOTREF(__pyx_t_7);
-            __Pyx_INCREF(__pyx_kp_u_home_plutonergy_Coding_CComicRe_2);
-            __Pyx_GIVEREF(__pyx_kp_u_home_plutonergy_Coding_CComicRe_2);
-            PyList_SET_ITEM(__pyx_t_7, 0, __pyx_kp_u_home_plutonergy_Coding_CComicRe_2);
+            __Pyx_INCREF(__pyx_kp_u_home_plutonergy_Coding_CComicRe);
+            __Pyx_GIVEREF(__pyx_kp_u_home_plutonergy_Coding_CComicRe);
+            PyList_SET_ITEM(__pyx_t_7, 0, __pyx_kp_u_home_plutonergy_Coding_CComicRe);
             if (PyDict_SetItem(__pyx_d, __pyx_n_s_backup_location, __pyx_t_7) < 0) __PYX_ERR(0, 77, __pyx_L28_error)
             __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
@@ -23094,7 +23094,7 @@ if (!__Pyx_RefNanny) {
  *     comic_folders   = sqlite_function("settings", "comic_folders",   "TEXT")
  *     cache_folder    = sqlite_function("settings", "cache_folder",    "TEXT")             # <<<<<<<<<<<<<<
  *     dangerous_index = sqlite_function("settings", "dangerous_index", "TEXT")
- * 
+ *     skip_a_while    = sqlite_function("settings", "skip_a_while",    "TEXT")
  */
   __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_cache_folder, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 197, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
@@ -23106,8 +23106,8 @@ if (!__Pyx_RefNanny) {
  *     comic_folders   = sqlite_function("settings", "comic_folders",   "TEXT")
  *     cache_folder    = sqlite_function("settings", "cache_folder",    "TEXT")
  *     dangerous_index = sqlite_function("settings", "dangerous_index", "TEXT")             # <<<<<<<<<<<<<<
+ *     skip_a_while    = sqlite_function("settings", "skip_a_while",    "TEXT")
  * 
- *     standard        = sqlite_function("settings", "standard",   "TEXT")
  */
   __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_dangerous_index, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
@@ -23115,1504 +23115,1517 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":200
+  /* "tricks.pyx":199
+ *     cache_folder    = sqlite_function("settings", "cache_folder",    "TEXT")
  *     dangerous_index = sqlite_function("settings", "dangerous_index", "TEXT")
+ *     skip_a_while    = sqlite_function("settings", "skip_a_while",    "TEXT")             # <<<<<<<<<<<<<<
+ * 
+ *     standard        = sqlite_function("settings", "standard",   "TEXT")
+ */
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_skip_a_while, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_8);
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_skip_a_while, __pyx_t_8) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  PyType_Modified(__pyx_ptype_6tricks_DB);
+
+  /* "tricks.pyx":201
+ *     skip_a_while    = sqlite_function("settings", "skip_a_while",    "TEXT")
  * 
  *     standard        = sqlite_function("settings", "standard",   "TEXT")             # <<<<<<<<<<<<<<
  *     fake            = sqlite_function("settings", "fake",       "TEXT")
  *     mainframe       = sqlite_function("settings", "mainframe",  "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_standard, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 200, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_standard, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_standard, __pyx_t_8) < 0) __PYX_ERR(0, 200, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_standard, __pyx_t_8) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":201
+  /* "tricks.pyx":202
  * 
  *     standard        = sqlite_function("settings", "standard",   "TEXT")
  *     fake            = sqlite_function("settings", "fake",       "TEXT")             # <<<<<<<<<<<<<<
  *     mainframe       = sqlite_function("settings", "mainframe",  "TEXT")
  *     linked          = sqlite_function("settings", "linked",     "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_fake, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_fake, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_fake, __pyx_t_8) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_fake, __pyx_t_8) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":202
+  /* "tricks.pyx":203
  *     standard        = sqlite_function("settings", "standard",   "TEXT")
  *     fake            = sqlite_function("settings", "fake",       "TEXT")
  *     mainframe       = sqlite_function("settings", "mainframe",  "TEXT")             # <<<<<<<<<<<<<<
  *     linked          = sqlite_function("settings", "linked",     "TEXT")
  *     large           = sqlite_function("settings", "large",      "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_mainframe, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_mainframe, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_mainframe, __pyx_t_8) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_mainframe, __pyx_t_8) < 0) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":203
+  /* "tricks.pyx":204
  *     fake            = sqlite_function("settings", "fake",       "TEXT")
  *     mainframe       = sqlite_function("settings", "mainframe",  "TEXT")
  *     linked          = sqlite_function("settings", "linked",     "TEXT")             # <<<<<<<<<<<<<<
  *     large           = sqlite_function("settings", "large",      "TEXT")
  *     previous        = sqlite_function("settings", "previous",   "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_linked, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_linked, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_linked, __pyx_t_8) < 0) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_linked, __pyx_t_8) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":204
+  /* "tricks.pyx":205
  *     mainframe       = sqlite_function("settings", "mainframe",  "TEXT")
  *     linked          = sqlite_function("settings", "linked",     "TEXT")
  *     large           = sqlite_function("settings", "large",      "TEXT")             # <<<<<<<<<<<<<<
  *     previous        = sqlite_function("settings", "previous",   "TEXT")
  *     search_history  = sqlite_function("settings", "search_history", "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_large, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 204, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_large, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_large, __pyx_t_8) < 0) __PYX_ERR(0, 204, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_large, __pyx_t_8) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":205
+  /* "tricks.pyx":206
  *     linked          = sqlite_function("settings", "linked",     "TEXT")
  *     large           = sqlite_function("settings", "large",      "TEXT")
  *     previous        = sqlite_function("settings", "previous",   "TEXT")             # <<<<<<<<<<<<<<
  *     search_history  = sqlite_function("settings", "search_history", "TEXT")
  * 
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_previous, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_previous, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_previous, __pyx_t_8) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_previous, __pyx_t_8) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":206
+  /* "tricks.pyx":207
  *     large           = sqlite_function("settings", "large",      "TEXT")
  *     previous        = sqlite_function("settings", "previous",   "TEXT")
  *     search_history  = sqlite_function("settings", "search_history", "TEXT")             # <<<<<<<<<<<<<<
  * 
  *     include_md5     = sqlite_function("settings", "include_md5",       "INTEGER")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_search_history, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 206, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_search_history, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_search_history, __pyx_t_8) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_search_history, __pyx_t_8) < 0) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":208
+  /* "tricks.pyx":209
  *     search_history  = sqlite_function("settings", "search_history", "TEXT")
  * 
  *     include_md5     = sqlite_function("settings", "include_md5",       "INTEGER")             # <<<<<<<<<<<<<<
  *     show_filesize   = sqlite_function("settings", "show_filesize",     "INTEGER")
  *     show_pagecount  = sqlite_function("settings", "show_pagecount",    "INTEGER")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_include_md5, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_include_md5, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_include_md5, __pyx_t_8) < 0) __PYX_ERR(0, 208, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_include_md5, __pyx_t_8) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":209
+  /* "tricks.pyx":210
  * 
  *     include_md5     = sqlite_function("settings", "include_md5",       "INTEGER")
  *     show_filesize   = sqlite_function("settings", "show_filesize",     "INTEGER")             # <<<<<<<<<<<<<<
  *     show_pagecount  = sqlite_function("settings", "show_pagecount",    "INTEGER")
  *     defer_comicvine = sqlite_function("settings", "defer_comicvine",   "INTEGER")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_show_filesize, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_show_filesize, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_show_filesize, __pyx_t_8) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_show_filesize, __pyx_t_8) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":210
+  /* "tricks.pyx":211
  *     include_md5     = sqlite_function("settings", "include_md5",       "INTEGER")
  *     show_filesize   = sqlite_function("settings", "show_filesize",     "INTEGER")
  *     show_pagecount  = sqlite_function("settings", "show_pagecount",    "INTEGER")             # <<<<<<<<<<<<<<
  *     defer_comicvine = sqlite_function("settings", "defer_comicvine",   "INTEGER")
  * 
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_show_pagecount, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 210, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_show_pagecount, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_show_pagecount, __pyx_t_8) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_show_pagecount, __pyx_t_8) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":211
+  /* "tricks.pyx":212
  *     show_filesize   = sqlite_function("settings", "show_filesize",     "INTEGER")
  *     show_pagecount  = sqlite_function("settings", "show_pagecount",    "INTEGER")
  *     defer_comicvine = sqlite_function("settings", "defer_comicvine",   "INTEGER")             # <<<<<<<<<<<<<<
  * 
  *     P_publisher_id  = sqlite_function("publishers", "publisher_id",     "INTEGER")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_defer_comicvine, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_settings, __pyx_n_u_defer_comicvine, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_defer_comicvine, __pyx_t_8) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_defer_comicvine, __pyx_t_8) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":213
+  /* "tricks.pyx":214
  *     defer_comicvine = sqlite_function("settings", "defer_comicvine",   "INTEGER")
  * 
  *     P_publisher_id  = sqlite_function("publishers", "publisher_id",     "INTEGER")             # <<<<<<<<<<<<<<
  *     P_last_updated  = sqlite_function("publishers", "last_updated",     "INTEGER")
  * 
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_id, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 213, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_id, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_P_publisher_id, __pyx_t_8) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_P_publisher_id, __pyx_t_8) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":214
+  /* "tricks.pyx":215
  * 
  *     P_publisher_id  = sqlite_function("publishers", "publisher_id",     "INTEGER")
  *     P_last_updated  = sqlite_function("publishers", "last_updated",     "INTEGER")             # <<<<<<<<<<<<<<
  * 
  *     publisher_name  = sqlite_function("publishers", "publisher_name",   "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_last_updated, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_last_updated, __pyx_n_u_INTEGER)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_P_last_updated, __pyx_t_8) < 0) __PYX_ERR(0, 214, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_P_last_updated, __pyx_t_8) < 0) __PYX_ERR(0, 215, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":216
+  /* "tricks.pyx":217
  *     P_last_updated  = sqlite_function("publishers", "last_updated",     "INTEGER")
  * 
  *     publisher_name  = sqlite_function("publishers", "publisher_name",   "TEXT")             # <<<<<<<<<<<<<<
  *     publisher_img   = sqlite_function("publishers", "publisher_img",    "TEXT")
  *     aliases         = sqlite_function("publishers", "aliases",          "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_name, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 216, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_name, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_publisher_name, __pyx_t_8) < 0) __PYX_ERR(0, 216, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_publisher_name, __pyx_t_8) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":217
+  /* "tricks.pyx":218
  * 
  *     publisher_name  = sqlite_function("publishers", "publisher_name",   "TEXT")
  *     publisher_img   = sqlite_function("publishers", "publisher_img",    "TEXT")             # <<<<<<<<<<<<<<
  *     aliases         = sqlite_function("publishers", "aliases",          "TEXT")
  *     location_city   = sqlite_function("publishers", "location_city",    "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_img, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_img, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_publisher_img, __pyx_t_8) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_publisher_img, __pyx_t_8) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":218
+  /* "tricks.pyx":219
  *     publisher_name  = sqlite_function("publishers", "publisher_name",   "TEXT")
  *     publisher_img   = sqlite_function("publishers", "publisher_img",    "TEXT")
  *     aliases         = sqlite_function("publishers", "aliases",          "TEXT")             # <<<<<<<<<<<<<<
  *     location_city   = sqlite_function("publishers", "location_city",    "TEXT")
  *     location_address= sqlite_function("publishers", "location_address", "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_aliases, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 218, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_aliases, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_aliases, __pyx_t_8) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_aliases, __pyx_t_8) < 0) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":219
+  /* "tricks.pyx":220
  *     publisher_img   = sqlite_function("publishers", "publisher_img",    "TEXT")
  *     aliases         = sqlite_function("publishers", "aliases",          "TEXT")
  *     location_city   = sqlite_function("publishers", "location_city",    "TEXT")             # <<<<<<<<<<<<<<
  *     location_address= sqlite_function("publishers", "location_address", "TEXT")
  *     deck            = sqlite_function("publishers", "deck",             "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_location_city, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 219, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_location_city, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_location_city, __pyx_t_8) < 0) __PYX_ERR(0, 219, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_location_city, __pyx_t_8) < 0) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":220
+  /* "tricks.pyx":221
  *     aliases         = sqlite_function("publishers", "aliases",          "TEXT")
  *     location_city   = sqlite_function("publishers", "location_city",    "TEXT")
  *     location_address= sqlite_function("publishers", "location_address", "TEXT")             # <<<<<<<<<<<<<<
  *     deck            = sqlite_function("publishers", "deck",             "TEXT")
  *     location_state  = sqlite_function("publishers", "location_state",   "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_location_address, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_location_address, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_location_address, __pyx_t_8) < 0) __PYX_ERR(0, 220, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_location_address, __pyx_t_8) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":221
+  /* "tricks.pyx":222
  *     location_city   = sqlite_function("publishers", "location_city",    "TEXT")
  *     location_address= sqlite_function("publishers", "location_address", "TEXT")
  *     deck            = sqlite_function("publishers", "deck",             "TEXT")             # <<<<<<<<<<<<<<
  *     location_state  = sqlite_function("publishers", "location_state",   "TEXT")
  * 
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_deck, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 221, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_deck, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_deck, __pyx_t_8) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_deck, __pyx_t_8) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":222
+  /* "tricks.pyx":223
  *     location_address= sqlite_function("publishers", "location_address", "TEXT")
  *     deck            = sqlite_function("publishers", "deck",             "TEXT")
  *     location_state  = sqlite_function("publishers", "location_state",   "TEXT")             # <<<<<<<<<<<<<<
  * 
  *     publisher_site_detail_url = sqlite_function("publishers", "publisher_site_detail_url", "TEXT")
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_location_state, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_location_state, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 223, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_location_state, __pyx_t_8) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_location_state, __pyx_t_8) < 0) __PYX_ERR(0, 223, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":224
+  /* "tricks.pyx":225
  *     location_state  = sqlite_function("publishers", "location_state",   "TEXT")
  * 
  *     publisher_site_detail_url = sqlite_function("publishers", "publisher_site_detail_url", "TEXT")             # <<<<<<<<<<<<<<
  *     publisher_api_detail_url  = sqlite_function("publishers", "publisher_api_detail_url",  "TEXT")
  * 
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_site_detail_url, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 224, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_site_detail_url, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_publisher_site_detail_url, __pyx_t_8) < 0) __PYX_ERR(0, 224, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_publisher_site_detail_url, __pyx_t_8) < 0) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":225
+  /* "tricks.pyx":226
  * 
  *     publisher_site_detail_url = sqlite_function("publishers", "publisher_site_detail_url", "TEXT")
  *     publisher_api_detail_url  = sqlite_function("publishers", "publisher_api_detail_url",  "TEXT")             # <<<<<<<<<<<<<<
  * 
  * def Theme(self):
  */
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_api_detail_url, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 225, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_f_6tricks_sqlite_function(__pyx_n_u_publishers, __pyx_n_u_publisher_api_detail_url, __pyx_n_u_TEXT)); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_publisher_api_detail_url, __pyx_t_8) < 0) __PYX_ERR(0, 225, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_6tricks_DB->tp_dict, __pyx_n_s_publisher_api_detail_url, __pyx_t_8) < 0) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   PyType_Modified(__pyx_ptype_6tricks_DB);
 
-  /* "tricks.pyx":227
+  /* "tricks.pyx":228
  *     publisher_api_detail_url  = sqlite_function("publishers", "publisher_api_detail_url",  "TEXT")
  * 
  * def Theme(self):             # <<<<<<<<<<<<<<
  *     global techdict
  *     cdef int count
  */
-  __pyx_t_8 = PyCFunction_NewEx(&__pyx_mdef_6tricks_1Theme, NULL, __pyx_n_s_tricks); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_t_8 = PyCFunction_NewEx(&__pyx_mdef_6tricks_1Theme, NULL, __pyx_n_s_tricks); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Theme, __pyx_t_8) < 0) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Theme, __pyx_t_8) < 0) __PYX_ERR(0, 228, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "tricks.pyx":267
+  /* "tricks.pyx":268
  * 
  * 
  * class tech:             # <<<<<<<<<<<<<<
  *     global techdict
  *     @staticmethod
  */
-  __pyx_t_8 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_tech, __pyx_n_s_tech, (PyObject *) NULL, __pyx_n_s_tricks, (PyObject *) NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 267, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_tech, __pyx_n_s_tech, (PyObject *) NULL, __pyx_n_s_tricks, (PyObject *) NULL); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
 
-  /* "tricks.pyx":270
+  /* "tricks.pyx":271
  *     global techdict
  *     @staticmethod
  *     def tricks_threadpool():             # <<<<<<<<<<<<<<
  *         if 'threadpool' not in techdict:
- *             techdict['threadpool'] = QThreadPool()
+ *             techdict['threadpool'] = QThreadPool(maxThreadCount=1)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_1tricks_threadpool, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tricks_threadpool, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 270, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_1tricks_threadpool, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tricks_threadpool, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__36)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":269
+  /* "tricks.pyx":270
  * class tech:
  *     global techdict
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def tricks_threadpool():
  *         if 'threadpool' not in techdict:
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 270, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tricks_threadpool, __pyx_t_7) < 0) __PYX_ERR(0, 270, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tricks_threadpool, __pyx_t_7) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":276
+  /* "tricks.pyx":277
  * 
  *     @staticmethod
  *     def clear_comic_id(tuple db_input):             # <<<<<<<<<<<<<<
  *         if db_input[0] == None:
  *             return
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_3clear_comic_id, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_clear_comic_id, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 276, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_3clear_comic_id, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_clear_comic_id, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__38)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":275
+  /* "tricks.pyx":276
  *         return techdict['threadpool']
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def clear_comic_id(tuple db_input):
  *         if db_input[0] == None:
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 276, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_clear_comic_id, __pyx_t_2) < 0) __PYX_ERR(0, 276, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_clear_comic_id, __pyx_t_2) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":286
+  /* "tricks.pyx":287
  *                 sqlitecursor.execute(query, (None, db_input[0],))
  *     @staticmethod
  *     def fpath(path_to_fix):             # <<<<<<<<<<<<<<
  *         return os.path.abspath(os.path.expanduser(path_to_fix))
  * 
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_5fpath, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_fpath, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_5fpath, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_fpath, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__40)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":285
+  /* "tricks.pyx":286
  *                 query = 'update comics set ' + i + ' = (?) where id = (?)'
  *                 sqlitecursor.execute(query, (None, db_input[0],))
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def fpath(path_to_fix):
  *         return os.path.abspath(os.path.expanduser(path_to_fix))
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_fpath, __pyx_t_7) < 0) __PYX_ERR(0, 286, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_fpath, __pyx_t_7) < 0) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":290
+  /* "tricks.pyx":291
  * 
  *     @staticmethod
  *     def webp_or_jpeg():             # <<<<<<<<<<<<<<
  *         if 'thumbextension' not in techdict:
  *             im = Image.new('RGB', (1, 1), (100, 100, 100))
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_7webp_or_jpeg, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_webp_or_jpeg, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 290, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_7webp_or_jpeg, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_webp_or_jpeg, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__42)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":289
+  /* "tricks.pyx":290
  *         return os.path.abspath(os.path.expanduser(path_to_fix))
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def webp_or_jpeg():
  *         if 'thumbextension' not in techdict:
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_webp_or_jpeg, __pyx_t_2) < 0) __PYX_ERR(0, 290, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_webp_or_jpeg, __pyx_t_2) < 0) __PYX_ERR(0, 291, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":302
+  /* "tricks.pyx":303
  * 
  *     @staticmethod
  *     def refresh_publisher(tuple db_input):             # <<<<<<<<<<<<<<
  *         if db_input[DB.C_volume_id] != None and db_input[DB.C_publisher_id] == None:
  *             sqlitecursor.execute('select * from volumes where volume_id = (?)', (db_input[DB.C_volume_id],))
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_9refresh_publisher, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_refresh_publisher, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 302, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_9refresh_publisher, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_refresh_publisher, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__44)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":301
+  /* "tricks.pyx":302
  *         return techdict['thumbextension']
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def refresh_publisher(tuple db_input):
  *         if db_input[DB.C_volume_id] != None and db_input[DB.C_publisher_id] == None:
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 301, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 302, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_refresh_publisher, __pyx_t_7) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_refresh_publisher, __pyx_t_7) < 0) __PYX_ERR(0, 303, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":313
+  /* "tricks.pyx":314
  * 
  *     @staticmethod
  *     def string_normer(str string_to_fix, allow_unicode=False):             # <<<<<<<<<<<<<<
  *         if allow_unicode:
  *             string_to_fix = unicodedata.normalize('NFKC', string_to_fix)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_11string_normer, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_string_normer, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 313, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_11string_normer, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_string_normer, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__46)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_7, __pyx_tuple__47);
 
-  /* "tricks.pyx":312
+  /* "tricks.pyx":313
  *         return db_input
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def string_normer(str string_to_fix, allow_unicode=False):
  *         if allow_unicode:
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 313, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_string_normer, __pyx_t_2) < 0) __PYX_ERR(0, 313, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_string_normer, __pyx_t_2) < 0) __PYX_ERR(0, 314, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":322
+  /* "tricks.pyx":323
  * 
  *     @staticmethod
  *     def store_restore_state(self, bint store):             # <<<<<<<<<<<<<<
  *         cdef dict store_restore_settings
  *         cdef list cyclelist, radio_cycle, check_cycle, cycle, eachlist
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_13store_restore_state, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_store_restore_state, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_13store_restore_state, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_store_restore_state, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":321
+  /* "tricks.pyx":322
  *         return re.sub(r'[-\s]+', '-', string_to_fix).strip('-_')
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def store_restore_state(self, bint store):
  *         cdef dict store_restore_settings
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 321, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 322, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_store_restore_state, __pyx_t_7) < 0) __PYX_ERR(0, 322, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_store_restore_state, __pyx_t_7) < 0) __PYX_ERR(0, 323, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":371
+  /* "tricks.pyx":372
  * 
  *     @staticmethod
  *     def empty_insert_query(str table):             # <<<<<<<<<<<<<<
  *         cdef str query_part1, query_part2
  *         cdef list values
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_15empty_insert_query, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_empty_insert_query, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_15empty_insert_query, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_empty_insert_query, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__51)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":370
+  /* "tricks.pyx":371
  *                     i.setChecked(False)
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def empty_insert_query(str table):
  *         cdef str query_part1, query_part2
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 370, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 371, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_empty_insert_query, __pyx_t_2) < 0) __PYX_ERR(0, 371, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_empty_insert_query, __pyx_t_2) < 0) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":382
+  /* "tricks.pyx":383
  * 
  *     @staticmethod
  *     def clear_from_techdict(str key):             # <<<<<<<<<<<<<<
  *         try: techdict.pop(key)
  *         except KeyError: pass
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_17clear_from_techdict, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_clear_from_techdict, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__53)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_17clear_from_techdict, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_clear_from_techdict, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__53)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":381
+  /* "tricks.pyx":382
  *         return query_part1 + query_part2, values
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def clear_from_techdict(str key):
  *         try: techdict.pop(key)
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 381, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 382, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_clear_from_techdict, __pyx_t_7) < 0) __PYX_ERR(0, 382, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_clear_from_techdict, __pyx_t_7) < 0) __PYX_ERR(0, 383, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":387
+  /* "tricks.pyx":388
  * 
  *     @staticmethod
  *     def remove_NSFW(list data):             # <<<<<<<<<<<<<<
  *         """
  *         currently not used, but this one filters out
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_19remove_NSFW, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_remove_NSFW, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 387, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_19remove_NSFW, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_remove_NSFW, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__55)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 388, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":386
+  /* "tricks.pyx":387
  *         except KeyError: pass
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def remove_NSFW(list data):
  *         """
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 386, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 387, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_remove_NSFW, __pyx_t_2) < 0) __PYX_ERR(0, 387, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_remove_NSFW, __pyx_t_2) < 0) __PYX_ERR(0, 388, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":405
+  /* "tricks.pyx":406
  * 
  *     @staticmethod
  *     def refresh_db_input(tuple db_input):             # <<<<<<<<<<<<<<
  *         """
  *         simply refreshes the database input, perhaps something happened, also as it
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_21refresh_db_input, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_refresh_db_input, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 405, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_21refresh_db_input, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_refresh_db_input, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__57)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 406, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":404
+  /* "tricks.pyx":405
  *                         data.pop(revcount)
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def refresh_db_input(tuple db_input):
  *         """
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 404, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 405, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_refresh_db_input, __pyx_t_7) < 0) __PYX_ERR(0, 405, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_refresh_db_input, __pyx_t_7) < 0) __PYX_ERR(0, 406, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":430
+  /* "tricks.pyx":431
  * 
  *     @staticmethod
  *     def timeconverter(unixtime):             # <<<<<<<<<<<<<<
  *         return datetime.fromtimestamp(unixtime).strftime('%Y-%m-%d')
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_23timeconverter, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_timeconverter, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__59)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 430, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_23timeconverter, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_timeconverter, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__59)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":429
+  /* "tricks.pyx":430
  *         return db_input
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def timeconverter(unixtime):
  *         return datetime.fromtimestamp(unixtime).strftime('%Y-%m-%d')
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_timeconverter, __pyx_t_2) < 0) __PYX_ERR(0, 430, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_timeconverter, __pyx_t_2) < 0) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":434
+  /* "tricks.pyx":435
  * 
  *     @staticmethod
  *     def layout_shrink(layout):             # <<<<<<<<<<<<<<
  *         try:
  *             layout.setHorizontalSpacing(0)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_25layout_shrink, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_layout_shrink, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__61)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 434, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_25layout_shrink, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_layout_shrink, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__61)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 435, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":433
+  /* "tricks.pyx":434
  *         return datetime.fromtimestamp(unixtime).strftime('%Y-%m-%d')
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def layout_shrink(layout):
  *         try:
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 434, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_layout_shrink, __pyx_t_7) < 0) __PYX_ERR(0, 434, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_layout_shrink, __pyx_t_7) < 0) __PYX_ERR(0, 435, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":449
+  /* "tricks.pyx":450
  * 
  *     @staticmethod
  *     def greates_len(list lenlist, int key):             # <<<<<<<<<<<<<<
  *         cdef list returnlist = []
  *         cdef int eachnumber, greatest = 0
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_27greates_len, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_greates_len, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__63)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_27greates_len, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_greates_len, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__63)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 450, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":448
+  /* "tricks.pyx":449
  *             pass
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def greates_len(list lenlist, int key):
  *         cdef list returnlist = []
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 448, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_greates_len, __pyx_t_2) < 0) __PYX_ERR(0, 449, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_greates_len, __pyx_t_2) < 0) __PYX_ERR(0, 450, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":467
+  /* "tricks.pyx":468
  * 
  *     @staticmethod
  *     def download_file(str dl_from, str save_to):             # <<<<<<<<<<<<<<
  *         """
  *         dl_from  = http://...
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_29download_file, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_download_file, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__65)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_29download_file, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_download_file, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__65)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":466
+  /* "tricks.pyx":467
  *         return greatest
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def download_file(str dl_from, str save_to):
  *         """
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 466, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_download_file, __pyx_t_7) < 0) __PYX_ERR(0, 467, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_download_file, __pyx_t_7) < 0) __PYX_ERR(0, 468, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":493
+  /* "tricks.pyx":494
  * 
  *     @staticmethod
  *     def uni_sort(self, list data):             # <<<<<<<<<<<<<<
  *         """
  *         sorts data and honors mainframe settings,
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_31uni_sort, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_uni_sort, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__68)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_31uni_sort, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_uni_sort, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__68)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":492
+  /* "tricks.pyx":493
  *         print(tech.color.RED + "ERROR" + tech.color.END + " Could not download: " + tech.color.CYAN + dl_from + tech.color.END)
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def uni_sort(self, list data):
  *         """
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 492, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_uni_sort, __pyx_t_2) < 0) __PYX_ERR(0, 493, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_uni_sort, __pyx_t_2) < 0) __PYX_ERR(0, 494, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":556
+  /* "tricks.pyx":557
  * 
  *     @staticmethod
  *     def uni_search(list fromlist, str userinput, int key):             # <<<<<<<<<<<<<<
  *         """
  *         makes list of userinput and searches
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_33uni_search, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_uni_search, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__70)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 556, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_33uni_search, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_uni_search, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__70)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":555
+  /* "tricks.pyx":556
  *         return data
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def uni_search(list fromlist, str userinput, int key):
  *         """
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 555, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 556, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_uni_search, __pyx_t_7) < 0) __PYX_ERR(0, 556, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_uni_search, __pyx_t_7) < 0) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":591
+  /* "tricks.pyx":592
  * 
  *     @staticmethod
  *     def star_pixmap(str requestimage):             # <<<<<<<<<<<<<<
  *         def opacity_star(pixmap):
  *             new_pixmap = QtGui.QPixmap(pixmap)
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_35star_pixmap, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_star_pixmap, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__72)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 591, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_35star_pixmap, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_star_pixmap, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__72)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 592, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":590
+  /* "tricks.pyx":591
  *         return drawlist
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def star_pixmap(str requestimage):
  *         def opacity_star(pixmap):
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 590, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 591, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_star_pixmap, __pyx_t_2) < 0) __PYX_ERR(0, 591, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_star_pixmap, __pyx_t_2) < 0) __PYX_ERR(0, 592, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":625
+  /* "tricks.pyx":626
  * 
  *     @staticmethod
  *     def icon_size():             # <<<<<<<<<<<<<<
  *         if 'icon_size' not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_37icon_size, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_icon_size, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__74)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 625, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_37icon_size, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_icon_size, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__74)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 626, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":624
+  /* "tricks.pyx":625
  *                 return techdict['pixmap'][requestimage]
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def icon_size():
  *         if 'icon_size' not in techdict:
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 624, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 625, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_icon_size, __pyx_t_7) < 0) __PYX_ERR(0, 625, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_icon_size, __pyx_t_7) < 0) __PYX_ERR(0, 626, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":637
+  /* "tricks.pyx":638
  * 
  *     @staticmethod
  *     def apikey():             # <<<<<<<<<<<<<<
  *         if 'api_key' not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_39apikey, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_apikey, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__76)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 637, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_39apikey, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_apikey, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__76)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 638, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":636
+  /* "tricks.pyx":637
  *         return techdict['icon_size']
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def apikey():
  *         if 'api_key' not in techdict:
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 636, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 637, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_apikey, __pyx_t_2) < 0) __PYX_ERR(0, 637, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_apikey, __pyx_t_2) < 0) __PYX_ERR(0, 638, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":648
+  /* "tricks.pyx":649
  * 
  *     @staticmethod
  *     def header():             # <<<<<<<<<<<<<<
  *         cdef dict header
  *         cdef str agent = 'User-Agent'
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_41header, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_header, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__78)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 648, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_41header, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_header, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__78)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 649, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":647
+  /* "tricks.pyx":648
  *         except KeyError: return False
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def header():
  *         cdef dict header
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 647, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 648, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_header, __pyx_t_7) < 0) __PYX_ERR(0, 648, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_header, __pyx_t_7) < 0) __PYX_ERR(0, 649, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":656
+  /* "tricks.pyx":657
  * 
  *     @staticmethod
  *     def comic_folders():             # <<<<<<<<<<<<<<
  *         cdef list comic_folders = []
  *         if 'comic_folders' not in techdict:
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_43comic_folders, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_comic_folders, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__80)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 656, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_43comic_folders, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_comic_folders, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__80)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":655
+  /* "tricks.pyx":656
  *         return header
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def comic_folders():
  *         cdef list comic_folders = []
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 655, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 656, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_comic_folders, __pyx_t_2) < 0) __PYX_ERR(0, 656, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_comic_folders, __pyx_t_2) < 0) __PYX_ERR(0, 657, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":668
+  /* "tricks.pyx":669
  * 
  *     @staticmethod
  *     def tmp_thumbnails():             # <<<<<<<<<<<<<<
  *         return tech.cache_folder() + '/thumbs1'
  * 
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_45tmp_thumbnails, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tmp_thumbnails, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__81)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 668, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_45tmp_thumbnails, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tmp_thumbnails, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__81)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 669, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":667
+  /* "tricks.pyx":668
  *         return techdict['comic_folders']
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def tmp_thumbnails():
  *         return tech.cache_folder() + '/thumbs1'
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 667, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 668, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tmp_thumbnails, __pyx_t_7) < 0) __PYX_ERR(0, 668, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tmp_thumbnails, __pyx_t_7) < 0) __PYX_ERR(0, 669, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":672
+  /* "tricks.pyx":673
  * 
  *     @staticmethod
  *     def tmp_downloaded_thumbnails():             # <<<<<<<<<<<<<<
  *         return tech.cache_folder() + '/thumbs2'
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_47tmp_downloaded_thumbnails, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tmp_downloaded_thumbnails, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__82)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 672, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_47tmp_downloaded_thumbnails, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tmp_downloaded_thumbnails, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__82)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 673, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":671
+  /* "tricks.pyx":672
  *         return tech.cache_folder() + '/thumbs1'
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def tmp_downloaded_thumbnails():
  *         return tech.cache_folder() + '/thumbs2'
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 671, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 672, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tmp_downloaded_thumbnails, __pyx_t_2) < 0) __PYX_ERR(0, 672, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tmp_downloaded_thumbnails, __pyx_t_2) < 0) __PYX_ERR(0, 673, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":676
+  /* "tricks.pyx":677
  * 
  *     @staticmethod
  *     def tmp_api():             # <<<<<<<<<<<<<<
  *         return tech.cache_folder() + '/api'
  * 
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_49tmp_api, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tmp_api, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__83)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 676, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_49tmp_api, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tmp_api, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__83)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 677, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":675
+  /* "tricks.pyx":676
  *         return tech.cache_folder() + '/thumbs2'
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def tmp_api():
  *         return tech.cache_folder() + '/api'
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 675, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 676, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tmp_api, __pyx_t_7) < 0) __PYX_ERR(0, 676, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tmp_api, __pyx_t_7) < 0) __PYX_ERR(0, 677, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":680
+  /* "tricks.pyx":681
  * 
  *     @staticmethod
  *     def tmp_pages():             # <<<<<<<<<<<<<<
  *         return tech.cache_folder() + '/pages'
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_51tmp_pages, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tmp_pages, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__84)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 680, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_51tmp_pages, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_tmp_pages, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__84)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 681, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":679
+  /* "tricks.pyx":680
  *         return tech.cache_folder() + '/api'
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def tmp_pages():
  *         return tech.cache_folder() + '/pages'
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 679, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 680, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tmp_pages, __pyx_t_2) < 0) __PYX_ERR(0, 680, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_tmp_pages, __pyx_t_2) < 0) __PYX_ERR(0, 681, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":684
+  /* "tricks.pyx":685
  * 
  *     @staticmethod
  *     def cache_folder():             # <<<<<<<<<<<<<<
  *         try: return techdict['cache_folder']
  *         except KeyError:
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_53cache_folder, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_cache_folder, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__86)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 684, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_53cache_folder, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_cache_folder, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__86)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 685, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":683
+  /* "tricks.pyx":684
  *         return tech.cache_folder() + '/pages'
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def cache_folder():
  *         try: return techdict['cache_folder']
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 683, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 684, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_cache_folder, __pyx_t_7) < 0) __PYX_ERR(0, 684, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_cache_folder, __pyx_t_7) < 0) __PYX_ERR(0, 685, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":696
+  /* "tricks.pyx":697
  * 
  *     @staticmethod
  *     def settings_filler(str setting_string, int default=0):             # <<<<<<<<<<<<<<
  *         if setting_string not in techdict:
  *             sqlitecursor.execute('select * from settings where id is 1')
  */
-  __pyx_t_7 = __Pyx_PyInt_From_int(((int)0)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 696, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyInt_From_int(((int)0)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 696, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_7);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_7);
   __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_55settings_filler, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_settings_filler, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__88)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 696, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_55settings_filler, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_settings_filler, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__88)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_7, __pyx_t_2);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":695
+  /* "tricks.pyx":696
  *         return techdict['cache_folder']
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def settings_filler(str setting_string, int default=0):
  *         if setting_string not in techdict:
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 695, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 696, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_settings_filler, __pyx_t_2) < 0) __PYX_ERR(0, 696, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_settings_filler, __pyx_t_2) < 0) __PYX_ERR(0, 697, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":709
+  /* "tricks.pyx":710
  * 
  *     @staticmethod
  *     def check_bleed():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_bleed']
  *         except KeyError: return tech.settings_filler('check_bleed')
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_57check_bleed, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_bleed, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__89)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 709, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_57check_bleed, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_bleed, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__89)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 710, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":708
+  /* "tricks.pyx":709
  *         return techdict[setting_string]
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def check_bleed():
  *         try: return techdict['check_bleed']
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 708, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 709, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_bleed, __pyx_t_7) < 0) __PYX_ERR(0, 709, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_bleed, __pyx_t_7) < 0) __PYX_ERR(0, 710, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":713
+  /* "tricks.pyx":714
  *         except KeyError: return tech.settings_filler('check_bleed')
  *     @staticmethod
  *     def check_spaceout():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_spaceout']
  *         except KeyError: return tech.settings_filler('check_spaceout')
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_59check_spaceout, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_spaceout, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__90)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 713, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_59check_spaceout, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_spaceout, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__90)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 714, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":712
+  /* "tricks.pyx":713
  *         try: return techdict['check_bleed']
  *         except KeyError: return tech.settings_filler('check_bleed')
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def check_spaceout():
  *         try: return techdict['check_spaceout']
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 712, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 713, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_spaceout, __pyx_t_2) < 0) __PYX_ERR(0, 713, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_spaceout, __pyx_t_2) < 0) __PYX_ERR(0, 714, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":717
+  /* "tricks.pyx":718
  *         except KeyError: return tech.settings_filler('check_spaceout')
  *     @staticmethod
  *     def check_alternative_covers():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_alternative_covers']
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_61check_alternative_covers, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_alternative_covers, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__91)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 717, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_61check_alternative_covers, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_alternative_covers, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__91)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 718, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":716
+  /* "tricks.pyx":717
  *         try: return techdict['check_spaceout']
  *         except KeyError: return tech.settings_filler('check_spaceout')
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def check_alternative_covers():
  *         try: return techdict['check_alternative_covers']
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 716, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 717, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_alternative_covers, __pyx_t_7) < 0) __PYX_ERR(0, 717, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_alternative_covers, __pyx_t_7) < 0) __PYX_ERR(0, 718, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":721
+  /* "tricks.pyx":722
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)
  *     @staticmethod
  *     def check_overwrite_covers():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_overwrite_covers']
  *         except KeyError: return tech.settings_filler('check_overwrite_covers')
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_63check_overwrite_covers, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_overwrite_covers, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__92)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 721, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_63check_overwrite_covers, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_overwrite_covers, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__92)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 722, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":720
+  /* "tricks.pyx":721
  *         try: return techdict['check_alternative_covers']
  *         except KeyError: return tech.settings_filler('check_alternative_covers', 1)
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def check_overwrite_covers():
  *         try: return techdict['check_overwrite_covers']
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 720, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 721, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_overwrite_covers, __pyx_t_2) < 0) __PYX_ERR(0, 721, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_overwrite_covers, __pyx_t_2) < 0) __PYX_ERR(0, 722, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":725
+  /* "tricks.pyx":726
  *         except KeyError: return tech.settings_filler('check_overwrite_covers')
  *     @staticmethod
  *     def check_show_filesize():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_show_filesize']
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_65check_show_filesize, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_show_filesize, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__93)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 725, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_65check_show_filesize, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_show_filesize, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__93)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 726, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":724
+  /* "tricks.pyx":725
  *         try: return techdict['check_overwrite_covers']
  *         except KeyError: return tech.settings_filler('check_overwrite_covers')
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def check_show_filesize():
  *         try: return techdict['check_show_filesize']
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 724, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 725, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_show_filesize, __pyx_t_7) < 0) __PYX_ERR(0, 725, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_show_filesize, __pyx_t_7) < 0) __PYX_ERR(0, 726, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":729
+  /* "tricks.pyx":730
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)
  *     @staticmethod
  *     def check_defer_comicvine():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_defer_comicvine']
  *         except KeyError: return tech.settings_filler('check_defer_comicvine')
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_67check_defer_comicvine, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_defer_comicvine, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__94)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 729, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_67check_defer_comicvine, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_defer_comicvine, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__94)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 730, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":728
+  /* "tricks.pyx":729
  *         try: return techdict['check_show_filesize']
  *         except KeyError: return tech.settings_filler('check_show_filesize', 1)
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def check_defer_comicvine():
  *         try: return techdict['check_defer_comicvine']
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 728, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 729, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_defer_comicvine, __pyx_t_2) < 0) __PYX_ERR(0, 729, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_defer_comicvine, __pyx_t_2) < 0) __PYX_ERR(0, 730, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":733
+  /* "tricks.pyx":734
  *         except KeyError: return tech.settings_filler('check_defer_comicvine')
  *     @staticmethod
  *     def check_show_pagecount():             # <<<<<<<<<<<<<<
  *         try: return techdict['check_show_pagecount']
  *         except KeyError: return tech.settings_filler('check_show_pagecount', 1)
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_69check_show_pagecount, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_show_pagecount, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__95)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 733, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_69check_show_pagecount, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_check_show_pagecount, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__95)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":732
+  /* "tricks.pyx":733
  *         try: return techdict['check_defer_comicvine']
  *         except KeyError: return tech.settings_filler('check_defer_comicvine')
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def check_show_pagecount():
  *         try: return techdict['check_show_pagecount']
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 732, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 733, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_show_pagecount, __pyx_t_7) < 0) __PYX_ERR(0, 733, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_check_show_pagecount, __pyx_t_7) < 0) __PYX_ERR(0, 734, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":738
+  /* "tricks.pyx":739
  * 
  *     @staticmethod
  *     def dummyjpeg():             # <<<<<<<<<<<<<<
  *         return tech.fpath(f'{tempfile.gettempdir()}/dummyjpeg.jpeg')
  * 
  */
-  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_71dummyjpeg, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_dummyjpeg, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__96)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 738, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_71dummyjpeg, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_dummyjpeg, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__96)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 739, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":737
+  /* "tricks.pyx":738
  *         except KeyError: return tech.settings_filler('check_show_pagecount', 1)
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def dummyjpeg():
  *         return tech.fpath(f'{tempfile.gettempdir()}/dummyjpeg.jpeg')
  */
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 737, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 738, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_dummyjpeg, __pyx_t_2) < 0) __PYX_ERR(0, 738, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_dummyjpeg, __pyx_t_2) < 0) __PYX_ERR(0, 739, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "tricks.pyx":742
+  /* "tricks.pyx":743
  * 
  *     @staticmethod
  *     def md5_hash(str local_path):             # <<<<<<<<<<<<<<
  *         hash_md5 = hashlib.md5()
  *         with open(local_path, "rb") as f:
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_73md5_hash, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_md5_hash, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__98)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 742, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_6tricks_4tech_73md5_hash, __Pyx_CYFUNCTION_STATICMETHOD, __pyx_n_s_tech_md5_hash, NULL, __pyx_n_s_tricks, __pyx_d, ((PyObject *)__pyx_codeobj__98)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 743, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "tricks.pyx":741
+  /* "tricks.pyx":742
  *         return tech.fpath(f'{tempfile.gettempdir()}/dummyjpeg.jpeg')
  * 
  *     @staticmethod             # <<<<<<<<<<<<<<
  *     def md5_hash(str local_path):
  *         hash_md5 = hashlib.md5()
  */
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 741, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_staticmethod, __pyx_t_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 742, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_md5_hash, __pyx_t_7) < 0) __PYX_ERR(0, 742, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_md5_hash, __pyx_t_7) < 0) __PYX_ERR(0, 743, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":749
+  /* "tricks.pyx":750
  *         return hash_md5.hexdigest()
  * 
  *     class color:             # <<<<<<<<<<<<<<
  *         PURPLE = '\033[95m'
  *         CYAN = '\033[96m'
  */
-  __pyx_t_7 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_color, __pyx_n_s_tech_color, (PyObject *) NULL, __pyx_n_s_tricks, (PyObject *) NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 749, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_color, __pyx_n_s_tech_color, (PyObject *) NULL, __pyx_n_s_tricks, (PyObject *) NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 750, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
 
-  /* "tricks.pyx":750
+  /* "tricks.pyx":751
  * 
  *     class color:
  *         PURPLE = '\033[95m'             # <<<<<<<<<<<<<<
  *         CYAN = '\033[96m'
  *         DARKCYAN = '\033[36m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_PURPLE, __pyx_kp_u_95m) < 0) __PYX_ERR(0, 750, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_PURPLE, __pyx_kp_u_95m) < 0) __PYX_ERR(0, 751, __pyx_L1_error)
 
-  /* "tricks.pyx":751
+  /* "tricks.pyx":752
  *     class color:
  *         PURPLE = '\033[95m'
  *         CYAN = '\033[96m'             # <<<<<<<<<<<<<<
  *         DARKCYAN = '\033[36m'
  *         BLUE = '\033[94m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_CYAN, __pyx_kp_u_96m) < 0) __PYX_ERR(0, 751, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_CYAN, __pyx_kp_u_96m) < 0) __PYX_ERR(0, 752, __pyx_L1_error)
 
-  /* "tricks.pyx":752
+  /* "tricks.pyx":753
  *         PURPLE = '\033[95m'
  *         CYAN = '\033[96m'
  *         DARKCYAN = '\033[36m'             # <<<<<<<<<<<<<<
  *         BLUE = '\033[94m'
  *         GREEN = '\033[92m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_DARKCYAN, __pyx_kp_u_36m) < 0) __PYX_ERR(0, 752, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_DARKCYAN, __pyx_kp_u_36m) < 0) __PYX_ERR(0, 753, __pyx_L1_error)
 
-  /* "tricks.pyx":753
+  /* "tricks.pyx":754
  *         CYAN = '\033[96m'
  *         DARKCYAN = '\033[36m'
  *         BLUE = '\033[94m'             # <<<<<<<<<<<<<<
  *         GREEN = '\033[92m'
  *         YELLOW = '\033[93m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BLUE, __pyx_kp_u_94m) < 0) __PYX_ERR(0, 753, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BLUE, __pyx_kp_u_94m) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
 
-  /* "tricks.pyx":754
+  /* "tricks.pyx":755
  *         DARKCYAN = '\033[36m'
  *         BLUE = '\033[94m'
  *         GREEN = '\033[92m'             # <<<<<<<<<<<<<<
  *         YELLOW = '\033[93m'
  *         RED = '\033[91m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_GREEN, __pyx_kp_u_92m) < 0) __PYX_ERR(0, 754, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_GREEN, __pyx_kp_u_92m) < 0) __PYX_ERR(0, 755, __pyx_L1_error)
 
-  /* "tricks.pyx":755
+  /* "tricks.pyx":756
  *         BLUE = '\033[94m'
  *         GREEN = '\033[92m'
  *         YELLOW = '\033[93m'             # <<<<<<<<<<<<<<
  *         RED = '\033[91m'
  *         BOLD = '\033[1m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_YELLOW, __pyx_kp_u_93m) < 0) __PYX_ERR(0, 755, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_YELLOW, __pyx_kp_u_93m) < 0) __PYX_ERR(0, 756, __pyx_L1_error)
 
-  /* "tricks.pyx":756
+  /* "tricks.pyx":757
  *         GREEN = '\033[92m'
  *         YELLOW = '\033[93m'
  *         RED = '\033[91m'             # <<<<<<<<<<<<<<
  *         BOLD = '\033[1m'
  *         UNDERLINE = '\033[4m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_RED, __pyx_kp_u_91m) < 0) __PYX_ERR(0, 756, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_RED, __pyx_kp_u_91m) < 0) __PYX_ERR(0, 757, __pyx_L1_error)
 
-  /* "tricks.pyx":757
+  /* "tricks.pyx":758
  *         YELLOW = '\033[93m'
  *         RED = '\033[91m'
  *         BOLD = '\033[1m'             # <<<<<<<<<<<<<<
  *         UNDERLINE = '\033[4m'
  *         WHITE = '\33[97m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BOLD, __pyx_kp_u_1m) < 0) __PYX_ERR(0, 757, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BOLD, __pyx_kp_u_1m) < 0) __PYX_ERR(0, 758, __pyx_L1_error)
 
-  /* "tricks.pyx":758
+  /* "tricks.pyx":759
  *         RED = '\033[91m'
  *         BOLD = '\033[1m'
  *         UNDERLINE = '\033[4m'             # <<<<<<<<<<<<<<
  *         WHITE = '\33[97m'
  *         LGREEN = "\u001b[32;1m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_UNDERLINE, __pyx_kp_u_4m) < 0) __PYX_ERR(0, 758, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_UNDERLINE, __pyx_kp_u_4m) < 0) __PYX_ERR(0, 759, __pyx_L1_error)
 
-  /* "tricks.pyx":759
+  /* "tricks.pyx":760
  *         BOLD = '\033[1m'
  *         UNDERLINE = '\033[4m'
  *         WHITE = '\33[97m'             # <<<<<<<<<<<<<<
  *         LGREEN = "\u001b[32;1m"
  *         CVIOLET = '\33[35m'
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_WHITE, __pyx_kp_u_97m) < 0) __PYX_ERR(0, 759, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_WHITE, __pyx_kp_u_97m) < 0) __PYX_ERR(0, 760, __pyx_L1_error)
 
-  /* "tricks.pyx":760
+  /* "tricks.pyx":761
  *         UNDERLINE = '\033[4m'
  *         WHITE = '\33[97m'
  *         LGREEN = "\u001b[32;1m"             # <<<<<<<<<<<<<<
  *         CVIOLET = '\33[35m'
  *         BROWN = "\033[0;33m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LGREEN, __pyx_kp_u_32_1m) < 0) __PYX_ERR(0, 760, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LGREEN, __pyx_kp_u_32_1m) < 0) __PYX_ERR(0, 761, __pyx_L1_error)
 
-  /* "tricks.pyx":761
+  /* "tricks.pyx":762
  *         WHITE = '\33[97m'
  *         LGREEN = "\u001b[32;1m"
  *         CVIOLET = '\33[35m'             # <<<<<<<<<<<<<<
  *         BROWN = "\033[0;33m"
  *         BLACK = "\033[0;30m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_CVIOLET, __pyx_kp_u_35m) < 0) __PYX_ERR(0, 761, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_CVIOLET, __pyx_kp_u_35m) < 0) __PYX_ERR(0, 762, __pyx_L1_error)
 
-  /* "tricks.pyx":762
+  /* "tricks.pyx":763
  *         LGREEN = "\u001b[32;1m"
  *         CVIOLET = '\33[35m'
  *         BROWN = "\033[0;33m"             # <<<<<<<<<<<<<<
  *         BLACK = "\033[0;30m"
  *         RED2 = "\033[0;31m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BROWN, __pyx_kp_u_0_33m) < 0) __PYX_ERR(0, 762, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BROWN, __pyx_kp_u_0_33m) < 0) __PYX_ERR(0, 763, __pyx_L1_error)
 
-  /* "tricks.pyx":763
+  /* "tricks.pyx":764
  *         CVIOLET = '\33[35m'
  *         BROWN = "\033[0;33m"
  *         BLACK = "\033[0;30m"             # <<<<<<<<<<<<<<
  *         RED2 = "\033[0;31m"
  *         GREEN2 = "\033[0;32m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BLACK, __pyx_kp_u_0_30m) < 0) __PYX_ERR(0, 763, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BLACK, __pyx_kp_u_0_30m) < 0) __PYX_ERR(0, 764, __pyx_L1_error)
 
-  /* "tricks.pyx":764
+  /* "tricks.pyx":765
  *         BROWN = "\033[0;33m"
  *         BLACK = "\033[0;30m"
  *         RED2 = "\033[0;31m"             # <<<<<<<<<<<<<<
  *         GREEN2 = "\033[0;32m"
  *         BLUE2 = "\033[0;34m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_RED2, __pyx_kp_u_0_31m) < 0) __PYX_ERR(0, 764, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_RED2, __pyx_kp_u_0_31m) < 0) __PYX_ERR(0, 765, __pyx_L1_error)
 
-  /* "tricks.pyx":765
+  /* "tricks.pyx":766
  *         BLACK = "\033[0;30m"
  *         RED2 = "\033[0;31m"
  *         GREEN2 = "\033[0;32m"             # <<<<<<<<<<<<<<
  *         BLUE2 = "\033[0;34m"
  *         PURPLE2 = "\033[0;35m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_GREEN2, __pyx_kp_u_0_32m) < 0) __PYX_ERR(0, 765, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_GREEN2, __pyx_kp_u_0_32m) < 0) __PYX_ERR(0, 766, __pyx_L1_error)
 
-  /* "tricks.pyx":766
+  /* "tricks.pyx":767
  *         RED2 = "\033[0;31m"
  *         GREEN2 = "\033[0;32m"
  *         BLUE2 = "\033[0;34m"             # <<<<<<<<<<<<<<
  *         PURPLE2 = "\033[0;35m"
  *         LIGHT_GRAY = "\033[0;37m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BLUE2, __pyx_kp_u_0_34m) < 0) __PYX_ERR(0, 766, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BLUE2, __pyx_kp_u_0_34m) < 0) __PYX_ERR(0, 767, __pyx_L1_error)
 
-  /* "tricks.pyx":767
+  /* "tricks.pyx":768
  *         GREEN2 = "\033[0;32m"
  *         BLUE2 = "\033[0;34m"
  *         PURPLE2 = "\033[0;35m"             # <<<<<<<<<<<<<<
  *         LIGHT_GRAY = "\033[0;37m"
  *         DARK_GRAY = "\033[1;30m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_PURPLE2, __pyx_kp_u_0_35m) < 0) __PYX_ERR(0, 767, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_PURPLE2, __pyx_kp_u_0_35m) < 0) __PYX_ERR(0, 768, __pyx_L1_error)
 
-  /* "tricks.pyx":768
+  /* "tricks.pyx":769
  *         BLUE2 = "\033[0;34m"
  *         PURPLE2 = "\033[0;35m"
  *         LIGHT_GRAY = "\033[0;37m"             # <<<<<<<<<<<<<<
  *         DARK_GRAY = "\033[1;30m"
  *         LIGHT_RED = "\033[1;31m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_GRAY, __pyx_kp_u_0_37m) < 0) __PYX_ERR(0, 768, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_GRAY, __pyx_kp_u_0_37m) < 0) __PYX_ERR(0, 769, __pyx_L1_error)
 
-  /* "tricks.pyx":769
+  /* "tricks.pyx":770
  *         PURPLE2 = "\033[0;35m"
  *         LIGHT_GRAY = "\033[0;37m"
  *         DARK_GRAY = "\033[1;30m"             # <<<<<<<<<<<<<<
  *         LIGHT_RED = "\033[1;31m"
  *         LIGHT_GREEN = "\033[1;32m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_DARK_GRAY, __pyx_kp_u_1_30m) < 0) __PYX_ERR(0, 769, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_DARK_GRAY, __pyx_kp_u_1_30m) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
 
-  /* "tricks.pyx":770
+  /* "tricks.pyx":771
  *         LIGHT_GRAY = "\033[0;37m"
  *         DARK_GRAY = "\033[1;30m"
  *         LIGHT_RED = "\033[1;31m"             # <<<<<<<<<<<<<<
  *         LIGHT_GREEN = "\033[1;32m"
  *         YELLOW2 = "\033[1;33m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_RED, __pyx_kp_u_1_31m) < 0) __PYX_ERR(0, 770, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_RED, __pyx_kp_u_1_31m) < 0) __PYX_ERR(0, 771, __pyx_L1_error)
 
-  /* "tricks.pyx":771
+  /* "tricks.pyx":772
  *         DARK_GRAY = "\033[1;30m"
  *         LIGHT_RED = "\033[1;31m"
  *         LIGHT_GREEN = "\033[1;32m"             # <<<<<<<<<<<<<<
  *         YELLOW2 = "\033[1;33m"
  *         LIGHT_BLUE = "\033[1;34m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_GREEN, __pyx_kp_u_1_32m) < 0) __PYX_ERR(0, 771, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_GREEN, __pyx_kp_u_1_32m) < 0) __PYX_ERR(0, 772, __pyx_L1_error)
 
-  /* "tricks.pyx":772
+  /* "tricks.pyx":773
  *         LIGHT_RED = "\033[1;31m"
  *         LIGHT_GREEN = "\033[1;32m"
  *         YELLOW2 = "\033[1;33m"             # <<<<<<<<<<<<<<
  *         LIGHT_BLUE = "\033[1;34m"
  *         LIGHT_PURPLE = "\033[1;35m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_YELLOW2, __pyx_kp_u_1_33m) < 0) __PYX_ERR(0, 772, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_YELLOW2, __pyx_kp_u_1_33m) < 0) __PYX_ERR(0, 773, __pyx_L1_error)
 
-  /* "tricks.pyx":773
+  /* "tricks.pyx":774
  *         LIGHT_GREEN = "\033[1;32m"
  *         YELLOW2 = "\033[1;33m"
  *         LIGHT_BLUE = "\033[1;34m"             # <<<<<<<<<<<<<<
  *         LIGHT_PURPLE = "\033[1;35m"
  *         LIGHT_CYAN = "\033[1;36m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_BLUE, __pyx_kp_u_1_34m) < 0) __PYX_ERR(0, 773, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_BLUE, __pyx_kp_u_1_34m) < 0) __PYX_ERR(0, 774, __pyx_L1_error)
 
-  /* "tricks.pyx":774
+  /* "tricks.pyx":775
  *         YELLOW2 = "\033[1;33m"
  *         LIGHT_BLUE = "\033[1;34m"
  *         LIGHT_PURPLE = "\033[1;35m"             # <<<<<<<<<<<<<<
  *         LIGHT_CYAN = "\033[1;36m"
  *         LIGHT_WHITE = "\033[1;37m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_PURPLE, __pyx_kp_u_1_35m) < 0) __PYX_ERR(0, 774, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_PURPLE, __pyx_kp_u_1_35m) < 0) __PYX_ERR(0, 775, __pyx_L1_error)
 
-  /* "tricks.pyx":775
+  /* "tricks.pyx":776
  *         LIGHT_BLUE = "\033[1;34m"
  *         LIGHT_PURPLE = "\033[1;35m"
  *         LIGHT_CYAN = "\033[1;36m"             # <<<<<<<<<<<<<<
  *         LIGHT_WHITE = "\033[1;37m"
  *         FAINT = "\033[2m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_CYAN, __pyx_kp_u_1_36m) < 0) __PYX_ERR(0, 775, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_CYAN, __pyx_kp_u_1_36m) < 0) __PYX_ERR(0, 776, __pyx_L1_error)
 
-  /* "tricks.pyx":776
+  /* "tricks.pyx":777
  *         LIGHT_PURPLE = "\033[1;35m"
  *         LIGHT_CYAN = "\033[1;36m"
  *         LIGHT_WHITE = "\033[1;37m"             # <<<<<<<<<<<<<<
  *         FAINT = "\033[2m"
  *         ITALIC = "\033[3m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_WHITE, __pyx_kp_u_1_37m) < 0) __PYX_ERR(0, 776, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_LIGHT_WHITE, __pyx_kp_u_1_37m) < 0) __PYX_ERR(0, 777, __pyx_L1_error)
 
-  /* "tricks.pyx":777
+  /* "tricks.pyx":778
  *         LIGHT_CYAN = "\033[1;36m"
  *         LIGHT_WHITE = "\033[1;37m"
  *         FAINT = "\033[2m"             # <<<<<<<<<<<<<<
  *         ITALIC = "\033[3m"
  *         BLINK = "\033[5m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_FAINT, __pyx_kp_u_2m) < 0) __PYX_ERR(0, 777, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_FAINT, __pyx_kp_u_2m) < 0) __PYX_ERR(0, 778, __pyx_L1_error)
 
-  /* "tricks.pyx":778
+  /* "tricks.pyx":779
  *         LIGHT_WHITE = "\033[1;37m"
  *         FAINT = "\033[2m"
  *         ITALIC = "\033[3m"             # <<<<<<<<<<<<<<
  *         BLINK = "\033[5m"
  *         NEGATIVE = "\033[7m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_ITALIC, __pyx_kp_u_3m) < 0) __PYX_ERR(0, 778, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_ITALIC, __pyx_kp_u_3m) < 0) __PYX_ERR(0, 779, __pyx_L1_error)
 
-  /* "tricks.pyx":779
+  /* "tricks.pyx":780
  *         FAINT = "\033[2m"
  *         ITALIC = "\033[3m"
  *         BLINK = "\033[5m"             # <<<<<<<<<<<<<<
  *         NEGATIVE = "\033[7m"
  *         CROSSED = "\033[9m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BLINK, __pyx_kp_u_5m) < 0) __PYX_ERR(0, 779, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_BLINK, __pyx_kp_u_5m) < 0) __PYX_ERR(0, 780, __pyx_L1_error)
 
-  /* "tricks.pyx":780
+  /* "tricks.pyx":781
  *         ITALIC = "\033[3m"
  *         BLINK = "\033[5m"
  *         NEGATIVE = "\033[7m"             # <<<<<<<<<<<<<<
  *         CROSSED = "\033[9m"
  *         END = "\033[0m"
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_NEGATIVE, __pyx_kp_u_7m) < 0) __PYX_ERR(0, 780, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_NEGATIVE, __pyx_kp_u_7m) < 0) __PYX_ERR(0, 781, __pyx_L1_error)
 
-  /* "tricks.pyx":781
+  /* "tricks.pyx":782
  *         BLINK = "\033[5m"
  *         NEGATIVE = "\033[7m"
  *         CROSSED = "\033[9m"             # <<<<<<<<<<<<<<
  *         END = "\033[0m"
  * 
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_CROSSED, __pyx_kp_u_9m) < 0) __PYX_ERR(0, 781, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_CROSSED, __pyx_kp_u_9m) < 0) __PYX_ERR(0, 782, __pyx_L1_error)
 
-  /* "tricks.pyx":782
+  /* "tricks.pyx":783
  *         NEGATIVE = "\033[7m"
  *         CROSSED = "\033[9m"
  *         END = "\033[0m"             # <<<<<<<<<<<<<<
  * 
  */
-  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_END, __pyx_kp_u_0m) < 0) __PYX_ERR(0, 782, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_7, __pyx_n_s_END, __pyx_kp_u_0m) < 0) __PYX_ERR(0, 783, __pyx_L1_error)
 
-  /* "tricks.pyx":749
+  /* "tricks.pyx":750
  *         return hash_md5.hexdigest()
  * 
  *     class color:             # <<<<<<<<<<<<<<
  *         PURPLE = '\033[95m'
  *         CYAN = '\033[96m'
  */
-  __pyx_t_2 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_color, __pyx_empty_tuple, __pyx_t_7, NULL, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 749, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_color, __pyx_empty_tuple, __pyx_t_7, NULL, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 750, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_color, __pyx_t_2) < 0) __PYX_ERR(0, 749, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_8, __pyx_n_s_color, __pyx_t_2) < 0) __PYX_ERR(0, 750, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "tricks.pyx":267
+  /* "tricks.pyx":268
  * 
  * 
  * class tech:             # <<<<<<<<<<<<<<
  *     global techdict
  *     @staticmethod
  */
-  __pyx_t_7 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_tech, __pyx_empty_tuple, __pyx_t_8, NULL, 0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 267, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_tech, __pyx_empty_tuple, __pyx_t_8, NULL, 0, 0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_tech, __pyx_t_7) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_tech, __pyx_t_7) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 

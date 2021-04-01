@@ -1729,7 +1729,6 @@ static const char __pyx_k_no_rating_radio[] = "no_rating_radio";
 static const char __pyx_k_ratings_updated[] = " ratings updated";
 static const char __pyx_k_site_detail_url[] = "site_detail_url";
 static const char __pyx_k_API_needed_sleep[] = "API needed sleep ";
-static const char __pyx_k_advanced_seardch[] = "advanced_seardch";
 static const char __pyx_k_any_rating_radio[] = "any_rating_radio";
 static const char __pyx_k_check_ignore_md5[] = "check_ignore_md5";
 static const char __pyx_k_latest_API_usage[] = "latest API usage ";
@@ -1776,8 +1775,8 @@ static const char __pyx_k_import_other_rating_radio_two[] = "import_other_rating
 static const char __pyx_k_import_rating_comic_id_redraw[] = "import_rating_comic_id_redraw";
 static const char __pyx_k_lines_of_potential_data_found[] = " lines of potential data:\nfound ";
 static const char __pyx_k_ComicIdImportExport_user_paste[] = "ComicIdImportExport.user_paste";
+static const char __pyx_k_C_Users_Find_Nemo_Desktop_build[] = "C:\\Users\\Find Nemo\\Desktop\\build\\cv_connect.pyx";
 static const char __pyx_k_ComicIdImportExport_draw_export[] = "ComicIdImportExport.draw_export_from_drawlist";
-static const char __pyx_k_home_plutonergy_Coding_CComicRe[] = "/home/plutonergy/Coding/CComicReader/cv_connect.pyx";
 static const char __pyx_k_select_from_comics_where_md5_or[] = "select * from comics where md5 = (?) or comic_id = (?)";
 static const char __pyx_k_ComicIdImportExport_import_ratin[] = "ComicIdImportExport.import_rating_comic_id_redraw";
 static const char __pyx_k_MD5_checksum_Comicvine_ID_import[] = "MD5 checksum -> Comicvine ID import/export";
@@ -1797,6 +1796,7 @@ static PyObject *__pyx_kp_u_API_statuscode;
 static PyObject *__pyx_n_s_AttributeError;
 static PyObject *__pyx_n_s_BLUE;
 static PyObject *__pyx_n_s_CYAN;
+static PyObject *__pyx_kp_s_C_Users_Find_Nemo_Desktop_build;
 static PyObject *__pyx_n_s_C_volume_id;
 static PyObject *__pyx_n_s_ComicIdImportExport;
 static PyObject *__pyx_n_s_ComicIdImportExport___init;
@@ -1855,7 +1855,6 @@ static PyObject *__pyx_n_s__21;
 static PyObject *__pyx_kp_u__3;
 static PyObject *__pyx_kp_u__4;
 static PyObject *__pyx_n_s_action;
-static PyObject *__pyx_n_s_advanced_seardch;
 static PyObject *__pyx_n_s_any_rating_radio;
 static PyObject *__pyx_n_u_api_detail_url;
 static PyObject *__pyx_kp_u_api_key;
@@ -1930,7 +1929,6 @@ static PyObject *__pyx_kp_u_gui_import_export_comic_id_ui;
 static PyObject *__pyx_n_s_header;
 static PyObject *__pyx_n_s_headers;
 static PyObject *__pyx_n_s_height_taken;
-static PyObject *__pyx_kp_s_home_plutonergy_Coding_CComicRe;
 static PyObject *__pyx_kp_u_https_comicvine_gamespot_com_api;
 static PyObject *__pyx_kp_u_https_comicvine_gamespot_com_api_2;
 static PyObject *__pyx_n_s_i;
@@ -2101,7 +2099,6 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_2user_paste(CYTHON_
 static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_4import_rating_comic_id_redraw(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_6import_rating_comic_id(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_drawlist(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_10cv_connect_advanced_seardch(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static __Pyx_CachedCFunction __pyx_umethod_PyUnicode_Type_strip = {0, &__pyx_n_s_strip, 0, 0, 0};
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
@@ -2134,7 +2131,6 @@ static PyObject *__pyx_tuple__36;
 static PyObject *__pyx_tuple__38;
 static PyObject *__pyx_tuple__40;
 static PyObject *__pyx_tuple__42;
-static PyObject *__pyx_tuple__44;
 static PyObject *__pyx_codeobj__18;
 static PyObject *__pyx_codeobj__20;
 static PyObject *__pyx_codeobj__23;
@@ -2148,7 +2144,6 @@ static PyObject *__pyx_codeobj__37;
 static PyObject *__pyx_codeobj__39;
 static PyObject *__pyx_codeobj__41;
 static PyObject *__pyx_codeobj__43;
-static PyObject *__pyx_codeobj__45;
 /* Late includes */
 
 /* "cv_connect.pyx":17
@@ -13160,7 +13155,6 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  *         self.import_te.setPlainText(longstring)
  *         self.current_long_string = longstring             # <<<<<<<<<<<<<<
  *         self.stopper = False
- * 
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_current_long_string, __pyx_v_longstring) < 0) __PYX_ERR(0, 392, __pyx_L1_error)
 
@@ -13168,8 +13162,6 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
  *         self.import_te.setPlainText(longstring)
  *         self.current_long_string = longstring
  *         self.stopper = False             # <<<<<<<<<<<<<<
- * 
- * def advanced_seardch(self):
  */
   if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_stopper, Py_False) < 0) __PYX_ERR(0, 393, __pyx_L1_error)
 
@@ -13195,84 +13187,6 @@ static PyObject *__pyx_pf_10cv_connect_19ComicIdImportExport_8draw_export_from_d
   __Pyx_XDECREF(__pyx_v_longstring);
   __Pyx_XDECREF(__pyx_v_rating);
   __Pyx_XDECREF(__pyx_v_eachcard);
-  __Pyx_XGIVEREF(__pyx_r);
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-/* "cv_connect.pyx":395
- *         self.stopper = False
- * 
- * def advanced_seardch(self):             # <<<<<<<<<<<<<<
- *     small_flexible_tunnel_two(self)
- */
-
-/* Python wrapper */
-static PyObject *__pyx_pw_10cv_connect_1advanced_seardch(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_10cv_connect_1advanced_seardch = {"advanced_seardch", (PyCFunction)__pyx_pw_10cv_connect_1advanced_seardch, METH_O, 0};
-static PyObject *__pyx_pw_10cv_connect_1advanced_seardch(PyObject *__pyx_self, PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = 0;
-  __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("advanced_seardch (wrapper)", 0);
-  __pyx_r = __pyx_pf_10cv_connect_advanced_seardch(__pyx_self, ((PyObject *)__pyx_v_self));
-
-  /* function exit code */
-  __Pyx_RefNannyFinishContext();
-  return __pyx_r;
-}
-
-static PyObject *__pyx_pf_10cv_connect_advanced_seardch(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
-  PyObject *__pyx_r = NULL;
-  __Pyx_RefNannyDeclarations
-  PyObject *__pyx_t_1 = NULL;
-  PyObject *__pyx_t_2 = NULL;
-  PyObject *__pyx_t_3 = NULL;
-  int __pyx_lineno = 0;
-  const char *__pyx_filename = NULL;
-  int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("advanced_seardch", 0);
-
-  /* "cv_connect.pyx":396
- * 
- * def advanced_seardch(self):
- *     small_flexible_tunnel_two(self)             # <<<<<<<<<<<<<<
- */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_small_flexible_tunnel_two); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 396, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
-    if (likely(__pyx_t_3)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-      __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_2, function);
-    }
-  }
-  __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_self) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_self);
-  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "cv_connect.pyx":395
- *         self.stopper = False
- * 
- * def advanced_seardch(self):             # <<<<<<<<<<<<<<
- *     small_flexible_tunnel_two(self)
- */
-
-  /* function exit code */
-  __pyx_r = Py_None; __Pyx_INCREF(Py_None);
-  goto __pyx_L0;
-  __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2);
-  __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("cv_connect.advanced_seardch", __pyx_clineno, __pyx_lineno, __pyx_filename);
-  __pyx_r = NULL;
-  __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
@@ -13332,6 +13246,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_AttributeError, __pyx_k_AttributeError, sizeof(__pyx_k_AttributeError), 0, 0, 1, 1},
   {&__pyx_n_s_BLUE, __pyx_k_BLUE, sizeof(__pyx_k_BLUE), 0, 0, 1, 1},
   {&__pyx_n_s_CYAN, __pyx_k_CYAN, sizeof(__pyx_k_CYAN), 0, 0, 1, 1},
+  {&__pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_k_C_Users_Find_Nemo_Desktop_build, sizeof(__pyx_k_C_Users_Find_Nemo_Desktop_build), 0, 0, 1, 0},
   {&__pyx_n_s_C_volume_id, __pyx_k_C_volume_id, sizeof(__pyx_k_C_volume_id), 0, 0, 1, 1},
   {&__pyx_n_s_ComicIdImportExport, __pyx_k_ComicIdImportExport, sizeof(__pyx_k_ComicIdImportExport), 0, 0, 1, 1},
   {&__pyx_n_s_ComicIdImportExport___init, __pyx_k_ComicIdImportExport___init, sizeof(__pyx_k_ComicIdImportExport___init), 0, 0, 1, 1},
@@ -13390,7 +13305,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u__3, __pyx_k__3, sizeof(__pyx_k__3), 0, 1, 0, 0},
   {&__pyx_kp_u__4, __pyx_k__4, sizeof(__pyx_k__4), 0, 1, 0, 0},
   {&__pyx_n_s_action, __pyx_k_action, sizeof(__pyx_k_action), 0, 0, 1, 1},
-  {&__pyx_n_s_advanced_seardch, __pyx_k_advanced_seardch, sizeof(__pyx_k_advanced_seardch), 0, 0, 1, 1},
   {&__pyx_n_s_any_rating_radio, __pyx_k_any_rating_radio, sizeof(__pyx_k_any_rating_radio), 0, 0, 1, 1},
   {&__pyx_n_u_api_detail_url, __pyx_k_api_detail_url, sizeof(__pyx_k_api_detail_url), 0, 1, 0, 1},
   {&__pyx_kp_u_api_key, __pyx_k_api_key, sizeof(__pyx_k_api_key), 0, 1, 0, 0},
@@ -13465,7 +13379,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_header, __pyx_k_header, sizeof(__pyx_k_header), 0, 0, 1, 1},
   {&__pyx_n_s_headers, __pyx_k_headers, sizeof(__pyx_k_headers), 0, 0, 1, 1},
   {&__pyx_n_s_height_taken, __pyx_k_height_taken, sizeof(__pyx_k_height_taken), 0, 0, 1, 1},
-  {&__pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_k_home_plutonergy_Coding_CComicRe, sizeof(__pyx_k_home_plutonergy_Coding_CComicRe), 0, 0, 1, 0},
   {&__pyx_kp_u_https_comicvine_gamespot_com_api, __pyx_k_https_comicvine_gamespot_com_api, sizeof(__pyx_k_https_comicvine_gamespot_com_api), 0, 1, 0, 0},
   {&__pyx_kp_u_https_comicvine_gamespot_com_api_2, __pyx_k_https_comicvine_gamespot_com_api_2, sizeof(__pyx_k_https_comicvine_gamespot_com_api_2), 0, 1, 0, 0},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
@@ -13720,7 +13633,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__17 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_cycle, __pyx_n_s_db_input, __pyx_n_s_column, __pyx_n_s_value, __pyx_n_s_query); if (unlikely(!__pyx_tuple__17)) __PYX_ERR(0, 17, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__17);
   __Pyx_GIVEREF(__pyx_tuple__17);
-  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_update_column, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 17, __pyx_L1_error)
+  __pyx_codeobj__18 = (PyObject*)__Pyx_PyCode_New(3, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__17, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_update_column, 17, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__18)) __PYX_ERR(0, 17, __pyx_L1_error)
 
   /* "cv_connect.pyx":27
  *                     except KeyError: pass
@@ -13732,7 +13645,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__19 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_db_input, __pyx_n_s_cycle); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 27, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_refresh_comic_id, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 27, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_refresh_comic_id, 27, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 27, __pyx_L1_error)
 
   /* "cv_connect.pyx":52
  *             return False
@@ -13744,7 +13657,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__22 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_db_input, __pyx_n_s_fictive_issues, __pyx_n_s_values, __pyx_n_s_query, __pyx_n_s_i, __pyx_n_s__21); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 52, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_extract_issues, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_extract_issues, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 52, __pyx_L1_error)
 
   /* "cv_connect.pyx":71
  *                 except IndexError: pass
@@ -13756,7 +13669,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__24 = PyTuple_Pack(12, __pyx_n_s_self, __pyx_n_s_kwargs, __pyx_n_s_was_sleeping, __pyx_n_s_savelocation, __pyx_n_s_force_update, __pyx_n_s_one_sec_api, __pyx_n_s_cv_dict, __pyx_n_s_loadlist, __pyx_n_s_cycle, __pyx_n_s_eachfield, __pyx_n_s_eachform, __pyx_n_s_eachkey); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_api_request, 71, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 71, __pyx_L1_error)
+  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_api_request, 71, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 71, __pyx_L1_error)
 
   /* "cv_connect.pyx":116
  *         self.load_results()
@@ -13768,7 +13681,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__26 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 116, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_generate_filename, 116, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_generate_filename, 116, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 116, __pyx_L1_error)
 
   /* "cv_connect.pyx":130
  *         self.savelocation = tech.fpath(self.savelocation)
@@ -13780,7 +13693,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__28 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_printdata, __pyx_n_s_force, __pyx_n_s_jsondata, __pyx_n_s_f); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 130, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_store_jsondata, 130, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 130, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_store_jsondata, 130, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 130, __pyx_L1_error)
 
   /* "cv_connect.pyx":163
  *             print('Failure: ' + tech.color.BLUE + self.requestdata.replace(tech.apikey(),'$$$') + tech.color.END + ' -> API statuscode: ' + tech.color.RED + str(self.response.status_code) + tech.color.END)
@@ -13792,7 +13705,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__30 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_data, __pyx_n_s_i, __pyx_n_s_cache_date, __pyx_n_s_raw); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 163, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_load_results, 163, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(1, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_load_results, 163, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 163, __pyx_L1_error)
 
   /* "cv_connect.pyx":179
  *                             self.loadlist.append(i)
@@ -13804,7 +13717,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__32 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_requestdata, __pyx_n_s_retry_count); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 179, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_comicvine_request, 179, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 179, __pyx_L1_error)
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(1, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_comicvine_request, 179, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 179, __pyx_L1_error)
 
   /* "cv_connect.pyx":212
  * 
@@ -13816,7 +13729,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__34 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_main, __pyx_n_s_current_long_string, __pyx_n_s_drawlist, __pyx_n_s_stopper, __pyx_n_s_cycle, __pyx_n_s_trigger, __pyx_n_s_action); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_init, 212, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(2, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_init, 212, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 212, __pyx_L1_error)
 
   /* "cv_connect.pyx":243
  *         self.setStyleSheet(self.main.styleSheet())
@@ -13828,7 +13741,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__36 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 243, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
-  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_user_paste, 243, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 243, __pyx_L1_error)
+  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_user_paste, 243, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 243, __pyx_L1_error)
 
   /* "cv_connect.pyx":247
  *             self.current_long_string = self.import_te.toPlainText()
@@ -13840,7 +13753,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__38 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_org_string, __pyx_n_s_i, __pyx_n_s_longstring, __pyx_n_s_data, __pyx_n_s_newstring); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__38);
   __Pyx_GIVEREF(__pyx_tuple__38);
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_import_rating_comic_id_redraw, 247, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_import_rating_comic_id_redraw, 247, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 247, __pyx_L1_error)
 
   /* "cv_connect.pyx":266
  *         self.stopper = False
@@ -13852,7 +13765,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__40 = PyTuple_Pack(13, __pyx_n_s_self, __pyx_n_s_org_string, __pyx_n_s_i, __pyx_n_s_longstring, __pyx_n_s_data, __pyx_n_s_status, __pyx_n_s_count, __pyx_n_s_checkdata, __pyx_n_s_query, __pyx_n_s_md5data, __pyx_n_s_newstring, __pyx_n_s_eachwidget, __pyx_n_s_newdata); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(1, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_import_rating_comic_id, 266, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(1, 0, 13, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_import_rating_comic_id, 266, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 266, __pyx_L1_error)
 
   /* "cv_connect.pyx":364
  *                 except AttributeError: pass
@@ -13864,18 +13777,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __pyx_tuple__42 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_longstring, __pyx_n_s_rating, __pyx_n_s_eachcard); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 364, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_draw_export_from_drawlist, 364, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 364, __pyx_L1_error)
-
-  /* "cv_connect.pyx":395
- *         self.stopper = False
- * 
- * def advanced_seardch(self):             # <<<<<<<<<<<<<<
- *     small_flexible_tunnel_two(self)
- */
-  __pyx_tuple__44 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 395, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_tuple__44);
-  __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_home_plutonergy_Coding_CComicRe, __pyx_n_s_advanced_seardch, 395, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 395, __pyx_L1_error)
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_C_Users_Find_Nemo_Desktop_build, __pyx_n_s_draw_export_from_drawlist, 364, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 364, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -14618,17 +14520,6 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "cv_connect.pyx":395
- *         self.stopper = False
- * 
- * def advanced_seardch(self):             # <<<<<<<<<<<<<<
- *     small_flexible_tunnel_two(self)
- */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_10cv_connect_1advanced_seardch, NULL, __pyx_n_s_cv_connect); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 395, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_advanced_seardch, __pyx_t_1) < 0) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "cv_connect.pyx":1
