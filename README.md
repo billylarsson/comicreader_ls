@@ -53,12 +53,9 @@ where `#17827` is the unique volume ID for that volume.
 
 WEBP converter
 -----
-Converts single file or que from top to bottom.
-
-This is the least tested feature, it works properly under Linux.
-It converts your comics to WEBP (or JPEG) re-compresses them and REPLACES the old file, same as Dangerous Indexing... you shouldn't use this feature unless you know what you're doing and I know that there are some bugs if you use the same instances after processing a que.
-Restarting the program could be a good idea after using the compressor.
-
+Clicking one comic will convert that comic, clicking the start button and the program will run threw all comics and process them one at the time, if you click a comic while the program is running, another thread is stating and will run along with the mainthread benefiting from all cores.
+Clicking "SOFT STOP" it will stop queing more jobs, but will finsish the current ones.
+I've not put all heart into it, not well tested, but I assume I've taken nessesary precautions to not break things.
 
 User rating(s)
 -----
